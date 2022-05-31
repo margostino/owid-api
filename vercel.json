@@ -3,6 +3,9 @@
     "silent": true
   },
   "functions": {
+    "api/hello.go": {
+      "maxDuration": 5
+    },
     "api/query.go": {
       "memory": 1024,
       "maxDuration": 5,

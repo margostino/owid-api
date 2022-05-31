@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	http.HandleFunc("/hello", handler.Hello)
 	http.HandleFunc("/query", handler.Query)
 	http.HandleFunc("/playground", handler.Playground)
 	log.Println("Starting OWID-API Server in :8080")
