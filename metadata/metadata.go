@@ -25,11 +25,12 @@ func main() {
 	var metadata Metadata
 	var schema string
 	var argumentsList = make([]string, 0)
-	INDENTATION := "    "
+	//INDENTATION := "    "
 	COMMENT_BLOCK_BEGIN := "\"\"\""
-	//COMMENT_BLOCK_END := "\"\"\""
-
-	ymlFile, err := ioutil.ReadFile("/Users/martin.dagostino/workspace/margostino/owid-api/graph/metadata/20th_century_deaths_in_us_cdc.yml")
+	COMMENT_BLOCK_END := "\"\"\""
+	metadataFile := "/Users/martin.dagostino/workspace/margostino/owid-api/graph/metadata/20th_century_deaths_in_us_cdc.yml"
+	schemaFile := "/Users/martin.dagostino/workspace/margostino/owid-api/graph/generated.graphql"
+	ymlFile, err := ioutil.ReadFile(metadataFile)
 
 	if err != nil {
 		log.Printf("yamlFile.Get err   #%v ", err)
@@ -42,27 +43,34 @@ func main() {
 
 	typeName := metadata.Name + "Dataset"
 	description := metadata.Description
-
-	if description != "" {
-		schema += INDENTATION + COMMENT_BLOCK_BEGIN
-		schema += description
-		schema += INDENTATION + COMMENT_BLOCK_BEGIN
-	}
-	schema += fmt.Sprintf("type %s {", typeName)
-	for _, variable := range metadata.Variables {
-		schema += fmt.Sprintf("%s: %s\n", variable.Name, variable.Type)
-	}
 	for _, argument := range metadata.Arguments {
 		argumentsList = append(argumentsList, fmt.Sprintf("%s: %s", argument.Name, argument.Type))
 	}
-	arguments := strings.Join(argumentsList[:], ",")
+	arguments := strings.Join(argumentsList[:], ", ")
 
-	schema += "}\n"
+	if description != "" {
+		sanitizedDescription := strings.ReplaceAll(description, "\n", "")
+		sanitizedDescription = strings.ReplaceAll(sanitizedDescription, ". ", ".\n")
+		schema += fmt.Sprintf("%s\n%s\n%s\n", COMMENT_BLOCK_BEGIN, sanitizedDescription, COMMENT_BLOCK_END)
+	}
+
+	schema += fmt.Sprintf("type %s {\n", typeName)
+	for _, variable := range metadata.Variables {
+		schema += fmt.Sprintf(" %s: %s\n", variable.Name, variable.Type)
+	}
+
+	schema += "}\n\n"
 	schema += "type Query {\n"
-	schema += fmt.Sprintf("%s(%s):%s!\n", metadata.Name, arguments, typeName)
-	schema += "}\n"
-	schema += "schema {\nquery: Query\n}"
+	schema += fmt.Sprintf(" %s(%s):%s!\n", metadata.Name, arguments, typeName)
+	schema += "}\n\n"
+	schema += "schema {\n query: Query\n}"
 	println(schema)
+
+	file, err := os.Create(schemaFile)
+	check(err)
+	defer file.Close()
+	_, err2 := file.WriteString(schema)
+	check(err2)
 }
 
 func check(err error) {
