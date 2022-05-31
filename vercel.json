@@ -3,7 +3,12 @@
     "silent": true
   },
   "functions": {
-    "api/owid.go": {
+    "api/query.go": {
+      "memory": 1024,
+      "maxDuration": 5,
+      "includeFiles": "_files/**"
+    },
+    "api/playground.go": {
       "memory": 1024,
       "maxDuration": 5,
       "includeFiles": "_files/**"
