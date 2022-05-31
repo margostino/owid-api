@@ -182,7 +182,7 @@ func (ec *executionContext) introspectType(name string) (*introspection.Type, er
 }
 
 var sources = []*ast.Source{
-	{Name: "../schema.graphqls", Input: `"""
+	{Name: "../schema.graphql", Input: `"""
 Time use in Sweden - Statistics Sweden.
 """
 type TimeUseInSwedenDataset {
