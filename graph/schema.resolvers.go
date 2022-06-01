@@ -5,6 +5,7 @@ package graph
 
 import (
 	"context"
+
 	"github.com/margostino/owid-api/graph/generated"
 	"github.com/margostino/owid-api/graph/model"
 )

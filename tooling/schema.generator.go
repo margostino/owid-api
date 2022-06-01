@@ -30,7 +30,7 @@ func main() {
 	COMMENT_BLOCK_END := "\"\"\""
 	//metadataFile := "/Users/martin.dagostino/workspace/margostino/owid-api/graph/metadata/o20th_century_deaths_in_us_cdc.yml"
 	metadataFolder := "/Users/martin.dagostino/workspace/margostino/owid-api/graph/metadata"
-	schemaFile := "/Users/martin.dagostino/workspace/margostino/owid-api/graph/generated.graphql"
+	schemaFile := "/Users/martin.dagostino/workspace/margostino/owid-api/graph/schema.graphql"
 	var queryVariables = make([]string, 0)
 
 	filepath.Walk(metadataFolder, func(path string, info os.FileInfo, err error) error {

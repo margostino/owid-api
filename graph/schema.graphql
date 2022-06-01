@@ -4,8 +4,8 @@ This is measured across both sexes and all ages.
 Death rates are reported per 100,000 and are not age-standardized.Data for specific causes of death may be missing or intermittent where it enters or falls out of the top 10 reported causes of deaths in any year.
 """
 type O20thCenturyDeathsInUsCdcDataset {
-  accidents_excl_road_deaths: Int
-  accidents_total_deaths: Int
+ accidents_excl_road_deaths: Int
+ accidents_total_deaths: Int
 }
 
 """
@@ -17,19 +17,19 @@ The definition for each activity is outlined below:<ul><li>Gainful employment in
 </li></ul>For the original data, see Table 1 in the <a href="http://www.scb.se/statistik/_publikationer/LE0103_1990I91_BR_LE80SA9201.pdf" rel="noopener" target="_blank">1990 Sweden Statistics time use report</a>; Table B:4 in the <a href="http://www.scb.se/statistik/LE/LE0103/2003M00/LE99SA0301.pdf" rel="noopener" target="_blank">2000 report</a>; and Table B:1a in the <a href="http://www.scb.se/statistik/_publikationer/LE0103_2010A01_BR_LE123BR1201.pdf" rel="noopener" target="_blank">2010 report</a>.
 """
 type TimeUseInSwedenDataset {
-  time_allocation_weekday_women: Float
-  time_allocation_weekend_women: Float
-  time_allocation_weekday_men: Float
-  time_allocation_weekend_men: Float
-  time_allocation_average_day_women: Float
-  time_allocation_average_day_men: Float
+ time_allocation_weekday_women: Float
+ time_allocation_weekend_women: Float
+ time_allocation_weekday_men: Float
+ time_allocation_weekend_men: Float
+ time_allocation_average_day_women: Float
+ time_allocation_average_day_men: Float
 }
 
 type Query {
-  o20th_century_deaths_in_us_cdc(entity: String!, year: Int!):O20thCenturyDeathsInUsCdcDataset!
-  time_use_in_sweden(entity: String!, year: Int!):TimeUseInSwedenDataset!
+ o20th_century_deaths_in_us_cdc(entity: String!, year: Int!):O20thCenturyDeathsInUsCdcDataset!
+ time_use_in_sweden(entity: String!, year: Int!):TimeUseInSwedenDataset!
 }
 
 schema {
-  query: Query
+ query: Query
 }
