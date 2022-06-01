@@ -2,12 +2,25 @@
 
 package model
 
-// Time use in Sweden - Statistics Sweden.
+// Data is compiled based on the list of top 10 causes of death published by the Centre for Diseases Control (CDC).
+// This is measured across both sexes and all ages.
+// Death rates are reported per 100,000 and are not age-standardized.Data for specific causes of death may be missing or intermittent where it enters or falls out of the top 10 reported causes of deaths in any year.
+type O20thCenturyDeathsInUsCdcDataset struct {
+	AccidentsExclRoadDeaths *int `json:"accidents_excl_road_deaths"`
+	AccidentsTotalDeaths    *int `json:"accidents_total_deaths"`
+}
+
+// Time spent on activities has been categorised under six main headings: gainful employment, personal needs, housework, leisure, studies, and other activities.
+// The definition for each activity is outlined below:<ul><li>Gainful employment includes time spent at work and time spent commuting to and from work.
+// </li><li>Personal needs includes meals, personal care, and travel for personal needs.
+// </li><li>Housework includes cooking, washing, ironing, cleaning, caring for own children, caring for others, maintenance work, purchase of goods and services, other housework, and related travel.</li><li>Leisure time includes sports and outdoor activities, TV and radio, hobbies, entertainment, cultural, and social activities, other free time, and related travel.
+// </li><li>Study time includes time spent studying and travel for studies.
+// </li></ul>For the original data, see Table 1 in the <a href="http://www.scb.se/statistik/_publikationer/LE0103_1990I91_BR_LE80SA9201.pdf" rel="noopener" target="_blank">1990 Sweden Statistics time use report</a>; Table B:4 in the <a href="http://www.scb.se/statistik/LE/LE0103/2003M00/LE99SA0301.pdf" rel="noopener" target="_blank">2000 report</a>; and Table B:1a in the <a href="http://www.scb.se/statistik/_publikationer/LE0103_2010A01_BR_LE123BR1201.pdf" rel="noopener" target="_blank">2010 report</a>.
 type TimeUseInSwedenDataset struct {
-	TimeAllocationWeekdayWomen    float64 `json:"time_allocation_weekday_women"`
-	TimeAllocationWeekendWomen    float64 `json:"time_allocation_weekend_women"`
-	TimeAllocationWeekdayMen      float64 `json:"time_allocation_weekday_men"`
-	TimeAllocationWeekendMen      float64 `json:"time_allocation_weekend_men"`
-	TimeAllocationAverageDayWomen float64 `json:"time_allocation_average_day_women"`
-	TimeAllocationAverageDayMen   float64 `json:"time_allocation_average_day_men"`
+	TimeAllocationWeekdayWomen    *float64 `json:"time_allocation_weekday_women"`
+	TimeAllocationWeekendWomen    *float64 `json:"time_allocation_weekend_women"`
+	TimeAllocationWeekdayMen      *float64 `json:"time_allocation_weekday_men"`
+	TimeAllocationWeekendMen      *float64 `json:"time_allocation_weekend_men"`
+	TimeAllocationAverageDayWomen *float64 `json:"time_allocation_average_day_women"`
+	TimeAllocationAverageDayMen   *float64 `json:"time_allocation_average_day_men"`
 }

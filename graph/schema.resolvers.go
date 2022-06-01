@@ -9,12 +9,26 @@ import (
 	"github.com/margostino/owid-api/graph/model"
 )
 
-func (r *queryResolver) TimeUseInSweden(ctx context.Context, entity string, year int) (*model.TimeUseInSwedenDataset, error) {
-	var a = model.TimeUseInSwedenDataset{
-		TimeAllocationAverageDayMen: 10.0,
-		TimeAllocationWeekdayWomen:  12.0,
+func (r *queryResolver) O20thCenturyDeathsInUsCdc(ctx context.Context, entity string, year int) (*model.O20thCenturyDeathsInUsCdcDataset, error) {
+	var value *int
+	value = new(int)
+	*value = 10
+	var response = model.O20thCenturyDeathsInUsCdcDataset{
+		AccidentsExclRoadDeaths: value,
+		AccidentsTotalDeaths:    value,
 	}
-	return &a, nil
+	return &response, nil
+}
+
+func (r *queryResolver) TimeUseInSweden(ctx context.Context, entity string, year int) (*model.TimeUseInSwedenDataset, error) {
+	var value *float64
+	value = new(float64)
+	*value = 20.89
+	var response = model.TimeUseInSwedenDataset{
+		TimeAllocationAverageDayMen: value,
+		TimeAllocationWeekdayWomen:  value,
+	}
+	return &response, nil
 	//panic(fmt.Errorf("not implemented"))
 }
 
