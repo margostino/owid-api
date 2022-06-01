@@ -1,0 +1,11 @@
+name: air_travel_trips_per_capita
+description: ""
+data_path: Air travel trips per capita (Airbus, 2019).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: air_travel_trips_per_capita
+    type: Float

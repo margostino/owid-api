@@ -1,0 +1,11 @@
+name: countries_continents
+description: ""
+data_path: Countries Continents.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: countries_continents
+    type: Float

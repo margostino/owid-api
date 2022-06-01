@@ -1,0 +1,16 @@
+name: male_to_female_ratio_high_school_courses_in_usa_goldin_et_al
+description: Data represents the average male-to-female ratio of students taking maths
+    and science subjects in high school education in the United States.
+data_path: Male-to-female ratio high school courses in USA - Goldin et al..csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: maths
+    type: Float
+  - name: science
+    type: Float
+  - name: chemistry
+    type: Float

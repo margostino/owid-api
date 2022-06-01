@@ -1,0 +1,11 @@
+name: literacy_by_years_of_schooling_us_1947_oecd
+description: ""
+data_path: Literacy by years of schooling US 1947 – OECD (2014) .csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: percentage_literate
+    type: Float

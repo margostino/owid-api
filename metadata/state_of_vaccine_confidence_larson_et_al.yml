@@ -1,0 +1,19 @@
+name: state_of_vaccine_confidence_larson_et_al
+description: Possible answers for all questions were those on the five-point Likert
+    scale (strongly agree, tend to agree, do not know, tend to disagree, strongly
+    disagree).
+data_path: State of Vaccine Confidence - Larson et al (2016).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: importance
+    type: Float
+  - name: safety
+    type: Float
+  - name: effectiveness
+    type: Float
+  - name: religious_compatibility
+    type: Float

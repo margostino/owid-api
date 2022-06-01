@@ -1,0 +1,11 @@
+name: clark_flèche_and_senik_happiness_inequality
+description: ""
+data_path: Clark, Flèche & Senik – Happiness Inequality.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: standard_deviation_of_life_satisfaction
+    type: Float

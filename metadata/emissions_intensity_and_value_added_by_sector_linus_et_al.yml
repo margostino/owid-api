@@ -1,0 +1,38 @@
+name: emissions_intensity_and_value_added_by_sector_linus_et_al
+description: "Figures are derived from authors based on data from the (WIOD) World
+    Input-Output Dataset. \n\nWorld Input-Output Database 2013 release [Timmer, M.
+    P., Dietzenbacher, E., Los, B., Stehrer, R. and de Vries, G. J. (2015),\"An Illustrated
+    User Guide to the World Input–Output Database: the Case of Global Automotive Production\",
+    Review of International Economics., 23: 575–605]. Year 2009 in basic prices, value
+    added computed as net sectoral output (gross sectoral output less sectoral input)."
+data_path: Emissions intensity & value added by sector - Linus et al..csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: share_of_co2_emissions
+    type: Float
+  - name: value_added_to_gdp
+    type: Float
+  - name: emissions_growth
+    type: Float
+  - name: value_added_growth
+    type: Float
+  - name: share_of_co2_emissions
+    type: Float
+  - name: value_added_to_gdp
+    type: Float
+  - name: emissions_growth
+    type: Float
+  - name: value_added_growth
+    type: Float
+  - name: share_of_co2_emissions
+    type: Float
+  - name: value_added_to_gdp
+    type: Float
+  - name: emissions_growth
+    type: Float
+  - name: value_added_growth
+    type: Float

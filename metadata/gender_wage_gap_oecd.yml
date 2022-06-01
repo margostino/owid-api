@@ -1,0 +1,12 @@
+name: gender_wage_gap_oecd
+description: |4+
+
+data_path: Gender Wage Gap – OECD (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: gender_wage_gap
+    type: Float

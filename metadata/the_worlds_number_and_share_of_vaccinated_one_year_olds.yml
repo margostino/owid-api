@@ -1,0 +1,31 @@
+name: the_worlds_number_and_share_of_vaccinated_one_year_olds
+description: ""
+data_path: The world's number and share of vaccinated one-year-olds .csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: number_of_one_year_olds
+    type: Float
+  - name: share_of_one_year_olds_with_bcg
+    type: Float
+  - name: share_of_one_year_olds_with_hepatitis_b3_immunization
+    type: Float
+  - name: share_of_one_year_olds_with_diphtheria_pertussis_and_tetanus_immunization
+    type: Float
+  - name: share_of_one_year_olds_with_polio_immunization
+    type: Float
+  - name: share_of_one_year_olds_with_measles_immunization
+    type: Float
+  - name: number_of_one_year_olds_with_bcg
+    type: Float
+  - name: number_of_one_year_olds_with_hepatitis_b3_immunization
+    type: Float
+  - name: number_of_one_year_olds_with_diphteria_pertussis_and_tetanus_immunization
+    type: Float
+  - name: number_of_one_year_olds_with_polio_immunization
+    type: Float
+  - name: number_of_one_year_olds_with_measles_immunization
+    type: Float

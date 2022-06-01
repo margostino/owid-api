@@ -1,0 +1,12 @@
+name: population_covered_by_the_internet_internet_world_stats
+description: The numbers were obtained by dividing each country's number of internet
+    users by its population (both data points provided by Internet World Stats).
+data_path: Population covered by the internet - Internet World Stats (2019).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: share_of_population_covered_by_the_internet
+    type: Float

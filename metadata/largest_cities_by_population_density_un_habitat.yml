@@ -1,0 +1,12 @@
+name: largest_cities_by_population_density_un_habitat
+description: Data on population density (measured as the population per square kilometre)
+    is provided for the world's largest 100 cities based on population.
+data_path: Largest cities by population density - UN Habitat (2014).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: population_density_by_city
+    type: Float

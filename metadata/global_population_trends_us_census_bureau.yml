@@ -1,0 +1,15 @@
+name: global_population_trends_us_census_bureau
+description: "Population data is reported annually based on review of census data,
+    surveys, vital registration and administrative records from a variety of sources.\r\n\r\nPopulation
+    is recorded as 'de facto' meaning it includes all persons who are physically present
+    in the country at the reference date, whether or not they are usual and/or legal
+    residents."
+data_path: Global population trends - US Census Bureau (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: population
+    type: Float

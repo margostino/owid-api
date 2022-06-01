@@ -1,0 +1,17 @@
+name: co2_emissions_by_city_c40_cities
+description: ""
+data_path: CO2 emissions by city - C40 Cities (2018).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: population_density
+    type: Float
+  - name: co2_emissions_per_capita
+    type: Float
+  - name: transport_emissions_per_capita
+    type: Float
+  - name: waste_emissions_per_capita
+    type: Float

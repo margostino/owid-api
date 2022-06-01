@@ -1,0 +1,11 @@
+name: owid_country_to_who_regions
+description: ""
+data_path: OWID country to WHO regions.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: who_region
+    type: Float

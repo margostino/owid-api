@@ -1,0 +1,17 @@
+name: us_revenue_public_schools_us_bureau_of_the_census_and_nces
+description: ""
+data_path: US Revenue Public Schools - US Bureau of the Census and NCES (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: total
+    type: Float
+  - name: federalunassigned
+    type: Float
+  - name: state
+    type: Float
+  - name: local
+    type: Float

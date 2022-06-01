@@ -1,0 +1,13 @@
+name: inequality_in_human_development_indices_undp
+description: ""
+data_path: Inequality in human development indices - UNDP (2019).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: inequality_in_life_expectancy
+    type: Float
+  - name: inequality_in_education
+    type: Float

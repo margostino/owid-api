@@ -1,0 +1,33 @@
+name: food_expenditure_in_the_usa_usda
+description: Data on food expenditure does not include alcoholic beverages or tobacco.
+data_path: Food expenditure in the USA - USDA.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: food_consumed_at_home_as_share_of_disposable_income
+    type: Float
+  - name: food_consumed_away_from_home_as_share_of_disposable_income
+    type: Float
+  - name: food_as_share_of_disposable_income
+    type: Float
+  - name: restaurant_prices_relative_to_retail_prices
+    type: Float
+  - name: manufacturers_and_shippers_prices_relative_to_retail_prices
+    type: Float
+  - name: food_eaten_away_from_home_as_share_of_total_food_expenditure
+    type: Float
+  - name: food_expenditure_at_home
+    type: Float
+  - name: food_expenditure_away_from_home
+    type: Float
+  - name: food_expenditure_total
+    type: Float
+  - name: food_expenditure_at_home
+    type: Float
+  - name: food_expenditure_away_from_home
+    type: Float
+  - name: food_expenditure_total
+    type: Float

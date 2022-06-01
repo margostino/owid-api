@@ -1,15 +1,28 @@
 package main
 
 import (
-	handler "github.com/margostino/owid-api/api"
+	"fmt"
+	"github.com/margostino/owid-api/tooling"
 	"log"
-	"net/http"
+	"os"
 )
 
 func main() {
-	http.HandleFunc("/hello", handler.Hello)
-	http.HandleFunc("/query", handler.Query)
-	http.HandleFunc("/playground", handler.Playground)
-	log.Println("Starting OWID-API Server in :8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	if len(os.Args) < 2 {
+		message := fmt.Sprintf("Command Not Found!\n" +
+			"Commands available: \n" +
+			"- server: to start a local server\n" +
+			"- schema-gen: to generate a new Graphql Schema")
+		log.Panicln(message)
+	}
+	switch action := os.Args[1]; action {
+	case "server":
+		tooling.RunLocalServer()
+	case "schema-gen":
+		tooling.GenerateSchema()
+	case "metadata-gen":
+		tooling.GenerateMetadata()
+	default:
+		log.Printf("command not valid: %s", action)
+	}
 }

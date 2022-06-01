@@ -1,0 +1,13 @@
+name: airline_hijacking_aviation_safety_network
+description: Number of hijackings, fatalities of hijacking
+data_path: Airline hijacking - Aviation Safety Network.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: number_of_airline_hijackings
+    type: Float
+  - name: fatalities_due_to_airline_hijacking
+    type: Float

@@ -1,0 +1,13 @@
+name: renewable_energy
+description: Countries aggregated by income group have been classified based on the
+    World Bank's own definition of income level (low, lower middle, middle, middle
+    upper, and high)
+data_path: Renewable Energy (% electricity production) - World Bank (2015).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: renewable_electricity
+    type: Float

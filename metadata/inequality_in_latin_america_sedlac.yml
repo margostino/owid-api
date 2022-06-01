@@ -1,0 +1,11 @@
+name: inequality_in_latin_america_sedlac
+description: ""
+data_path: Inequality in Latin America - SEDLAC (CEDLAS and the World Bank).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: gini_index
+    type: Float

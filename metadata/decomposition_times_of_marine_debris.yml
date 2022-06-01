@@ -1,0 +1,11 @@
+name: decomposition_times_of_marine_debris
+description: Average estimated decomposition time of typical marine debris items.
+data_path: Decomposition times of marine debris.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: decomposition_rates_of_marine_debris
+    type: Float

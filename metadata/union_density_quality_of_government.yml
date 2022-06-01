@@ -1,0 +1,11 @@
+name: union_density_quality_of_government
+description: ""
+data_path: Union Density - Quality of Government (QoG) (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: union_density_rate
+    type: Float

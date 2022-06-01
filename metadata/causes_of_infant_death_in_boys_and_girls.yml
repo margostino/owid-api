@@ -1,0 +1,21 @@
+name: causes_of_infant_death_in_boys_and_girls
+description: |
+    Rates of infant mortality by sex for selected causes of death. This is based on death rates per 100,000 for infants less than one year old. This is given for a range of leading causes of death for comparison between infant mortality rates in males and females.
+
+    For conciseness and clarity, we have shortened a few of the original IHME causes of death:
+    Congenital birth defects = Birth defects
+    Congenital heart anomalies = Heart anomalies
+    Digestive congenital anomalies = Digestive anomalies
+    Neonatal encephalopathy due to birth asphyxia and trauma = Encephalopathy from asphyxia and trauma
+    Neonatal preterm birth = Preterm birth
+data_path: Causes of infant death in boys and girls (IHME, 2018).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: causes_of_death_for_infant_girls
+    type: Float
+  - name: causes_of_death_for_infant_boys
+    type: Float

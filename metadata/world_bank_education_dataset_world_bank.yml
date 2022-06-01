@@ -1,0 +1,15 @@
+name: world_bank_education_dataset_world_bank
+description: Educational attainment, enrolment and expenditure data
+data_path: 'World Bank: Education Dataset - World Bank (2015).csv'
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: total_government_expenditure_on_education
+    type: Float
+  - name: share_of_education_in_government_expenditure
+    type: Float
+  - name: expenditure_on_primary_as_perc_of_government_expenditure_on_education
+    type: Float

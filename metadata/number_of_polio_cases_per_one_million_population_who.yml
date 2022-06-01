@@ -1,0 +1,13 @@
+name: number_of_polio_cases_per_one_million_population_who
+description: The Polio case data from the WHO (2017) were divided by the UN Population
+    estimates (which were reported in thousands). The result was then divided by one
+    thousand to obtain the number of polio cases per one million population.
+data_path: Number of polio cases per one million population - WHO (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: polio_cases_per_1_million_population
+    type: Float

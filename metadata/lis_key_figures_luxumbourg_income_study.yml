@@ -1,0 +1,13 @@
+name: lis_key_figures_luxumbourg_income_study
+description: ""
+data_path: LIS Key Figures – Luxumbourg Income Study.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: gini_disposable_household_income
+    type: Float
+  - name: poverty_rate
+    type: Float

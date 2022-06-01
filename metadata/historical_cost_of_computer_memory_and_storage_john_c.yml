@@ -1,0 +1,17 @@
+name: historical_cost_of_computer_memory_and_storage_john_c
+description: ""
+data_path: Historical cost of computer memory and storage - John C. McCallum.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: memory
+    type: Float
+  - name: disk_drives
+    type: Float
+  - name: ssd
+    type: Float
+  - name: flash
+    type: Float

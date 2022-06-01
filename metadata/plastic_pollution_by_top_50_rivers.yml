@@ -1,0 +1,15 @@
+name: plastic_pollution_by_top_50_rivers
+description: ""
+data_path: Plastic pollution by top 50 rivers (Meijer et al. 2021).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: mismanaged_waste_emitted_to_the_ocean
+    type: Float
+  - name: mismanaged_waste_emitted_to_the_ocean
+    type: Float
+  - name: share_of_global_plastics_emitted_to_ocean
+    type: Float

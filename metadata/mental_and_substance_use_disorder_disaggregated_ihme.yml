@@ -1,0 +1,45 @@
+name: mental_and_substance_use_disorder_disaggregated_ihme
+description: ""
+data_path: Mental and substance use disorder disaggregated - IHME.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: prevalence_mental_health_disorders_both
+    type: Float
+  - name: prevalence_mental_health_disorders_male
+    type: Float
+  - name: prevalence_mental_health_disorders_female
+    type: Float
+  - name: prevalence_mental_health_disorders_both
+    type: Float
+  - name: prevalence_mental_health_disorders_male
+    type: Float
+  - name: prevalence_mental_health_disorders_female
+    type: Float
+  - name: prevalence_alcohol_and_substance_use_disorders_both
+    type: Float
+  - name: prevalence_alcohol_and_substance_use_disorders_male
+    type: Float
+  - name: prevalence_alcohol_and_substance_use_disorders_female
+    type: Float
+  - name: prevalence_alcohol_and_substance_use_disorders_both
+    type: Float
+  - name: prevalence_alcohol_and_substance_use_disorders_male
+    type: Float
+  - name: prevalence_alcohol_and_substance_use_disorders_female
+    type: Float
+  - name: deaths_alcohol_and_substance_use_disorders
+    type: Float
+  - name: deaths_alcohol_and_substance_use_disorders
+    type: Float
+  - name: dalys
+    type: Float
+  - name: dalys
+    type: Float
+  - name: dalys
+    type: Float
+  - name: dalys
+    type: Float

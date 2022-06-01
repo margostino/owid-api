@@ -1,0 +1,11 @@
+name: us_female_labor_force_participation_1890_2005_olivetti
+description: ""
+data_path: US Female Labor Force Participation 1890-2005 - Olivetti (2013).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: female_labor_force_participation
+    type: Float

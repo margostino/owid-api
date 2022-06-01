@@ -1,0 +1,12 @@
+name: globalization_over_5_centuries_pwt_9
+description: ""
+data_path: Globalization over 5 centuries - PWT 9.0, Klasing & Milionis (2014), and
+    Estevadeordal, Frantz, and Taylor (2003).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: world_trade
+    type: Float

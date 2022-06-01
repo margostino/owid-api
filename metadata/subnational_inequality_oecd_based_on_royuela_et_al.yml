@@ -1,0 +1,16 @@
+name: subnational_inequality_oecd_based_on_royuela_et_al
+description: Each observation corresponds to a different sub-national region. France,
+    for example, is divided in 22 different regions. The source notes that these regions
+    correspond in most cases to the principal sub-national unit of government (states
+    or provinces) 
+data_path: Subnational inequality - OECD based on Royuela et al. (2014)).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: oecd_subnational_gini_coefficients
+    type: Float
+  - name: average_annual_growth_rate_of_gdp_per_capita
+    type: Float

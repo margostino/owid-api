@@ -1,0 +1,66 @@
+name: diet_compositions_by_specific_food_commodities_fao
+description: |-
+    Data represents the average daily per capita supply of calories from the range of food commodities. Note that these figures do not correct for waste at the household/consumption level so may not directly reflect the quantity of food finally consumed by a given individual.
+
+    Values given for commodities include supply provided in its raw form, as well as products derived from this commodity (for example, figures for 'wheat' are inclusive of wheat consumed in its raw form as well as derivative products such as bread).
+
+    Figures for Former Soviet Union states have been allocated the average food supply figures of the USSR for the period 1961-1991, then their respective national values from there onwards.
+data_path: Diet compositions by specific food commodities - FAO (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: alcoholic_beverages
+    type: Float
+  - name: animal_fats
+    type: Float
+  - name: barley
+    type: Float
+  - name: bovine_meat
+    type: Float
+  - name: cereals_other
+    type: Float
+  - name: eggs
+    type: Float
+  - name: fish_and_seafood
+    type: Float
+  - name: fruit
+    type: Float
+  - name: maize
+    type: Float
+  - name: meat_other
+    type: Float
+  - name: milk
+    type: Float
+  - name: miscellaneous
+    type: Float
+  - name: mutton_and_goat_meat
+    type: Float
+  - name: oilcrops
+    type: Float
+  - name: pigmeat
+    type: Float
+  - name: poultry_meat
+    type: Float
+  - name: pulses
+    type: Float
+  - name: rice
+    type: Float
+  - name: starchy_roots
+    type: Float
+  - name: sugar_and_sweeteners
+    type: Float
+  - name: sugar_crops
+    type: Float
+  - name: nuts_and_seeds
+    type: Float
+  - name: vegetable_oils
+    type: Float
+  - name: vegetables
+    type: Float
+  - name: wheat
+    type: Float
+  - name: treenuts
+    type: Float

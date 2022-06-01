@@ -1,0 +1,12 @@
+name: food_prices_expressed_in_hourly_wages_u
+description: ""
+data_path: Food Prices expressed in hourly wages - U.S. Bureau of Labor Statistics
+    (2015).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: food_prices_expressed_in_hourly_wages
+    type: Float

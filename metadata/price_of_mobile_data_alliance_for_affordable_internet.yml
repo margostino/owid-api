@@ -1,0 +1,11 @@
+name: price_of_mobile_data_alliance_for_affordable_internet
+description: ""
+data_path: Price of mobile data - Alliance for Affordable Internet (2019).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: cost_of_1gb_of_mobile_data
+    type: Float

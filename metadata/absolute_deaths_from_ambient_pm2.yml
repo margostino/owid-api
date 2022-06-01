@@ -1,0 +1,11 @@
+name: absolute_deaths_from_ambient_pm2
+description: ""
+data_path: Absolute deaths from ambient PM2.5 air pollution- State of Global Air.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: absolute_deaths_from_ambient_pm2
+    type: Float

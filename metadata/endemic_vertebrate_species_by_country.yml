@@ -1,0 +1,60 @@
+name: endemic_vertebrate_species_by_country
+description: "Data denotes the number of endemic vertebrate species within a given
+    organism group by country. Endemic species are those which are known to naturally
+    occur in only one country. \n\nAlso available is the number of these endemic species
+    which are categorised as 'threatened'.  'Threatened' species are those in any
+    of the three Red List categories: Critically Endangered, Endangered, or Vulnerable.
+    They are considered high or greater risk of extinction in the wild.\n\nThis data
+    is only given for the more comprehensively assessed species groups (i.e., where
+    >80% of the species in the group have been assessed)."
+data_path: Endemic vertebrate species by country (IUCN, 2020).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: mammals
+    type: Float
+  - name: mammals
+    type: Float
+  - name: birds
+    type: Float
+  - name: birds
+    type: Float
+  - name: crocodiles_and_alligators
+    type: Float
+  - name: crocodiles_and_alligators
+    type: Float
+  - name: chameleons
+    type: Float
+  - name: chameleons
+    type: Float
+  - name: amphibians
+    type: Float
+  - name: amphibians
+    type: Float
+  - name: groupers
+    type: Float
+  - name: groupers
+    type: Float
+  - name: herrings_anchovies_etc
+    type: Float
+  - name: herrings_anchovies_etc
+    type: Float
+  - name: seahorses_and_pipefishes
+    type: Float
+  - name: seahorses_and_pipefishes
+    type: Float
+  - name: sturgeons
+    type: Float
+  - name: sturgeons
+    type: Float
+  - name: wrasses_and_parrotfishes
+    type: Float
+  - name: wrasses_and_parrotfishes
+    type: Float
+  - name: sharks_and_rays
+    type: Float
+  - name: sharks_and_rays
+    type: Float

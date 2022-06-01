@@ -1,0 +1,11 @@
+name: guinea_worm_who_certification_status_who_2018
+description: ""
+data_path: Guinea worm WHO certification status - WHO 2018.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: guinea_worm_certification_status
+    type: Float

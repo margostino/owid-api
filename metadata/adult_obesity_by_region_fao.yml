@@ -1,0 +1,14 @@
+name: adult_obesity_by_region_fao
+description: |-
+    Obesity is defined as having a body-mass index (BMI) greater than 30 kg per m2.
+
+    This data presents the prevalence of obesity in adults (male and female) aged 18 and above.
+data_path: Adult obesity by region - FAO (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: prevalence_of_obesity_in_adults
+    type: Float

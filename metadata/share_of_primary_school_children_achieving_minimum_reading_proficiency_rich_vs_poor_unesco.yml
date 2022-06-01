@@ -1,0 +1,14 @@
+name: share_of_primary_school_children_achieving_minimum_reading_proficiency_rich_vs_poor_unesco
+description: ""
+data_path: Share of primary-school children achieving minimum reading proficiency,
+    rich vs poor - UNESCO.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: share_of_children_who_passed_the_minimum_pasec_proficiency_level_poor
+    type: Float
+  - name: share_of_children_who_passed_the_minimum_pasec_proficiency_level_rich
+    type: Float

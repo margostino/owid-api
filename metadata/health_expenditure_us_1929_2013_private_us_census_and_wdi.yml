@@ -1,0 +1,11 @@
+name: health_expenditure_us_1929_2013_private_us_census_and_wdi
+description: ""
+data_path: Health Expenditure US 1929-2013 Private - US Census and WDI (2013).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: us_health_expenditure_private
+    type: Float

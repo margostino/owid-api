@@ -1,0 +1,16 @@
+name: households_using_solid_fuels_for_cooking
+description: |4+
+
+    	Data presents the percentage of households using solid fuels (wood, crop residues, dung, charcoal, and coal) for cooking by region. This data has been aggregated by urban vs. rural households.
+
+data_path: Households using solid fuels for cooking (Urban vs. Rural) - UN.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: urban
+    type: Float
+  - name: rural
+    type: Float

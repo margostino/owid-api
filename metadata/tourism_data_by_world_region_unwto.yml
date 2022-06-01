@@ -1,0 +1,13 @@
+name: tourism_data_by_world_region_unwto
+description: |+
+    The UNWTO World Tourism Barometer monitors short-term tourism trends on a regular basis to provide global tourism stakeholders with up-to-date analysis on international tourism.
+
+data_path: Tourism data by World Region - UNWTO (2019).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: international_tourist_arrivals
+    type: Float

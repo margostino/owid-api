@@ -1,0 +1,9 @@
+name: co2_emissions_per_capita_cdiac
+description: ""
+data_path: CO2 emissions per capita- CDIAC.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables: []

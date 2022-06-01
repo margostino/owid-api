@@ -1,0 +1,12 @@
+name: human_height_university_of_tuebingen
+description: Historical heights of soldiers, conscripts, prisoners and others. Please
+    consult the sources for details for each country.
+data_path: Human Height - University of Tuebingen (2015).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: human_height
+    type: Float

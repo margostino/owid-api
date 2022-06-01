@@ -1,0 +1,58 @@
+name: land_use_data_hyde
+description: |-
+    The authors of the database provide the following definition clarifications for land use categories:
+
+    'Cropland' refers to the same FAO category titled 'arable land and permanent crops'.
+
+    'Grazing' refers to the FAO category titled 'permanent meadows and pastures'.
+
+    'Pastureland' refers to "Grazing land with an aridity index > 0.5, assumed to be more intensively managed".
+
+    'Rangeland' refers to "Grazing land with an aridity index > 0.5, assumed to be less or not managed".
+
+    Area values have been converted from square kilometres to hectares by multiplying by 100.
+
+    Full reference: Klein Goldewijk et al., 20xx (in prep). Or in full: Klein Goldewijk, K., A. Beusen, J.Doelman and E. Stehfest, New anthropogenic land use estimates for the Holocene; HYDE 3.2, in prep.
+data_path: Land Use Data - HYDE (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: cropland
+    type: Float
+  - name: grazing
+    type: Float
+  - name: total_irrigated_area
+    type: Float
+  - name: irrigated_non_rice_crops
+    type: Float
+  - name: irrigated_rice
+    type: Float
+  - name: pastureland
+    type: Float
+  - name: rangeland
+    type: Float
+  - name: total_rainfed_area
+    type: Float
+  - name: rainfed_non_rice_crops
+    type: Float
+  - name: total_rice_area
+    type: Float
+  - name: built_up_area
+    type: Float
+  - name: total_population
+    type: Float
+  - name: urban_population
+    type: Float
+  - name: rural_population
+    type: Float
+  - name: agricultural_area
+    type: Float
+  - name: cropland_per_capita
+    type: Float
+  - name: grazing_land_per_capita
+    type: Float
+  - name: agricultural_land_per_capita
+    type: Float

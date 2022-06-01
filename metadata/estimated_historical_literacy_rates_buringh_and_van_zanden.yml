@@ -1,0 +1,11 @@
+name: estimated_historical_literacy_rates_buringh_and_van_zanden
+description: See Table 9 (pg 434) for the original estimates.
+data_path: Estimated historical literacy rates - Buringh and Van Zanden (2009).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: estimated_literacy_rates
+    type: Float

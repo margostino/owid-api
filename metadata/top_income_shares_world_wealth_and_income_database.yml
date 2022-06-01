@@ -1,0 +1,11 @@
+name: top_income_shares_world_wealth_and_income_database
+description: ""
+data_path: Top income shares – World Wealth and Income Database (2018).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: share_of_top_1perc_in_pre_tax_national_income
+    type: Float

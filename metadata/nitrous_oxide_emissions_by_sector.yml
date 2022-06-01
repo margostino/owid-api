@@ -1,0 +1,48 @@
+name: nitrous_oxide_emissions_by_sector
+description: |-
+    Nitrous oxide (N2O) emissions are measured in tonnes of carbon dioxide equivalents (CO₂e), based on 100-year global warming potential factors for non-CO₂ gases.
+
+    This data is published by country and sector from the CAIT Climate Data Explorer, and downloaded from the Climate Watch Portal. Available here: https://www.climatewatchdata.org/data-explorer/historical-emissions
+data_path: Nitrous oxide emissions by sector (CAIT, 2021).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: agriculture
+    type: Float
+  - name: agriculture
+    type: Float
+  - name: energy
+    type: Float
+  - name: energy
+    type: Float
+  - name: fugitive_emissions
+    type: Float
+  - name: fugitive_emissions
+    type: Float
+  - name: industry
+    type: Float
+  - name: industry
+    type: Float
+  - name: land_use_change_and_forestry
+    type: Float
+  - name: land_use_change_and_forestry
+    type: Float
+  - name: other_fuel_combustion
+    type: Float
+  - name: other_fuel_combustion
+    type: Float
+  - name: total_excluding_lucf
+    type: Float
+  - name: total_excluding_lucf
+    type: Float
+  - name: total_including_lucf
+    type: Float
+  - name: total_including_lucf
+    type: Float
+  - name: waste
+    type: Float
+  - name: waste
+    type: Float

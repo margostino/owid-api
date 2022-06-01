@@ -1,0 +1,17 @@
+name: political_competition_and_participation
+description: ""
+data_path: Political Competition and Participation (How Was Life, OECD (2014)).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: political_participation
+    type: Float
+  - name: political_competition
+    type: Float
+  - name: index_of_democracy
+    type: Float
+  - name: polity2
+    type: Float

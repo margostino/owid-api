@@ -1,0 +1,12 @@
+name: government_spending_roine_vlachos_waldenstrom
+description: ""
+data_path: Government Spending – Roine, Vlachos, Waldenström (2009) and US Historical
+    Tables (2016).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: central_gov_expenditure
+    type: Float

@@ -1,0 +1,33 @@
+name: vaccine_coverage_and_disease_burden_who
+description: ""
+data_path: Vaccine Coverage and Disease Burden - WHO (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: bcg_immunization_coverage_among_1_year_olds
+    type: Float
+  - name: hepatitis_b
+    type: Float
+  - name: dtp3_immunization_coverage_among_1_year_olds
+    type: Float
+  - name: polio
+    type: Float
+  - name: measles
+    type: Float
+  - name: number_of_confirmed_tetanus_cases
+    type: Float
+  - name: number_confirmed_polio_cases
+    type: Float
+  - name: number_of_confirmed_pertussis_cases
+    type: Float
+  - name: number_of_confirmed_measles_cases
+    type: Float
+  - name: number_of_confirmed_diphtheria_cases
+    type: Float
+  - name: estimated_deaths_due_to_tuberculosis_per_100_000_population_excluding_hiv
+    type: Float
+  - name: estimated_number_of_deaths_due_to_tuberculosis_excluding_hiv
+    type: Float

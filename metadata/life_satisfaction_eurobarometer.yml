@@ -1,0 +1,13 @@
+name: life_satisfaction_eurobarometer
+description: The Eurobarometer provides estimates for dated surveys. In some years,
+    there are some countries with multiple surveys. In those cases, we provide yearly
+    averages.
+data_path: Life satisfaction – Eurobarometer (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: share_of_people_who_are_happy
+    type: Float

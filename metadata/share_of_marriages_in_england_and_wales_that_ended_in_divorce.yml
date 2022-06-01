@@ -1,0 +1,18 @@
+name: share_of_marriages_in_england_and_wales_that_ended_in_divorce
+description: |-
+    Data measures the percentage of marriages in England and Wales ending in divorce by anniversary and year of marriage.
+
+    The UK Office for National Statistics notes the following points:
+    – When calculating these percentages, it has been assumed that the couples who married each year have not moved out of England and Wales, couples who divorced each year have not moved into England and Wales since getting married, and couples marry in the country where they usually live.
+
+    – The Divorce Reform Act 1969, which came into effect on 1 January 1971, made it easier for couples to divorce upon separation.
+data_path: Share of marriages in England and Wales that ended in divorce (UK ONS,
+    2020).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: share_of_married_couples_that_had_divorced_in_england_and_wales
+    type: Float

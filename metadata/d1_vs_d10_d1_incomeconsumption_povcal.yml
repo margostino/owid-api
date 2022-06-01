@@ -1,0 +1,17 @@
+name: d1_vs_d10_d1_incomeconsumption_povcal
+description: ""
+data_path: D1 vs D10-D1 income/consumption – Povcal (2018).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: bottom_decile_incomeconsumption_per_day
+    type: Float
+  - name: difference_between_top_and_bottom_decile_incomeconsumption_per_day
+    type: Float
+  - name: world_bank_region
+    type: Float
+  - name: pop
+    type: Float

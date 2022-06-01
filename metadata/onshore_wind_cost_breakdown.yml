@@ -1,0 +1,28 @@
+name: onshore_wind_cost_breakdown
+description: |-
+    Cost breakdown of onshore wind energy projects in select countries, given as each component's share of total installed project costs.
+
+    This data is published in IRENA's report 'Renewable Power Generation Costs in 2017'. Available at: http://www.irena.org/publications/2018/Jan/Renewable-power-generation-costs-in-2017. IRENA retains copyright of the underlying data.
+data_path: Onshore wind cost breakdown (IRENA, 2018).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: civil_works
+    type: Float
+  - name: development
+    type: Float
+  - name: foundation
+    type: Float
+  - name: grid_connection
+    type: Float
+  - name: land
+    type: Float
+  - name: other
+    type: Float
+  - name: planning
+    type: Float
+  - name: wind_turbine
+    type: Float

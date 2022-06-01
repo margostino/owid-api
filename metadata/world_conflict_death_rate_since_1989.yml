@@ -1,0 +1,13 @@
+name: world_conflict_death_rate_since_1989
+description: Some sources release data only at the conflict level. In these cases
+    we have assumed an even death toll across the duration of the conflict and aggregated
+    by year across all conflicts.
+data_path: World conflict death rate since 1989 (various sources).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: conflict_deaths_per_100_000_world
+    type: Float

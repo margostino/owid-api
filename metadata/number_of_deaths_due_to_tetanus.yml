@@ -1,0 +1,11 @@
+name: number_of_deaths_due_to_tetanus
+description: ""
+data_path: Number of deaths due to tetanus.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: number_of_deaths_from_tetanus
+    type: Float

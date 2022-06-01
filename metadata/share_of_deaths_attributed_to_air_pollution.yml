@@ -1,0 +1,18 @@
+name: share_of_deaths_attributed_to_air_pollution
+description: |-
+    Share of total deaths which are attributed to to air pollution as a risk factor.
+
+    Figures for 'Outdoor air pollution' have been calculated by Our World in Data as the sum of figures from the IHME for 'Ambient ozone pollution' and 'Ambient particulate matter pollution'.
+data_path: Share of deaths attributed to air pollution (IHME, 2019).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: share_of_deaths_from_air_pollution
+    type: Float
+  - name: share_of_deaths_from_indoor_air_pollution
+    type: Float
+  - name: share_of_deaths_from_outdoor_air_pollution
+    type: Float

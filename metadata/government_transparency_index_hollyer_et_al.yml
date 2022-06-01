@@ -1,0 +1,18 @@
+name: government_transparency_index_hollyer_et_al
+description: |-
+    This dataset provides information on government transparency, as per the index by Hollyer et al. (2014).
+
+    A government is considered more transparent if it provides data on many measures included in the World Governance Indicators to the World Bank, even if other countries do not.
+data_path: Government Transparency index - Hollyer et al. (2014).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: gov_transparency
+    type: Float
+  - name: gov_transparency_upper
+    type: Float
+  - name: gov_transparency_lower
+    type: Float

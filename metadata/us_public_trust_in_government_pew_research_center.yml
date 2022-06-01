@@ -1,0 +1,12 @@
+name: us_public_trust_in_government_pew_research_center
+description: For those years with estimates from more than one poll, the reported
+    figure corresponds to the average for that year.
+data_path: US - Public Trust in Government - Pew Research Center.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: public_trust_government
+    type: Float

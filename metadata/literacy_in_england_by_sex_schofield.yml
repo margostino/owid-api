@@ -1,0 +1,16 @@
+name: literacy_in_england_by_sex_schofield
+description: 'See Table 1 (pg 204) for original figures. Table 1 provides the percentage
+    who are illiterate. To arrive at current estimates: % who are literate = 100 -
+    (% who are illiterate)'
+data_path: Literacy in England, by sex - Schofield (1973), Houston (1982), Cressy
+    (1980) .csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: male_literacy_rate
+    type: Float
+  - name: female_literacy_rate
+    type: Float

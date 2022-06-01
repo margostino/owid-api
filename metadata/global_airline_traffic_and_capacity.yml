@@ -1,0 +1,33 @@
+name: global_airline_traffic_and_capacity
+description: |
+    Global airline traffic and capacity data is sourced from 'Airlines for America': https://www.airlines.org/dataset/world-airlines-traffic-and-capacity
+
+    The source notes that:
+    "Traffic and operations data below reflects the systemwide scheduled activity of passenger and cargo airlines operating worldwide, as recorded by ICAO; domestic operations within the former USSR are excluded prior to 1970."
+data_path: Global airline traffic and capacity (ICAO, 2020).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: aircraft_departures
+    type: Float
+  - name: aircraft_travel_distance
+    type: Float
+  - name: available_seat_kilometers_asks
+    type: Float
+  - name: cargo_revenue_tonne_kilometres_rtks
+    type: Float
+  - name: freight_revenue_tonne_kilometres_rtks
+    type: Float
+  - name: freight_tonnes
+    type: Float
+  - name: mail_revenue_tonne_kilometers_rtks
+    type: Float
+  - name: number_of_passengers
+    type: Float
+  - name: passenger_load_factor
+    type: Float
+  - name: revenue_passenger_kilometers
+    type: Float

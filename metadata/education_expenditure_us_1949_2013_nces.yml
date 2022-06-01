@@ -1,0 +1,13 @@
+name: education_expenditure_us_1949_2013_nces
+description: ""
+data_path: Education Expenditure US 1949-2013 - NCES (2014).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: private_education_expenditure_in_the_us
+    type: Float
+  - name: public_education_expenditure_in_the_us
+    type: Float

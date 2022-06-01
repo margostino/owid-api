@@ -1,0 +1,13 @@
+name: child_labor_uk
+description: ""
+data_path: Child Labor UK (historic) - Cunningham, H. and Viazzo, P.P. (1996).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: child_labor_uk
+    type: Float
+  - name: child_labor_uk
+    type: Float

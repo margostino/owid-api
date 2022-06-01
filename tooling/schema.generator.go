@@ -1,7 +1,9 @@
-package main
+package tooling
 
 import (
 	"fmt"
+	"github.com/margostino/owid-api/common"
+	"github.com/margostino/owid-api/configuration"
 	"gopkg.in/yaml.v3"
 	"io/ioutil"
 	"log"
@@ -10,30 +12,20 @@ import (
 	"strings"
 )
 
-type Variable struct {
-	Name string `yaml:"name"`
-	Type string `yaml:"type"`
-}
+const COMMENT_BLOCK_BEGIN = "\"\"\""
+const COMMENT_BLOCK_END = "\"\"\""
 
-type Metadata struct {
-	Name        string      `yaml:"name"`
-	Description string      `yaml:"description"`
-	Arguments   []*Variable `yaml:"arguments"`
-	Variables   []*Variable `yaml:"variables"`
-}
-
-func main() {
+func GenerateSchema() {
+	a := "6₆"
+	if strings.HasSuffix(a, "₆") || strings.Contains(a, "U+208x") {
+		println("dsmk")
+	}
+	config := configuration.GetConfig()
 	var metadata Metadata
 	var schema string
-	//INDENTATION := "    "
-	COMMENT_BLOCK_BEGIN := "\"\"\""
-	COMMENT_BLOCK_END := "\"\"\""
-	//metadataFile := "/Users/martin.dagostino/workspace/margostino/owid-api/graph/metadata/o20th_century_deaths_in_us_cdc.yml"
-	metadataFolder := "/Users/martin.dagostino/workspace/margostino/owid-api/graph/metadata"
-	schemaFile := "/Users/martin.dagostino/workspace/margostino/owid-api/graph/schema.graphql"
 	var queryVariables = make([]string, 0)
 
-	filepath.Walk(metadataFolder, func(path string, info os.FileInfo, err error) error {
+	filepath.Walk(config.MetadataPath, func(path string, info os.FileInfo, err error) error {
 		var argumentsList = make([]string, 0)
 		if err != nil {
 			log.Fatalf(err.Error())
@@ -42,12 +34,10 @@ func main() {
 			var normalizedTypeNameParts = make([]string, 0)
 			fmt.Printf("File Name: %s \n", path)
 			ymlFile, err := ioutil.ReadFile(path)
-			check(err)
+			common.Check(err)
 			ymlFile = []byte(os.ExpandEnv(string(ymlFile)))
 			err = yaml.Unmarshal(ymlFile, &metadata)
-			check(err)
-
-			//typeName := metadata.Name + "Dataset"
+			common.Check(err)
 			typeNameParts := strings.Split(metadata.Name, "_")
 			for _, typeNamePart := range typeNameParts {
 				normalizedTypeNameParts = append(normalizedTypeNameParts, strings.Title(strings.ToLower(typeNamePart)))
@@ -56,7 +46,7 @@ func main() {
 
 			description := metadata.Description
 			for _, argument := range metadata.Arguments {
-				argumentsList = append(argumentsList, fmt.Sprintf("%s: %s", argument.Name, argument.Type))
+				argumentsList = append(argumentsList, fmt.Sprintf("%s: %s!", argument.Name, argument.Type))
 			}
 			arguments := strings.Join(argumentsList[:], ", ")
 			if description != "" {
@@ -84,15 +74,9 @@ func main() {
 	schema += "schema {\n query: Query\n}"
 	println(schema)
 
-	file, err := os.Create(schemaFile)
-	check(err)
+	file, err := os.OpenFile(config.SchemaFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
+	common.Check(err)
 	defer file.Close()
 	_, err2 := file.WriteString(schema)
-	check(err2)
-}
-
-func check(err error) {
-	if err != nil {
-		log.Fatalf("failed to create new schema, error: %v", err)
-	}
+	common.Check(err2)
 }

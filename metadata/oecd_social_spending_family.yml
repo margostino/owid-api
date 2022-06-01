@@ -1,0 +1,12 @@
+name: oecd_social_spending_family
+description: Dimension of social spending given as the percentage of a country's gross
+    domestic product (%GDP)
+data_path: OECD Social Spending- Family.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: family
+    type: Float

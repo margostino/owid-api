@@ -1,0 +1,16 @@
+name: pieces_of_mail_and_number_of_post_offices_united_states_postal_service
+description: ""
+data_path: Pieces of mail and number of post offices - United States Postal Service
+    (2018).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: pieces_of_mail_handled
+    type: Float
+  - name: number_of_post_offices
+    type: Float
+  - name: mail_handled_per_post_office
+    type: Float

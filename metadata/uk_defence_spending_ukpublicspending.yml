@@ -1,0 +1,13 @@
+name: uk_defence_spending_ukpublicspending
+description: Historical data provided by International Historical Statistics (Brian
+    Mitchell) and the Measuring Worth project (measuringworth.com). Recent data comes
+    from official sources (Office for Budget Responsibility and HM Treasury).
+data_path: UK Defence Spending - ukpublicspending.com .csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: defence_spending_as_a_percent_of_gdp
+    type: Float

@@ -1,0 +1,18 @@
+name: mental_health_as_risk_factor_for_substance_use_swendsen_et_al
+description: |-
+    Data denotes the increased risk of developing a substance use disorder in individuals with a mental health disorder relative to those without, based on a study on over 5000 individuals over a 10-year period.
+
+    Full data with confidence intervals can be found at: https://ourworldindata.org/mental-health-disorders-as-risk-for-substance-use
+data_path: Mental health as risk factor for substance use - Swendsen et al. (2010).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: increased_risk_of_nicotine_dependency
+    type: Float
+  - name: increased_risk_of_alcohol_dependency
+    type: Float
+  - name: increased_risk_of_illicit_drug_dependency
+    type: Float

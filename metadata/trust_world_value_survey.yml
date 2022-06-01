@@ -1,0 +1,11 @@
+name: trust_world_value_survey
+description: ""
+data_path: Trust – World Value Survey.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: trust_in_others
+    type: Float

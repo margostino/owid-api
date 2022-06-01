@@ -1,0 +1,11 @@
+name: human_development_index_undp
+description: ""
+data_path: Human Development Index - UNDP.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: human_development_index
+    type: Float

@@ -1,0 +1,12 @@
+name: number_of_published_titles_simons
+description: A “title” is for the editors of the ESTC an edition. The eight editions
+    of Robinson Crusoe published in 1719 create eight ESTC-entries
+data_path: Number of published titles - Simons (2001).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: number_of_published_titles
+    type: Float

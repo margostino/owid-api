@@ -1,0 +1,9 @@
+name: air_pollution_death_rate_world_ihme
+description: ""
+data_path: Air pollution death rate- world- IHME.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables: []

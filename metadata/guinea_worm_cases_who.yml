@@ -1,0 +1,13 @@
+name: guinea_worm_cases_who
+description: We excluded all countries that the WHO labelled as "guinea worm not endemic
+    in the 1980s" from this dataset as these countries never documented any cases
+    of guinea worm disease.
+data_path: Guinea Worm Cases - WHO (2018).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: guinea_worm_cases
+    type: Float

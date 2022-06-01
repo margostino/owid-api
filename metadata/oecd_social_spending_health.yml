@@ -1,0 +1,12 @@
+name: oecd_social_spending_health
+description: Dimension of social spending given as the percentage of a country's gross
+    domestic product (%GDP)
+data_path: OECD Social Spending- Health.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: health
+    type: Float

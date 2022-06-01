@@ -1,0 +1,13 @@
+name: percentage_of_adults_living_alone_in_the_us_and_canada_us_census_bureau_and_statistics_canada
+description: 'Data for the United States corresponds to population aged 18 and over.
+    Data for Canada corresponds to population aged 15 and over. '
+data_path: Percentage of adults living alone in the US and Canada- US Census Bureau
+    & Statistics Canada.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: percentage_of_adults_living_alone
+    type: Float

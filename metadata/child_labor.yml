@@ -1,0 +1,21 @@
+name: child_labor
+description: ""
+data_path: Child Labor (World ILO) - ILO (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: child_labor
+    type: Float
+  - name: child_labor
+    type: Float
+  - name: child_labor
+    type: Float
+  - name: children
+    type: Float
+  - name: children
+    type: Float
+  - name: child_labor
+    type: Float

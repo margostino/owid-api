@@ -1,0 +1,31 @@
+name: co2_gdp_coupling_owid_based_on_world_bank
+description: ""
+data_path: CO2-GDP Coupling - OWID based on World Bank.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: gdp_per_capita
+    type: Float
+  - name: gdp
+    type: Float
+  - name: population
+    type: Float
+  - name: co2_emissions
+    type: Float
+  - name: co2_emissions_per_capita
+    type: Float
+  - name: methane_emissions
+    type: Float
+  - name: methane_emissions_per_capita
+    type: Float
+  - name: nitrous_oxide_emissions
+    type: Float
+  - name: nitrous_oxide_per_capita
+    type: Float
+  - name: energy_use_per_capita
+    type: Float
+  - name: energy_use
+    type: Float

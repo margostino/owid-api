@@ -1,0 +1,14 @@
+name: neglected_tropical_diseases
+description: ""
+data_path: Neglected Tropical Diseases (Lymphatic Filariasis) Population requiring
+    PC not-treated and treated - Enric Jané (2016).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: reported_number_of_people_treated
+    type: Float
+  - name: population_requiring_pc_for_lf_but_not_treated
+    type: Float

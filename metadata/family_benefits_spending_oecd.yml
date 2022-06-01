@@ -1,0 +1,9 @@
+name: family_benefits_spending_oecd
+description: ""
+data_path: Family Benefits Spending - OECD (2016).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables: []

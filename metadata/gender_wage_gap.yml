@@ -1,0 +1,11 @@
+name: gender_wage_gap
+description: ""
+data_path: Gender wage gap (assigning zeros for no work).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: womens_income_as_a_percent_of_mens
+    type: Float
