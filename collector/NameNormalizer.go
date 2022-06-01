@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -21,7 +23,8 @@ func (normalizer *NameNormalizer) Normalize() string {
 		replace("%", "perc").
 		replace(".", "").
 		replace(" ", "_").
-		cleanTail().
+		sanitizeHead().
+		sanitizeTail().
 		value
 }
 
@@ -30,7 +33,14 @@ func (normalizer *NameNormalizer) toLowercase() *NameNormalizer {
 	return normalizer
 }
 
-func (normalizer *NameNormalizer) cleanTail() *NameNormalizer {
+func (normalizer *NameNormalizer) sanitizeHead() *NameNormalizer {
+	if _, err := strconv.Atoi(normalizer.value[0:1]); err == nil {
+		normalizer.value = fmt.Sprintf("o%s", normalizer.value)
+	}
+	return normalizer
+}
+
+func (normalizer *NameNormalizer) sanitizeTail() *NameNormalizer {
 	if strings.HasSuffix(normalizer.value, "_") {
 		normalizer.value = normalizer.value[:len(normalizer.value)-len("_")]
 	}

@@ -43,8 +43,14 @@ type DirectiveRoot struct {
 }
 
 type ComplexityRoot struct {
+	O20thCenturyDeathsInUsCdcDataset struct {
+		AccidentsExclRoadDeaths func(childComplexity int) int
+		AccidentsTotalDeaths    func(childComplexity int) int
+	}
+
 	Query struct {
-		TimeUseInSweden func(childComplexity int, entity string, year int) int
+		O20thCenturyDeathsInUsCdc func(childComplexity int, entity string, year int) int
+		TimeUseInSweden           func(childComplexity int, entity string, year int) int
 	}
 
 	TimeUseInSwedenDataset struct {
@@ -58,6 +64,7 @@ type ComplexityRoot struct {
 }
 
 type QueryResolver interface {
+	O20thCenturyDeathsInUsCdc(ctx context.Context, entity string, year int) (*model.O20thCenturyDeathsInUsCdcDataset, error)
 	TimeUseInSweden(ctx context.Context, entity string, year int) (*model.TimeUseInSwedenDataset, error)
 }
 
@@ -75,6 +82,32 @@ func (e *executableSchema) Complexity(typeName, field string, childComplexity in
 	ec := executionContext{nil, e}
 	_ = ec
 	switch typeName + "." + field {
+
+	case "O20thCenturyDeathsInUsCdcDataset.accidents_excl_road_deaths":
+		if e.complexity.O20thCenturyDeathsInUsCdcDataset.AccidentsExclRoadDeaths == nil {
+			break
+		}
+
+		return e.complexity.O20thCenturyDeathsInUsCdcDataset.AccidentsExclRoadDeaths(childComplexity), true
+
+	case "O20thCenturyDeathsInUsCdcDataset.accidents_total_deaths":
+		if e.complexity.O20thCenturyDeathsInUsCdcDataset.AccidentsTotalDeaths == nil {
+			break
+		}
+
+		return e.complexity.O20thCenturyDeathsInUsCdcDataset.AccidentsTotalDeaths(childComplexity), true
+
+	case "Query.o20th_century_deaths_in_us_cdc":
+		if e.complexity.Query.O20thCenturyDeathsInUsCdc == nil {
+			break
+		}
+
+		args, err := ec.field_Query_o20th_century_deaths_in_us_cdc_args(context.TODO(), rawArgs)
+		if err != nil {
+			return 0, false
+		}
+
+		return e.complexity.Query.O20thCenturyDeathsInUsCdc(childComplexity, args["entity"].(string), args["year"].(int)), true
 
 	case "Query.time_use_in_sweden":
 		if e.complexity.Query.TimeUseInSweden == nil {
@@ -183,25 +216,40 @@ func (ec *executionContext) introspectType(name string) (*introspection.Type, er
 
 var sources = []*ast.Source{
 	{Name: "../schema.graphql", Input: `"""
-Time use in Sweden - Statistics Sweden.
+Data is compiled based on the list of top 10 causes of death published by the Centre for Diseases Control (CDC).
+This is measured across both sexes and all ages.
+Death rates are reported per 100,000 and are not age-standardized.Data for specific causes of death may be missing or intermittent where it enters or falls out of the top 10 reported causes of deaths in any year.
+"""
+type O20thCenturyDeathsInUsCdcDataset {
+  accidents_excl_road_deaths: Int
+  accidents_total_deaths: Int
+}
+
+"""
+Time spent on activities has been categorised under six main headings: gainful employment, personal needs, housework, leisure, studies, and other activities.
+The definition for each activity is outlined below:<ul><li>Gainful employment includes time spent at work and time spent commuting to and from work.
+</li><li>Personal needs includes meals, personal care, and travel for personal needs.
+</li><li>Housework includes cooking, washing, ironing, cleaning, caring for own children, caring for others, maintenance work, purchase of goods and services, other housework, and related travel.</li><li>Leisure time includes sports and outdoor activities, TV and radio, hobbies, entertainment, cultural, and social activities, other free time, and related travel.
+</li><li>Study time includes time spent studying and travel for studies.
+</li></ul>For the original data, see Table 1 in the <a href="http://www.scb.se/statistik/_publikationer/LE0103_1990I91_BR_LE80SA9201.pdf" rel="noopener" target="_blank">1990 Sweden Statistics time use report</a>; Table B:4 in the <a href="http://www.scb.se/statistik/LE/LE0103/2003M00/LE99SA0301.pdf" rel="noopener" target="_blank">2000 report</a>; and Table B:1a in the <a href="http://www.scb.se/statistik/_publikationer/LE0103_2010A01_BR_LE123BR1201.pdf" rel="noopener" target="_blank">2010 report</a>.
 """
 type TimeUseInSwedenDataset {
-  time_allocation_weekday_women: Float!
-  time_allocation_weekend_women: Float!
-  time_allocation_weekday_men: Float!
-  time_allocation_weekend_men: Float!
-  time_allocation_average_day_women: Float!
-  time_allocation_average_day_men: Float!
+  time_allocation_weekday_women: Float
+  time_allocation_weekend_women: Float
+  time_allocation_weekday_men: Float
+  time_allocation_weekend_men: Float
+  time_allocation_average_day_women: Float
+  time_allocation_average_day_men: Float
 }
 
 type Query {
-  time_use_in_sweden(entity: String!, year: Int!): TimeUseInSwedenDataset!
+  o20th_century_deaths_in_us_cdc(entity: String!, year: Int!):O20thCenturyDeathsInUsCdcDataset!
+  time_use_in_sweden(entity: String!, year: Int!):TimeUseInSwedenDataset!
 }
 
 schema {
   query: Query
-}
-`, BuiltIn: false},
+}`, BuiltIn: false},
 }
 var parsedSchema = gqlparser.MustLoadSchema(sources...)
 
@@ -221,6 +269,30 @@ func (ec *executionContext) field_Query___type_args(ctx context.Context, rawArgs
 		}
 	}
 	args["name"] = arg0
+	return args, nil
+}
+
+func (ec *executionContext) field_Query_o20th_century_deaths_in_us_cdc_args(ctx context.Context, rawArgs map[string]interface{}) (map[string]interface{}, error) {
+	var err error
+	args := map[string]interface{}{}
+	var arg0 string
+	if tmp, ok := rawArgs["entity"]; ok {
+		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("entity"))
+		arg0, err = ec.unmarshalNString2string(ctx, tmp)
+		if err != nil {
+			return nil, err
+		}
+	}
+	args["entity"] = arg0
+	var arg1 int
+	if tmp, ok := rawArgs["year"]; ok {
+		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("year"))
+		arg1, err = ec.unmarshalNInt2int(ctx, tmp)
+		if err != nil {
+			return nil, err
+		}
+	}
+	args["year"] = arg1
 	return args, nil
 }
 
@@ -285,6 +357,149 @@ func (ec *executionContext) field___Type_fields_args(ctx context.Context, rawArg
 // endregion ************************** directives.gotpl **************************
 
 // region    **************************** field.gotpl *****************************
+
+func (ec *executionContext) _O20thCenturyDeathsInUsCdcDataset_accidents_excl_road_deaths(ctx context.Context, field graphql.CollectedField, obj *model.O20thCenturyDeathsInUsCdcDataset) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_O20thCenturyDeathsInUsCdcDataset_accidents_excl_road_deaths(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (interface{}, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.AccidentsExclRoadDeaths, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*int)
+	fc.Result = res
+	return ec.marshalOInt2ᚖint(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_O20thCenturyDeathsInUsCdcDataset_accidents_excl_road_deaths(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "O20thCenturyDeathsInUsCdcDataset",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Int does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _O20thCenturyDeathsInUsCdcDataset_accidents_total_deaths(ctx context.Context, field graphql.CollectedField, obj *model.O20thCenturyDeathsInUsCdcDataset) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_O20thCenturyDeathsInUsCdcDataset_accidents_total_deaths(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (interface{}, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.AccidentsTotalDeaths, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*int)
+	fc.Result = res
+	return ec.marshalOInt2ᚖint(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_O20thCenturyDeathsInUsCdcDataset_accidents_total_deaths(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "O20thCenturyDeathsInUsCdcDataset",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Int does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Query_o20th_century_deaths_in_us_cdc(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Query_o20th_century_deaths_in_us_cdc(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (interface{}, error) {
+		ctx = rctx // use context from middleware stack in children
+		return ec.resolvers.Query().O20thCenturyDeathsInUsCdc(rctx, fc.Args["entity"].(string), fc.Args["year"].(int))
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		if !graphql.HasFieldError(ctx, fc) {
+			ec.Errorf(ctx, "must not be null")
+		}
+		return graphql.Null
+	}
+	res := resTmp.(*model.O20thCenturyDeathsInUsCdcDataset)
+	fc.Result = res
+	return ec.marshalNO20thCenturyDeathsInUsCdcDataset2ᚖgithubᚗcomᚋmargostinoᚋowidᚑapiᚋgraphᚋmodelᚐO20thCenturyDeathsInUsCdcDataset(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Query_o20th_century_deaths_in_us_cdc(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Query",
+		Field:      field,
+		IsMethod:   true,
+		IsResolver: true,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			switch field.Name {
+			case "accidents_excl_road_deaths":
+				return ec.fieldContext_O20thCenturyDeathsInUsCdcDataset_accidents_excl_road_deaths(ctx, field)
+			case "accidents_total_deaths":
+				return ec.fieldContext_O20thCenturyDeathsInUsCdcDataset_accidents_total_deaths(ctx, field)
+			}
+			return nil, fmt.Errorf("no field named %q was found under type O20thCenturyDeathsInUsCdcDataset", field.Name)
+		},
+	}
+	defer func() {
+		if r := recover(); r != nil {
+			err = ec.Recover(ctx, r)
+			ec.Error(ctx, err)
+		}
+	}()
+	ctx = graphql.WithFieldContext(ctx, fc)
+	if fc.Args, err = ec.field_Query_o20th_century_deaths_in_us_cdc_args(ctx, field.ArgumentMap(ec.Variables)); err != nil {
+		ec.Error(ctx, err)
+		return
+	}
+	return fc, nil
+}
 
 func (ec *executionContext) _Query_time_use_in_sweden(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
 	fc, err := ec.fieldContext_Query_time_use_in_sweden(ctx, field)
@@ -505,14 +720,11 @@ func (ec *executionContext) _TimeUseInSwedenDataset_time_allocation_weekday_wome
 		return graphql.Null
 	}
 	if resTmp == nil {
-		if !graphql.HasFieldError(ctx, fc) {
-			ec.Errorf(ctx, "must not be null")
-		}
 		return graphql.Null
 	}
-	res := resTmp.(float64)
+	res := resTmp.(*float64)
 	fc.Result = res
-	return ec.marshalNFloat2float64(ctx, field.Selections, res)
+	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_TimeUseInSwedenDataset_time_allocation_weekday_women(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -549,14 +761,11 @@ func (ec *executionContext) _TimeUseInSwedenDataset_time_allocation_weekend_wome
 		return graphql.Null
 	}
 	if resTmp == nil {
-		if !graphql.HasFieldError(ctx, fc) {
-			ec.Errorf(ctx, "must not be null")
-		}
 		return graphql.Null
 	}
-	res := resTmp.(float64)
+	res := resTmp.(*float64)
 	fc.Result = res
-	return ec.marshalNFloat2float64(ctx, field.Selections, res)
+	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_TimeUseInSwedenDataset_time_allocation_weekend_women(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -593,14 +802,11 @@ func (ec *executionContext) _TimeUseInSwedenDataset_time_allocation_weekday_men(
 		return graphql.Null
 	}
 	if resTmp == nil {
-		if !graphql.HasFieldError(ctx, fc) {
-			ec.Errorf(ctx, "must not be null")
-		}
 		return graphql.Null
 	}
-	res := resTmp.(float64)
+	res := resTmp.(*float64)
 	fc.Result = res
-	return ec.marshalNFloat2float64(ctx, field.Selections, res)
+	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_TimeUseInSwedenDataset_time_allocation_weekday_men(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -637,14 +843,11 @@ func (ec *executionContext) _TimeUseInSwedenDataset_time_allocation_weekend_men(
 		return graphql.Null
 	}
 	if resTmp == nil {
-		if !graphql.HasFieldError(ctx, fc) {
-			ec.Errorf(ctx, "must not be null")
-		}
 		return graphql.Null
 	}
-	res := resTmp.(float64)
+	res := resTmp.(*float64)
 	fc.Result = res
-	return ec.marshalNFloat2float64(ctx, field.Selections, res)
+	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_TimeUseInSwedenDataset_time_allocation_weekend_men(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -681,14 +884,11 @@ func (ec *executionContext) _TimeUseInSwedenDataset_time_allocation_average_day_
 		return graphql.Null
 	}
 	if resTmp == nil {
-		if !graphql.HasFieldError(ctx, fc) {
-			ec.Errorf(ctx, "must not be null")
-		}
 		return graphql.Null
 	}
-	res := resTmp.(float64)
+	res := resTmp.(*float64)
 	fc.Result = res
-	return ec.marshalNFloat2float64(ctx, field.Selections, res)
+	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_TimeUseInSwedenDataset_time_allocation_average_day_women(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -725,14 +925,11 @@ func (ec *executionContext) _TimeUseInSwedenDataset_time_allocation_average_day_
 		return graphql.Null
 	}
 	if resTmp == nil {
-		if !graphql.HasFieldError(ctx, fc) {
-			ec.Errorf(ctx, "must not be null")
-		}
 		return graphql.Null
 	}
-	res := resTmp.(float64)
+	res := resTmp.(*float64)
 	fc.Result = res
-	return ec.marshalNFloat2float64(ctx, field.Selections, res)
+	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_TimeUseInSwedenDataset_time_allocation_average_day_men(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -2529,6 +2726,35 @@ func (ec *executionContext) fieldContext___Type_specifiedByURL(ctx context.Conte
 
 // region    **************************** object.gotpl ****************************
 
+var o20thCenturyDeathsInUsCdcDatasetImplementors = []string{"O20thCenturyDeathsInUsCdcDataset"}
+
+func (ec *executionContext) _O20thCenturyDeathsInUsCdcDataset(ctx context.Context, sel ast.SelectionSet, obj *model.O20thCenturyDeathsInUsCdcDataset) graphql.Marshaler {
+	fields := graphql.CollectFields(ec.OperationContext, sel, o20thCenturyDeathsInUsCdcDatasetImplementors)
+	out := graphql.NewFieldSet(fields)
+	var invalids uint32
+	for i, field := range fields {
+		switch field.Name {
+		case "__typename":
+			out.Values[i] = graphql.MarshalString("O20thCenturyDeathsInUsCdcDataset")
+		case "accidents_excl_road_deaths":
+
+			out.Values[i] = ec._O20thCenturyDeathsInUsCdcDataset_accidents_excl_road_deaths(ctx, field, obj)
+
+		case "accidents_total_deaths":
+
+			out.Values[i] = ec._O20thCenturyDeathsInUsCdcDataset_accidents_total_deaths(ctx, field, obj)
+
+		default:
+			panic("unknown field " + strconv.Quote(field.Name))
+		}
+	}
+	out.Dispatch()
+	if invalids > 0 {
+		return graphql.Null
+	}
+	return out
+}
+
 var queryImplementors = []string{"Query"}
 
 func (ec *executionContext) _Query(ctx context.Context, sel ast.SelectionSet) graphql.Marshaler {
@@ -2548,6 +2774,29 @@ func (ec *executionContext) _Query(ctx context.Context, sel ast.SelectionSet) gr
 		switch field.Name {
 		case "__typename":
 			out.Values[i] = graphql.MarshalString("Query")
+		case "o20th_century_deaths_in_us_cdc":
+			field := field
+
+			innerFunc := func(ctx context.Context) (res graphql.Marshaler) {
+				defer func() {
+					if r := recover(); r != nil {
+						ec.Error(ctx, ec.Recover(ctx, r))
+					}
+				}()
+				res = ec._Query_o20th_century_deaths_in_us_cdc(ctx, field)
+				if res == graphql.Null {
+					atomic.AddUint32(&invalids, 1)
+				}
+				return res
+			}
+
+			rrm := func(ctx context.Context) graphql.Marshaler {
+				return ec.OperationContext.RootResolverMiddleware(ctx, innerFunc)
+			}
+
+			out.Concurrently(i, func() graphql.Marshaler {
+				return rrm(innerCtx)
+			})
 		case "time_use_in_sweden":
 			field := field
 
@@ -2608,44 +2857,26 @@ func (ec *executionContext) _TimeUseInSwedenDataset(ctx context.Context, sel ast
 
 			out.Values[i] = ec._TimeUseInSwedenDataset_time_allocation_weekday_women(ctx, field, obj)
 
-			if out.Values[i] == graphql.Null {
-				invalids++
-			}
 		case "time_allocation_weekend_women":
 
 			out.Values[i] = ec._TimeUseInSwedenDataset_time_allocation_weekend_women(ctx, field, obj)
 
-			if out.Values[i] == graphql.Null {
-				invalids++
-			}
 		case "time_allocation_weekday_men":
 
 			out.Values[i] = ec._TimeUseInSwedenDataset_time_allocation_weekday_men(ctx, field, obj)
 
-			if out.Values[i] == graphql.Null {
-				invalids++
-			}
 		case "time_allocation_weekend_men":
 
 			out.Values[i] = ec._TimeUseInSwedenDataset_time_allocation_weekend_men(ctx, field, obj)
 
-			if out.Values[i] == graphql.Null {
-				invalids++
-			}
 		case "time_allocation_average_day_women":
 
 			out.Values[i] = ec._TimeUseInSwedenDataset_time_allocation_average_day_women(ctx, field, obj)
 
-			if out.Values[i] == graphql.Null {
-				invalids++
-			}
 		case "time_allocation_average_day_men":
 
 			out.Values[i] = ec._TimeUseInSwedenDataset_time_allocation_average_day_men(ctx, field, obj)
 
-			if out.Values[i] == graphql.Null {
-				invalids++
-			}
 		default:
 			panic("unknown field " + strconv.Quote(field.Name))
 		}
@@ -2990,21 +3221,6 @@ func (ec *executionContext) marshalNBoolean2bool(ctx context.Context, sel ast.Se
 	return res
 }
 
-func (ec *executionContext) unmarshalNFloat2float64(ctx context.Context, v interface{}) (float64, error) {
-	res, err := graphql.UnmarshalFloatContext(ctx, v)
-	return res, graphql.ErrorOnPath(ctx, err)
-}
-
-func (ec *executionContext) marshalNFloat2float64(ctx context.Context, sel ast.SelectionSet, v float64) graphql.Marshaler {
-	res := graphql.MarshalFloatContext(v)
-	if res == graphql.Null {
-		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
-			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
-		}
-	}
-	return graphql.WrapContextMarshaler(ctx, res)
-}
-
 func (ec *executionContext) unmarshalNInt2int(ctx context.Context, v interface{}) (int, error) {
 	res, err := graphql.UnmarshalInt(v)
 	return res, graphql.ErrorOnPath(ctx, err)
@@ -3018,6 +3234,20 @@ func (ec *executionContext) marshalNInt2int(ctx context.Context, sel ast.Selecti
 		}
 	}
 	return res
+}
+
+func (ec *executionContext) marshalNO20thCenturyDeathsInUsCdcDataset2githubᚗcomᚋmargostinoᚋowidᚑapiᚋgraphᚋmodelᚐO20thCenturyDeathsInUsCdcDataset(ctx context.Context, sel ast.SelectionSet, v model.O20thCenturyDeathsInUsCdcDataset) graphql.Marshaler {
+	return ec._O20thCenturyDeathsInUsCdcDataset(ctx, sel, &v)
+}
+
+func (ec *executionContext) marshalNO20thCenturyDeathsInUsCdcDataset2ᚖgithubᚗcomᚋmargostinoᚋowidᚑapiᚋgraphᚋmodelᚐO20thCenturyDeathsInUsCdcDataset(ctx context.Context, sel ast.SelectionSet, v *model.O20thCenturyDeathsInUsCdcDataset) graphql.Marshaler {
+	if v == nil {
+		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
+			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
+		}
+		return graphql.Null
+	}
+	return ec._O20thCenturyDeathsInUsCdcDataset(ctx, sel, v)
 }
 
 func (ec *executionContext) unmarshalNString2string(ctx context.Context, v interface{}) (string, error) {
@@ -3325,6 +3555,38 @@ func (ec *executionContext) marshalOBoolean2ᚖbool(ctx context.Context, sel ast
 		return graphql.Null
 	}
 	res := graphql.MarshalBoolean(*v)
+	return res
+}
+
+func (ec *executionContext) unmarshalOFloat2ᚖfloat64(ctx context.Context, v interface{}) (*float64, error) {
+	if v == nil {
+		return nil, nil
+	}
+	res, err := graphql.UnmarshalFloatContext(ctx, v)
+	return &res, graphql.ErrorOnPath(ctx, err)
+}
+
+func (ec *executionContext) marshalOFloat2ᚖfloat64(ctx context.Context, sel ast.SelectionSet, v *float64) graphql.Marshaler {
+	if v == nil {
+		return graphql.Null
+	}
+	res := graphql.MarshalFloatContext(*v)
+	return graphql.WrapContextMarshaler(ctx, res)
+}
+
+func (ec *executionContext) unmarshalOInt2ᚖint(ctx context.Context, v interface{}) (*int, error) {
+	if v == nil {
+		return nil, nil
+	}
+	res, err := graphql.UnmarshalInt(v)
+	return &res, graphql.ErrorOnPath(ctx, err)
+}
+
+func (ec *executionContext) marshalOInt2ᚖint(ctx context.Context, sel ast.SelectionSet, v *int) graphql.Marshaler {
+	if v == nil {
+		return graphql.Null
+	}
+	res := graphql.MarshalInt(*v)
 	return res
 }
 
