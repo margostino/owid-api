@@ -10,6 +10,11 @@ type NameNormalizer struct {
 	Value string
 }
 
+func NormalizeName(value string) string {
+	normalizer := NameNormalizer{Value: value}
+	return normalizer.Normalize()
+}
+
 func (normalizer *NameNormalizer) Normalize() string {
 	return normalizer.toLowercase().
 		extractUntilStop(".").

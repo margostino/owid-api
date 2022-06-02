@@ -7,6 +7,7 @@ import (
 	"context"
 	"github.com/margostino/owid-api/fetcher"
 	"github.com/margostino/owid-api/utils"
+	"strconv"
 
 	"github.com/margostino/owid-api/graph/generated"
 	"github.com/margostino/owid-api/graph/model"
@@ -14,13 +15,10 @@ import (
 
 func (r *queryResolver) TimeUseInSwedenStatisticsSweden(ctx context.Context, entity string, year int) (*model.TimeUseInSwedenStatisticsSwedenDataset, error) {
 	dataset := utils.ToSnakeCase("TimeUseInSwedenStatisticsSweden")
-	fetcher.Fetch(dataset, entity, year)
-	var value *float64
-	value = new(float64)
-	*value = 20.89
+	results := fetcher.Fetch(dataset, entity, strconv.Itoa(year))
 	var response = model.TimeUseInSwedenStatisticsSwedenDataset{
-		TimeAllocationAverageDayMen: value,
-		TimeAllocationWeekdayWomen:  value,
+		TimeAllocationAverageDayMen: results["time_allocation_average_day_men"],
+		TimeAllocationWeekdayWomen:  results["time_allocation_weekday_women"],
 	}
 	return &response, nil
 }

@@ -6,8 +6,10 @@ import (
 	"github.com/google/go-github/v45/github"
 	"github.com/margostino/owid-api/common"
 	"github.com/margostino/owid-api/model"
+	"github.com/margostino/owid-api/utils"
 	"io"
 	"net/http"
+	"strconv"
 	"strings"
 )
 
@@ -32,17 +34,12 @@ func getMetadata(url string) *model.Metadata {
 	resp, err := http.Get(url)
 	defer resp.Body.Close()
 	common.Check(err)
-	//common.UnmarshalYaml(url, &metadata)
 	bodyBytes, err := io.ReadAll(resp.Body)
 	common.UnmarshalYamlBytes(bodyBytes, &metadata)
-	//reader := yaml.NewDecoder(resp.Body)
-	//reader.Comma = ','
-	//data, err := reader.ReadAll()
-
 	return &metadata
 }
 
-func readCSVFromUrl(url string) ([][]string, error) {
+func fetchCSVFromUrl(url string) ([][]string, error) {
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, err
@@ -59,26 +56,34 @@ func readCSVFromUrl(url string) ([][]string, error) {
 	return data, nil
 }
 
-func Fetch(dataset string, entity string, year int) {
+// Fetch TODO: caching?
+func Fetch(dataset string, entity string, year string) map[string]*float64 {
+	var results = make(map[string]*float64)
 	url := METADATA[dataset]
-	//url := "https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/20th%20century%20deaths%20in%20US%20-%20CDC/20th century deaths in US - CDC.csv"
 	metadata := getMetadata(url)
+	data, err := fetchCSVFromUrl(metadata.DataBaseUrl)
+	common.Check(err)
 
-	println(metadata)
-	//if err != nil {
-	//	panic(err)
-	//}
-	//for idx, row := range data {
-	//	// skip header
-	//	if idx == 0 {
-	//		continue
-	//	}
-	//
-	//	if idx == 6 {
-	//		break
-	//	}
-	//
-	//	fmt.Println(row[2])
-	//}
+	if err != nil {
+		panic(err)
+	}
 
+	var index = make(map[int]string)
+	for idx, row := range data {
+		if idx == 0 {
+			for dataIndex, column := range row[2:] {
+				index[dataIndex] = utils.NormalizeName(column)
+			}
+			continue
+		}
+
+		if row[0] == entity && row[1] == year {
+			for rowIndex, value := range row[2:] {
+				resultValue, _ := strconv.ParseFloat(value, 8)
+				results[index[rowIndex]] = &resultValue
+			}
+			return results
+		}
+	}
+	return results
 }

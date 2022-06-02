@@ -15,16 +15,6 @@ import (
 	"strings"
 )
 
-func normalizeName(value string) string {
-	normalizer := utils.NameNormalizer{Value: value}
-	return normalizer.Normalize()
-}
-
-func normalizeType(value string) string {
-	normalizer := utils.TypeNormalizer{Value: value}
-	return normalizer.Normalize()
-}
-
 func GenerateMetadata() {
 	config := configuration.GetConfig()
 	var accessToken = config.GithubAccessToken
@@ -39,7 +29,7 @@ func GenerateMetadata() {
 	for _, dataset := range datasets {
 		var metadata model.Metadata
 		var dataPackage map[string]interface{}
-		datasetName := normalizeName(*dataset.Name)
+		datasetName := utils.NormalizeName(*dataset.Name)
 		path := *dataset.Path + "/datapackage.json"
 		encodedData, _, _, err := client.Repositories.GetContents(context.Background(), "owid", "owid-datasets", path, nil)
 		common.Check(err)
@@ -62,8 +52,8 @@ func GenerateMetadata() {
 			fields := fieldsMap["fields"].([]interface{})
 			for _, fieldMap := range fields {
 				field := fieldMap.(map[string]interface{})
-				fieldName := normalizeName(field["name"].(string))
-				fieldType := normalizeType(field["type"].(string))
+				fieldName := utils.NormalizeName(field["name"].(string))
+				fieldType := utils.NormalizeType(field["type"].(string))
 				variable := model.Variable{
 					Name: fieldName,
 					Type: fieldType,

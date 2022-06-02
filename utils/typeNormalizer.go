@@ -4,6 +4,11 @@ type TypeNormalizer struct {
 	Value string
 }
 
+func NormalizeType(value string) string {
+	normalizer := TypeNormalizer{Value: value}
+	return normalizer.Normalize()
+}
+
 func (normalizer *TypeNormalizer) Normalize() string {
 	switch normalizer.Value {
 	case "year":
