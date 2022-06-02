@@ -41,8 +41,8 @@ run:
 v.stop:
 	./bin/vercel-stop
 
-.PHONY: schema.gen
-schema.gen:
+.PHONY: gql.gen
+gql.gen:
 	go mod tidy
 	go get github.com/99designs/gqlgen@v0.17.9
 	go run github.com/99designs/gqlgen generate
