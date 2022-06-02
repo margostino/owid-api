@@ -5,12 +5,12 @@ package graph
 
 import (
 	"context"
-	"github.com/margostino/owid-api/fetcher"
-	"github.com/margostino/owid-api/utils"
 	"strconv"
 
+	"github.com/margostino/owid-api/fetcher"
 	"github.com/margostino/owid-api/graph/generated"
 	"github.com/margostino/owid-api/graph/model"
+	"github.com/margostino/owid-api/utils"
 )
 
 func (r *queryResolver) TimeUseInSwedenStatisticsSweden(ctx context.Context, entity string, year int) (*model.TimeUseInSwedenStatisticsSwedenDataset, error) {

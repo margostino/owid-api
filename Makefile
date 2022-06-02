@@ -41,8 +41,8 @@ run:
 v.stop:
 	./bin/vercel-stop
 
-.PHONY: gql.gen
-gql.gen:
+.PHONY: server.gen
+server.gen:
 	go mod tidy
 	go get github.com/99designs/gqlgen@v0.17.9
 	go run github.com/99designs/gqlgen generate
@@ -50,3 +50,9 @@ gql.gen:
 .PHONY: clean.metadata
 clean.metadata:
 	rm ./metadata/*
+
+.PHONY: schema.recovery
+schema.recovery:
+	git checkout -m graph/generated/generated.go
+	git checkout -m graph/model/models_gen.go
+
