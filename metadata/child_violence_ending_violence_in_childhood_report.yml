@@ -1,0 +1,25 @@
+name: child_violence_ending_violence_in_childhood_report
+description: ""
+data_file: Child violence – Ending Violence in Childhood Report (2017).csv
+data_base_url_file: https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Child%20violence%20%E2%80%93%20Ending%20Violence%20in%20Childhood%20Report%20(2017)/Child
+    violence – Ending Violence in Childhood Report (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: children
+    type: Float
+  - name: children
+    type: Float
+  - name: children
+    type: Float
+  - name: girls
+    type: Float
+  - name: girls
+    type: Float
+  - name: number_of_homicide_victims_among_children
+    type: Float
+  - name: women
+    type: Float

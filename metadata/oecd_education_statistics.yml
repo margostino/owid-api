@@ -1,0 +1,23 @@
+name: oecd_education_statistics
+description: ""
+data_file: 'OECD: Education Statistics (2017).csv'
+data_base_url_file: 'https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/OECD!%20Education%20Statistics%20(2017)/OECD:
+    Education Statistics (2017).csv'
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: share_public_education_expenditure
+    type: Float
+  - name: private_expenditure_on_education
+    type: Float
+  - name: public_expenditure_on_education
+    type: Float
+  - name: capital_expenditure
+    type: Float
+  - name: current_expenditure_staff
+    type: Float
+  - name: current_expenditure_non_staff
+    type: Float

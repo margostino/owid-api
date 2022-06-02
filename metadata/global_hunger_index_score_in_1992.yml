@@ -1,0 +1,11 @@
+name: global_hunger_index_score_in_1992
+description: ""
+data_file: Global Hunger Index score in 1992.csv
+data_base_url_file: https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Global%20Hunger%20Index%20score%20in%201992/Global
+    Hunger Index score in 1992.csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables: []

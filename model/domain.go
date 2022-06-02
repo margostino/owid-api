@@ -1,4 +1,4 @@
-package fetcher
+package model
 
 type Variable struct {
 	Name string `yaml:"name"`

@@ -1,0 +1,33 @@
+name: alcohol_expenditure_in_the_usa_long_term
+description: |+
+    Data is sourced from the USDA ERS dataset 'Nominal food expenditures, with taxes and tips, from previously-published estimates', available at: https://www.ers.usda.gov/data-products/food-expenditures.aspx
+
+    Figures are measured in constant 1998 US$. Values also include taxes and tips.
+
+data_file: Alcohol expenditure in the USA long-term (USDA, 2018).csv
+data_base_url_file: https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Alcohol%20expenditure%20in%20the%20USA%20long-term%20(USDA%2C%202018)/Alcohol
+    expenditure in the USA long-term (USDA, 2018).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: liquor_stores
+    type: Float
+  - name: food_stores
+    type: Float
+  - name: other
+    type: Float
+  - name: total
+    type: Float
+  - name: restaurants_and_bars
+    type: Float
+  - name: hotels_and_motels
+    type: Float
+  - name: all_other
+    type: Float
+  - name: total
+    type: Float
+  - name: total_alcohol_expenditure
+    type: Float

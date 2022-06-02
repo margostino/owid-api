@@ -1,0 +1,75 @@
+name: renewable_energy_costs
+description: ""
+data_file: Renewable energy costs (IRENA, 2020).csv
+data_base_url_file: https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Renewable%20energy%20costs%20(IRENA%2C%202020)/Renewable
+    energy costs (IRENA, 2020).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: onshore_wind_turbine_nameplate_capacity
+    type: Float
+  - name: onshore_turbine_rotor_diameter
+    type: Float
+  - name: total_installed_cost_onshore_wind
+    type: Float
+  - name: onshore_wind_capacity_factor
+    type: Float
+  - name: onshore_wind_lcoe
+    type: Float
+  - name: total_installed_solar_cost
+    type: Float
+  - name: solar_lcoe
+    type: Float
+  - name: total_installed_solar_cost_residential
+    type: Float
+  - name: total_installed_solar_cost_commercial
+    type: Float
+  - name: solar_capacity_factor
+    type: Float
+  - name: solar_lcoe_residential
+    type: Float
+  - name: solar_lcoe_commercial
+    type: Float
+  - name: solar_pv_module_price
+    type: Float
+  - name: offshore_wind_average_turbine_rating
+    type: Float
+  - name: offshore_wind_average_project_capacity
+    type: Float
+  - name: offshore_wind_total_installed_costs
+    type: Float
+  - name: offshore_wind_capacity_factor
+    type: Float
+  - name: offshore_wind_lcoe
+    type: Float
+  - name: hydro_total_installed_costs
+    type: Float
+  - name: hydro_total_installed_costs_large
+    type: Float
+  - name: hydro_total_installed_costs_small
+    type: Float
+  - name: hydro_capacity_factor
+    type: Float
+  - name: hydro_lcoe
+    type: Float
+  - name: geothermal_total_installed_costs
+    type: Float
+  - name: geothermal_capacity_factor
+    type: Float
+  - name: geothermal_lcoe
+    type: Float
+  - name: bioenergy_total_installed_costs
+    type: Float
+  - name: bioenergy_capacity_factor
+    type: Float
+  - name: bioenergy_lcoe
+    type: Float
+  - name: csp_total_installed_costs
+    type: Float
+  - name: csp_capacity_factor
+    type: Float
+  - name: csp_lcoe
+    type: Float

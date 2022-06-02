@@ -5,32 +5,24 @@ package graph
 
 import (
 	"context"
+	"github.com/margostino/owid-api/fetcher"
+	"github.com/margostino/owid-api/utils"
 
 	"github.com/margostino/owid-api/graph/generated"
 	"github.com/margostino/owid-api/graph/model"
 )
 
-func (r *queryResolver) O20thCenturyDeathsInUsCdc(ctx context.Context, entity string, year int) (*model.O20thCenturyDeathsInUsCdcDataset, error) {
-	var value *int
-	value = new(int)
-	*value = 10
-	var response = model.O20thCenturyDeathsInUsCdcDataset{
-		AccidentsExclRoadDeaths: value,
-		AccidentsTotalDeaths:    value,
-	}
-	return &response, nil
-}
-
-func (r *queryResolver) TimeUseInSweden(ctx context.Context, entity string, year int) (*model.TimeUseInSwedenDataset, error) {
+func (r *queryResolver) TimeUseInSwedenStatisticsSweden(ctx context.Context, entity string, year int) (*model.TimeUseInSwedenStatisticsSwedenDataset, error) {
+	dataset := utils.ToSnakeCase("TimeUseInSwedenStatisticsSweden")
+	fetcher.Fetch(dataset, entity, year)
 	var value *float64
 	value = new(float64)
 	*value = 20.89
-	var response = model.TimeUseInSwedenDataset{
+	var response = model.TimeUseInSwedenStatisticsSwedenDataset{
 		TimeAllocationAverageDayMen: value,
 		TimeAllocationWeekdayWomen:  value,
 	}
 	return &response, nil
-	//panic(fmt.Errorf("not implemented"))
 }
 
 // Query returns generated.QueryResolver implementation.

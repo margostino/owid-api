@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/margostino/owid-api/common"
 	"github.com/margostino/owid-api/configuration"
+	"github.com/margostino/owid-api/model"
 	"gopkg.in/yaml.v3"
 	"io/ioutil"
 	"log"
@@ -21,7 +22,7 @@ func GenerateSchema() {
 		println("dsmk")
 	}
 	config := configuration.GetConfig()
-	var metadata Metadata
+	var metadata model.Metadata
 	var schema string
 	var queryVariables = make([]string, 0)
 

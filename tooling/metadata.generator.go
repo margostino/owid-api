@@ -7,24 +7,13 @@ import (
 	"github.com/google/go-github/v45/github"
 	"github.com/margostino/owid-api/common"
 	"github.com/margostino/owid-api/configuration"
+	"github.com/margostino/owid-api/model"
 	"github.com/margostino/owid-api/utils"
 	"golang.org/x/oauth2"
 	"gopkg.in/yaml.v3"
 	"io/ioutil"
+	"strings"
 )
-
-type Variable struct {
-	Name string `yaml:"name"`
-	Type string `yaml:"type"`
-}
-
-type Metadata struct {
-	Name        string      `yaml:"name"`
-	Description string      `yaml:"description"`
-	DataPath    string      `yaml:"data_path"`
-	Arguments   []*Variable `yaml:"arguments"`
-	Variables   []*Variable `yaml:"variables"`
-}
 
 func normalizeName(value string) string {
 	normalizer := utils.NameNormalizer{Value: value}
@@ -48,7 +37,7 @@ func GenerateMetadata() {
 	_, datasets, _, err := client.Repositories.GetContents(context.Background(), "owid", "owid-datasets", "datasets", nil)
 	common.Check(err)
 	for _, dataset := range datasets {
-		var metadata Metadata
+		var metadata model.Metadata
 		var dataPackage map[string]interface{}
 		datasetName := normalizeName(*dataset.Name)
 		path := *dataset.Path + "/datapackage.json"
@@ -60,10 +49,11 @@ func GenerateMetadata() {
 		dataResources := dataPackage["resources"].([]interface{})
 
 		metadata.Name = datasetName
-		metadata.DataPath = dataResources[0].(map[string]interface{})["path"].(string) // TODO: check index
+		metadata.DataFile = dataResources[0].(map[string]interface{})["path"].(string) // TODO: check index
+		metadata.DataBaseUrl = strings.ReplaceAll(encodedData.GetDownloadURL(), "datapackage.json", metadata.DataFile)
 		metadata.Description = dataPackage["description"].(string)
-		metadata.Arguments = make([]*Variable, 0)
-		metadata.Variables = make([]*Variable, 0)
+		metadata.Arguments = make([]*model.Variable, 0)
+		metadata.Variables = make([]*model.Variable, 0)
 
 		fmt.Printf("\nOriginal: %s  -  Normalized: %s\n", *dataset.Name, datasetName)
 		for _, resource := range dataResources {
@@ -74,7 +64,7 @@ func GenerateMetadata() {
 				field := fieldMap.(map[string]interface{})
 				fieldName := normalizeName(field["name"].(string))
 				fieldType := normalizeType(field["type"].(string))
-				variable := Variable{
+				variable := model.Variable{
 					Name: fieldName,
 					Type: fieldType,
 				}
@@ -94,4 +84,6 @@ func GenerateMetadata() {
 		common.Check(err)
 		fmt.Printf("\nNew file: %s\n", fileName)
 	}
+
+	// TODO: add and report sanity checks at the end
 }

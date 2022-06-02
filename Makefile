@@ -47,3 +47,6 @@ gql.gen:
 	go get github.com/99designs/gqlgen@v0.17.9
 	go run github.com/99designs/gqlgen generate
 
+.PHONY: clean.metadata
+clean.metadata:
+	rm ./metadata/*

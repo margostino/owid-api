@@ -1,0 +1,11 @@
+name: decomposition_of_gender_wage_gap_blau_kahn
+description: ""
+data_file: Decomposition of Gender Wage Gap - Blau, Kahn (2017).csv
+data_base_url_file: https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Decomposition%20of%20Gender%20Wage%20Gap%20-%20Blau%2C%20Kahn%20(2017)/Decomposition
+    of Gender Wage Gap - Blau, Kahn (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables: []

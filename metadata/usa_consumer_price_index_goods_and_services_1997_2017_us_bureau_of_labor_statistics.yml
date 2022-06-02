@@ -1,0 +1,48 @@
+name: usa_consumer_price_index_goods_and_services_1997_2017_us_bureau_of_labor_statistics
+description: "The Bureau of Labor Statistics report on the monthly Consumer Price
+    Index (CPI) of individual goods and services for urban consumers at a national,
+    city and state level.\r\n\r\nData used in this sequence are based on the USA national
+    average of urban consumers, relative to December 1997 (which has been given the
+    value of zero). CPI is presented on an annual basis, which we have derived as
+    the average of the monthly CPIs in a given year."
+data_file: USA Consumer Price Index Goods and Services 1997-2017 - US Bureau of Labor
+    Statistics (2017).csv
+data_base_url_file: https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/USA%20Consumer%20Price%20Index%20Goods%20and%20Services%201997-2017%20-%20US%20Bureau%20of%20Labor%20Statistics%20(2017)/USA
+    Consumer Price Index Goods and Services 1997-2017 - US Bureau of Labor Statistics
+    (2017).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables:
+  - name: household_furnishings
+    type: Float
+  - name: household_energy
+    type: Float
+  - name: childcare
+    type: Float
+  - name: college_tuition_fees
+    type: Float
+  - name: education
+    type: Float
+  - name: toys
+    type: Float
+  - name: food_and_beverages
+    type: Float
+  - name: housing
+    type: Float
+  - name: medical_care
+    type: Float
+  - name: new_cars
+    type: Float
+  - name: clothing
+    type: Float
+  - name: tvs
+    type: Float
+  - name: software
+    type: Float
+  - name: all_items
+    type: Float
+  - name: public_transportation
+    type: Float

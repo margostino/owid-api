@@ -1,0 +1,11 @@
+name: real_gdp_at_chained_ppps_in_2011_us$_penn_world_table_9
+description: ""
+data_file: Real GDP at chained PPPs in 2011 US$ - Penn World Table 9.0 (2016).csv
+data_base_url_file: https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Real%20GDP%20at%20chained%20PPPs%20in%202011%20US%24%20-%20Penn%20World%20Table%209.0%20(2016)/Real
+    GDP at chained PPPs in 2011 US$ - Penn World Table 9.0 (2016).csv
+arguments:
+  - name: entity
+    type: String
+  - name: year
+    type: Int
+variables: []
