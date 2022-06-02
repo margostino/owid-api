@@ -1,9 +1,0 @@
-name: global_hunger_index_score_in_1992
-description: ""
-data_path: Global Hunger Index score in 1992.csv
-arguments:
-  - name: entity
-    type: String
-  - name: year
-    type: Int
-variables: []

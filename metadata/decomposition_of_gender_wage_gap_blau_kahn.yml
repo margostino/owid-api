@@ -1,9 +1,0 @@
-name: decomposition_of_gender_wage_gap_blau_kahn
-description: ""
-data_path: Decomposition of Gender Wage Gap - Blau, Kahn (2017).csv
-arguments:
-  - name: entity
-    type: String
-  - name: year
-    type: Int
-variables: []

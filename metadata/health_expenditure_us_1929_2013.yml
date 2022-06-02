@@ -1,9 +1,0 @@
-name: health_expenditure_us_1929_2013
-description: ""
-data_path: Health Expenditure US 1929-2013 (US Census and WDI ).csv
-arguments:
-  - name: entity
-    type: String
-  - name: year
-    type: Int
-variables: []

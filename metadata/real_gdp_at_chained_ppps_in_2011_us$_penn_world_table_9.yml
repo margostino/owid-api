@@ -1,9 +1,0 @@
-name: real_gdp_at_chained_ppps_in_2011_us$_penn_world_table_9
-description: ""
-data_path: Real GDP at chained PPPs in 2011 US$ - Penn World Table 9.0 (2016).csv
-arguments:
-  - name: entity
-    type: String
-  - name: year
-    type: Int
-variables: []
