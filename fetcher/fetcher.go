@@ -4,11 +4,12 @@ import (
 	"encoding/csv"
 	"fmt"
 	"github.com/margostino/owid-api/common"
-	"github.com/margostino/owid-api/configuration"
 	"github.com/margostino/owid-api/model"
 	"github.com/margostino/owid-api/utils"
 	"io"
+	"log"
 	"net/http"
+	"os"
 	"strconv"
 )
 
@@ -21,7 +22,6 @@ type DatasetIndex struct {
 }
 
 var datasetCache = make(map[string]DatasetIndex)
-var config = configuration.GetConfig()
 
 func getMetadata(url string) *model.Metadata {
 	var metadata model.Metadata
@@ -56,15 +56,18 @@ func Fetch(queryResolver string, entity string, year int) map[string]*float64 {
 	dataset := utils.ToSnakeCase(queryResolver)
 	dataKey := entity + yearAsString
 
+	log.Printf("Query for dataset %s with entity [%s] and year [%s]\n", dataset, entity, yearAsString)
+
 	if value, ok := datasetCache[dataset]; ok {
 		if result, ok := value.Index[dataKey]; ok {
+			log.Println("Results from cache")
 			return result.Row
 		}
 	}
 
 	var results = make(map[string]*float64)
-
-	url := fmt.Sprintf("%s/%s.yml", config.MetadataBaseUrl, dataset)
+	baseUrl := os.Getenv("METADATA_BASE_URL")
+	url := fmt.Sprintf("%s/%s.yml", baseUrl, dataset)
 	metadata := getMetadata(url)
 	data, err := fetchCSVFromUrl(metadata.DataBaseUrl)
 	common.Check(err)
@@ -93,6 +96,7 @@ func Fetch(queryResolver string, entity string, year int) map[string]*float64 {
 				Index: datasetMapping,
 			}
 			datasetCache[dataset] = datasetIndex
+			log.Printf("New entry in cache for dataset %s and entity %s and year %s\n", dataset, entity, yearAsString)
 			return results
 		}
 	}
