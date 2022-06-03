@@ -1,16 +1,15 @@
 package fetcher
 
 import (
-	"context"
 	"encoding/csv"
-	"github.com/google/go-github/v45/github"
+	"fmt"
 	"github.com/margostino/owid-api/common"
+	"github.com/margostino/owid-api/configuration"
 	"github.com/margostino/owid-api/model"
 	"github.com/margostino/owid-api/utils"
 	"io"
 	"net/http"
 	"strconv"
-	"strings"
 )
 
 type Dataset struct {
@@ -21,22 +20,8 @@ type DatasetIndex struct {
 	Index map[string]Dataset
 }
 
-var METADATA = loadMetadata()
 var datasetCache = make(map[string]DatasetIndex)
-
-// TODO: for local use local resources
-func loadMetadata() map[string]string {
-	var metadataUrls = make(map[string]string)
-	client := github.NewClient(nil)
-	_, results, _, err := client.Repositories.GetContents(context.Background(), "margostino", "owid-api", "metadata", nil)
-	common.Check(err)
-
-	for _, result := range results {
-		key := strings.ReplaceAll(result.GetName(), ".yml", "")
-		metadataUrls[key] = result.GetDownloadURL()
-	}
-	return metadataUrls
-}
+var config = configuration.GetConfig()
 
 func getMetadata(url string) *model.Metadata {
 	var metadata model.Metadata
@@ -79,7 +64,7 @@ func Fetch(queryResolver string, entity string, year int) map[string]*float64 {
 
 	var results = make(map[string]*float64)
 
-	url := METADATA[dataset]
+	url := fmt.Sprintf("%s/%s.yml", config.MetadataBaseUrl, dataset)
 	metadata := getMetadata(url)
 	data, err := fetchCSVFromUrl(metadata.DataBaseUrl)
 	common.Check(err)
