@@ -13,10 +13,19 @@ import (
 	"strings"
 )
 
-var METADATA = getAllMetadata()
+type Dataset struct {
+	Row map[string]*float64
+}
+
+type DatasetIndex struct {
+	Index map[string]Dataset
+}
+
+var METADATA = loadMetadata()
+var datasetCache = make(map[string]DatasetIndex)
 
 // TODO: for local use local resources
-func getAllMetadata() map[string]string {
+func loadMetadata() map[string]string {
 	var metadataUrls = make(map[string]string)
 	client := github.NewClient(nil)
 	_, results, _, err := client.Repositories.GetContents(context.Background(), "margostino", "owid-api", "metadata", nil)
@@ -56,17 +65,24 @@ func fetchCSVFromUrl(url string) ([][]string, error) {
 	return data, nil
 }
 
-// Fetch TODO: caching?
-func Fetch(dataset string, entity string, year string) map[string]*float64 {
+// Fetch TODO: caching or preloading?
+func Fetch(queryResolver string, entity string, year int) map[string]*float64 {
+	yearAsString := strconv.Itoa(year)
+	dataset := utils.ToSnakeCase(queryResolver)
+	dataKey := entity + yearAsString
+
+	if value, ok := datasetCache[dataset]; ok {
+		if result, ok := value.Index[dataKey]; ok {
+			return result.Row
+		}
+	}
+
 	var results = make(map[string]*float64)
+
 	url := METADATA[dataset]
 	metadata := getMetadata(url)
 	data, err := fetchCSVFromUrl(metadata.DataBaseUrl)
 	common.Check(err)
-
-	if err != nil {
-		panic(err)
-	}
 
 	var index = make(map[int]string)
 	for idx, row := range data {
@@ -77,11 +93,21 @@ func Fetch(dataset string, entity string, year string) map[string]*float64 {
 			continue
 		}
 
-		if row[0] == entity && row[1] == year {
+		if row[0] == entity && row[1] == yearAsString {
 			for rowIndex, value := range row[2:] {
 				resultValue, _ := strconv.ParseFloat(value, 8)
 				results[index[rowIndex]] = &resultValue
 			}
+
+			datasetMapping := make(map[string]Dataset)
+			cacheValue := Dataset{
+				Row: results,
+			}
+			datasetMapping[dataKey] = cacheValue
+			datasetIndex := DatasetIndex{
+				Index: datasetMapping,
+			}
+			datasetCache[dataset] = datasetIndex
 			return results
 		}
 	}

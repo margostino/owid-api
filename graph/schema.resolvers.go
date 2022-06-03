@@ -6,12 +6,9 @@ package graph
 import (
 	"context"
 	"fmt"
-	"strconv"
-
 	"github.com/margostino/owid-api/fetcher"
 	"github.com/margostino/owid-api/graph/generated"
 	"github.com/margostino/owid-api/graph/model"
-	"github.com/margostino/owid-api/utils"
 )
 
 func (r *queryResolver) ACenturyOfWorkAndLeisureRameyAndFrancis2009(ctx context.Context, entity string, year int) (*model.ACenturyOfWorkAndLeisureRameyAndFrancis2009Dataset, error) {
@@ -2811,15 +2808,24 @@ func (r *queryResolver) TimeThatDoctorsSpendWithAPatientDasHammerAndLeonard2008(
 }
 
 func (r *queryResolver) TimeUseInFinlandStatisticsFinland(ctx context.Context, entity string, year int) (*model.TimeUseInFinlandStatisticsFinlandDataset, error) {
-	panic(fmt.Errorf("not implemented"))
+	results := fetcher.Fetch("TimeUseInFinlandStatisticsFinland", entity, year)
+	var response = model.TimeUseInFinlandStatisticsFinlandDataset{
+		TimeAllocationAllStatisticsFinland:   results["time_allocation_all_statistics_finland"],
+		TimeAllocationMenStatisticsFinland:   results["time_allocation_men_statistics_finland"],
+		TimeAllocationWomenStatisticsFinland: results["time_allocation_women_statistics_finland"],
+	}
+	return &response, nil
 }
 
 func (r *queryResolver) TimeUseInSwedenStatisticsSweden(ctx context.Context, entity string, year int) (*model.TimeUseInSwedenStatisticsSwedenDataset, error) {
-	dataset := utils.ToSnakeCase("TimeUseInSwedenStatisticsSweden")
-	results := fetcher.Fetch(dataset, entity, strconv.Itoa(year))
+	results := fetcher.Fetch("TimeUseInSwedenStatisticsSweden", entity, year)
 	var response = model.TimeUseInSwedenStatisticsSwedenDataset{
-		TimeAllocationAverageDayMen: results["time_allocation_average_day_men"],
-		TimeAllocationWeekdayWomen:  results["time_allocation_weekday_women"],
+		TimeAllocationWeekdayWomen:    results["time_allocation_weekday_women"],
+		TimeAllocationWeekendWomen:    results["time_allocation_weekend_women"],
+		TimeAllocationWeekdayMen:      results["time_allocation_weekday_men"],
+		TimeAllocationWeekendMen:      results["time_allocation_weekend_men"],
+		TimeAllocationAverageDayWomen: results["time_allocation_average_day_women"],
+		TimeAllocationAverageDayMen:   results["time_allocation_average_day_men"],
 	}
 	return &response, nil
 }
