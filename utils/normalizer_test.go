@@ -54,5 +54,15 @@ func TestNameNormalizer(t *testing.T) {
 	result = NormalizeName(original)
 	assert(t, expected, result)
 
+	original = "PM₂.₅"
+	expected = "pm25"
+	result = NormalizeName(original)
+	assert(t, expected, result)
+
+	original = "PM₁₀ (Index)"
+	expected = "pm10_index"
+	result = NormalizeName(original)
+	assert(t, expected, result)
+
 	//TODO
 }

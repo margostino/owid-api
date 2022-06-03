@@ -13,5 +13,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: world_gdp_in_2011_int
+  - name: world_gdp_in_2011_intmoney_owid_based_on_world_bank_and_maddison_2017
     type: Float

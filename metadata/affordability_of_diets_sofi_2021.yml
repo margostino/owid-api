@@ -22,11 +22,11 @@ variables:
     type: Float
   - name: cost_of_healthy_diet_2017_usd_per_day
     type: Float
-  - name: calorie_sufficient_diet_cost_perc_of_money1
+  - name: calorie_sufficient_diet_cost_perc_of_money120_poverty_line
     type: Float
-  - name: nutrient_adequate_diet_cost_perc_of_money1
+  - name: nutrient_adequate_diet_cost_perc_of_money120_poverty_line
     type: Float
-  - name: healthy_diet_cost_perc_of_money1
+  - name: healthy_diet_cost_perc_of_money120_poverty_line
     type: Float
   - name: calorie_sufficient_diet_cost_perc_of_average_food_expenditure
     type: Float

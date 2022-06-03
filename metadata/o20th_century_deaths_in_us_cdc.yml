@@ -12,7 +12,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: accidents_excl
+  - name: accidents_excl_road_deaths
     type: Float
   - name: accidents_total_deaths
     type: Float
@@ -66,7 +66,7 @@ variables:
     type: Float
   - name: communicable_infectious_neonatal_and_other_deaths_deaths
     type: Float
-  - name: accidents_excl
+  - name: accidents_excl_road_death_rates
     type: Float
   - name: accidents_total_death_rates
     type: Float
@@ -120,7 +120,7 @@ variables:
     type: Float
   - name: communicable_infectious_neonatal_and_other_deaths_death_rates
     type: Float
-  - name: accidents_excl
+  - name: accidents_excl_road_perc_of_deaths
     type: Float
   - name: accidents_total_perc_of_deaths
     type: Float

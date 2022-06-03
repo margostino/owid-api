@@ -17,11 +17,11 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: case_detection_rate_all_forms
+  - name: case_detection_rate_all_forms_also_known_as_tb_treatment_coverage_percent_c_cdr
     type: Float
-  - name: case_detection_rate_all_forms
+  - name: case_detection_rate_all_forms_also_known_as_tb_treatment_coverage_percent_high_bound_c_cdr_hi
     type: Float
-  - name: case_detection_rate_all_forms
+  - name: case_detection_rate_all_forms_also_known_as_tb_treatment_coverage_percent_low_bound_c_cdr_lo
     type: Float
   - name: case_notification_rate_which_is_the_total_of_new_and_relapse_cases_and_cases_with_unknown_previous_tb_treatment_history_per_100_000_population_calculated_c_newinc_100k
     type: Float

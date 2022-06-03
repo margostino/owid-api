@@ -12,5 +12,5 @@ arguments:
 variables:
   - name: money1_poverty_rate_bradshaw_and_mayhew_2011
     type: Float
-  - name: money2
+  - name: money215_poverty_rate_bradshaw_and_mayhew_2011
     type: Float

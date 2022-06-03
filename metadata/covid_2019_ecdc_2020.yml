@@ -38,7 +38,7 @@ variables:
     type: Float
   - name: days_since_the_total_confirmed_cases_of_covid_19_per_million_people_reached_1
     type: Float
-  - name: days_since_the_total_confirmed_deaths_of_covid_19_per_million_people_reached_0
+  - name: days_since_the_total_confirmed_deaths_of_covid_19_per_million_people_reached_01
     type: Float
   - name: case_fatality_rate_of_covid_19_perc
     type: Float
@@ -60,7 +60,7 @@ variables:
     type: Float
   - name: days_since_daily_new_confirmed_cases_of_covid_19_per_million_people_rolling_7_day_average_right_aligned_reached_1
     type: Float
-  - name: days_since_daily_new_confirmed_deaths_due_to_covid_19_per_million_people_rolling_7_day_average_right_aligned_reached_0
+  - name: days_since_daily_new_confirmed_deaths_due_to_covid_19_per_million_people_rolling_7_day_average_right_aligned_reached_01
     type: Float
   - name: daily_new_confirmed_cases_of_covid_19_rolling_3_day_average_right_aligned
     type: Float
@@ -74,7 +74,7 @@ variables:
     type: Float
   - name: days_since_daily_new_confirmed_deaths_due_to_covid_19_rolling_7_day_average_right_aligned_reached_5
     type: Float
-  - name: days_since_daily_new_confirmed_deaths_due_to_covid_19_per_million_people_rolling_7_day_average_right_aligned_reached_0
+  - name: days_since_daily_new_confirmed_deaths_due_to_covid_19_per_million_people_rolling_7_day_average_right_aligned_reached_001
     type: Float
   - name: daily_new_confirmed_cases_of_covid_19_per_million_people_rolling_3_day_average_right_aligned
     type: Float

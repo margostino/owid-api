@@ -12,17 +12,17 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: happiness_and_log_income_partial_correlation_clark_et_al
+  - name: happiness_and_log_income_partial_correlation_clark_et_al_in_world_happiness_report_2017
     type: Float
-  - name: happiness_and_years_of_education_partial_correlation_clark_et_al
+  - name: happiness_and_years_of_education_partial_correlation_clark_et_al_in_world_happiness_report_2017
     type: Float
-  - name: happiness_and_not_unemployed_partial_correlation_clark_et_al
+  - name: happiness_and_not_unemployed_partial_correlation_clark_et_al_in_world_happiness_report_2017
     type: Float
-  - name: happiness_and_partnered_partial_correlation_clark_et_al
+  - name: happiness_and_partnered_partial_correlation_clark_et_al_in_world_happiness_report_2017
     type: Float
-  - name: happiness_and_physical_illness_partial_correlation_clark_et_al
+  - name: happiness_and_physical_illness_partial_correlation_clark_et_al_in_world_happiness_report_2017
     type: Float
-  - name: happiness_and_mental_illness_partial_correlation_clark_et_al
+  - name: happiness_and_mental_illness_partial_correlation_clark_et_al_in_world_happiness_report_2017
     type: Float
-  - name: happiness_and_gender_partial_correlation_with_female_clark_et_al
+  - name: happiness_and_gender_partial_correlation_with_female_clark_et_al_in_world_happiness_report_2017
     type: Float

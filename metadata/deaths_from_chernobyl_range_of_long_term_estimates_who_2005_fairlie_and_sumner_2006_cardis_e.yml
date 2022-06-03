@@ -27,5 +27,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: chernobyl_who_2005_fairlie_and_sumner_2006_cardis_et_al
+  - name: chernobyl_who_2005_fairlie_and_sumner_2006_cardis_et_al_2006
     type: Float

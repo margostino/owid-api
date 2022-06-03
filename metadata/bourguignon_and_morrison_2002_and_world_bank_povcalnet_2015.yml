@@ -19,7 +19,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: less_than_1
+  - name: less_than_190money_per_day_world_bank_2015
     type: Float
   - name: extreme_poverty_bm_2002
     type: Float

@@ -21,11 +21,11 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: estimated_number_of_paralytic_polio_cases_disregarding_cases_after_polio_ceased_to_be_endemic_who_2018_and_tebbens_et_al
+  - name: estimated_number_of_paralytic_polio_cases_disregarding_cases_after_polio_ceased_to_be_endemic_who_2018_and_tebbens_et_al_2011
     type: Float
   - name: reported_number_of_paralytic_polio_cases_who_2018
     type: Float
-  - name: estimated_number_of_paralytic_polio_cases_who_2018_and_tebbens_et_al
+  - name: estimated_number_of_paralytic_polio_cases_who_2018_and_tebbens_et_al_2011
     type: Float
-  - name: estimated_number_of_paralytic_polio_cases_using_reported_number_of_cases_after_polio_free_certification_who_2018_and_tebbens_et_al
+  - name: estimated_number_of_paralytic_polio_cases_using_reported_number_of_cases_after_polio_free_certification_who_2018_and_tebbens_et_al_2011
     type: Float

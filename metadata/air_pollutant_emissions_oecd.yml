@@ -21,7 +21,7 @@ variables:
     type: Float
   - name: pm10
     type: Float
-  - name: pm2
+  - name: pm25
     type: Float
   - name: so2
     type: Float
@@ -33,7 +33,7 @@ variables:
     type: Float
   - name: pm10_index
     type: Float
-  - name: pm2
+  - name: pm25_index
     type: Float
   - name: so2_index
     type: Float

@@ -16,15 +16,15 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: share_of_agriculture_in_gdp_at_current_prices_herrendorf_et_al
+  - name: share_of_agriculture_in_gdp_at_current_prices_herrendorf_et_al_data
     type: Float
-  - name: share_of_industry_in_gdp_at_current_prices_herrendorf_et_al
+  - name: share_of_industry_in_gdp_at_current_prices_herrendorf_et_al_data
     type: Float
-  - name: share_of_services_in_gdp_at_current_prices_herrendorf_et_al
+  - name: share_of_services_in_gdp_at_current_prices_herrendorf_et_al_data
     type: Float
-  - name: number_of_people_employed_in_agriculture_herrendorf_et_al
+  - name: number_of_people_employed_in_agriculture_herrendorf_et_al_data
     type: Float
-  - name: number_of_people_employed_in_industry_herrendorf_et_al
+  - name: number_of_people_employed_in_industry_herrendorf_et_al_data
     type: Float
-  - name: number_of_people_employed_in_services_herrendorf_et_al
+  - name: number_of_people_employed_in_services_herrendorf_et_al_data
     type: Float

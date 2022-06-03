@@ -5,8 +5,8 @@ type ACenturyOfWorkAndLeisureRameyAndFrancis2009Dataset {
  average_weekly_leisure_estimates_by_age_ramey_and_francis_2009: Float
 }
 
-type AbsoluteDeathsFromAmbientPm2Dataset {
- absolute_deaths_from_ambient_pm2: Float
+type AbsoluteDeathsFromAmbientPm25AirPollutionStateOfGlobalAirDataset {
+ absolute_deaths_from_ambient_pm25_air_pollution_state_of_global_air: Float
 }
 
 """
@@ -93,9 +93,9 @@ type AffordabilityOfDietsSofi2021Dataset {
  cost_of_calorie_sufficient_diet_2017_usd_per_day: Float
  cost_of_nutrient_adequate_diet_2017_usd_per_day: Float
  cost_of_healthy_diet_2017_usd_per_day: Float
- calorie_sufficient_diet_cost_perc_of_money1: Float
- nutrient_adequate_diet_cost_perc_of_money1: Float
- healthy_diet_cost_perc_of_money1: Float
+ calorie_sufficient_diet_cost_perc_of_money120_poverty_line: Float
+ nutrient_adequate_diet_cost_perc_of_money120_poverty_line: Float
+ healthy_diet_cost_perc_of_money120_poverty_line: Float
  calorie_sufficient_diet_cost_perc_of_average_food_expenditure: Float
  nutrient_adequate_diet_cost_perc_of_average_food_expenditure: Float
  healthy_diet_cost_perc_of_average_food_expenditure: Float
@@ -189,13 +189,13 @@ type AirPollutantEmissionsOecdDataset {
  nox: Float
  non_methane_volatile_organic_compounds_vocs: Float
  pm10: Float
- pm2: Float
+ pm25: Float
  so2: Float
  carbon_monoxide_index: Float
  nox_index: Float
  non_methane_volatile_organic_compounds_vocs_index: Float
  pm10_index: Float
- pm2: Float
+ pm25_index: Float
  so2_index: Float
 }
 
@@ -308,7 +308,7 @@ type AnnualWorldPopulationGrowthRateOwidDataset {
 Boeker et al.
 (2017) project global antibiotic use under business-as-usual antibiotic concentrations and projected meat consumption.The authors also project a number of potential reduction scenarios:- a global limit of 50 milligrams of antibiotic use per kilogram of meat production.- a limit of 50 milligrams of antibiotic use per kilogram of meat production for OECD countries & China.- global per capita meat consumption of 40 grams per day (the equivalent of an average burger patty)- global per capita meat consumption of 165 grams per day (the projected EU average in 2030)Projected global antibiotic use for livestock are shown for each of these potential reduction scenarios.
 """
-type AntibioticUseInLivestock2030BoeckelEtAlDataset {
+type AntibioticUseInLivestock2030BoeckelEtAl2017Dataset {
  global_antibiotic_use: Float
 }
 
@@ -355,7 +355,7 @@ Archaeologists with land-use expertise were invited to contribute to a detailed 
 Contributors selected individual regions where they had expertise; 255 individual archaeologists completed a total of 711 regional questionnaires, resulting in complete, though uneven, global coverage.
 The result is an expert-based meta-analysis that uses semi-subjective (ranked) survey data to generate regional assessments of land use over time.They map the dating and extent of four 'agricultural' regimes across the world:1) Foraging: Foraging/hunting/gathering/fishing - subsistence based on hunting wild animals, gathering wild plants, and fishing, without deliberately modifying the reproduction of plants and animals that people exploit.2) Pastoralism: the exploitation of pasturelands for animal husbandry - including the breeding, care, and use of domesticated herd animals (e.g., sheep, goats, camels, cattle, horses, llamas, reindeer, and yaks).3) Extensive agriculture: swidden/shifting cultivation and other forms of noncontinuous cultivation.4) Intensive agriculture: all other forms of continuous cultivation (including irrigated and nonirrigated annual cropping, tropical agroforestry, flooded field farming, and industrial monocrop/plantation agriculture).
 """
-type ArchaeologicalLandUseStephensEtAlDataset {
+type ArchaeologicalLandUseStephensEtAl2019Dataset {
  cum_sum_regions: Float
  global_share_land_use_extent: Float
  foraging: Float
@@ -404,7 +404,7 @@ Attainable yields are based on assessments for the year 2000.
 Attainable yield pre-2000 may be lower; and post-2000 may be higher than these values.Yield gaps have been calculated by Our World in Data as the difference between actual observed yields (as reported by the UN FAO: http://www.fao.org/faostat/en/) and attainable yields, as reported by Mueller et al.
 (2012).
 """
-type AttainableYieldsMuellerEtAlDataset {
+type AttainableYieldsMuellerEtAl2012Dataset {
  barley_attainable: Float
  cassava_attainable: Float
  cotton_attainable: Float
@@ -551,7 +551,7 @@ For richer countries this would mean a reduction (but not elimination) of meat c
 For poorer countries, this would mean an increase.Optimize trade: agricultural production and trade is optimized to produce food in the locations with the least risk of habitat loss.
 Agricultural production shifts from the 25 countries projected to have the greatest mean losses of suitable habitat across all species to countries where less than 10% of species are threatened with extinction.Combined: all four interventions are combined.
 """
-type BiodiversityHabitatLossWilliamsEtAlDataset {
+type BiodiversityHabitatLossWilliamsEtAl2021Dataset {
  all_species_number: Float
  bau_habitat_loss_all: Float
  combined_habitat_loss_all: Float
@@ -610,7 +610,7 @@ type BiodiversityHabitatLossWilliamsEtAlDataset {
 """
 Estimates of the global biomass (measured in tonnes of carbon) and abundance (number of individuals) of different taxonomic groups.Due to large uncertainty for some groups, these are used as order-of-magnitude estimates and come with notable error margins.
 """
-type BiomassAndTaxaAbundanceBarOnEtAlDataset {
+type BiomassAndTaxaAbundanceBarOnEtAl2018Dataset {
  global_biomass: Float
  abundance_of_organisms: Float
 }
@@ -641,7 +641,7 @@ The revisions in the definition of the poverty line and the PPP adjustment make 
 The World Bank data was downloaded in October 2015.
 """
 type BourguignonAndMorrison2002AndWorldBankPovcalnet2015Dataset {
- less_than_1: Float
+ less_than_190money_per_day_world_bank_2015: Float
  extreme_poverty_bm_2002: Float
  poverty_bm_2002: Float
 }
@@ -744,11 +744,29 @@ Data was compiled and published by Owen Shen, tallying comparisons between the s
 These are normalised to be given as deaths, Google searches and media coverage as a share of the total reported across these 13 causes (which does not mean the share of deaths or coverage of all causes of death).The values given represent their relative share, rather than absolute counts.
 This allows for comparison of the proportionality in representation across different sources.Mortality data was sourced from the Center for Disease Control and Prevention (CDC): https://wonder.cdc.gov/Google searches from Google Trends: https://github.com/GeneralMills/pytrendsThe Guardian's article database: http://open-platform.theguardian.com/The New York Times' database: https://developer.nytimes.com/
 """
-type CausesOfDeathVsDataset {
+type CausesOfDeathVsMediaCoverageShenDataset {
  share_of_deaths: Float
  share_of_google_searches: Float
  share_of_nyt_media_coverage: Float
  share_of_guardian_media_coverage: Float
+}
+
+"""
+Shen et al.
+(2018) compared the leading causes of death in the United States as their share of total deaths relative to Google searches and media coverage in The New York Times (NYT) and The Guardian newspaper.
+For this analysis they selected the top 10 causes of death in the USA in addition to terrorism, homicide, and drug overdoses (which they assumed to also receive significant media attention).Data each causes' share of total deaths in the USA was assessed based on the Centers for Disease Control and Prevention (CDC) WONDER database for public health, available at: https://wonder.cdc.gov/.
+This is available from 1999 to 2016.
+Combined, the 13 causes of death assessed in this analysis account for approximately 88% of all deaths in the USA.Data on Google searches was derived from Google Trends (available from 2004 to 2016).
+This was assessed on the number of searches for these terms and close synonyms.The New York Times and The Guardian media coverage was assessed from both newspapers' article databases.
+Here the authors searched the database for a list of all articles which contained the word anywhere (headline or body).All values are normalized to 100% so they represent their relative share of the top causes, rather than absolute counts (e.g.
+‘deaths’ represents each causes’ share of deaths within the 13 categories shown rather than total deaths).
+This allows for us to compare the relative representation of different sources.Full methodology, notes and open-access data on GitHub are available from the original source: https://owenshen24.github.io/charting-death/.
+"""
+type CausesOfDeathVsMediaCoverageShenEtAl2018Dataset {
+ share_of_deaths_shen_et_al_2018: Float
+ share_of_google_searches_shen_et_al_2018: Float
+ share_of_nyt_media_coverage_shen_et_al_2018: Float
+ share_of_guardian_media_coverage_shen_et_al_2018: Float
 }
 
 """
@@ -795,7 +813,7 @@ This allows for measurement of CFC-11 concentrations in mole fractions (parts pe
 Data here represents the annual average for data reported in Montzka et al.
 (2018).The WMO (2003; 2010 and 2014) projections are those published by the World Meteorological Organization (WMO) and represent the global average expected change in CFC-11 concentrations based on reported emissions of CFC-11 from all parties to the Montreal Protocol.
 """
-type Cfc11ExpectedAndMeasuredConcentrationsMontzkaEtAlDataset {
+type Cfc11ExpectedAndMeasuredConcentrationsMontzkaEtAl2018Dataset {
  northern_hemisphere: Float
  southern_hemisphere: Float
  wmo_2003: Float
@@ -808,7 +826,7 @@ Data denotes the measured annual change in concentrations of trichlorofluorometh
 Data here represents the annual average for data reported in Montzka et al.
 (2018).The WMO (2003; 2010 and 2014) projections are those published by the World Meteorological Organization (WMO) and represent the global average expected rate of change in CFC-11 concentrations based on reported emissions of CFC-11 from all parties to the Montreal Protocol.
 """
-type Cfc11ExpectedAndMeasuredRateOfChangeMontzkaEtAlDataset {
+type Cfc11ExpectedAndMeasuredRateOfChangeMontzkaEtAl2018Dataset {
  cfc_11_measurement: Float
  wmo_2003: Float
  wmo_2010: Float
@@ -874,15 +892,15 @@ type ChildLaborInUsLong1958Dataset {
  child_labor_long_1958: Float
 }
 
-type ChildLaborItalyHistoricTonioloGDataset {
- child_labor_italy_all_historic_toniolo_g: Float
- child_labor_italy_boys_historic_toniolo_g: Float
- child_labor_italy_girls_historic_toniolo_g: Float
+type ChildLaborItalyHistoricTonioloGAndVecchiG2007Dataset {
+ child_labor_italy_all_historic_toniolo_g_and_vecchi_g_2007: Float
+ child_labor_italy_boys_historic_toniolo_g_and_vecchi_g_2007: Float
+ child_labor_italy_girls_historic_toniolo_g_and_vecchi_g_2007: Float
 }
 
-type ChildLaborUkHistoricCunninghamHDataset {
- child_labor_uk_boys_historic_cunningham_h: Float
- child_labor_uk_girls_historic_cunningham_h: Float
+type ChildLaborUkHistoricCunninghamHAndViazzoPp1996Dataset {
+ child_labor_uk_boys_historic_cunningham_h_and_viazzo_pp_1996: Float
+ child_labor_uk_girls_historic_cunningham_h_and_viazzo_pp_1996: Float
 }
 
 type ChildLaborWorld19501995Basu1999Dataset {
@@ -1236,8 +1254,8 @@ Data is sourced from Robbie Andrew, and available for download here: http://folk
 2018).Global cumulative CO2 emissions budgets are from the IPCC Special Report on 1.5°C (Rogelj et al 2018): 420 GtCO2 for a 66% of 1.5°C and 1170 GtCO2 for a 66% of 2°C.
 Mitigation curves describe approximately exponential decay pathways such that the quota is never exceeded (see Raupach et al., 2014).
 """
-type Co2MitigationCurvesFor1Dataset {
- co2_mitigation_curves_for_1: Float
+type Co2MitigationCurvesFor15cAndrewsAndGcp2019Dataset {
+ co2_mitigation_curves_for_15c_andrews_and_gcp_2019: Float
 }
 
 """
@@ -1436,7 +1454,7 @@ Sci.
 Data Discussions, 2017.
 https://doi.org/10.5194/essdd-2017-123.
 """
-type ConsumptionVsDataset {
+type ConsumptionVsProductionBasedCo2EmissionsSharesBasedOnGcpAndUnDataset {
  share_of_global_population_perc: Float
  consumption_based_co2_emissions_perc_of_global_total: Float
  production_based_co2_emissions_perc_of_global_total: Float
@@ -1458,11 +1476,11 @@ Pre-1914, military expenditure is in thousands of UK pounds and post-1914 it is 
 Both expenditure figures are measured in current prices.For values in real prices: Deflated the pre-1914 series to give the value in 1900 UK £s and  deflated the post-1914 series to give the value in 2000 US .
 Uses Quandl data.
 """
-type CorrelatesOfWarNationalMaterialCapabilitiesV4Dataset {
- iron_and_steel_production_correlates_of_war_national_material_capabilities_v4: Float
- military_expenditure_1816_1913_current_prices_correlates_of_war_national_material_capabilities_v4: Float
- military_expenditure_1914_2007_current_prices_correlates_of_war_national_material_capabilities_v4: Float
- military_personnel_correlates_of_war_national_material_capabilities_v4: Float
+type CorrelatesOfWarNationalMaterialCapabilitiesV40Dataset {
+ iron_and_steel_production_correlates_of_war_national_material_capabilities_v40: Float
+ military_expenditure_1816_1913_current_prices_correlates_of_war_national_material_capabilities_v40: Float
+ military_expenditure_1914_2007_current_prices_correlates_of_war_national_material_capabilities_v40: Float
+ military_personnel_correlates_of_war_national_material_capabilities_v40: Float
 }
 
 """
@@ -1518,7 +1536,7 @@ type Covid2019Ecdc2020Dataset {
  days_since_the_total_confirmed_cases_of_covid_19_reached_100: Float
  days_since_the_total_confirmed_deaths_of_covid_19_reached_5: Float
  days_since_the_total_confirmed_cases_of_covid_19_per_million_people_reached_1: Float
- days_since_the_total_confirmed_deaths_of_covid_19_per_million_people_reached_0: Float
+ days_since_the_total_confirmed_deaths_of_covid_19_per_million_people_reached_01: Float
  case_fatality_rate_of_covid_19_perc: Float
  case_fatality_rate_of_covid_19_perc_only_observations_with_greater_or_equal100_cases: Float
  days_since_30_daily_new_confirmed_cases_recorded: Float
@@ -1529,14 +1547,14 @@ type Covid2019Ecdc2020Dataset {
  daily_new_confirmed_deaths_due_to_covid_19_rolling_7_day_average_right_aligned: Float
  daily_new_confirmed_cases_due_to_covid_19_rolling_7_day_average_right_aligned: Float
  days_since_daily_new_confirmed_cases_of_covid_19_per_million_people_rolling_7_day_average_right_aligned_reached_1: Float
- days_since_daily_new_confirmed_deaths_due_to_covid_19_per_million_people_rolling_7_day_average_right_aligned_reached_0: Float
+ days_since_daily_new_confirmed_deaths_due_to_covid_19_per_million_people_rolling_7_day_average_right_aligned_reached_01: Float
  daily_new_confirmed_cases_of_covid_19_rolling_3_day_average_right_aligned: Float
  daily_new_confirmed_deaths_due_to_covid_19_rolling_3_day_average_right_aligned: Float
  daily_new_confirmed_cases_of_covid_19_per_million_people_rolling_7_day_average_right_aligned: Float
  daily_new_confirmed_deaths_due_to_covid_19_per_million_people_rolling_7_day_average_right_aligned: Float
  days_since_daily_new_confirmed_cases_of_covid_19_rolling_7_day_average_right_aligned_reached_30: Float
  days_since_daily_new_confirmed_deaths_due_to_covid_19_rolling_7_day_average_right_aligned_reached_5: Float
- days_since_daily_new_confirmed_deaths_due_to_covid_19_per_million_people_rolling_7_day_average_right_aligned_reached_0: Float
+ days_since_daily_new_confirmed_deaths_due_to_covid_19_per_million_people_rolling_7_day_average_right_aligned_reached_001: Float
  daily_new_confirmed_cases_of_covid_19_per_million_people_rolling_3_day_average_right_aligned: Float
  daily_new_confirmed_deaths_due_to_covid_19_per_million_people_rolling_3_day_average_right_aligned: Float
  days_since_the_total_confirmed_cases_of_covid_19_reached_100_with_population_greater_or_equal_5m: Float
@@ -1704,7 +1722,7 @@ Oil consumption data is based on reported global consumption measured in barrels
 This includes crude oil, shale oil, oil sands and Natural Gas Liquids (the gas component of which is treated separately and not included).Oil prices are based on average crude oil prices as the Arabian Light series from 1965-1983 and Brent dated series from 1984-2015.
 This is reported in 2015 US$ per barrel (deflated by BP Energy Review using the Consumer Price Index for the US).
 """
-type CrudeOilConsumptionVsDataset {
+type CrudeOilConsumptionVsPriceBpStatistics2016Dataset {
  oil_consumption_bp_statistics_2016: Float
  crude_oil_price_bp_statistics_2016: Float
 }
@@ -1827,7 +1845,7 @@ They do this by applying an atmospheric chemistry–general circulation model to
 This model includes concentrations of ozone (O3) and particulate matter, including PM2.5.
 These concentrations are then used to convert to health burden based on the Global Burden of Disease methodology.– Air pollution deaths from all sources includes pollution from all anthropogenic sources (fossil fuels, agriculture, residential energy use, and non-fossil industrial emissions) and natural emissions from sources such as desert dust.– Air pollution deaths from fossil fuels includes local air pollution generated from the burning of coal, oil and gas.– Air pollution deaths from all anthropogenic sources includes pollution from fossil fuels plus agriculture, residential energy use, and non-fossil industrial emissions.Our World in Data has also converted these mortality and YLL metrics into rates based on the population figures included in the study's Supplemental material.Our World in Data has also calculated fossil fuel and total anthropogenic pollution deaths as a share of total air pollution deaths based on the paper's original data.
 """
-type DeathsAttributedToAirPollutionLelieveldEtAlDataset {
+type DeathsAttributedToAirPollutionLelieveldEtAl2019Dataset {
  excess_mortality_from_air_pollution_all_sources: Float
  excess_mortality_from_fossil_fuels: Float
  excess_mortality_from_all_anthropogenic_pollution: Float
@@ -1865,7 +1883,7 @@ An independent scientific evaluation of health and environmental effects 20 year
 Available at: http://www.chernobylreport.org/?p=summary
 """
 type DeathsFromChernobylRangeOfLongTermEstimatesWho2005FairlieAndSumner2006CardisEDataset {
- chernobyl_who_2005_fairlie_and_sumner_2006_cardis_et_al: Float
+ chernobyl_who_2005_fairlie_and_sumner_2006_cardis_et_al_2006: Float
 }
 
 """
@@ -1951,7 +1969,7 @@ Number of deaths attributed to energy-related accidents of low-carbon energy sou
 They define an accident as: "an unintentional incident or event at an energy facility that led to either one death (or more) or at least 0,000 in property damage."This database was developed based on a series of academic databases (including ScienceDirect and EBSCO host) as well as the internet (using Google and Safari).The normalized death rate data is presented by Sovacool et al.
 (2016) as the number of deaths per TWh over the period from 1990 to 2013.
 """
-type DeathsPerTwhFromLowCarbonEnergySovacoolEtAlDataset {
+type DeathsPerTwhFromLowCarbonEnergySovacoolEtAl2016Dataset {
  deaths_per_twh_sovacool_et_al: Float
 }
 
@@ -1984,7 +2002,7 @@ Pendrill et al.
 This is then linked to particular agricultural commodities based on national land use, crop and forest product statistics published in the UN Food and Agricultural Organization balance sheets.This study also maps deforestation and related CO2 emissions embedded in the international trade of these products using both a physical trade model, and a MRIO (multi-regional input-output) model.
 This allows for the quantification of deforestation and related emissions embedded in imported food and forestry products.
 """
-type DeforestationByCommodityPendrillEtAlDataset {
+type DeforestationByCommodityPendrillEtAl2019Dataset {
  forest_loss_ha: Float
  share_of_commodity_driven_deforestation: Float
  deforestation_emissions: Float
@@ -2183,7 +2201,7 @@ type DrinkingHabitsInGreatBritainUkOnsDataset {
 """
 The study quantifies types of forest disturbance and loss in the Brazilian Legal Amazon (BLA) using a sample-based approach from remotely sensed data.This quantifies not only complete deforestation drivers, but also temporary forest loss from natural disturbances, wildfires, flooding etc.
 """
-type DriversOfForestLossInBrazilLegalAmazonTyukavinaEtAlDataset {
+type DriversOfForestLossInBrazilLegalAmazonTyukavinaEtAl2017Dataset {
  commercial_crops: Float
  tree_plantations_including_palm: Float
  pasture: Float
@@ -2270,12 +2288,12 @@ Please cite the data as:Pretis, Schwarz, Tang, Haustein, and Allen.
 Philosophical Transactions of the Royal Society, A.
 DOI 10.1098/rsta.2016.0460.
 """
-type EconomicImpacts2vs1Dataset {
+type EconomicImpacts2vs15cPretisEtAlDataset {
  median: Float
- o97: Float
+ o975th_percentile: Float
  o83rd_percentile: Float
  o17th_percentile: Float
- o2: Float
+ o25th_percentile: Float
 }
 
 """
@@ -2285,12 +2303,12 @@ Please cite the data as:Pretis, Schwarz, Tang, Haustein, and Allen.
 Philosophical Transactions of the Royal Society, A.
 DOI 10.1098/rsta.2016.0460.
 """
-type EconomicImpactsOf1Dataset {
+type EconomicImpactsOf15cPretisEtAlDataset {
  median: Float
  o17th_percentile: Float
  o83rd_percentile: Float
- o97: Float
- o2: Float
+ o975th_percentile: Float
+ o25th_percentile: Float
 }
 
 """
@@ -2300,12 +2318,12 @@ Please cite the data as:Pretis, Schwarz, Tang, Haustein, and Allen.
 Philosophical Transactions of the Royal Society, A.
 DOI 10.1098/rsta.2016.0460.
 """
-type EconomicImpactsOf2cPretisEtAlDataset {
+type EconomicImpactsOf2cPretisEtAl2018Dataset {
  median: Float
  o17th_percentile: Float
  o83rd_percentile: Float
- o97: Float
- o2: Float
+ o975th_percentile: Float
+ o25th_percentile: Float
 }
 
 """
@@ -2506,13 +2524,13 @@ type EmissionsAirPollutantsOverLongTermDefraAndEpaDataset {
  non_methane_volatile_organic_compounds_vocs: Float
  ammonia: Float
  pm10: Float
- pm2: Float
+ pm25: Float
  sulphur_dioxide_index: Float
  nitrogen_oxides_index: Float
  non_methane_volatile_organic_compounds_index: Float
  ammonia_index: Float
  pm10_index: Float
- pm2: Float
+ pm25_index: Float
 }
 
 """
@@ -2603,8 +2621,8 @@ type EndemicVertebrateSpeciesByCountryIucn2020Dataset {
  amphibians_threatened_endemic: Float
  groupers_total_endemic: Float
  groupers_threatened_endemic: Float
- herrings_anchovies_etc: Float
- herrings_anchovies_etc: Float
+ herrings_anchovies_etc_total_endemic: Float
+ herrings_anchovies_etc_threatened_endemic: Float
  seahorses_and_pipefishes_total_endemic: Float
  seahorses_and_pipefishes_threatened_endemic: Float
  sturgeons_total_endemic: Float
@@ -3113,7 +3131,7 @@ Estimates correspond to individuals living in households with per capita dispos
 """
 type ExtremeIncomePovertyInEuropeBradshawAndMayhew2011Dataset {
  money1_poverty_rate_bradshaw_and_mayhew_2011: Float
- money2: Float
+ money215_poverty_rate_bradshaw_and_mayhew_2011: Float
 }
 
 """
@@ -3130,7 +3148,7 @@ More information on this fragility measure can be found at the OECD (2018) repor
 OECD Publishing, Paris.
 Available at: https://www.oecd-ilibrary.org/development/states-of-fragility-2018_9789264302075-en
 """
-type ExtremePoverty2030ProjectionsBySspCrespoEtAlDataset {
+type ExtremePoverty2030ProjectionsBySspCrespoEtAl2018Dataset {
  ssp1_number_of_people_in_extreme_poverty: Float
  ssp2_number_of_people_in_extreme_poverty: Float
  ssp3_number_of_people_in_extreme_poverty: Float
@@ -3238,7 +3256,7 @@ The original sources:FAO, IFAD & WFP (2010) – The State of Food Insecurity in 
 http://www.fao.org/docrep/013/i1683e/i1683e.pdfFAO, IFAD & WFP (2013) – The State of Food Insecurity in the World 2013 – The multiple dimensions of food security, Food and Agriculture Organization of the United Nations (FAO), the International Fund for Agricultural Development (IFAD) or of the World Food Programme (WFP), FAO, Rome, 2013.
 http://www.fao.org/docrep/018/i3434e/i3434e.pdf
 """
-type FaoUndernourishmentComparison2010VsDataset {
+type FaoUndernourishmentComparison2010Vs2012Dataset {
  o2012_report: Float
  o2010_report: Float
 }
@@ -3508,8 +3526,8 @@ type FoodMilesByTransportMethodPooreAndNemecek2018Dataset {
  emissions_factor_for_temperature_controlled_transport_kg_co2eq_per_tonne_kilometer: Float
 }
 
-type FoodPricesExpressedInHourlyWagesUDataset {
- food_prices_expressed_in_hourly_wages_u: Float
+type FoodPricesExpressedInHourlyWagesUsBureauOfLaborStatistics2015Dataset {
+ food_prices_expressed_in_hourly_wages_us_bureau_of_labor_statistics_2015: Float
 }
 
 """
@@ -3606,7 +3624,7 @@ S., Brockhaus, M., Verchot, L., ...
 An assessment of deforestation and forest degradation drivers in developing countries.
 Environmental Research Letters, 7(4), 044009.
 """
-type ForestTransitionPhasePendrillEtAlDataset {
+type ForestTransitionPhasePendrillEtAl2019Dataset {
  forest_transition_phase: Float
 }
 
@@ -4251,7 +4269,7 @@ type GlobalMeatProjectionsTo2050FaoDataset {
 """
 Data denotes annual global polymer resin and fiber production (plastic production), measured in metric tonnes.
 """
-type GlobalPlasticProductionGeyerEtAlDataset {
+type GlobalPlasticProductionGeyerEtAl2017Dataset {
  global_plastics_production_million_tonnes: Float
  cumulative_global_plastics_production_million_tonnes: Float
 }
@@ -4405,7 +4423,7 @@ This is done in the context of recommended global TB strategies and targets endo
 The report can be found at https://www.who.int/tb/publications/global_report/en/
 """
 type GlobalTuberculosisReportCaseNotificationsWho2019Dataset {
- number_of_laboratory_confirmed_xdr_tb_cases_identified_in_the_current_year_including_in_mdr_cases_diagnosed_in_previous_years: Float
+ number_of_laboratory_confirmed_xdr_tb_cases_identified_in_the_current_year_including_in_mdr_cases_diagnosed_in_previous_years_all_conf_xdr: Float
  total_of_new_and_relapse_cases_and_cases_with_unknown_previous_tb_treatment_history_c_newinc: Float
  number_of_laboratory_confirmed_mdr_tb_cases_identified_conf_mdr: Float
  number_of_laboratory_confirmed_mdr_tb_patients_who_started_treatment_for_mdr_tb_conf_mdr_tx: Float
@@ -4416,8 +4434,8 @@ type GlobalTuberculosisReportCaseNotificationsWho2019Dataset {
  hiv_positive_tb_patients_started_or_continued_on_co_trimoxazole_preventive_therapy_cpt_hiv_cpt: Float
  people_living_with_hiv_newly_enrolled_in_hiv_care_who_started_treatment_for_latent_tb_infection_hiv_ipt: Float
  people_living_with_hiv_currently_enrolled_in_hiv_care_who_started_treatment_for_latent_tb_infection_hiv_ipt_reg_all: Float
- total_number_of_people_registered_as_hiv_positive_regardless_of_year_of_diagnosis: Float
- number_of_adults_and_children_newly_enrolled_in_hiv_care_during_the_year: Float
+ total_number_of_people_registered_as_hiv_positive_regardless_of_year_of_diagnosis_total_number_of_adults_and_children_enrolled_in_hiv_care_includes_everyone_in_the_hiv_care_andor_art_register_hiv_reg: Float
+ number_of_adults_and_children_newly_enrolled_in_hiv_care_during_the_year_hiv_reg_new: Float
  total_number_of_adults_and_children_newly_enrolled_in_pre_art_care_or_on_art_during_the_reporting_period_hiv_reg_new2: Float
  total_number_of_adults_and_children_newly_enrolled_in_hiv_care_who_are_diagnosed_as_having_active_tb_disease_during_the_reporting_period_hiv_tbdetect: Float
  number_of_adults_and_children_enrolled_in_hiv_care_who_had_their_tb_status_assessed_and_recorded_during_their_last_visit_hiv_tbscr: Float
@@ -4431,8 +4449,8 @@ type GlobalTuberculosisReportCaseNotificationsWho2019Dataset {
  had_any_tb_patients_been_started_on_bedaquiline_for_the_treatment_of_mdr_xdr_tb_by_the_end_of_reporting_year_as_part_of_expanded_access_compassionate_use_or_under_normal_programmatic_use_whether_in_the_public_or_private_sector_mdrxdr_bdq_used: Float
  number_of_patients_started_on_delamanid_during_the_reporting_year_mdrxdr_dlm_tx: Float
  had_any_tb_patients_been_started_on_delamanid_for_the_treatment_of_mdr_xdr_tb_by_the_end_of_reporting_as_part_of_expanded_access_compassionate_use_or_under_normal_programmatic_use_whether_in_the_public_or_private_sector_mdrxdr_dlm_used: Float
- new_pulmonary_clinically_diagnosed_tb_cases_not_bacteriologically_confirmed_as_positive_for_tb_but_diagnosed_with_active_tb_by_a_clinician_or_another_medical_practitioner_who_has_decided_to_give_the_patient_a_full_course_of_tb_treatment: Float
- new_extrapulmonary_cases_bacteriologically_confirmed_or_clinically_diagnosed: Float
+ new_pulmonary_clinically_diagnosed_tb_cases_not_bacteriologically_confirmed_as_positive_for_tb_but_diagnosed_with_active_tb_by_a_clinician_or_another_medical_practitioner_who_has_decided_to_give_the_patient_a_full_course_of_tb_treatment_it_also_includes_pulmonary_clinically_diagnosed_cases_with_unknown_previous_tb_treatment_history_new_clindx: Float
+ new_extrapulmonary_cases_bacteriologically_confirmed_or_clinically_diagnosed_as_of_2013_this_also_includes_extrapulmonary_cases_with_unknown_previous_tb_treatment_history_new_ep: Float
  new_extrapulmonary_cases_females_aged_0_14_years_not_used_after_2012_new_ep_f014: Float
  new_extrapulmonary_cases_females_aged_0_4_years_not_used_after_2012_new_ep_f04: Float
  new_extrapulmonary_cases_females_aged_15_24_years_not_used_after_2012_new_ep_f1524: Float
@@ -4460,7 +4478,7 @@ type GlobalTuberculosisReportCaseNotificationsWho2019Dataset {
  new_extrapulmonary_cases_sex_unknown_aged_15_years_and_over_not_used_after_2012_new_ep_sexunk15plus: Float
  new_extrapulmonary_cases_sex_unknown_aged_5_14_years_not_used_after_2012_new_ep_sexunk514: Float
  new_extrapulmonary_cases_sex_unknown_age_unknown_not_used_after_2012_new_ep_sexunkageunk: Float
- new_pulmonary_bacteriologically_confirmed_tb_cases_smear_positive_or_culture_positive_or_positive_by_who_recommended_rapid_diagnostics_such_as_xpert_mtbrif: Float
+ new_pulmonary_bacteriologically_confirmed_tb_cases_smear_positive_or_culture_positive_or_positive_by_who_recommended_rapid_diagnostics_such_as_xpert_mtbrif_as_of_2013_this_also_includes_pulmonary_bacteriologically_confirmed_cases_with_unknown_previous_tb_treatment_history_new_labconf: Float
  other_new_cases_not_used_after_2012_new_oth: Float
  new_pulmonary_smear_negative_cases_not_used_after_2012_new_sn: Float
  new_pulmonary_smear_negativesmear_unknownsmear_not_done_cases_females_aged_0_14_years_not_used_after_2012_new_sn_f014: Float
@@ -4545,9 +4563,9 @@ type GlobalTuberculosisReportCaseNotificationsWho2019Dataset {
  are_data_on_hiv_testing_hiv_positivity_and_provision_of_antiretroviral_therapy_art_restricted_to_new_and_relapse_tb_cases_only_newrel_tbhiv_flg: Float
  other_cases_not_included_in_new_and_re_treatment_case_numbers_newret_oth: Float
  new_and_re_treatment_tb_cases_among_foreign_born_individuals_notif_foreign: Float
- number_of_tb_cases_pulmonary_or_extrapulmonary_tested_for_susceptibility_to_rifampicin_using_phenotypic_dst_or_who_recommended_rapid_molecular_diagnostics_e: Float
- number_of_tb_cases_pulmonary_or_extrapulmonary_tested_for_susceptibility_to_rifampicin_using_phenotypic_dst_or_who_recommended_rapid_molecular_diagnostics_e: Float
- number_of_tb_cases_pulmonary_or_extrapulmonary_tested_for_susceptibility_to_rifampicin_using_phenotypic_dst_or_who_recommended_rapid_molecular_diagnostics_e: Float
+ number_of_tb_cases_pulmonary_or_extrapulmonary_tested_for_susceptibility_to_rifampicin_using_phenotypic_dst_or_who_recommended_rapid_molecular_diagnostics_eg_xpert_mtbrif_before_or_after_starting_treatment_new_cases_rdst_new: Float
+ number_of_tb_cases_pulmonary_or_extrapulmonary_tested_for_susceptibility_to_rifampicin_using_phenotypic_dst_or_who_recommended_rapid_molecular_diagnostics_eg_xpert_mtbrif_before_or_after_starting_treatment_previously_treated_cases_rdst_ret: Float
+ number_of_tb_cases_pulmonary_or_extrapulmonary_tested_for_susceptibility_to_rifampicin_using_phenotypic_dst_or_who_recommended_rapid_molecular_diagnostics_eg_xpert_mtbrif_before_or_after_starting_treatment_cases_with_unknown_previous_tb_treatment_history_rdst_unk: Float
  are_data_available_on_the_number_of_new_and_relapse_cases_tested_using_a_who_recommended_rapid_diagnostic_during_the_reporting_year_rdx_data_available: Float
  if_rdx_data_available61_number_of_new_and_relapse_cases_whose_medical_records_or_treatment_cards_were_included_in_the_survey_rdxsurvey_newinc: Float
  if_rdx_data_available61_among_the_cases_reported_in_rdxsurvey_newinc_the_number_tested_using_a_who_recommended_rapid_diagnostic_such_as_xpert_mtbrif_at_the_time_of_tb_diagnosis_regardless_of_test_result_rdxsurvey_newinc_rdx: Float
@@ -4555,9 +4573,9 @@ type GlobalTuberculosisReportCaseNotificationsWho2019Dataset {
  previously_treated_patients_excluding_relapse_cases_pulmonary_or_extrapulmonary_bacteriologically_confirmed_or_clinically_diagnosed_ret_nrel: Float
  other_re_treatment_cases_ret_oth: Float
  relapse_cases_ret_rel: Float
- relapse_pulmonary_clinically_diagnosed_tb_cases_not_bacteriologically_confirmed_as_positive_for_tb_but_diagnosed_with_active_tb_by_a_clinician_or_another_medical_practitioner_who_has_decided_to_give_the_patient_a_full_course_of_tb_treatment: Float
+ relapse_pulmonary_clinically_diagnosed_tb_cases_not_bacteriologically_confirmed_as_positive_for_tb_but_diagnosed_with_active_tb_by_a_clinician_or_another_medical_practitioner_who_has_decided_to_give_the_patient_a_full_course_of_tb_treatment_ret_rel_clindx: Float
  relapse_extrapulmonary_cases_bacteriologically_confirmed_or_clinically_diagnosed_ret_rel_ep: Float
- relapse_pulmonary_bacteriologically_confirmed_tb_cases_smear_positive_or_culture_positive_or_positive_by_who_recommended_rapid_diagnostics_such_as_xpert_mtbrif: Float
+ relapse_pulmonary_bacteriologically_confirmed_tb_cases_smear_positive_or_culture_positive_or_positive_by_who_recommended_rapid_diagnostics_such_as_xpert_mtbrif_ret_rel_labconf: Float
  treatment_after_default_cases_ret_tad: Float
  treatment_after_failure_cases_ret_taf: Float
  number_of_laboratory_confirmed_rr_tb_or_mdr_tb_cases_tested_for_susceptibility_to_second_line_drugs_fluoroquinolones_and_second_line_injectable_agents_rr_sldst: Float
@@ -4572,9 +4590,9 @@ This is done in the context of recommended global TB strategies and targets endo
 The report can be found at https://www.who.int/tb/publications/global_report/en/
 """
 type GlobalTuberculosisReportTbBurdenEstimatesWho2019Dataset {
- case_detection_rate_all_forms: Float
- case_detection_rate_all_forms: Float
- case_detection_rate_all_forms: Float
+ case_detection_rate_all_forms_also_known_as_tb_treatment_coverage_percent_c_cdr: Float
+ case_detection_rate_all_forms_also_known_as_tb_treatment_coverage_percent_high_bound_c_cdr_hi: Float
+ case_detection_rate_all_forms_also_known_as_tb_treatment_coverage_percent_low_bound_c_cdr_lo: Float
  case_notification_rate_which_is_the_total_of_new_and_relapse_cases_and_cases_with_unknown_previous_tb_treatment_history_per_100_000_population_calculated_c_newinc_100k: Float
  estimated_tb_case_fatality_ratio_cfr: Float
  estimated_tb_case_fatality_ratio_high_bound_cfr_hi: Float
@@ -4645,8 +4663,8 @@ type GlobalYearOfLastPolioCasePlusCertificationStatusGpei2017Dataset {
  polio_status_gpei_2017: Float
 }
 
-type GlobalizationOver5CenturiesPwt9Dataset {
- world_trade_perc_of_gdp_pwt_9: Float
+type GlobalizationOver5CenturiesPwt90KlasingAndMilionis2014AndEstevadeordalFrantzAndDataset {
+ world_trade_perc_of_gdp_pwt_90: Float
 }
 
 """
@@ -4698,8 +4716,8 @@ The authors als note: "The database covers an unbalanced panel of 55 countries (
 The data consist of government revenue, non-interest government expenditure, and the interest bill (and thus also the overall fiscal balance and the primary balance), as well as gross public debt, all expressed as a share of GDP...About half of the observations for the fiscal variables in our dataset are drawn from various cross-country sources, including the IMF’s World Economic Outlook (WEO) and International Financial Statistics (IFS) and the OECD Analytical Database...We hand-collected the other half of the data from country-specific sources, such as official government publications or economic histories that included public finance statistics."IMF data on government expenditure does not include interest paid on debt payments.
 In order to derive government expenditure with interest paid on debt included, the datasets "government expenditure, percent of GDP" and "interest paid on public debt, percent of GDP" from the IMF database.This data is therefore inclusive of interest on debt payments.
 """
-type GovernmentExpenditureImfBasedOnMauroEtAlDataset {
- government_expenditure_imf_based_on_mauro_et_al: Float
+type GovernmentExpenditureImfBasedOnMauroEtAl2015Dataset {
+ government_expenditure_imf_based_on_mauro_et_al_2015: Float
 }
 
 """
@@ -4729,7 +4747,7 @@ type GovernmentSpendingRoineVlachosWaldenstrom2009AndUsHistoricalTables2016Datas
 This dataset provides information on government transparency, as per the index by Hollyer et al.
 (2014).A government is considered more transparent if it provides data on many measures included in the World Governance Indicators to the World Bank, even if other countries do not.
 """
-type GovernmentTransparencyIndexHollyerEtAlDataset {
+type GovernmentTransparencyIndexHollyerEtAl2014Dataset {
  gov_transparency: Float
  gov_transparency_upper: Float
  gov_transparency_lower: Float
@@ -4789,9 +4807,9 @@ Risk and resilience in a new era.
 WWF International, Gland, Switzerland.
 Available at: http://awsassets.panda.org/downloads/lpr_living_planet_report_2016.pdf
 """
-type HalfIndexLandUseAlexanderEtAlDataset {
- half_index_total_land_area_alexander_et_al: Float
- half_index_habitable_land_area_alexander_et_al: Float
+type HalfIndexLandUseAlexanderEtAl2016Dataset {
+ half_index_total_land_area_alexander_et_al_2016: Float
+ half_index_habitable_land_area_alexander_et_al_2016: Float
 }
 
 """
@@ -4800,13 +4818,13 @@ However, the underlying data comes from various survey waves, varying by country
 The online appendix in the original article provides details regarding actual dates of data collection.
 """
 type HappinessPredictorsWorldHappinessReport2017Dataset {
- happiness_and_log_income_partial_correlation_clark_et_al: Float
- happiness_and_years_of_education_partial_correlation_clark_et_al: Float
- happiness_and_not_unemployed_partial_correlation_clark_et_al: Float
- happiness_and_partnered_partial_correlation_clark_et_al: Float
- happiness_and_physical_illness_partial_correlation_clark_et_al: Float
- happiness_and_mental_illness_partial_correlation_clark_et_al: Float
- happiness_and_gender_partial_correlation_with_female_clark_et_al: Float
+ happiness_and_log_income_partial_correlation_clark_et_al_in_world_happiness_report_2017: Float
+ happiness_and_years_of_education_partial_correlation_clark_et_al_in_world_happiness_report_2017: Float
+ happiness_and_not_unemployed_partial_correlation_clark_et_al_in_world_happiness_report_2017: Float
+ happiness_and_partnered_partial_correlation_clark_et_al_in_world_happiness_report_2017: Float
+ happiness_and_physical_illness_partial_correlation_clark_et_al_in_world_happiness_report_2017: Float
+ happiness_and_mental_illness_partial_correlation_clark_et_al_in_world_happiness_report_2017: Float
+ happiness_and_gender_partial_correlation_with_female_clark_et_al_in_world_happiness_report_2017: Float
 }
 
 """
@@ -4904,11 +4922,11 @@ The three components were equally weighted (HHI-PD score = [stunting (%) + anemi
 Applying arbitrary cut-offs, HHI-PD scores between 0 and 19.9 were considered mild, 20-34.9 as moderate, 35-44.9 as severe, and 45-100 as alarmingly high.
 Highly developed countries with a 2007 Human Development Index (HDI) score above 0.9 (n=41) were assumed to have a low prevalence of micronutrient deficiencies, and were therefore excluded from this analysis.Data on micronutrient deficiencies used in this index relate to national-level analysis and surveys over the period 1999-2009.
 """
-type HiddenHungerIndexInPreSchoolChildrenMuthayyaEtAlDataset {
- hidden_hunger_index_in_pre_school_children_muthayya_et_al: Float
+type HiddenHungerIndexInPreSchoolChildrenMuthayyaEtAl2013Dataset {
+ hidden_hunger_index_in_pre_school_children_muthayya_et_al_2013: Float
 }
 
-type HistoricalCostOfComputerMemoryAndStorageJohnCDataset {
+type HistoricalCostOfComputerMemoryAndStorageJohnCMccallumDataset {
  memory: Float
  disk_drives: Float
  ssd: Float
@@ -4923,12 +4941,12 @@ US data published by the Bureau of Economic Analysis).
 In the attached documentation (https://ourworldindata.org/wp-content/uploads/2017/05/Documentation-for-Historical-employment-and-output-by-sector-%E2%80%93-OWID-2017.pdf) we describe sources and updates, country by country.
 """
 type HistoricalEmploymentAndOutputBySectorOwid2017Dataset {
- share_of_agriculture_in_gdp_at_current_prices_herrendorf_et_al: Float
- share_of_industry_in_gdp_at_current_prices_herrendorf_et_al: Float
- share_of_services_in_gdp_at_current_prices_herrendorf_et_al: Float
- number_of_people_employed_in_agriculture_herrendorf_et_al: Float
- number_of_people_employed_in_industry_herrendorf_et_al: Float
- number_of_people_employed_in_services_herrendorf_et_al: Float
+ share_of_agriculture_in_gdp_at_current_prices_herrendorf_et_al_data: Float
+ share_of_industry_in_gdp_at_current_prices_herrendorf_et_al_data: Float
+ share_of_services_in_gdp_at_current_prices_herrendorf_et_al_data: Float
+ number_of_people_employed_in_agriculture_herrendorf_et_al_data: Float
+ number_of_people_employed_in_industry_herrendorf_et_al_data: Float
+ number_of_people_employed_in_services_herrendorf_et_al_data: Float
 }
 
 """
@@ -5017,10 +5035,10 @@ Long term dynamic modeling of global population and built-up area in a spatially
 The Holocene20(4):565-573.
 http://dx.doi.org/10.1177/0959683609356587
 """
-type HistoricalUrbanFractionEstimatesAndTotalComputedUrbanAreasHyde3Dataset {
- historical_urban_fraction_estimate_per_region_hyde_3: Float
- total_urban_area_per_world_region_hyde_3: Float
- historical_rural_fraction_estimate_per_region_hyde_3: Float
+type HistoricalUrbanFractionEstimatesAndTotalComputedUrbanAreasHyde312010Dataset {
+ historical_urban_fraction_estimate_per_region_hyde_31_2010: Float
+ total_urban_area_per_world_region_hyde_31_2010: Float
+ historical_rural_fraction_estimate_per_region_hyde_31_2010: Float
 }
 
 """
@@ -5050,8 +5068,8 @@ All interviews took place in the period 1999-2003.
 The source provides the following information regarding the data-collecting process:"Random samples of 250–435 adults were interviewed by telephone in five different nations (N = 1,546): Belgium, Germany, Italy, the UK, and the United States.
 The interview included questions on respondent attitudes, knowledge, and opinions regarding homelessness; respondents’ own personal experiences with homelessness and homeless people; and demographic characteristics of the respondents.Respondents’ personal experiences with homelessness were assessed by querying whether they had ever considered themselves homeless or in another precarious housing situation, following up with items directed at ascertaining the age at which they experienced homelessness, the duration of the episode of homelessness, and whether they were literally homeless (slept in a shelter, in a park) or 'precariously housed' (slept at a friend’s house because they had no other place to go)."We report estimates only for literal homelessness.
 """
-type HomelessnessPrevalenceToroEtAlDataset {
- share_of_population_with_an_episode_of_homelessness_toro_et_al: Float
+type HomelessnessPrevalenceToroEtAl2007Dataset {
+ share_of_population_with_an_episode_of_homelessness_toro_et_al_2007: Float
 }
 
 """
@@ -5120,7 +5138,7 @@ type HouseholdsActualAndImputedRentAsShareOfGdpOecdDataset {
 This data has been aggregated by urban vs.
 rural households.
 """
-type HouseholdsUsingSolidFuelsForCookingUrbanVsDataset {
+type HouseholdsUsingSolidFuelsForCookingUrbanVsRuralUnDataset {
  urban: Float
  rural: Float
 }
@@ -5227,7 +5245,7 @@ type HumanHeightUniversityOfTuebingen2015Dataset {
 This dataset provides the human rights protection scores by Fariss et al.
 (2020), first developed by Schnakenberg and Fariss (2014).
 """
-type HumanRightsProtectionFarissEtAlDataset {
+type HumanRightsProtectionFarissEtAl2020Dataset {
  human_rights_protection: Float
 }
 
@@ -5794,7 +5812,7 @@ The authors produce a global reconstruction and mapping of anthropogenic land us
 Anthromes were mapped using gridded global estimates of human population density and land use from the History of the Global Environment database (HYDE version 3.2) by a classification procedure similar to that used for prior anthrome maps.Our World in Data has also provided aggregated land use categories based on the Ellis et al.
 (2020) results, where categories were grouped in the following way:– Urban: "Urban" + "Mixed settlements"– Villages: "Rice villages" + "Irrigated villages" + "Rainfed villages" + "Pastoral villages"– Croplands: "Residential irrigated croplands" + "Residential rainfed croplands" + "Populated rainfed croplands" + "Remote croplands"– Pasture : "Residential rangelands" + "Populated rangelands" + "Remote rangelands"– Semi-natural land: "Residential woodlands" + "Populated woodlands" + "Remote woodlands"
 """
-type LandUseSince10000bcEllisEtAlDataset {
+type LandUseSince10000bcEllisEtAl2020Dataset {
  area_disaggregated_categories: Float
  area_aggregated_categories: Float
 }
@@ -5814,8 +5832,8 @@ type LearningAdjustedYearsOfSchoolingWorldBank2018Dataset {
  learning_adjusted_years_of_school: Float
 }
 
-type LearningCostsJDataset {
- j: Float
+type LearningCostsJDoyneFarmerAndFrancoisLafond2016Dataset {
+ j_doyne_farmer_and_francois_lafond_2016: Float
 }
 
 """
@@ -6191,12 +6209,12 @@ European Review of Economic History Vol.
 219-253.
 Cambridge University Press Available online at: http://dx.doi.org/10.1017/S1361491607001967
 """
-type LongTermEnergyTransitionInEuropeGalesEtAlDataset {
- muscle_gales_et_al: Float
- firewood_gales_et_al: Float
- wind_water_gales_et_al: Float
- fossil_fuels_gales_et_al: Float
- primary_electricity_gales_et_al: Float
+type LongTermEnergyTransitionInEuropeGalesEtAl2007Dataset {
+ muscle_gales_et_al_2007: Float
+ firewood_gales_et_al_2007: Float
+ wind_water_gales_et_al_2007: Float
+ fossil_fuels_gales_et_al_2007: Float
+ primary_electricity_gales_et_al_2007: Float
 }
 
 """
@@ -6315,7 +6333,7 @@ Bolt, Jutta, Robert Inklaar, Herman de Jong and Jan Luiten van Zanden (2018), �
 In our dataset we have multiplied it by 1000 to avoid expressing it "in thousands".The Maddison region definitions were adapted from the source from Maddison (2010)'s homepage at: http://www.ggdc.net/maddison/oriindex.htm under the heading "Historical Statistics" and the file titled: Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD (Horizontal file, copyright Angus Maddison, University of Groningen) To calculate average real GDP per capita across regions, we have calculated a population weight for each country per year by dividing country population in year x by the total regional population.
 This weight has been used to multiply real GDP per capita (in 2011US$, with multiple benchmarks) to give real regional GDP per capita weighted by population.
 """
-type MaddisonProjectDatabase2018BoltEtAlDataset {
+type MaddisonProjectDatabase2018BoltEtAl2018Dataset {
  real_gdp_per_capita_in_2011usmoney_multiple_benchmarks_maddison_project_database_2018: Float
  real_gdp_per_capita_in_2011usmoney_2011_benchmark_maddison_project_database_2018: Float
  population_maddison_project_database_2018: Float
@@ -6691,7 +6709,7 @@ Data was downloaded on 30th August 2018.United Nations, Department of Economic a
 World Population Prospects: The 2017 Revision, DVD Edition (https://esa.un.org/unpd/wpp/Download/Standard/Population/).
 Data was downloaded on 30th August 2018.
 """
-type MaternalDeathsTo2030BauVsDataset {
+type MaternalDeathsTo2030BauVsSdgTargetBasedOnWorldBankAndUn2018Dataset {
  annual_maternal_deaths_to_2030_business_as_usual: Float
  annual_maternal_deaths_to_2030_required_rate_for_sdgs: Float
  annual_maternal_lives_at_stake_to_2030: Float
@@ -6728,15 +6746,15 @@ type MaternalMortalityRatioGapminder2010AndWorldBank2015Dataset {
 Data is based on the UN's final evaluation of the Millennium Development Goals (MDGs) and sourced from its final report (http://www.un.org/millenniumgoals/2015_MDG_Report/pdf/MDG%202015%20rev%20(July%201).pdf) and Statistical Database (http://mdgs.un.org/unsd/mdg/Resources/Static/Products/Progress2015/StatAnnex.pdf).The specific Targets with data here are:MDG1.A: halve share of people living in extreme poverty (defined as living on less than .25 per day - the historical poverty line).MDG1.B: achieve full and productive employment, as well as decent work for all, including young people and women.MDG1.C: halve the proportion of individuals suffering from hunger.MDG2: ensure that children universally – including both boys and girls – will be able to complete a full course of primary education by 2015.MDG3.A: eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015.MDG4.A: reduce the under-five mortality rate by two-thirds in the period between 1990 and 2015.MDG5.A: reduce the maternal mortality ratio by 75 percent.MDG5.B: achieve universal access to reproductive health.
 """
 type MdgFinalEvaluationUnMdgReportDataset {
- mdg1: Float
- mdg1: Float
- mdg1: Float
- mdg2: Float
- mdg3: Float
- mdg4: Float
- mdg5: Float
- mdg5: Float
- mdg5: Float
+ mdg1a_share_in_extreme_poverty_money125_per_day: Float
+ mdg1b_share_in_productive_employment: Float
+ mdg1c_share_undernourished: Float
+ mdg2a_universal_primary_education: Float
+ mdg3a_gender_parity_index: Float
+ mdg4a_child_mortality_rate: Float
+ mdg5a_maternal_mortality_rate: Float
+ mdg5b_share_of_pregnant_women_receiving_antenatal_care: Float
+ mdg5b_share_of_married_women_using_contraceptives: Float
 }
 
 """
@@ -6834,10 +6852,10 @@ This is measured in kilograms of dry-matter feed per kilogram of edible weight p
 Greenhouse Gas Emissions from Ruminant Supply Chains–A Global Life Cycle Assessment Food and Agriculture Organization of the United Nations (FAO), Rome, Italy (2013).Macleod et al.
 Greenhouse Gas Emissions from Pig and Chicken Supply Chains – A Global Life Cycle Assessment Food and Agriculture Organization of the United Nations (FAO), Rome, Italy (2013).
 """
-type MeatConversionEfficienciesAlexanderEtAlDataset {
- feed_conversion_ratio_alexander_et_al: Float
- protein_feed_conversion_efficiency_alexander_et_al: Float
- energy_conversion_efficiency_alexander_et_al: Float
+type MeatConversionEfficienciesAlexanderEtAl2016Dataset {
+ feed_conversion_ratio_alexander_et_al_2016: Float
+ protein_feed_conversion_efficiency_alexander_et_al_2016: Float
+ energy_conversion_efficiency_alexander_et_al_2016: Float
 }
 
 """
@@ -6877,7 +6895,7 @@ type MentalAndSubstanceUseDisorderDisaggregatedIhmeDataset {
 """
 Data denotes the increased risk of developing a substance use disorder in individuals with a mental health disorder relative to those without, based on a study on over 5000 individuals over a 10-year period.Full data with confidence intervals can be found at: https://ourworldindata.org/mental-health-disorders-as-risk-for-substance-use
 """
-type MentalHealthAsRiskFactorForSubstanceUseSwendsenEtAlDataset {
+type MentalHealthAsRiskFactorForSubstanceUseSwendsenEtAl2010Dataset {
  increased_risk_of_nicotine_dependency: Float
  increased_risk_of_alcohol_dependency: Float
  increased_risk_of_illicit_drug_dependency: Float
@@ -6886,7 +6904,7 @@ type MentalHealthAsRiskFactorForSubstanceUseSwendsenEtAlDataset {
 """
 Data is available only for a small number of countries, and based on household surveys over the period 2001-2004.'Share receiving any treatment for mental health' refers to the percentage of total respondents (with or without mental health burden) who received any form of treatment in the last 12 months.In differentiating the share of people with particular severities of mental illness receiving treatment, the authors define the following categories:- 'Severe' = "bipolar I disorder or substance dependence with a physiological dependence syndrome, making a suicide attempt in conjunction with any other disorder, reporting severe role impairment due to a mental disorder in at least two areas of functioning measured by disorder-specific Sheehan Disability Scales (SDS),12 or having overall functional impairment from any disorder consistent with a Global Assessment of Functioning (GAF)13 score of 50 or less."- 'Moderate' = "substance dependence without a physiological dependence syndrome or at least moderate interference in any SDS domain"- 'Mild' = all other disorders not noted above.Mental health services were classified into the following sectors: - mental health specialty (psychiatrist, psychologist, other mental health professional in any setting, social worker or counsellor in a mental health specialty setting, use of a mental health hotline); - general medical (primary care doctor, other general medical doctor, nurse, any other health professional not previously mentioned); - human services (religious or spiritual advisor, social worker, or counsellor in any setting other than a specialty mental health setting);- complementary and alternative medicine (any other type of healer such as chiropractors, participation in an internet support group, participation in a self-help group).
 """
-type MentalHealthServicesAcrossIncomesWangEtAlDataset {
+type MentalHealthServicesAcrossIncomesWangEtAl2007Dataset {
  share_of_gdp_spent_on_healthcare: Float
  share_receiving_any_treatment_for_mental_health: Float
  mental_health_specialty_perc: Float
@@ -7054,9 +7072,9 @@ type MinimumReadingAndMathsProficiencyGemReport20178Dataset {
 Data describes modelled and projected ocean plastic under three 'plastic emissions' scenarios.Given is the modelled global accumulation of buoyant macroplastics (>0.5 cm) in the ocean.
 And the accumulation of microplastics (<0.5 cm), which is degraded plastic material from the ocean surface layer.This is given under three scenarios:(1) Emissions of plastic to the world's oceans stopped by 2020;(2) Emissions stagnated at 2020 levels;(3) Increasing emissions of plastic until 2050 in line with the average growth rate of global plastic production from 2005-2015.
 """
-type MissingPlasticBudgetLebretonEtAlDataset {
- accumulated_ocean_plastic_macroplastics_greater0: Float
- accumulated_ocean_plastic_microplastics_less0: Float
+type MissingPlasticBudgetLebretonEtAl2019Dataset {
+ accumulated_ocean_plastic_macroplastics_greater05cm: Float
+ accumulated_ocean_plastic_microplastics_less05cm: Float
 }
 
 """
@@ -7508,8 +7526,8 @@ type NeglectedTropicalDiseasesLymphaticFilariasisPopulationRequiringPcNotTreated
 """
 Estimates generated by the UN Inter-agency Group for Child Mortality Estimation (IGME) in 2015.
 """
-type NeonatalMortalityRateViaChildmortalityDataset {
- neonatal_mortality_rate_via_childmortality: Float
+type NeonatalMortalityRateViaChildmortalityorg2015Dataset {
+ neonatal_mortality_rate_via_childmortalityorg_2015: Float
 }
 
 type NeonatalTetanusIncidenceDataset {
@@ -7895,7 +7913,7 @@ This is measured across both sexes and all ages.
 Death rates are reported per 100,000 and are not age-standardized.Data for specific causes of death may be missing or intermittent where it enters or falls out of the top 10 reported causes of deaths in any year.
 """
 type O20thCenturyDeathsInUsCdcDataset {
- accidents_excl: Float
+ accidents_excl_road_deaths: Float
  accidents_total_deaths: Float
  arteriosclerosis_deaths: Float
  bronchitis_deaths: Float
@@ -7922,7 +7940,7 @@ type O20thCenturyDeathsInUsCdcDataset {
  tuberculosis_deaths: Float
  non_communicable_diseases_ncds_deaths: Float
  communicable_infectious_neonatal_and_other_deaths_deaths: Float
- accidents_excl: Float
+ accidents_excl_road_death_rates: Float
  accidents_total_death_rates: Float
  arteriosclerosis_death_rates: Float
  bronchitis_death_rates: Float
@@ -7949,7 +7967,7 @@ type O20thCenturyDeathsInUsCdcDataset {
  tuberculosis_death_rates: Float
  non_communicable_diseases_ncds_death_rates: Float
  communicable_infectious_neonatal_and_other_deaths_death_rates: Float
- accidents_excl: Float
+ accidents_excl_road_perc_of_deaths: Float
  accidents_total_perc_of_deaths: Float
  arteriosclerosis_perc_of_deaths: Float
  bronchitis_perc_of_deaths: Float
@@ -8350,9 +8368,9 @@ E.
 Population and Development Review, 38: 221–242.
 doi:10.1111/j.1728-4457.2013.00561.x
 """
-type PeakFarmlandProjectionAusbuelEtAlDataset {
- arable_land_and_permanent_crops_ausbuel_et_al: Float
- ausubel_et_al: Float
+type PeakFarmlandProjectionAusbuelEtAl2013Dataset {
+ arable_land_and_permanent_crops_ausbuel_et_al_2013: Float
+ ausubel_et_al_2013_projection_ausbuel_et_al_2013: Float
 }
 
 """
@@ -8462,7 +8480,7 @@ Estimates of the proportion of plastic waste discarded, recycled and incinerated
 Data for 1980-2015 is based on historical estimates.
 Data from 2016-2050 is based solely on extrapolation of consistent growth trends of 0.7% for recycling and incineration; it therefore represents business-as-usual growth but should not be interpreted as a direct projection.
 """
-type PlasticDiscardedRecycledIncineratedGeyerEtAlDataset {
+type PlasticDiscardedRecycledIncineratedGeyerEtAl2017Dataset {
  estimated_historic_plastic_fate: Float
  extrapolation_of_plastic_fate: Float
 }
@@ -8471,7 +8489,7 @@ type PlasticDiscardedRecycledIncineratedGeyerEtAlDataset {
 Quantity of plastic exports to China by the top 10 exporting countries in 2016.
 This is given in tonnes of plastic waste imported by China.Data is based on the UN Comtrade Database.
 """
-type PlasticImportersToChinaBrooksEtAlDataset {
+type PlasticImportersToChinaBrooksEtAl2018Dataset {
  plastic_exports_to_china_tonnes: Float
  share_of_chinese_plastic_imports_perc: Float
 }
@@ -8480,7 +8498,7 @@ type PlasticImportersToChinaBrooksEtAlDataset {
 Data represents two series related to Chinese plastic waste:- the estimated quantity of domestic waste generation, imported recycled waste, and total plastic waste to manage, measured in tonnes per year (from 2010 to 2016).- the projected cumulative quantity of plastic waste displaced as a result of the Chinese plastic imported ban (over the period 2018-2030).
 This is shown under scenarios of a 100%, 75% or 50% Chinese ban on plastic waste imports.
 """
-type PlasticImportsByChinaAndImpactOfBanBrooksEtAlDataset {
+type PlasticImportsByChinaAndImpactOfBanBrooksEtAl2018Dataset {
  domestic_plastic_waste_generated_tonnes: Float
  imported_recycled_waste_tonnes: Float
  total_waste_to_manage_tonnes: Float
@@ -8490,7 +8508,7 @@ type PlasticImportsByChinaAndImpactOfBanBrooksEtAlDataset {
  displaced_plastic_waste_50perc_ban_tonnes: Float
 }
 
-type PlasticOceanPollutionMeijerEtAlDataset {
+type PlasticOceanPollutionMeijerEtAl2021Dataset {
  probability_of_plastic_being_emitted_to_ocean: Float
  mismanaged_plastic_waste_metric_tons_year_1: Float
  mismanaged_waste_emitted_to_the_ocean_metric_tons_year_1: Float
@@ -8501,7 +8519,7 @@ type PlasticOceanPollutionMeijerEtAlDataset {
  mismanaged_plastic_waste_to_ocean_per_capita_kg_per_year: Float
 }
 
-type PlasticPollutionByTop50RiversMeijerEtAlDataset {
+type PlasticPollutionByTop50RiversMeijerEtAl2021Dataset {
  mismanaged_waste_emitted_to_the_ocean_metric_tons_year_1: Float
  mismanaged_waste_emitted_to_the_ocean_grams_per_second: Float
  share_of_global_plastics_emitted_to_ocean: Float
@@ -8512,7 +8530,7 @@ Data is given as mean product lifetimes of plastic products (measured in years),
 Data is also given for primary production and plastic waste by polymer type.
 Polymer types are as follows:- LDPE: Low-density polyethylene- HDPE: High-density polyethylene- PP: Polypropylene- PS: Polystyrene- PVC: Polyvinyl chloride- PET: Polyethylene terephthalate- PUT: Polyurethanes- PP&A fibres: polyester, polyamide, and acrylic fibres- Other polymers- Additives
 """
-type PlasticProductLifetimeProductionWasteBySourceGeyerEtAlDataset {
+type PlasticProductLifetimeProductionWasteBySourceGeyerEtAl2017Dataset {
  mean_product_lifetime_years: Float
  primary_plastic_production_million_tonnes: Float
  primary_plastic_waste_generation_million_tonnes: Float
@@ -8525,7 +8543,7 @@ quantified municipal and plastic waste streams from coastal populations in 2010.
 Their estimates were therefore multiplied by coastal population numbers to derive national plastic waste at risk of entering oceans and waterways.
 Here we calculate the total plastic waste generation by instead multiplying by total population figures.
 """
-type PlasticWasteGenerationByCountryOwidBasedOnJambeckEtAlDataset {
+type PlasticWasteGenerationByCountryOwidBasedOnJambeckEtAlAndWorldBankDataset {
  plastic_waste_generation_tonnes_total: Float
 }
 
@@ -8538,7 +8556,7 @@ Inadequately disposed waste is not formally managed and includes disposal in dum
 Mismanaged waste could eventually enter the ocean via inland waterways,wastewater outflows, and transport by wind or tides."In October 2019, per capita plastic waste figures for Trinidad and Tobago were updated from 3.6kg to 0.29kg per person per day.
 This change was the result of error in the original waste figures published by the World Bank, which have since been revised and amended.
 """
-type PlasticWasteJambeckEtAlDataset {
+type PlasticWasteJambeckEtAl2015Dataset {
  coastal_population: Float
  per_capita_waste_generation_rate: Float
  share_of_plastics_in_waste_stream: Float
@@ -8656,7 +8674,7 @@ type PoliticalRegimesFreedomHouse2022Dataset {
 This dataset provides information on political regimes, using data from Boix et al.
 (2013).We slightly expand the countries and years covered.You can download the code and complete dataset, including supplementary variables, from GitHub: https://github.com/owid/notebooks/tree/main/BastianHerre/political_regimes
 """
-type PoliticalRegimesOwidBasedOnBoixEtAlDataset {
+type PoliticalRegimesOwidBasedOnBoixEtAl2013Dataset {
  regime_bmr_owid: Float
  dem_age_bmr_owid: Float
  dem_age_group_bmr_owid: Float
@@ -8704,7 +8722,7 @@ This dataset provides information on political regimes, using data from the Vari
 (2018).We expand the countries and years covered, and refine the coding of the Regimes of the World classification.
 You can read a detailed description of the data in this post: https://ourworldindata.org/regimes-of-the-world-dataYou can download the code and complete dataset, including supplementary variables, from GitHub: https://github.com/owid/notebooks/tree/main/BastianHerre/political_regimes
 """
-type PoliticalRegimesOwidBasedOnVDemV12AndLuhrmannEtAlDataset {
+type PoliticalRegimesOwidBasedOnVDemV12AndLuhrmannEtAl2018Dataset {
  regime_row_owid: Float
  electdem_age_row_owid: Float
  electdem_age_group_row_owid: Float
@@ -8931,7 +8949,7 @@ type PoliticalRegimesPolity5Dataset {
 This dataset provides information on political regimes, using data from Skaaning et al.
 (2015).You can download the code and complete dataset, including supplementary variables, from GitHub: https://github.com/owid/notebooks/tree/main/BastianHerre/democracy
 """
-type PoliticalRegimesSkaaningEtAlDataset {
+type PoliticalRegimesSkaaningEtAl2015Dataset {
  regime_lied: Float
  exelec_lied: Float
  legelec_lied: Float
@@ -9019,7 +9037,7 @@ That of 1940, the 1937 census.
 From 1950 onwards, decadal census figures from 1951, 1961, etc are used.
 
 """
-type PopulationClioInfra2016WithIslandOfIrelandRepDataset {
+type PopulationClioInfra2016WithIslandOfIrelandRepNorthernDataset {
  population_clio_infra_2016_with_island_of_ireland_figures: Float
 }
 
@@ -9173,7 +9191,7 @@ Data for high-income economies are from the Luxembourg Income Study database.
 For more information and methodology, please see PovcalNet.
 (http://iresearch.worldbank.org/PovcalNet/methodology.aspx).
 """
-type PovertyHeadcountAtMoney1Dataset {
+type PovertyHeadcountAtMoney190ADay2011PppHighIncomeWorldBankPovcal2017Dataset {
  extreme_poverty_headcount_high_income_world_bank_povcal_2017: Float
 }
 
@@ -9341,8 +9359,8 @@ Estimates of zinc inadequacy were measured on the basis of national dietary inta
 Country-specific estimated prevalence of inadequate zinc intake were calculated based on the estimated absorbable zinc content of the national food supply, International Zinc Nutrition Consultative Group estimated physiological requirements for absorbed zinc, and demographic data obtained from United Nations estimates.
 Stunting data were obtained from a recent systematic analysis based on World Health Organization growth standards."
 """
-type PrevalenceOfZincDeficiencyWessellsEtAlDataset {
- prevalence_of_zinc_deficiency_wessells_et_al: Float
+type PrevalenceOfZincDeficiencyWessellsEtAl2012Dataset {
+ prevalence_of_zinc_deficiency_wessells_et_al_2012: Float
 }
 
 type PriceForLightFouquetDataset {
@@ -9633,7 +9651,7 @@ type RealGdpPerCapitaLondonAndDelhiOwidDataset {
 Cumulative export of plastics over the period 1988-2016 by the top 10 exporting countries.
 This is measured across several variables: economic value, tonnage, and share of global exports of plastics.
 """
-type RecycledPlasticExportsBrooksEtAlDataset {
+type RecycledPlasticExportsBrooksEtAl2018Dataset {
  cumulative_recycled_plastic_trade_value_billion_usd: Float
  cumulative_net_exported_plastic_million_tonnes: Float
  share_of_global_exports_perc: Float
@@ -9643,7 +9661,7 @@ type RecycledPlasticExportsBrooksEtAlDataset {
 This dataset provides information on the size of populations living under different political systems.Population data comes from our own calculations based on Gapminder (v6), HYDE (v3.2), and UN (2019).Political regimes are identified using the Regimes of the World classification from Lührmann et al.
 (2018), data from the Varieties of Democracy Project (v12), and expanding the data and refining the classification ourselves.The classification distinguishes between closed autocracies, electoral autocracies, electoral democracies, and liberal democracies.
 """
-type RegimePopulationsOwidBasedOnLuhrmannEtAlDataset {
+type RegimePopulationsOwidBasedOnLuhrmannEtAl2018VDemV12Owid2021GapminderV6Dataset {
  population_closed_aut: Float
  population_electoral_aut: Float
  population_electoral_dem: Float
@@ -9773,10 +9791,10 @@ An explanation of the correction factor algorithm can be found here: https://our
 Then, Tebbens et al.’s  (2010) model is applied in the same way as for the “Estimated number of polio cases”, for which we provide an explanation here: https://ourworldindata.org/tebbens-et-al-2011-estimation-of-the-number-of-paralytic-polio-cases/.
 """
 type ReportedNumberAndDifferentEstimationsOfPolioCasesWho2018Dataset {
- estimated_number_of_paralytic_polio_cases_disregarding_cases_after_polio_ceased_to_be_endemic_who_2018_and_tebbens_et_al: Float
+ estimated_number_of_paralytic_polio_cases_disregarding_cases_after_polio_ceased_to_be_endemic_who_2018_and_tebbens_et_al_2011: Float
  reported_number_of_paralytic_polio_cases_who_2018: Float
- estimated_number_of_paralytic_polio_cases_who_2018_and_tebbens_et_al: Float
- estimated_number_of_paralytic_polio_cases_using_reported_number_of_cases_after_polio_free_certification_who_2018_and_tebbens_et_al: Float
+ estimated_number_of_paralytic_polio_cases_who_2018_and_tebbens_et_al_2011: Float
+ estimated_number_of_paralytic_polio_cases_using_reported_number_of_cases_after_polio_free_certification_who_2018_and_tebbens_et_al_2011: Float
 }
 
 """
@@ -9967,20 +9985,20 @@ Journal of Biosocial Science, 49(6), 826-841.
 Available at: https://www.cambridge.org/core/services/aop-cambridge-core/content/view/51D48C611E5176A042FF28684041D997/S0021932016000547a.pdf/changes_in_sex_ratio_at_birth_in_china_a_decomposition_by_birth_order.pdfData for South Korea is sourced from the National Statistical Office of Korea (NSO Korea).
 Available at: http://kosis.kr/eng/statisticsList/statisticsListIndex.do?menuId=M_01_01&vwcd=MT_ETITLE&parmTabId=M_01_01&parentId=A.1;A2.2;A21.3;#A21.3
 """
-type SexRatioAtBirthByBirthOrderInSDataset {
- total_sex_ratio_at_birth_srb_jiang_et_al: Float
- first_child_srb_jiang_et_al: Float
- second_child_srb_jiang_et_al: Float
- third_child_srb_jiang_et_al: Float
- fourth_child_and_higher_srb_jiang_et_al: Float
+type SexRatioAtBirthByBirthOrderInSkoreaAndChinaJiangEtAl2017AndNsoKoreaDataset {
+ total_sex_ratio_at_birth_srb_jiang_et_al_2017: Float
+ first_child_srb_jiang_et_al_2017: Float
+ second_child_srb_jiang_et_al_2017: Float
+ third_child_srb_jiang_et_al_2017: Float
+ fourth_child_and_higher_srb_jiang_et_al_2017_and_nso_korea: Float
 }
 
 """
 Sex ratio at birth, measured as the number of male births per 100 female births.
 Birth ratios are slightly male-biased, with an expected biological ratio of 105 male per 100 female births.Data is available for every country from 1950, with modelled estimates based on a range of sources (census, household surveys and other population information sources) by the study authors.
 """
-type SexRatioAtBirthChaoEtAlDataset {
- sex_ratio_at_birth_chao_et_al: Float
+type SexRatioAtBirthChaoEtAl2019Dataset {
+ sex_ratio_at_birth_chao_et_al_2019: Float
 }
 
 """
@@ -10116,9 +10134,9 @@ Each decade, PEP releases these 'Intercensal Estimates' which constitutes the pr
 population figures for the period 2011-2016 are taken from the 'National Population Totals Tables: 2010-2016'.
 These estimates "are produced using a similar procedure to that used for our current postcensal estimates series, and with no knowledge of the Census count at the end of the decade."
 """
-type ShareOfPeopleExperiencingHomelessnessInTheUsa20072016Per100000Hud2016AndUDataset {
- sheltered_homeless_hud_2016_and_u: Float
- unsheltered_homeless_hud_2016_and_u: Float
+type ShareOfPeopleExperiencingHomelessnessInTheUsa20072016Per100000Hud2016AndUsCDataset {
+ sheltered_homeless_hud_2016_and_us_census_bureau_2010: Float
+ unsheltered_homeless_hud_2016_and_us_census_bureau_2010: Float
 }
 
 type ShareOfPeopleWhoReportHavingIntentionsToStartBusinessGlobalEntrepreneurshipMonitorDataset {
@@ -10167,20 +10185,20 @@ Based on tax data.
 Income includes earned, self-employment and investment income.
 Capital gains is in general excluded, but to varying degrees between countries.
 """
-type ShareOfWomenInTopIncomeGroupsAtkinsonCasaricoAndVoitchovsky2018Dataset {
+type ShareOfWomenInTopIncomeGroupsAtkinsonCasaricoAndVoitchovsky2018OldDataset {
  share_of_women_in_top_10perc: Float
  share_of_women_in_top_5perc: Float
  share_of_women_in_top_1perc: Float
- share_of_women_in_top_0: Float
- share_of_women_in_top_0: Float
- share_of_women_in_top_0: Float
+ share_of_women_in_top_01perc: Float
+ share_of_women_in_top_05perc: Float
+ share_of_women_in_top_025perc: Float
  top_10perc_series_2: Float
  top_5perc_series_2: Float
  top_1perc_series_2: Float
- top_0: Float
- top_0: Float
- top_0: Float
- top_0: Float
+ top_01perc_series_2: Float
+ top_05perc_series_2: Float
+ top_025perc_series_2: Float
+ top_05perc_series_3: Float
 }
 
 """
@@ -10299,7 +10317,7 @@ type SmallpoxCasesByCountry19201977Dataset {
  world_region_world_bank_2017: Float
 }
 
-type SmallpoxCasesReportedAndRevisedFennerEtAlDataset {
+type SmallpoxCasesReportedAndRevisedFennerEtAl1988Dataset {
  smallpox_cases_as_recorded_in_april_1967: Float
  smallpox_cases_as_revised_in_1987: Float
 }
@@ -10360,8 +10378,8 @@ Clio Infra data is available online at: https://www.clio-infra.eu/Data for 2010 
 (2011).
 This methodology estimates emissions based on energy and industrial production and mass-balance statistics.
 """
-type So2EmissionsByRegionOecd2014AndKlimontEtAlDataset {
- so2_emissions_oecd_2014_and_klimont_et_al: Float
+type So2EmissionsByRegionOecd2014AndKlimontEtAl2013Dataset {
+ so2_emissions_oecd_2014_and_klimont_et_al_2013: Float
 }
 
 """
@@ -10382,8 +10400,8 @@ Delgado Arias (2011) – Anthropogenic sulfur dioxide emissions: 1850–2005.
 Atmospheric Chemistry and Physics, 11, 1101-1116, doi:10.5194/acp-11-1101-2011, 2011.
 Online at: http://www.atmos-chem-phys.net/11/1101/2011/
 """
-type So2EmissionsChinaAndIndiaKlimontEtAlDataset {
- so2_emissions_in_china_and_india_klimont_et_al: Float
+type So2EmissionsChinaAndIndiaKlimontEtAl2013Dataset {
+ so2_emissions_in_china_and_india_klimont_et_al_2013: Float
 }
 
 type So2PerCapitaClioInfraDataset {
@@ -10416,7 +10434,7 @@ Available at: http://resourceirena.irena.org/gateway/dashboard/https://www.irena
 Here we have adopted the series for Thin film a-Si/u-Si, which it adopts as the Global Index.Prices from LaFond et al.
 (2017) have been converted to 2019 US$ using the US GDP deflator: https://www.multpl.com/gdp-deflator/table/by-year
 """
-type SolarPvModuleCostsAndCapacityLafondEtAlDataset {
+type SolarPvModuleCostsAndCapacityLafondEtAl2017AndIrenaDataset {
  cumulative_capacity: Float
  unit_cost: Float
 }
@@ -10435,7 +10453,7 @@ type SolarPvSystemsCostsBarboseAndDarghouth2016Dataset {
 To give one example: The world’s households primarily relying on solid fuels for cooking declined from 62% to 41% between 1980 and 2010.
 The 95% confidence interval for 1980 is from 58% to 66% and for 2010 from 37% to 44%.Countries are grouped by WHO region and income category (WHO 2012e; see Supplemental Material, Table S2).
 """
-type SolidFuelUseForCookingByRegionBonjourEtAlDataset {
+type SolidFuelUseForCookingByRegionBonjourEtAl2013Dataset {
  households_using_solid_fuels_as_the_main_cooking_fuel: Float
 }
 
@@ -10502,9 +10520,9 @@ Each observation corresponds to a different sub-national region.
 France, for example, is divided in 22 different regions.
 The source notes that these regions correspond in most cases to the principal sub-national unit of government (states or provinces) 
 """
-type SubnationalInequalityOecdBasedOnRoyuelaEtAlDataset {
- oecd_subnational_gini_coefficients_oecd_based_on_royuela_et_al: Float
- average_annual_growth_rate_of_gdp_per_capita_oecd_based_on_royuela_et_al: Float
+type SubnationalInequalityOecdBasedOnRoyuelaEtAl2014Dataset {
+ oecd_subnational_gini_coefficients_oecd_based_on_royuela_et_al_2014: Float
+ average_annual_growth_rate_of_gdp_per_capita_oecd_based_on_royuela_et_al_2014: Float
 }
 
 """
@@ -10549,9 +10567,9 @@ Mew et al.
 Our primary outcome was the proportion of total suicides due to pesticide poisoning.
 Weighted estimates were calculated for seven WHO regional and income strata."
 """
-type SuicidesFromPesticidesMewEtAlDataset {
- share_of_suicide_deaths_from_pesticides_mew_et_al: Float
- annual_suicide_deaths_from_pesticides_mew_et_al: Float
+type SuicidesFromPesticidesMewEtAl2017Dataset {
+ share_of_suicide_deaths_from_pesticides_mew_et_al_2017: Float
+ annual_suicide_deaths_from_pesticides_mew_et_al_2017: Float
 }
 
 """
@@ -10570,10 +10588,10 @@ Estimates by Eriksen et al.
 Estimates are based on results from 24 expeditions (over the period 2007–2013) across all five sub-tropical gyres, costal Australia, Bay of Bengal and the Mediterranean Sea conducting surface net tows (N = 680) and visual survey transects of large plastic debris (N = 891).
 These field-based results were combined with oceanographic modelling of floating debris dispersal and wind-driven vertical mixing to derive total oceanic figures.
 """
-type SurfaceOceanPlasticByMassEriksenEtAlDataset {
- small_microplastic_mass_0: Float
- large_microplastic_mass_1: Float
- mesoplastic_mass_4: Float
+type SurfaceOceanPlasticByMassEriksenEtAl2014Dataset {
+ small_microplastic_mass_033_1mm: Float
+ large_microplastic_mass_101_475mm: Float
+ mesoplastic_mass_476_200mm: Float
  macroplastic_mass_greater200mm: Float
  all_sizes_total_mass: Float
 }
@@ -10584,10 +10602,10 @@ Estimates by Eriksen et al.
 Estimates are based on results from 24 expeditions (over the period 2007–2013) across all five sub-tropical gyres, costal Australia, Bay of Bengal and the Mediterranean Sea conducting surface net tows (N = 680) and visual survey transects of large plastic debris (N = 891).
 These field-based results were combined with oceanographic modelling of floating debris dispersal and wind-driven vertical mixing to derive total oceanic figures.
 """
-type SurfaceOceanPlasticByParticleCountEriksenEtAlDataset {
- small_microplastic_count_0: Float
- large_microplastic_count_1: Float
- mesoplastic_count_4: Float
+type SurfaceOceanPlasticByParticleCountEriksenEtAl2014Dataset {
+ small_microplastic_count_033_1mm: Float
+ large_microplastic_count_101_475mm: Float
+ mesoplastic_count_476_200mm: Float
  macroplastic_count_greater200mm: Float
  all_sizes_total_count: Float
 }
@@ -10608,7 +10626,7 @@ type SwedishHistoricalNationalAccountsSchonAndKrantz200720122015Dataset {
  labor_productivity_gdpworker_schon_and_krantz_2007_2012_2015: Float
 }
 
-type TaxCompositionArroyoAbadAndPDataset {
+type TaxCompositionArroyoAbadAndPLindert2016Dataset {
  income_and_wealth_arroyo_abad_and_lindert_2016: Float
  consumption_arroyo_abad_and_lindert_2016: Float
  trade_arroyo_abad_and_lindert_2016: Float
@@ -10674,7 +10692,7 @@ Hence, each country is given equal weight.
 Further details on the construction of the variables and sampling weights are available in an Appendix available from the authors upon request.
 
 """
-type TeacherAbsenteeismBoldEtAlDataset {
+type TeacherAbsenteeismBoldEtAl2017Dataset {
  percentage_of_teachers_absent_from_class: Float
  percentage_of_teachers_absent_from_school: Float
 }
@@ -11212,7 +11230,7 @@ type TransistorsPerMicroprocessorRuppAndHorowitzDataset {
 """
 The authors used 429,775 ground-sourced measurements of tree density from every continent on Earth except Antarctica to generate a global map of forest trees.They define a tree as a plant with woody stems larger than 10 cm diameter at breast height (DBH).Tree density (per square kilometer and per capita) were calculated by the authors based on population and land area data sourced from the World Bank for 2014.
 """
-type TreeDensityCrowtherEtAlDataset {
+type TreeDensityCrowtherEtAl2015Dataset {
  number_of_trees: Float
  tree_density_trees_per_km2: Float
  tree_density_trees_per_capita: Float
@@ -11224,7 +11242,7 @@ Pendrill et al.
 This is then linked to particular agricultural commodities based on national land use, crop and forest product statistics published in the UN Food and Agricultural Organization balance sheets.This study also maps deforestation and related CO2 emissions embedded in the international trade of these products using both a physical trade model, and a MRIO (multi-regional input-output) model.
 This allows for the quantification of deforestation and related emissions embedded in imported food and forestry products.
 """
-type TropicalDeforestationByCountryOrRegionPendrillEtAlDataset {
+type TropicalDeforestationByCountryOrRegionPendrillEtAl2019Dataset {
  forest_loss_ha: Float
  share_of_commodity_driven_deforestation: Float
  deforestation_emissions_mtco2: Float
@@ -11244,7 +11262,7 @@ type TrustWorldValueSurveyDataset {
  trust_in_others_world_values_survey_2014: Float
 }
 
-type UcdpprioArmedConflictDatasetVersion17Dataset {
+type UcdpprioArmedConflictDatasetVersion172DirectFormUcdpDataset {
  number_of_conflicts_and_incidences_of_one_sided_violence: Float
 }
 
@@ -11287,8 +11305,8 @@ type UkCholeraDeathOverTheLongTermOnsDataset {
 Historical data provided by International Historical Statistics (Brian Mitchell) and the Measuring Worth project (measuringworth.com).
 Recent data comes from official sources (Office for Budget Responsibility and HM Treasury).
 """
-type UkDefenceSpendingUkpublicspendingDataset {
- defence_spending_as_a_percent_of_gdp_ukpublicspending: Float
+type UkDefenceSpendingUkpublicspendingcomDataset {
+ defence_spending_as_a_percent_of_gdp_ukpublicspendingcom: Float
 }
 
 """
@@ -11455,8 +11473,8 @@ HMD values are multiplied by a factor of 1.2 for Bulgaria, Czech Republic, Latvi
 PLoS Med 9(8): e1001303.
 doi:10.1371/journal.pmed.1001303
 """
-type Under5MortalityRateDataset {
- under_5_mortality_rate: Float
+type Under5MortalityRateOurWorldInDataDataset {
+ under_5_mortality_rate_our_world_in_data: Float
 }
 
 """
@@ -11930,8 +11948,8 @@ type VolcanicEruptionDeathsNgdcnoaaDataset {
 Wages in the Manufacturing Sector vs.
 Several Food Prices USA  – BLS Data
 """
-type WagesInTheManufacturingSectorVsDataset {
- wage_and_food_prices_u: Float
+type WagesInTheManufacturingSectorVsSeveralFoodPricesInTheUsUsBureauOfLaborStatisticDataset {
+ wage_and_food_prices_us_bureau_of_labor_statistics_2013: Float
 }
 
 type WaterAndSanitationWhoWash2021Dataset {
@@ -12266,18 +12284,18 @@ V.
 Emptying the oceans: a summary of industrial whaling catches in the 20th century.
 Marine Fisheries Review, 76(4), 37-48.The above paper draws on data originally published by the International Whaling Commission (IWC).Data from 2000 onwards is sourced directly from the International Whaling Commissions (IWC) which recorded the number of catches at: https://iwc.int/catches.
 """
-type WhaleCatchByDecadeRochaEtAlDataset {
- blue_whale_rocha_et_al: Float
- fin_whale_rocha_et_al: Float
- sperm_whale_rocha_et_al: Float
- humpback_whale_rocha_et_al: Float
- sei_whale_rocha_et_al: Float
- brydes_whale_rocha_et_al: Float
- minke_whale_rocha_et_al: Float
- gray_whale_rocha_et_al: Float
- right_whale_rocha_et_al: Float
- unspecifiedother_rocha_et_al: Float
- all_species_rocha_et_al: Float
+type WhaleCatchByDecadeRochaEtAlAndIwcDataset {
+ blue_whale_rocha_et_al_and_iwc: Float
+ fin_whale_rocha_et_al_and_iwc: Float
+ sperm_whale_rocha_et_al_and_iwc: Float
+ humpback_whale_rocha_et_al_and_iwc: Float
+ sei_whale_rocha_et_al_and_iwc: Float
+ brydes_whale_rocha_et_al_and_iwc: Float
+ minke_whale_rocha_et_al_and_iwc: Float
+ gray_whale_rocha_et_al_and_iwc: Float
+ right_whale_rocha_et_al_and_iwc: Float
+ unspecifiedother_rocha_et_al_and_iwc: Float
+ all_species_rocha_et_al_and_iwc: Float
 }
 
 """
@@ -12289,18 +12307,18 @@ V.
 Emptying the oceans: a summary of industrial whaling catches in the 20th century.
 Marine Fisheries Review, 76(4), 37-48.The above paper draws on data originally published by the International Whaling Commission (IWC).Data from 2000 onwards is sourced directly from the International Whaling Commissions (IWC) which recorded the number of catches at: https://iwc.int/catches
 """
-type WhaleCatchRochaEtAlDataset {
- blue_whale_rocha_et_al: Float
- fin_whale_rocha_et_al: Float
- sperm_whale_rocha_et_al: Float
- humpback_whale_rocha_et_al: Float
- sei_whale_rocha_et_al: Float
- brydes_whale_rocha_et_al: Float
- minke_whale_rocha_et_al: Float
- gray_whale_rocha_et_al: Float
- right_whale_rocha_et_al: Float
- unspecifiedother_rocha_et_al: Float
- all_whale_species_rocha_et_al: Float
+type WhaleCatchRochaEtAlIwcDataset {
+ blue_whale_rocha_et_al_iwc: Float
+ fin_whale_rocha_et_al_iwc: Float
+ sperm_whale_rocha_et_al_iwc: Float
+ humpback_whale_rocha_et_al_iwc: Float
+ sei_whale_rocha_et_al_iwc: Float
+ brydes_whale_rocha_et_al_iwc: Float
+ minke_whale_rocha_et_al_iwc: Float
+ gray_whale_rocha_et_al_iwc: Float
+ right_whale_rocha_et_al_iwc: Float
+ unspecifiedother_rocha_et_al_iwc: Float
+ all_whale_species_rocha_et_al_iwc: Float
 }
 
 """
@@ -12312,16 +12330,16 @@ The most common 'pre-whaling' date in the original source was in the late 19th a
 Here we have coded all pre-whaling dates as 1890 for consistency, but it should be noted that this date varies by species.
 The latest date – 2001 – is consistent across species.All estimates are of the global total.
 """
-type WhalePopulationsPershingEtAlDataset {
- whale_populations_pershing_et_al: Float
+type WhalePopulationsPershingEtAl2010Dataset {
+ whale_populations_pershing_et_al_2010: Float
 }
 
 """
 Long-run series on wheat prices in England, measured in constant 1996 pounds per tonne.Data is sourced from Makridakis, Wheelwright, and Hyndman (1997) - Forecasting: Methods and Applications.
 Wiley.The data is available at the book's accompanying website here: https://robjhyndman.com/forecasting/This book is online here: http://otexts.com/fpp/
 """
-type WheatPricesLongRunInEnglandMakridakisEtAlDataset {
- wheat_price_in_1996_pounds_makridakis_et_al: Float
+type WheatPricesLongRunInEnglandMakridakisEtAl1997Dataset {
+ wheat_price_in_1996_pounds_makridakis_et_al_1997: Float
 }
 
 """
@@ -12493,7 +12511,7 @@ Data earlier than 1990 is backwards extended from the World Bank observation for
 The Maddison data is published here: http://www.ggdc.net/maddison/oriindex.htm
 """
 type WorldGdpIn2011IntMoneyOwidBasedOnWorldBankMaddison2017Dataset {
- world_gdp_in_2011_int: Float
+ world_gdp_in_2011_intmoney_owid_based_on_world_bank_and_maddison_2017: Float
 }
 
 """
@@ -12731,7 +12749,7 @@ type YouthMortalityRateUnIgme2018Dataset {
 
 type Query {
  a_century_of_work_and_leisure_ramey_and_francis_2009(entity: String!, year: Int!):ACenturyOfWorkAndLeisureRameyAndFrancis2009Dataset!
- absolute_deaths_from_ambient_pm2(entity: String!, year: Int!):AbsoluteDeathsFromAmbientPm2Dataset!
+ absolute_deaths_from_ambient_pm25_air_pollution_state_of_global_air(entity: String!, year: Int!):AbsoluteDeathsFromAmbientPm25AirPollutionStateOfGlobalAirDataset!
  absolute_population_change_owid_based_on_hyde_and_un(entity: String!, year: Int!):AbsolutePopulationChangeOwidBasedOnHydeAndUnDataset!
  access_to_financial_account_or_services_perc_world_bank_2014(entity: String!, year: Int!):AccessToFinancialAccountOrServicesPercWorldBank2014Dataset!
  adjusted_net_savings_per_capita_world_bank_wdi_2017(entity: String!, year: Int!):AdjustedNetSavingsPerCapitaWorldBankWdi2017Dataset!
@@ -12752,20 +12770,20 @@ type Query {
  alcohol_expenditure_in_the_usa_long_term_usda_2018(entity: String!, year: Int!):AlcoholExpenditureInTheUsaLongTermUsda2018Dataset!
  annual_share_of_co2_emissions_owid_based_on_gcp_2017(entity: String!, year: Int!):AnnualShareOfCo2EmissionsOwidBasedOnGcp2017Dataset!
  annual_world_population_growth_rate_owid(entity: String!, year: Int!):AnnualWorldPopulationGrowthRateOwidDataset!
- antibiotic_use_in_livestock_2030_boeckel_et_al(entity: String!, year: Int!):AntibioticUseInLivestock2030BoeckelEtAlDataset!
+ antibiotic_use_in_livestock_2030_boeckel_et_al_2017(entity: String!, year: Int!):AntibioticUseInLivestock2030BoeckelEtAl2017Dataset!
  antibiotic_use_in_livestock_european_commission_and_van_boeckel_et_al(entity: String!, year: Int!):AntibioticUseInLivestockEuropeanCommissionAndVanBoeckelEtAlDataset!
  arable_land_per_crop_output_pin_fao_2019(entity: String!, year: Int!):ArableLandPerCropOutputPinFao2019Dataset!
- archaeological_land_use_stephens_et_al(entity: String!, year: Int!):ArchaeologicalLandUseStephensEtAlDataset!
+ archaeological_land_use_stephens_et_al_2019(entity: String!, year: Int!):ArchaeologicalLandUseStephensEtAl2019Dataset!
  armed_forces_personnel_as_a_share_of_the_total_population_owid_based_on_world_bank(entity: String!, year: Int!):ArmedForcesPersonnelAsAShareOfTheTotalPopulationOwidBasedOnWorldBankDataset!
- attainable_yields_mueller_et_al(entity: String!, year: Int!):AttainableYieldsMuellerEtAlDataset!
+ attainable_yields_mueller_et_al_2012(entity: String!, year: Int!):AttainableYieldsMuellerEtAl2012Dataset!
  attitudes_to_vaccines_wellcome_trust_2019(entity: String!, year: Int!):AttitudesToVaccinesWellcomeTrust2019Dataset!
  average_harmonised_learning_outcome_score_2005_2015_altinok_angrist_and_patrinos_2018(entity: String!, year: Int!):AverageHarmonisedLearningOutcomeScore20052015AltinokAngristAndPatrinos2018Dataset!
  average_monthly_incomes_or_consumption_by_decile_and_quintile_povcalnet_2019(entity: String!, year: Int!):AverageMonthlyIncomesOrConsumptionByDecileAndQuintilePovcalnet2019Dataset!
  aviation_accidents_and_fatalities_by_flight_phase_asn_2019(entity: String!, year: Int!):AviationAccidentsAndFatalitiesByFlightPhaseAsn2019Dataset!
  aviation_passenger_kilometres_and_co2_emissions_icct(entity: String!, year: Int!):AviationPassengerKilometresAndCo2EmissionsIcctDataset!
  basic_reading_and_maths_skills_world_development_report_2018(entity: String!, year: Int!):BasicReadingAndMathsSkillsWorldDevelopmentReport2018Dataset!
- biodiversity_habitat_loss_williams_et_al(entity: String!, year: Int!):BiodiversityHabitatLossWilliamsEtAlDataset!
- biomass_and_taxa_abundance_bar_on_et_al(entity: String!, year: Int!):BiomassAndTaxaAbundanceBarOnEtAlDataset!
+ biodiversity_habitat_loss_williams_et_al_2021(entity: String!, year: Int!):BiodiversityHabitatLossWilliamsEtAl2021Dataset!
+ biomass_and_taxa_abundance_bar_on_et_al_2018(entity: String!, year: Int!):BiomassAndTaxaAbundanceBarOnEtAl2018Dataset!
  births_outside_of_marriage(entity: String!, year: Int!):BirthsOutsideOfMarriageDataset!
  books_buringh_and_van_zanden_2009(entity: String!, year: Int!):BooksBuringhAndVanZanden2009Dataset!
  bourguignon_and_morrison_2002_and_world_bank_povcalnet_2015(entity: String!, year: Int!):BourguignonAndMorrison2002AndWorldBankPovcalnet2015Dataset!
@@ -12775,20 +12793,21 @@ type Query {
  capital_city_population_un_urbanization_prospects_2018(entity: String!, year: Int!):CapitalCityPopulationUnUrbanizationProspects2018Dataset!
  carbon_intensity_kgco2money_madisson_world_bank_cdiac(entity: String!, year: Int!):CarbonIntensityKgco2moneyMadissonWorldBankCdiacDataset!
  causes_of_child_mortality_ihme_global_burden_of_disease_study_2017(entity: String!, year: Int!):CausesOfChildMortalityIhmeGlobalBurdenOfDiseaseStudy2017Dataset!
- causes_of_death_vs(entity: String!, year: Int!):CausesOfDeathVsDataset!
+ causes_of_death_vs_media_coverage_shen(entity: String!, year: Int!):CausesOfDeathVsMediaCoverageShenDataset!
+ causes_of_death_vs_media_coverage_shen_et_al_2018(entity: String!, year: Int!):CausesOfDeathVsMediaCoverageShenEtAl2018Dataset!
  causes_of_infant_death_in_boys_and_girls_ihme_2018(entity: String!, year: Int!):CausesOfInfantDeathInBoysAndGirlsIhme2018Dataset!
  cereal_allocation_to_food_feed_fuel_owid_based_on_fao(entity: String!, year: Int!):CerealAllocationToFoodFeedFuelOwidBasedOnFaoDataset!
  cereal_yield_index_world_bank_2017_and_owid(entity: String!, year: Int!):CerealYieldIndexWorldBank2017AndOwidDataset!
- cfc_11_expected_and_measured_concentrations_montzka_et_al(entity: String!, year: Int!):Cfc11ExpectedAndMeasuredConcentrationsMontzkaEtAlDataset!
- cfc_11_expected_and_measured_rate_of_change_montzka_et_al(entity: String!, year: Int!):Cfc11ExpectedAndMeasuredRateOfChangeMontzkaEtAlDataset!
+ cfc_11_expected_and_measured_concentrations_montzka_et_al_2018(entity: String!, year: Int!):Cfc11ExpectedAndMeasuredConcentrationsMontzkaEtAl2018Dataset!
+ cfc_11_expected_and_measured_rate_of_change_montzka_et_al_2018(entity: String!, year: Int!):Cfc11ExpectedAndMeasuredRateOfChangeMontzkaEtAl2018Dataset!
  change_in_global_hunger_index_1992_2017_listed_2017_global_hunger_index_2017(entity: String!, year: Int!):ChangeInGlobalHungerIndex19922017Listed2017GlobalHungerIndex2017Dataset!
  chartbook_of_economic_inequality_gini_2016(entity: String!, year: Int!):ChartbookOfEconomicInequalityGini2016Dataset!
  child_deaths_by_life_stage_owid_based_on_un_igme(entity: String!, year: Int!):ChildDeathsByLifeStageOwidBasedOnUnIgmeDataset!
  child_deaths_united_nations_population_division_2015(entity: String!, year: Int!):ChildDeathsUnitedNationsPopulationDivision2015Dataset!
  child_labor_in_us_economic_history_association_2017(entity: String!, year: Int!):ChildLaborInUsEconomicHistoryAssociation2017Dataset!
  child_labor_in_us_long_1958(entity: String!, year: Int!):ChildLaborInUsLong1958Dataset!
- child_labor_italy_historic_toniolo_g(entity: String!, year: Int!):ChildLaborItalyHistoricTonioloGDataset!
- child_labor_uk_historic_cunningham_h(entity: String!, year: Int!):ChildLaborUkHistoricCunninghamHDataset!
+ child_labor_italy_historic_toniolo_g_and_vecchi_g_2007(entity: String!, year: Int!):ChildLaborItalyHistoricTonioloGAndVecchiG2007Dataset!
+ child_labor_uk_historic_cunningham_h_and_viazzo_pp_1996(entity: String!, year: Int!):ChildLaborUkHistoricCunninghamHAndViazzoPp1996Dataset!
  child_labor_world_1950_1995_basu_1999(entity: String!, year: Int!):ChildLaborWorld19501995Basu1999Dataset!
  child_labor_world_ilo_ilo_2017(entity: String!, year: Int!):ChildLaborWorldIloIlo2017Dataset!
  child_marriage_unicef_2017(entity: String!, year: Int!):ChildMarriageUnicef2017Dataset!
@@ -12820,7 +12839,7 @@ type Query {
  co2_from_solid_fuel_cdiac_2017(entity: String!, year: Int!):Co2FromSolidFuelCdiac2017Dataset!
  co2_gdp_coupling_owid_based_on_world_bank(entity: String!, year: Int!):Co2GdpCouplingOwidBasedOnWorldBankDataset!
  co2_intensity_of_transport_by_mode_uk_beis(entity: String!, year: Int!):Co2IntensityOfTransportByModeUkBeisDataset!
- co2_mitigation_curves_for_1(entity: String!, year: Int!):Co2MitigationCurvesFor1Dataset!
+ co2_mitigation_curves_for_15c_andrews_and_gcp_2019(entity: String!, year: Int!):Co2MitigationCurvesFor15cAndrewsAndGcp2019Dataset!
  co2_mitigation_curves_for_2c_andrews_and_gcp_2019(entity: String!, year: Int!):Co2MitigationCurvesFor2cAndrewsAndGcp2019Dataset!
  co2_per_year_by_region_cdiac_2017(entity: String!, year: Int!):Co2PerYearByRegionCdiac2017Dataset!
  coal_output_and_employment_in_uk_beis_2020(entity: String!, year: Int!):CoalOutputAndEmploymentInUkBeis2020Dataset!
@@ -12831,9 +12850,9 @@ type Query {
  conflict_deaths_ucdp_georeferenced_event_data_2019(entity: String!, year: Int!):ConflictDeathsUcdpGeoreferencedEventData2019Dataset!
  consumer_expenditure_on_food_usda_2017(entity: String!, year: Int!):ConsumerExpenditureOnFoodUsda2017Dataset!
  consumption_shares_in_selected_non_essential_products_world_bank_global_consumption_database(entity: String!, year: Int!):ConsumptionSharesInSelectedNonEssentialProductsWorldBankGlobalConsumptionDatabaseDataset!
- consumption_vs(entity: String!, year: Int!):ConsumptionVsDataset!
+ consumption_vs_production_based_co2_emissions_shares_based_on_gcp_and_un(entity: String!, year: Int!):ConsumptionVsProductionBasedCo2EmissionsSharesBasedOnGcpAndUnDataset!
  corporal_punishment_in_schools_longitudinal_evidence_from_ethiopia_india_peru_and_vietnam_unice(entity: String!, year: Int!):CorporalPunishmentInSchoolsLongitudinalEvidenceFromEthiopiaIndiaPeruAndVietnamUniceDataset!
- correlates_of_war_national_material_capabilities_v4(entity: String!, year: Int!):CorrelatesOfWarNationalMaterialCapabilitiesV4Dataset!
+ correlates_of_war_national_material_capabilities_v40(entity: String!, year: Int!):CorrelatesOfWarNationalMaterialCapabilitiesV40Dataset!
  corruption_perception_index_transparency_international_2018(entity: String!, year: Int!):CorruptionPerceptionIndexTransparencyInternational2018Dataset!
  countries_continents(entity: String!, year: Int!):CountriesContinentsDataset!
  country_income_classification_world_bank_2017(entity: String!, year: Int!):CountryIncomeClassificationWorldBank2017Dataset!
@@ -12845,7 +12864,7 @@ type Query {
  cross_country_literacy_rates_world_bank_cia_world_factbook_and_other_sources(entity: String!, year: Int!):CrossCountryLiteracyRatesWorldBankCiaWorldFactbookAndOtherSourcesDataset!
  crude_birth_and_death_rates_per_1_000_england_and_wales_1541_2015_wrigley_and_schofield_mitche(entity: String!, year: Int!):CrudeBirthAndDeathRatesPer1000EnglandAndWales15412015WrigleyAndSchofieldMitcheDataset!
  crude_marriage_rate_owid_based_on_un_oecd_eurostat_and_other_sources(entity: String!, year: Int!):CrudeMarriageRateOwidBasedOnUnOecdEurostatAndOtherSourcesDataset!
- crude_oil_consumption_vs(entity: String!, year: Int!):CrudeOilConsumptionVsDataset!
+ crude_oil_consumption_vs_price_bp_statistics_2016(entity: String!, year: Int!):CrudeOilConsumptionVsPriceBpStatistics2016Dataset!
  cumulative_co2_emissions_share_owid_based_on_gcp_2017(entity: String!, year: Int!):CumulativeCo2EmissionsShareOwidBasedOnGcp2017Dataset!
  cumulative_share_of_marriages_ending_in_divorce_england_and_wales_uk_ons(entity: String!, year: Int!):CumulativeShareOfMarriagesEndingInDivorceEnglandAndWalesUkOnsDataset!
  current_gdp_british_pounds_fouquin_and_hugot_cepii_2016(entity: String!, year: Int!):CurrentGdpBritishPoundsFouquinAndHugotCepii2016Dataset!
@@ -12855,18 +12874,18 @@ type Query {
  daily_supply_of_calories_per_person_owid_based_on_un_fao_and_historical_sources(entity: String!, year: Int!):DailySupplyOfCaloriesPerPersonOwidBasedOnUnFaoAndHistoricalSourcesDataset!
  days_and_hours_of_work_in_old_and_new_worlds_huberman_and_minns_2007(entity: String!, year: Int!):DaysAndHoursOfWorkInOldAndNewWorldsHubermanAndMinns2007Dataset!
  death_rate_by_age_group_in_england_and_wales_ons(entity: String!, year: Int!):DeathRateByAgeGroupInEnglandAndWalesOnsDataset!
- deaths_attributed_to_air_pollution_lelieveld_et_al(entity: String!, year: Int!):DeathsAttributedToAirPollutionLelieveldEtAlDataset!
+ deaths_attributed_to_air_pollution_lelieveld_et_al_2019(entity: String!, year: Int!):DeathsAttributedToAirPollutionLelieveldEtAl2019Dataset!
  deaths_by_world_region_who_2016(entity: String!, year: Int!):DeathsByWorldRegionWho2016Dataset!
  deaths_from_chernobyl_range_of_long_term_estimates_who_2005_fairlie_and_sumner_2006_cardis_e(entity: String!, year: Int!):DeathsFromChernobylRangeOfLongTermEstimatesWho2005FairlieAndSumner2006CardisEDataset!
  deaths_from_fukushima_who_2013_2016(entity: String!, year: Int!):DeathsFromFukushimaWho20132016Dataset!
  deaths_from_smalllpox_and_all_causes_in_london_1629_1902(entity: String!, year: Int!):DeathsFromSmalllpoxAndAllCausesInLondon16291902Dataset!
  deaths_from_smallpox_per_million_population_edwardes_1902(entity: String!, year: Int!):DeathsFromSmallpoxPerMillionPopulationEdwardes1902Dataset!
  deaths_per_twh_energy_production_markandya_and_wilkinson_sovacool_et_al(entity: String!, year: Int!):DeathsPerTwhEnergyProductionMarkandyaAndWilkinsonSovacoolEtAlDataset!
- deaths_per_twh_from_low_carbon_energy_sovacool_et_al(entity: String!, year: Int!):DeathsPerTwhFromLowCarbonEnergySovacoolEtAlDataset!
+ deaths_per_twh_from_low_carbon_energy_sovacool_et_al_2016(entity: String!, year: Int!):DeathsPerTwhFromLowCarbonEnergySovacoolEtAl2016Dataset!
  decomposition_of_gender_wage_gap_1980_blau_and_kahn_2017(entity: String!, year: Int!):DecompositionOfGenderWageGap1980BlauAndKahn2017Dataset!
  decomposition_of_gender_wage_gap_2010_blau_and_kahn_2017(entity: String!, year: Int!):DecompositionOfGenderWageGap2010BlauAndKahn2017Dataset!
  decomposition_times_of_marine_debris(entity: String!, year: Int!):DecompositionTimesOfMarineDebrisDataset!
- deforestation_by_commodity_pendrill_et_al(entity: String!, year: Int!):DeforestationByCommodityPendrillEtAlDataset!
+ deforestation_by_commodity_pendrill_et_al_2019(entity: String!, year: Int!):DeforestationByCommodityPendrillEtAl2019Dataset!
  deforestation_in_trade_pendrill(entity: String!, year: Int!):DeforestationInTradePendrillDataset!
  delivery_points_in_the_us_united_states_postal_service_2018(entity: String!, year: Int!):DeliveryPointsInTheUsUnitedStatesPostalService2018Dataset!
  depression_prevalence_by_education_oecd(entity: String!, year: Int!):DepressionPrevalenceByEducationOecdDataset!
@@ -12878,15 +12897,15 @@ type Query {
  disability_adjusted_life_years_who_2015(entity: String!, year: Int!):DisabilityAdjustedLifeYearsWho2015Dataset!
  distribution_of_bilateral_and_unilateral_trade_partnerships_fouquin_and_hugot_cepii_2016(entity: String!, year: Int!):DistributionOfBilateralAndUnilateralTradePartnershipsFouquinAndHugotCepii2016Dataset!
  drinking_habits_in_great_britain_uk_ons(entity: String!, year: Int!):DrinkingHabitsInGreatBritainUkOnsDataset!
- drivers_of_forest_loss_in_brazil_legal_amazon_tyukavina_et_al(entity: String!, year: Int!):DriversOfForestLossInBrazilLegalAmazonTyukavinaEtAlDataset!
+ drivers_of_forest_loss_in_brazil_legal_amazon_tyukavina_et_al_2017(entity: String!, year: Int!):DriversOfForestLossInBrazilLegalAmazonTyukavinaEtAl2017Dataset!
  drought_severity_index_in_us_noaa(entity: String!, year: Int!):DroughtSeverityIndexInUsNoaaDataset!
  duration_of_marriages_ending_in_divorce_owid_based_on_national_statistics(entity: String!, year: Int!):DurationOfMarriagesEndingInDivorceOwidBasedOnNationalStatisticsDataset!
  earthquake_deaths_ngdc_noaa(entity: String!, year: Int!):EarthquakeDeathsNgdcNoaaDataset!
  eci_country_rankings_observatory_of_economic_complexity_2016_and_the_atlas_of_economic_complexity(entity: String!, year: Int!):EciCountryRankingsObservatoryOfEconomicComplexity2016AndTheAtlasOfEconomicComplexityDataset!
  economic_freedom_of_the_world_fraser_institute_2018(entity: String!, year: Int!):EconomicFreedomOfTheWorldFraserInstitute2018Dataset!
- economic_impacts_2vs1(entity: String!, year: Int!):EconomicImpacts2vs1Dataset!
- economic_impacts_of_1(entity: String!, year: Int!):EconomicImpactsOf1Dataset!
- economic_impacts_of_2c_pretis_et_al(entity: String!, year: Int!):EconomicImpactsOf2cPretisEtAlDataset!
+ economic_impacts_2vs15c_pretis_et_al(entity: String!, year: Int!):EconomicImpacts2vs15cPretisEtAlDataset!
+ economic_impacts_of_15c_pretis_et_al(entity: String!, year: Int!):EconomicImpactsOf15cPretisEtAlDataset!
+ economic_impacts_of_2c_pretis_et_al_2018(entity: String!, year: Int!):EconomicImpactsOf2cPretisEtAl2018Dataset!
  economic_losses_from_disasters_as_a_share_of_gdp_pielke_2018(entity: String!, year: Int!):EconomicLossesFromDisastersAsAShareOfGdpPielke2018Dataset!
  education_data_deprivation_gem_report_201718_uis_2017(entity: String!, year: Int!):EducationDataDeprivationGemReport201718Uis2017Dataset!
  education_expenditure_us_1949_2013_nces_2014(entity: String!, year: Int!):EducationExpenditureUs19492013Nces2014Dataset!
@@ -12922,14 +12941,14 @@ type Query {
  experience_curves_lafond_2017(entity: String!, year: Int!):ExperienceCurvesLafond2017Dataset!
  extensions_in_life_expectancy_owid_calculations_based_on_un_population_division_2017_revision(entity: String!, year: Int!):ExtensionsInLifeExpectancyOwidCalculationsBasedOnUnPopulationDivision2017RevisionDataset!
  extreme_income_poverty_in_europe_bradshaw_and_mayhew_2011(entity: String!, year: Int!):ExtremeIncomePovertyInEuropeBradshawAndMayhew2011Dataset!
- extreme_poverty_2030_projections_by_ssp_crespo_et_al(entity: String!, year: Int!):ExtremePoverty2030ProjectionsBySspCrespoEtAlDataset!
+ extreme_poverty_2030_projections_by_ssp_crespo_et_al_2018(entity: String!, year: Int!):ExtremePoverty2030ProjectionsBySspCrespoEtAl2018Dataset!
  extreme_poverty_in_absolute_numbers_ravallion_2016_updated_with_world_bank_2019(entity: String!, year: Int!):ExtremePovertyInAbsoluteNumbersRavallion2016UpdatedWithWorldBank2019Dataset!
  extreme_poverty_michail_moatsos_oecd(entity: String!, year: Int!):ExtremePovertyMichailMoatsosOecdDataset!
  extreme_precipitation_in_us_noaa(entity: String!, year: Int!):ExtremePrecipitationInUsNoaaDataset!
  extreme_temperatures_in_us_noaa(entity: String!, year: Int!):ExtremeTemperaturesInUsNoaaDataset!
  family_benefits_public_spending_oecd_2016(entity: String!, year: Int!):FamilyBenefitsPublicSpendingOecd2016Dataset!
  fao_2030_50_projections_of_arable_land_fao_2017(entity: String!, year: Int!):Fao203050ProjectionsOfArableLandFao2017Dataset!
- fao_undernourishment_comparison_2010_vs(entity: String!, year: Int!):FaoUndernourishmentComparison2010VsDataset!
+ fao_undernourishment_comparison_2010_vs_2012(entity: String!, year: Int!):FaoUndernourishmentComparison2010Vs2012Dataset!
  fatal_aviation_accidents_and_fatalties_aviation_safety_network_asn(entity: String!, year: Int!):FatalAviationAccidentsAndFataltiesAviationSafetyNetworkAsnDataset!
  female_and_male_life_expectancy_at_birth_owid_based_on_un_population_division_2017(entity: String!, year: Int!):FemaleAndMaleLifeExpectancyAtBirthOwidBasedOnUnPopulationDivision2017Dataset!
  female_labor_force_participation_rate_owid_2017(entity: String!, year: Int!):FemaleLaborForceParticipationRateOwid2017Dataset!
@@ -12947,12 +12966,12 @@ type Query {
  five_year_cancer_survival_rates_national_cancer_institute(entity: String!, year: Int!):FiveYearCancerSurvivalRatesNationalCancerInstituteDataset!
  food_expenditure_in_the_usa_usda(entity: String!, year: Int!):FoodExpenditureInTheUsaUsdaDataset!
  food_miles_by_transport_method_poore_and_nemecek_2018(entity: String!, year: Int!):FoodMilesByTransportMethodPooreAndNemecek2018Dataset!
- food_prices_expressed_in_hourly_wages_u(entity: String!, year: Int!):FoodPricesExpressedInHourlyWagesUDataset!
+ food_prices_expressed_in_hourly_wages_us_bureau_of_labor_statistics_2015(entity: String!, year: Int!):FoodPricesExpressedInHourlyWagesUsBureauOfLaborStatistics2015Dataset!
  food_supply_fao_2020(entity: String!, year: Int!):FoodSupplyFao2020Dataset!
  food_waste_in_the_european_union_europa_2010(entity: String!, year: Int!):FoodWasteInTheEuropeanUnionEuropa2010Dataset!
  food_waste_in_the_supply_chain_t_wrap_2015_and_europa_2015(entity: String!, year: Int!):FoodWasteInTheSupplyChainTWrap2015AndEuropa2015Dataset!
  forest_land_deforestation_and_change_fao_2020(entity: String!, year: Int!):ForestLandDeforestationAndChangeFao2020Dataset!
- forest_transition_phase_pendrill_et_al(entity: String!, year: Int!):ForestTransitionPhasePendrillEtAlDataset!
+ forest_transition_phase_pendrill_et_al_2019(entity: String!, year: Int!):ForestTransitionPhasePendrillEtAl2019Dataset!
  forestry_area_fao_2017(entity: String!, year: Int!):ForestryAreaFao2017Dataset!
  fossil_fuel_consumption_per_capita_bp_and_un_2017_revision(entity: String!, year: Int!):FossilFuelConsumptionPerCapitaBpAndUn2017RevisionDataset!
  fossil_fuel_production_bp_and_shift_2020(entity: String!, year: Int!):FossilFuelProductionBpAndShift2020Dataset!
@@ -12997,7 +13016,7 @@ type Query {
  global_hunger_index_in_2017_listed_2017_global_hunger_index_2017(entity: String!, year: Int!):GlobalHungerIndexIn2017Listed2017GlobalHungerIndex2017Dataset!
  global_literacy_since_1800_owid_based_on_oecd_and_unesco_2019(entity: String!, year: Int!):GlobalLiteracySince1800OwidBasedOnOecdAndUnesco2019Dataset!
  global_meat_projections_to_2050_fao(entity: String!, year: Int!):GlobalMeatProjectionsTo2050FaoDataset!
- global_plastic_production_geyer_et_al(entity: String!, year: Int!):GlobalPlasticProductionGeyerEtAlDataset!
+ global_plastic_production_geyer_et_al_2017(entity: String!, year: Int!):GlobalPlasticProductionGeyerEtAl2017Dataset!
  global_population_by_region_with_projections_hyde_2016_and_un_2017(entity: String!, year: Int!):GlobalPopulationByRegionWithProjectionsHyde2016AndUn2017Dataset!
  global_population_trends_us_census_bureau_2017(entity: String!, year: Int!):GlobalPopulationTrendsUsCensusBureau2017Dataset!
  global_precipitation_anomaly_noaa(entity: String!, year: Int!):GlobalPrecipitationAnomalyNoaaDataset!
@@ -13011,21 +13030,21 @@ type Query {
  global_tuberculosis_report_tb_burden_estimates_who_2019(entity: String!, year: Int!):GlobalTuberculosisReportTbBurdenEstimatesWho2019Dataset!
  global_warming_potential_factors_gwp100_ipcc_2014(entity: String!, year: Int!):GlobalWarmingPotentialFactorsGwp100Ipcc2014Dataset!
  global_year_of_last_polio_case_plus_certification_status_gpei_2017(entity: String!, year: Int!):GlobalYearOfLastPolioCasePlusCertificationStatusGpei2017Dataset!
- globalization_over_5_centuries_pwt_9(entity: String!, year: Int!):GlobalizationOver5CenturiesPwt9Dataset!
+ globalization_over_5_centuries_pwt_90_klasing_and_milionis_2014_and_estevadeordal_frantz_and(entity: String!, year: Int!):GlobalizationOver5CenturiesPwt90KlasingAndMilionis2014AndEstevadeordalFrantzAndDataset!
  gold_prices_laurence_and_williamson_2017(entity: String!, year: Int!):GoldPricesLaurenceAndWilliamson2017Dataset!
  google_mobility_trends_2020(entity: String!, year: Int!):GoogleMobilityTrends2020Dataset!
  government_education_expenditure_1960_2010_szirmai_2015(entity: String!, year: Int!):GovernmentEducationExpenditure19602010Szirmai2015Dataset!
  government_expenditure_and_learning_outcomes(entity: String!, year: Int!):GovernmentExpenditureAndLearningOutcomesDataset!
- government_expenditure_imf_based_on_mauro_et_al(entity: String!, year: Int!):GovernmentExpenditureImfBasedOnMauroEtAlDataset!
+ government_expenditure_imf_based_on_mauro_et_al_2015(entity: String!, year: Int!):GovernmentExpenditureImfBasedOnMauroEtAl2015Dataset!
  government_revenue_wallis_2000(entity: String!, year: Int!):GovernmentRevenueWallis2000Dataset!
  government_spending_oecd_2017(entity: String!, year: Int!):GovernmentSpendingOecd2017Dataset!
  government_spending_roine_vlachos_waldenstrom_2009_and_us_historical_tables_2016(entity: String!, year: Int!):GovernmentSpendingRoineVlachosWaldenstrom2009AndUsHistoricalTables2016Dataset!
- government_transparency_index_hollyer_et_al(entity: String!, year: Int!):GovernmentTransparencyIndexHollyerEtAlDataset!
+ government_transparency_index_hollyer_et_al_2014(entity: String!, year: Int!):GovernmentTransparencyIndexHollyerEtAl2014Dataset!
  guinea_worm_cases_the_carter_center_2022(entity: String!, year: Int!):GuineaWormCasesTheCarterCenter2022Dataset!
  guinea_worm_cases_who_2018(entity: String!, year: Int!):GuineaWormCasesWho2018Dataset!
  guinea_worm_who_certification_status_who_2018(entity: String!, year: Int!):GuineaWormWhoCertificationStatusWho2018Dataset!
  hadcrut_temperature_anomaly(entity: String!, year: Int!):HadcrutTemperatureAnomalyDataset!
- half_index_land_use_alexander_et_al(entity: String!, year: Int!):HalfIndexLandUseAlexanderEtAlDataset!
+ half_index_land_use_alexander_et_al_2016(entity: String!, year: Int!):HalfIndexLandUseAlexanderEtAl2016Dataset!
  happiness_predictors_world_happiness_report_2017(entity: String!, year: Int!):HappinessPredictorsWorldHappinessReport2017Dataset!
  health_coverage_ilo_2014(entity: String!, year: Int!):HealthCoverageIlo2014Dataset!
  health_expenditure_and_financing_oecdstat_2017(entity: String!, year: Int!):HealthExpenditureAndFinancingOecdstat2017Dataset!
@@ -13038,24 +13057,24 @@ type Query {
  healthcare_access_and_quality_index_ihme_2017(entity: String!, year: Int!):HealthcareAccessAndQualityIndexIhme2017Dataset!
  healthy_life_expectancy_ihme(entity: String!, year: Int!):HealthyLifeExpectancyIhmeDataset!
  heights_of_early_europeans_based_on_hermanussen_2003_and_the_ncd_risc_2017(entity: String!, year: Int!):HeightsOfEarlyEuropeansBasedOnHermanussen2003AndTheNcdRisc2017Dataset!
- hidden_hunger_index_in_pre_school_children_muthayya_et_al(entity: String!, year: Int!):HiddenHungerIndexInPreSchoolChildrenMuthayyaEtAlDataset!
- historical_cost_of_computer_memory_and_storage_john_c(entity: String!, year: Int!):HistoricalCostOfComputerMemoryAndStorageJohnCDataset!
+ hidden_hunger_index_in_pre_school_children_muthayya_et_al_2013(entity: String!, year: Int!):HiddenHungerIndexInPreSchoolChildrenMuthayyaEtAl2013Dataset!
+ historical_cost_of_computer_memory_and_storage_john_c_mccallum(entity: String!, year: Int!):HistoricalCostOfComputerMemoryAndStorageJohnCMccallumDataset!
  historical_employment_and_output_by_sector_owid_2017(entity: String!, year: Int!):HistoricalEmploymentAndOutputBySectorOwid2017Dataset!
  historical_gender_equality_index_how_was_life_2014(entity: String!, year: Int!):HistoricalGenderEqualityIndexHowWasLife2014Dataset!
  historical_index_of_human_development_prados_de_la_escosura(entity: String!, year: Int!):HistoricalIndexOfHumanDevelopmentPradosDeLaEscosuraDataset!
  historical_index_of_human_development_without_gdp_prados_de_la_escosura(entity: String!, year: Int!):HistoricalIndexOfHumanDevelopmentWithoutGdpPradosDeLaEscosuraDataset!
  historical_un_population_projections(entity: String!, year: Int!):HistoricalUnPopulationProjectionsDataset!
- historical_urban_fraction_estimates_and_total_computed_urban_areas_hyde_3(entity: String!, year: Int!):HistoricalUrbanFractionEstimatesAndTotalComputedUrbanAreasHyde3Dataset!
+ historical_urban_fraction_estimates_and_total_computed_urban_areas_hyde_31_2010(entity: String!, year: Int!):HistoricalUrbanFractionEstimatesAndTotalComputedUrbanAreasHyde312010Dataset!
  historical_world_population_comparison_of_different_sources(entity: String!, year: Int!):HistoricalWorldPopulationComparisonOfDifferentSourcesDataset!
  homelessness_and_precarious_housing_oecd_2016(entity: String!, year: Int!):HomelessnessAndPrecariousHousingOecd2016Dataset!
- homelessness_prevalence_toro_et_al(entity: String!, year: Int!):HomelessnessPrevalenceToroEtAlDataset!
+ homelessness_prevalence_toro_et_al_2007(entity: String!, year: Int!):HomelessnessPrevalenceToroEtAl2007Dataset!
  homicide_rates_in_europe_over_long_term_eisner_and_ihme(entity: String!, year: Int!):HomicideRatesInEuropeOverLongTermEisnerAndIhmeDataset!
  homosexuality_laws_owid_based_on_kenny_and_patel_2017(entity: String!, year: Int!):HomosexualityLawsOwidBasedOnKennyAndPatel2017Dataset!
  homosexuality_opinions_wvs_1981_2016(entity: String!, year: Int!):HomosexualityOpinionsWvs19812016Dataset!
  homosexuality_public_opinion_pew_research_2013(entity: String!, year: Int!):HomosexualityPublicOpinionPewResearch2013Dataset!
  household_expenditure_on_housing_water_electricity_gas_and_other_fuels_as_a_share_of_gdp_un(entity: String!, year: Int!):HouseholdExpenditureOnHousingWaterElectricityGasAndOtherFuelsAsAShareOfGdpUnDataset!
  households_actual_and_imputed_rent_as_share_of_gdp_oecd(entity: String!, year: Int!):HouseholdsActualAndImputedRentAsShareOfGdpOecdDataset!
- households_using_solid_fuels_for_cooking_urban_vs(entity: String!, year: Int!):HouseholdsUsingSolidFuelsForCookingUrbanVsDataset!
+ households_using_solid_fuels_for_cooking_urban_vs_rural_un(entity: String!, year: Int!):HouseholdsUsingSolidFuelsForCookingUrbanVsRuralUnDataset!
  how_europeans_spend_their_time_european_commission_2004(entity: String!, year: Int!):HowEuropeansSpendTheirTimeEuropeanCommission2004Dataset!
  hubberts_peak_cavallo_and_eia(entity: String!, year: Int!):HubbertsPeakCavalloAndEiaDataset!
  human_capital_in_long_run_lee_lee_2016(entity: String!, year: Int!):HumanCapitalInLongRunLeeLee2016Dataset!
@@ -13063,7 +13082,7 @@ type Query {
  human_development_index_undp(entity: String!, year: Int!):HumanDevelopmentIndexUndpDataset!
  human_height_ncd_risc_2017(entity: String!, year: Int!):HumanHeightNcdRisc2017Dataset!
  human_height_university_of_tuebingen_2015(entity: String!, year: Int!):HumanHeightUniversityOfTuebingen2015Dataset!
- human_rights_protection_fariss_et_al(entity: String!, year: Int!):HumanRightsProtectionFarissEtAlDataset!
+ human_rights_protection_fariss_et_al_2020(entity: String!, year: Int!):HumanRightsProtectionFarissEtAl2020Dataset!
  human_rights_protection_score_christopher_farris_2014_and_keith_schnakenberg(entity: String!, year: Int!):HumanRightsProtectionScoreChristopherFarris2014AndKeithSchnakenbergDataset!
  hurricane_forecasting_error_nhc_2019(entity: String!, year: Int!):HurricaneForecastingErrorNhc2019Dataset!
  hurricane_landfalls_continental_us_hurdat_noaa(entity: String!, year: Int!):HurricaneLandfallsContinentalUsHurdatNoaaDataset!
@@ -13102,10 +13121,10 @@ type Query {
  land_under_cereal_production_index_world_bank_2017(entity: String!, year: Int!):LandUnderCerealProductionIndexWorldBank2017Dataset!
  land_use_data_hyde_2017(entity: String!, year: Int!):LandUseDataHyde2017Dataset!
  land_use_map_by_area_owid_based_on_fao(entity: String!, year: Int!):LandUseMapByAreaOwidBasedOnFaoDataset!
- land_use_since_10000bc_ellis_et_al(entity: String!, year: Int!):LandUseSince10000bcEllisEtAlDataset!
+ land_use_since_10000bc_ellis_et_al_2020(entity: String!, year: Int!):LandUseSince10000bcEllisEtAl2020Dataset!
  largest_cities_by_population_density_un_habitat_2014(entity: String!, year: Int!):LargestCitiesByPopulationDensityUnHabitat2014Dataset!
  learning_adjusted_years_of_schooling_world_bank_2018(entity: String!, year: Int!):LearningAdjustedYearsOfSchoolingWorldBank2018Dataset!
- learning_costs_j(entity: String!, year: Int!):LearningCostsJDataset!
+ learning_costs_j_doyne_farmer_and_francois_lafond_2016(entity: String!, year: Int!):LearningCostsJDoyneFarmerAndFrancoisLafond2016Dataset!
  length_of_the_work_day_from_1890s_to_1991_costa_2000(entity: String!, year: Int!):LengthOfTheWorkDayFrom1890sTo1991Costa2000Dataset!
  length_of_the_workday_in_1880_atack_and_bateman_1992(entity: String!, year: Int!):LengthOfTheWorkdayIn1880AtackAndBateman1992Dataset!
  levels_of_urbanization_and_per_capita_gnp_in_various_regions_bairoch_1988(entity: String!, year: Int!):LevelsOfUrbanizationAndPerCapitaGnpInVariousRegionsBairoch1988Dataset!
@@ -13135,7 +13154,7 @@ type Query {
  long_run_life_expectancy_gapminder_un(entity: String!, year: Int!):LongRunLifeExpectancyGapminderUnDataset!
  long_run_series_of_health_expenditure_world_bank_wdi_2017(entity: String!, year: Int!):LongRunSeriesOfHealthExpenditureWorldBankWdi2017Dataset!
  long_run_time_use_in_norway_by_sex_norway_statistics(entity: String!, year: Int!):LongRunTimeUseInNorwayBySexNorwayStatisticsDataset!
- long_term_energy_transition_in_europe_gales_et_al(entity: String!, year: Int!):LongTermEnergyTransitionInEuropeGalesEtAlDataset!
+ long_term_energy_transition_in_europe_gales_et_al_2007(entity: String!, year: Int!):LongTermEnergyTransitionInEuropeGalesEtAl2007Dataset!
  long_term_energy_transitions_energy_history_harvard_2016(entity: String!, year: Int!):LongTermEnergyTransitionsEnergyHistoryHarvard2016Dataset!
  long_term_per_capita_fossil_fuels_owid_based_on_un_gapminder_bp_etemad_and_luciana(entity: String!, year: Int!):LongTermPerCapitaFossilFuelsOwidBasedOnUnGapminderBpEtemadAndLucianaDataset!
  long_term_productivity_bergeaud_cette_and_lecat_2016(entity: String!, year: Int!):LongTermProductivityBergeaudCetteAndLecat2016Dataset!
@@ -13144,7 +13163,7 @@ type Query {
  lost_school_grants_reinikka_and_svensson_2004(entity: String!, year: Int!):LostSchoolGrantsReinikkaAndSvensson2004Dataset!
  lowest_paying_occupations_percent_female_nwlc_2014(entity: String!, year: Int!):LowestPayingOccupationsPercentFemaleNwlc2014Dataset!
  lung_cancer_mortality_rates_per_100_000_2022(entity: String!, year: Int!):LungCancerMortalityRatesPer1000002022Dataset!
- maddison_project_database_2018_bolt_et_al(entity: String!, year: Int!):MaddisonProjectDatabase2018BoltEtAlDataset!
+ maddison_project_database_2018_bolt_et_al_2018(entity: String!, year: Int!):MaddisonProjectDatabase2018BoltEtAl2018Dataset!
  maddison_project_database_2020_bolt_and_van_zanden_2020(entity: String!, year: Int!):MaddisonProjectDatabase2020BoltAndVanZanden2020Dataset!
  malaria_deaths_ihme_2016(entity: String!, year: Int!):MalariaDeathsIhme2016Dataset!
  male_and_female_life_expectancy_by_age_in_the_long_run_human_mortality_database_2018_and_others(entity: String!, year: Int!):MaleAndFemaleLifeExpectancyByAgeInTheLongRunHumanMortalityDatabase2018AndOthersDataset!
@@ -13152,7 +13171,7 @@ type Query {
  marine_energy_irena(entity: String!, year: Int!):MarineEnergyIrenaDataset!
  marine_stocks_by_region_and_taxa_ramlegacy(entity: String!, year: Int!):MarineStocksByRegionAndTaxaRamlegacyDataset!
  market_share_of_iodized_salt_in_european_countries_european_commission_2006(entity: String!, year: Int!):MarketShareOfIodizedSaltInEuropeanCountriesEuropeanCommission2006Dataset!
- maternal_deaths_to_2030_bau_vs(entity: String!, year: Int!):MaternalDeathsTo2030BauVsDataset!
+ maternal_deaths_to_2030_bau_vs_sdg_target_based_on_world_bank_and_un_2018(entity: String!, year: Int!):MaternalDeathsTo2030BauVsSdgTargetBasedOnWorldBankAndUn2018Dataset!
  maternal_mortality_projection_to_2030_based_on_world_bank_2018(entity: String!, year: Int!):MaternalMortalityProjectionTo2030BasedOnWorldBank2018Dataset!
  maternal_mortality_ratio_gapminder_2010_and_world_bank_2015(entity: String!, year: Int!):MaternalMortalityRatioGapminder2010AndWorldBank2015Dataset!
  mdg_final_evaluation_un_mdg_report(entity: String!, year: Int!):MdgFinalEvaluationUnMdgReportDataset!
@@ -13162,11 +13181,11 @@ type Query {
  measures_and_indicators_for_poverty_povcalnet_world_bank_2017(entity: String!, year: Int!):MeasuresAndIndicatorsForPovertyPovcalnetWorldBank2017Dataset!
  meat_consumption_in_eu28_oecd_2018(entity: String!, year: Int!):MeatConsumptionInEu28Oecd2018Dataset!
  meat_consumption_in_the_usa_usda_2018(entity: String!, year: Int!):MeatConsumptionInTheUsaUsda2018Dataset!
- meat_conversion_efficiencies_alexander_et_al(entity: String!, year: Int!):MeatConversionEfficienciesAlexanderEtAlDataset!
+ meat_conversion_efficiencies_alexander_et_al_2016(entity: String!, year: Int!):MeatConversionEfficienciesAlexanderEtAl2016Dataset!
  median_un_population_projections_global_vs_africa_owid_based_on_un(entity: String!, year: Int!):MedianUnPopulationProjectionsGlobalVsAfricaOwidBasedOnUnDataset!
  mental_and_substance_use_disorder_disaggregated_ihme(entity: String!, year: Int!):MentalAndSubstanceUseDisorderDisaggregatedIhmeDataset!
- mental_health_as_risk_factor_for_substance_use_swendsen_et_al(entity: String!, year: Int!):MentalHealthAsRiskFactorForSubstanceUseSwendsenEtAlDataset!
- mental_health_services_across_incomes_wang_et_al(entity: String!, year: Int!):MentalHealthServicesAcrossIncomesWangEtAlDataset!
+ mental_health_as_risk_factor_for_substance_use_swendsen_et_al_2010(entity: String!, year: Int!):MentalHealthAsRiskFactorForSubstanceUseSwendsenEtAl2010Dataset!
+ mental_health_services_across_incomes_wang_et_al_2007(entity: String!, year: Int!):MentalHealthServicesAcrossIncomesWangEtAl2007Dataset!
  metal_production_clio_infra_and_usgs(entity: String!, year: Int!):MetalProductionClioInfraAndUsgsDataset!
  methane_emissions_by_sector_cait_2020(entity: String!, year: Int!):MethaneEmissionsBySectorCait2020Dataset!
  methane_emissions_by_sector_cait_2021(entity: String!, year: Int!):MethaneEmissionsBySectorCait2021Dataset!
@@ -13174,7 +13193,7 @@ type Query {
  military_expenditure_as_a_share_of_gdp_owid_based_on_cow_and_sipri_2017(entity: String!, year: Int!):MilitaryExpenditureAsAShareOfGdpOwidBasedOnCowAndSipri2017Dataset!
  mineral_production_bgs_2016(entity: String!, year: Int!):MineralProductionBgs2016Dataset!
  minimum_reading_and_maths_proficiency_gem_report_20178(entity: String!, year: Int!):MinimumReadingAndMathsProficiencyGemReport20178Dataset!
- missing_plastic_budget_lebreton_et_al(entity: String!, year: Int!):MissingPlasticBudgetLebretonEtAlDataset!
+ missing_plastic_budget_lebreton_et_al_2019(entity: String!, year: Int!):MissingPlasticBudgetLebretonEtAl2019Dataset!
  missing_women_estimates_bongaarts_and_guilmoto_2015(entity: String!, year: Int!):MissingWomenEstimatesBongaartsAndGuilmoto2015Dataset!
  mobile_bank_accounts_by_region_gsma_2019(entity: String!, year: Int!):MobileBankAccountsByRegionGsma2019Dataset!
  mortality_from_all_forms_of_violence_ihme_2016(entity: String!, year: Int!):MortalityFromAllFormsOfViolenceIhme2016Dataset!
@@ -13185,7 +13204,7 @@ type Query {
  natural_disasters_emdat_decadal(entity: String!, year: Int!):NaturalDisastersEmdatDecadalDataset!
  natural_disasters_from_1900_to_2019_emdat_2020(entity: String!, year: Int!):NaturalDisastersFrom1900To2019Emdat2020Dataset!
  neglected_tropical_diseases_lymphatic_filariasis_population_requiring_pc_not_treated_and_treated(entity: String!, year: Int!):NeglectedTropicalDiseasesLymphaticFilariasisPopulationRequiringPcNotTreatedAndTreatedDataset!
- neonatal_mortality_rate_via_childmortality(entity: String!, year: Int!):NeonatalMortalityRateViaChildmortalityDataset!
+ neonatal_mortality_rate_via_childmortalityorg_2015(entity: String!, year: Int!):NeonatalMortalityRateViaChildmortalityorg2015Dataset!
  neonatal_tetanus_incidence(entity: String!, year: Int!):NeonatalTetanusIncidenceDataset!
  new_estimates_of_hours_of_work_per_week_1900_1957_jones_1963(entity: String!, year: Int!):NewEstimatesOfHoursOfWorkPerWeek19001957Jones1963Dataset!
  newsworthiness_of_disasters_by_disaster_type_and_region_eisensee_and_stromberg_2007(entity: String!, year: Int!):NewsworthinessOfDisastersByDisasterTypeAndRegionEisenseeAndStromberg2007Dataset!
@@ -13258,7 +13277,7 @@ type Query {
  parties_to_montreal_protocol_unep(entity: String!, year: Int!):PartiesToMontrealProtocolUnepDataset!
  patent_and_publication_rates_owid_based_on_world_bank_and_un(entity: String!, year: Int!):PatentAndPublicationRatesOwidBasedOnWorldBankAndUnDataset!
  patents_awarded_in_england_scotland_and_wales_bottomley(entity: String!, year: Int!):PatentsAwardedInEnglandScotlandAndWalesBottomleyDataset!
- peak_farmland_projection_ausbuel_et_al(entity: String!, year: Int!):PeakFarmlandProjectionAusbuelEtAlDataset!
+ peak_farmland_projection_ausbuel_et_al_2013(entity: String!, year: Int!):PeakFarmlandProjectionAusbuelEtAl2013Dataset!
  people_experiencing_homelessness_in_the_usa_pit_by_sheltering_status_hud_2016(entity: String!, year: Int!):PeopleExperiencingHomelessnessInTheUsaPitByShelteringStatusHud2016Dataset!
  percentage_deaths_attributable_to_risk_factors_ihme(entity: String!, year: Int!):PercentageDeathsAttributableToRiskFactorsIhmeDataset!
  percentage_gained_access_to_improved_water_and_sanitation_1990_2015_who(entity: String!, year: Int!):PercentageGainedAccessToImprovedWaterAndSanitation19902015WhoDataset!
@@ -13270,26 +13289,26 @@ type Query {
  phosphate_fertilizers_fao_2017(entity: String!, year: Int!):PhosphateFertilizersFao2017Dataset!
  pieces_of_mail_and_number_of_post_offices_united_states_postal_service_2018(entity: String!, year: Int!):PiecesOfMailAndNumberOfPostOfficesUnitedStatesPostalService2018Dataset!
  plastic_bag_substitute_comparisons_danish_epa_2018(entity: String!, year: Int!):PlasticBagSubstituteComparisonsDanishEpa2018Dataset!
- plastic_discarded_recycled_incinerated_geyer_et_al(entity: String!, year: Int!):PlasticDiscardedRecycledIncineratedGeyerEtAlDataset!
- plastic_importers_to_china_brooks_et_al(entity: String!, year: Int!):PlasticImportersToChinaBrooksEtAlDataset!
- plastic_imports_by_china_and_impact_of_ban_brooks_et_al(entity: String!, year: Int!):PlasticImportsByChinaAndImpactOfBanBrooksEtAlDataset!
- plastic_ocean_pollution_meijer_et_al(entity: String!, year: Int!):PlasticOceanPollutionMeijerEtAlDataset!
- plastic_pollution_by_top_50_rivers_meijer_et_al(entity: String!, year: Int!):PlasticPollutionByTop50RiversMeijerEtAlDataset!
- plastic_product_lifetime_production_waste_by_source_geyer_et_al(entity: String!, year: Int!):PlasticProductLifetimeProductionWasteBySourceGeyerEtAlDataset!
- plastic_waste_generation_by_country_owid_based_on_jambeck_et_al(entity: String!, year: Int!):PlasticWasteGenerationByCountryOwidBasedOnJambeckEtAlDataset!
- plastic_waste_jambeck_et_al(entity: String!, year: Int!):PlasticWasteJambeckEtAlDataset!
+ plastic_discarded_recycled_incinerated_geyer_et_al_2017(entity: String!, year: Int!):PlasticDiscardedRecycledIncineratedGeyerEtAl2017Dataset!
+ plastic_importers_to_china_brooks_et_al_2018(entity: String!, year: Int!):PlasticImportersToChinaBrooksEtAl2018Dataset!
+ plastic_imports_by_china_and_impact_of_ban_brooks_et_al_2018(entity: String!, year: Int!):PlasticImportsByChinaAndImpactOfBanBrooksEtAl2018Dataset!
+ plastic_ocean_pollution_meijer_et_al_2021(entity: String!, year: Int!):PlasticOceanPollutionMeijerEtAl2021Dataset!
+ plastic_pollution_by_top_50_rivers_meijer_et_al_2021(entity: String!, year: Int!):PlasticPollutionByTop50RiversMeijerEtAl2021Dataset!
+ plastic_product_lifetime_production_waste_by_source_geyer_et_al_2017(entity: String!, year: Int!):PlasticProductLifetimeProductionWasteBySourceGeyerEtAl2017Dataset!
+ plastic_waste_generation_by_country_owid_based_on_jambeck_et_al_and_world_bank(entity: String!, year: Int!):PlasticWasteGenerationByCountryOwidBasedOnJambeckEtAlAndWorldBankDataset!
+ plastic_waste_jambeck_et_al_2015(entity: String!, year: Int!):PlasticWasteJambeckEtAl2015Dataset!
  polcalnet_global_poverty_2017(entity: String!, year: Int!):PolcalnetGlobalPoverty2017Dataset!
  political_competition_and_participation_how_was_life_oecd_2014(entity: String!, year: Int!):PoliticalCompetitionAndParticipationHowWasLifeOecd2014Dataset!
  political_regimes_bertelsmann_transformation_index_2022(entity: String!, year: Int!):PoliticalRegimesBertelsmannTransformationIndex2022Dataset!
  political_regimes_economist_intelligence_unit_2022(entity: String!, year: Int!):PoliticalRegimesEconomistIntelligenceUnit2022Dataset!
  political_regimes_freedom_house_2022(entity: String!, year: Int!):PoliticalRegimesFreedomHouse2022Dataset!
- political_regimes_owid_based_on_boix_et_al(entity: String!, year: Int!):PoliticalRegimesOwidBasedOnBoixEtAlDataset!
- political_regimes_owid_based_on_v_dem_v12_and_luhrmann_et_al(entity: String!, year: Int!):PoliticalRegimesOwidBasedOnVDemV12AndLuhrmannEtAlDataset!
+ political_regimes_owid_based_on_boix_et_al_2013(entity: String!, year: Int!):PoliticalRegimesOwidBasedOnBoixEtAl2013Dataset!
+ political_regimes_owid_based_on_v_dem_v12_and_luhrmann_et_al_2018(entity: String!, year: Int!):PoliticalRegimesOwidBasedOnVDemV12AndLuhrmannEtAl2018Dataset!
  political_regimes_polity_5(entity: String!, year: Int!):PoliticalRegimesPolity5Dataset!
- political_regimes_skaaning_et_al(entity: String!, year: Int!):PoliticalRegimesSkaaningEtAlDataset!
+ political_regimes_skaaning_et_al_2015(entity: String!, year: Int!):PoliticalRegimesSkaaningEtAl2015Dataset!
  population_by_age_group_to_2100_based_on_unwpp_2017_medium_scenario(entity: String!, year: Int!):PopulationByAgeGroupTo2100BasedOnUnwpp2017MediumScenarioDataset!
  population_by_country_1800_to_2100_gapminder_and_un(entity: String!, year: Int!):PopulationByCountry1800To2100GapminderAndUnDataset!
- population_clio_infra_2016_with_island_of_ireland_rep(entity: String!, year: Int!):PopulationClioInfra2016WithIslandOfIrelandRepDataset!
+ population_clio_infra_2016_with_island_of_ireland_rep_northern(entity: String!, year: Int!):PopulationClioInfra2016WithIslandOfIrelandRepNorthernDataset!
  population_covered_by_the_internet_internet_world_stats_2019(entity: String!, year: Int!):PopulationCoveredByTheInternetInternetWorldStats2019Dataset!
  population_data_gapminder_up_to_1949_un_population_division_1950_to_2015(entity: String!, year: Int!):PopulationDataGapminderUpTo1949UnPopulationDivision1950To2015Dataset!
  population_density_world_bank_gapminder_hyde_and_un(entity: String!, year: Int!):PopulationDensityWorldBankGapminderHydeAndUnDataset!
@@ -13303,7 +13322,7 @@ type Query {
  population_using_informal_saving_perc_world_bank_world_development_report_2013(entity: String!, year: Int!):PopulationUsingInformalSavingPercWorldBankWorldDevelopmentReport2013Dataset!
  postage_rates_united_states_postal_service_2018(entity: String!, year: Int!):PostageRatesUnitedStatesPostalService2018Dataset!
  potash_fertilizers_fao_2017(entity: String!, year: Int!):PotashFertilizersFao2017Dataset!
- poverty_headcount_at_money1(entity: String!, year: Int!):PovertyHeadcountAtMoney1Dataset!
+ poverty_headcount_at_money190_a_day_2011_ppp_high_income_world_bank_povcal_2017(entity: String!, year: Int!):PovertyHeadcountAtMoney190ADay2011PppHighIncomeWorldBankPovcal2017Dataset!
  poverty_rate_50perc_of_median_lis_key_figures_2018(entity: String!, year: Int!):PovertyRate50percOfMedianLisKeyFigures2018Dataset!
  precipitation_anomaly_in_us_noaa(entity: String!, year: Int!):PrecipitationAnomalyInUsNoaaDataset!
  press_freedom_freedom_house_2017(entity: String!, year: Int!):PressFreedomFreedomHouse2017Dataset!
@@ -13316,7 +13335,7 @@ type Query {
  prevalence_of_vitamin_a_deficiency_in_pregnant_women_who_2009(entity: String!, year: Int!):PrevalenceOfVitaminADeficiencyInPregnantWomenWho2009Dataset!
  prevalence_of_weight_categories_in_females_ncdrisc_2017(entity: String!, year: Int!):PrevalenceOfWeightCategoriesInFemalesNcdrisc2017Dataset!
  prevalence_of_weight_categories_in_males_ncdrisc_2017(entity: String!, year: Int!):PrevalenceOfWeightCategoriesInMalesNcdrisc2017Dataset!
- prevalence_of_zinc_deficiency_wessells_et_al(entity: String!, year: Int!):PrevalenceOfZincDeficiencyWessellsEtAlDataset!
+ prevalence_of_zinc_deficiency_wessells_et_al_2012(entity: String!, year: Int!):PrevalenceOfZincDeficiencyWessellsEtAl2012Dataset!
  price_for_light_fouquet(entity: String!, year: Int!):PriceForLightFouquetDataset!
  price_of_mobile_data_alliance_for_affordable_internet_2019(entity: String!, year: Int!):PriceOfMobileDataAllianceForAffordableInternet2019Dataset!
  price_of_nails_since_1695_daniel_sichels_2017(entity: String!, year: Int!):PriceOfNailsSince1695DanielSichels2017Dataset!
@@ -13336,8 +13355,8 @@ type Query {
  rate_of_natural_population_increase_un_population_division_2015(entity: String!, year: Int!):RateOfNaturalPopulationIncreaseUnPopulationDivision2015Dataset!
  real_commodity_price_index_since_1850_jacks_2016(entity: String!, year: Int!):RealCommodityPriceIndexSince1850Jacks2016Dataset!
  real_gdp_per_capita_london_and_delhi_owid(entity: String!, year: Int!):RealGdpPerCapitaLondonAndDelhiOwidDataset!
- recycled_plastic_exports_brooks_et_al(entity: String!, year: Int!):RecycledPlasticExportsBrooksEtAlDataset!
- regime_populations_owid_based_on_luhrmann_et_al(entity: String!, year: Int!):RegimePopulationsOwidBasedOnLuhrmannEtAlDataset!
+ recycled_plastic_exports_brooks_et_al_2018(entity: String!, year: Int!):RecycledPlasticExportsBrooksEtAl2018Dataset!
+ regime_populations_owid_based_on_luhrmann_et_al_2018_v_dem_v12_owid_2021_gapminder_v6(entity: String!, year: Int!):RegimePopulationsOwidBasedOnLuhrmannEtAl2018VDemV12Owid2021GapminderV6Dataset!
  relative_earnings_of_adults_by_educational_attainment_education_at_a_glance_2017_oecd_indicators(entity: String!, year: Int!):RelativeEarningsOfAdultsByEducationalAttainmentEducationAtAGlance2017OecdIndicatorsDataset!
  relative_wages_of_craftsmen_to_labourers_1200_2000_clark_2005(entity: String!, year: Int!):RelativeWagesOfCraftsmenToLabourers12002000Clark2005Dataset!
  renewable_energy_capacity_by_region_irena_2017(entity: String!, year: Int!):RenewableEnergyCapacityByRegionIrena2017Dataset!
@@ -13361,8 +13380,8 @@ type Query {
  same_sex_marriages_by_sex_in_the_netherlands_cbs_2016(entity: String!, year: Int!):SameSexMarriagesBySexInTheNetherlandsCbs2016Dataset!
  same_sex_married_households_in_the_us(entity: String!, year: Int!):SameSexMarriedHouseholdsInTheUsDataset!
  self_reported_loneliness_in_older_adults_owid_2018(entity: String!, year: Int!):SelfReportedLonelinessInOlderAdultsOwid2018Dataset!
- sex_ratio_at_birth_by_birth_order_in_s(entity: String!, year: Int!):SexRatioAtBirthByBirthOrderInSDataset!
- sex_ratio_at_birth_chao_et_al(entity: String!, year: Int!):SexRatioAtBirthChaoEtAlDataset!
+ sex_ratio_at_birth_by_birth_order_in_skorea_and_china_jiang_et_al_2017_and_nso_korea(entity: String!, year: Int!):SexRatioAtBirthByBirthOrderInSkoreaAndChinaJiangEtAl2017AndNsoKoreaDataset!
+ sex_ratio_at_birth_chao_et_al_2019(entity: String!, year: Int!):SexRatioAtBirthChaoEtAl2019Dataset!
  sex_ratio_by_age_owid_based_on_unwpp_2017(entity: String!, year: Int!):SexRatioByAgeOwidBasedOnUnwpp2017Dataset!
  sexual_violence_unicef_2017(entity: String!, year: Int!):SexualViolenceUnicef2017Dataset!
  share_of_arable_land_which_is_organic_owid_based_on_fao(entity: String!, year: Int!):ShareOfArableLandWhichIsOrganicOwidBasedOnFaoDataset!
@@ -13373,46 +13392,46 @@ type Query {
  share_of_food_lost_by_food_type_and_region_fao_2019(entity: String!, year: Int!):ShareOfFoodLostByFoodTypeAndRegionFao2019Dataset!
  share_of_landowners_who_are_female_fao_2017(entity: String!, year: Int!):ShareOfLandownersWhoAreFemaleFao2017Dataset!
  share_of_marriages_in_england_and_wales_that_ended_in_divorce_uk_ons_2020(entity: String!, year: Int!):ShareOfMarriagesInEnglandAndWalesThatEndedInDivorceUkOns2020Dataset!
- share_of_people_experiencing_homelessness_in_the_usa_2007_2016_per_100_000_hud_2016_and_u(entity: String!, year: Int!):ShareOfPeopleExperiencingHomelessnessInTheUsa20072016Per100000Hud2016AndUDataset!
+ share_of_people_experiencing_homelessness_in_the_usa_2007_2016_per_100_000_hud_2016_and_us_c(entity: String!, year: Int!):ShareOfPeopleExperiencingHomelessnessInTheUsa20072016Per100000Hud2016AndUsCDataset!
  share_of_people_who_report_having_intentions_to_start_business_global_entrepreneurship_monitor(entity: String!, year: Int!):ShareOfPeopleWhoReportHavingIntentionsToStartBusinessGlobalEntrepreneurshipMonitorDataset!
  share_of_population_covered_by_social_protection_aspire_world_bank_2019(entity: String!, year: Int!):ShareOfPopulationCoveredBySocialProtectionAspireWorldBank2019Dataset!
  share_of_primary_school_children_achieving_minimum_reading_proficiency_rich_vs_poor_unesco(entity: String!, year: Int!):ShareOfPrimarySchoolChildrenAchievingMinimumReadingProficiencyRichVsPoorUnescoDataset!
  share_of_services_in_total_exports_wdi_2017(entity: String!, year: Int!):ShareOfServicesInTotalExportsWdi2017Dataset!
  share_of_single_parent_families_un_population_division_2018(entity: String!, year: Int!):ShareOfSingleParentFamiliesUnPopulationDivision2018Dataset!
  share_of_top_1perc_in_net_personal_wealth_world_wealth_and_income_database_2018(entity: String!, year: Int!):ShareOfTop1percInNetPersonalWealthWorldWealthAndIncomeDatabase2018Dataset!
- share_of_women_in_top_income_groups_atkinson_casarico_and_voitchovsky_2018(entity: String!, year: Int!):ShareOfWomenInTopIncomeGroupsAtkinsonCasaricoAndVoitchovsky2018Dataset!
+ share_of_women_in_top_income_groups_atkinson_casarico_and_voitchovsky_2018_old(entity: String!, year: Int!):ShareOfWomenInTopIncomeGroupsAtkinsonCasaricoAndVoitchovsky2018OldDataset!
  share_of_world_merchandise_trade_by_type_of_trade_fouquin_and_hugot_cepii_2016_dyadic_data(entity: String!, year: Int!):ShareOfWorldMerchandiseTradeByTypeOfTradeFouquinAndHugotCepii2016DyadicDataDataset!
  shark_attacks_and_fatalities_global_shark_attack_file_gsaf_2018(entity: String!, year: Int!):SharkAttacksAndFatalitiesGlobalSharkAttackFileGsaf2018Dataset!
  significant_earthquake_events_ngdc_nasa(entity: String!, year: Int!):SignificantEarthquakeEventsNgdcNasaDataset!
  significant_volcanic_eruptions_ngdc_wds(entity: String!, year: Int!):SignificantVolcanicEruptionsNgdcWdsDataset!
  sipri_military_expenditure_database(entity: String!, year: Int!):SipriMilitaryExpenditureDatabaseDataset!
  smallpox_cases_by_country_1920_1977(entity: String!, year: Int!):SmallpoxCasesByCountry19201977Dataset!
- smallpox_cases_reported_and_revised_fenner_et_al(entity: String!, year: Int!):SmallpoxCasesReportedAndRevisedFennerEtAlDataset!
+ smallpox_cases_reported_and_revised_fenner_et_al_1988(entity: String!, year: Int!):SmallpoxCasesReportedAndRevisedFennerEtAl1988Dataset!
  smoking_cigarette_sales_international_smoking_statistics_2017(entity: String!, year: Int!):SmokingCigaretteSalesInternationalSmokingStatistics2017Dataset!
  smoking_prevalence_and_cigarette_consumption_ihme_ghdx_2012(entity: String!, year: Int!):SmokingPrevalenceAndCigaretteConsumptionIhmeGhdx2012Dataset!
  so2_emissions_by_country_1850_2000_clio_infra(entity: String!, year: Int!):So2EmissionsByCountry18502000ClioInfraDataset!
- so2_emissions_by_region_oecd_2014_and_klimont_et_al(entity: String!, year: Int!):So2EmissionsByRegionOecd2014AndKlimontEtAlDataset!
- so2_emissions_china_and_india_klimont_et_al(entity: String!, year: Int!):So2EmissionsChinaAndIndiaKlimontEtAlDataset!
+ so2_emissions_by_region_oecd_2014_and_klimont_et_al_2013(entity: String!, year: Int!):So2EmissionsByRegionOecd2014AndKlimontEtAl2013Dataset!
+ so2_emissions_china_and_india_klimont_et_al_2013(entity: String!, year: Int!):So2EmissionsChinaAndIndiaKlimontEtAl2013Dataset!
  so2_per_capita_clio_infra(entity: String!, year: Int!):So2PerCapitaClioInfraDataset!
  social_expenditure_in_the_long_run_lindert_2004_oecd_1985_oecd_socx(entity: String!, year: Int!):SocialExpenditureInTheLongRunLindert2004Oecd1985OecdSocxDataset!
- solar_pv_module_costs_and_capacity_lafond_et_al(entity: String!, year: Int!):SolarPvModuleCostsAndCapacityLafondEtAlDataset!
+ solar_pv_module_costs_and_capacity_lafond_et_al_2017_and_irena(entity: String!, year: Int!):SolarPvModuleCostsAndCapacityLafondEtAl2017AndIrenaDataset!
  solar_pv_systems_costs_barbose_and_darghouth_2016(entity: String!, year: Int!):SolarPvSystemsCostsBarboseAndDarghouth2016Dataset!
- solid_fuel_use_for_cooking_by_region_bonjour_et_al(entity: String!, year: Int!):SolidFuelUseForCookingByRegionBonjourEtAlDataset!
+ solid_fuel_use_for_cooking_by_region_bonjour_et_al_2013(entity: String!, year: Int!):SolidFuelUseForCookingByRegionBonjourEtAl2013Dataset!
  split_of_exports_to_different_country_groups_owid_calculations_based_on_fouquin_and_hugot_cepii_2(entity: String!, year: Int!):SplitOfExportsToDifferentCountryGroupsOwidCalculationsBasedOnFouquinAndHugotCepii2Dataset!
  state_based_conflict_deaths_since_1946_by_region_and_conflict_type_prio_ucdp_2022(entity: String!, year: Int!):StateBasedConflictDeathsSince1946ByRegionAndConflictTypePrioUcdp2022Dataset!
  state_of_vaccine_confidence_larson_et_al_2016(entity: String!, year: Int!):StateOfVaccineConfidenceLarsonEtAl2016Dataset!
- subnational_inequality_oecd_based_on_royuela_et_al(entity: String!, year: Int!):SubnationalInequalityOecdBasedOnRoyuelaEtAlDataset!
+ subnational_inequality_oecd_based_on_royuela_et_al_2014(entity: String!, year: Int!):SubnationalInequalityOecdBasedOnRoyuelaEtAl2014Dataset!
  suicide_rates_by_sex_and_age_ihme_2019(entity: String!, year: Int!):SuicideRatesBySexAndAgeIhme2019Dataset!
- suicides_from_pesticides_mew_et_al(entity: String!, year: Int!):SuicidesFromPesticidesMewEtAlDataset!
+ suicides_from_pesticides_mew_et_al_2017(entity: String!, year: Int!):SuicidesFromPesticidesMewEtAl2017Dataset!
  supercomputer_power_flops_top500_database(entity: String!, year: Int!):SupercomputerPowerFlopsTop500DatabaseDataset!
- surface_ocean_plastic_by_mass_eriksen_et_al(entity: String!, year: Int!):SurfaceOceanPlasticByMassEriksenEtAlDataset!
- surface_ocean_plastic_by_particle_count_eriksen_et_al(entity: String!, year: Int!):SurfaceOceanPlasticByParticleCountEriksenEtAlDataset!
+ surface_ocean_plastic_by_mass_eriksen_et_al_2014(entity: String!, year: Int!):SurfaceOceanPlasticByMassEriksenEtAl2014Dataset!
+ surface_ocean_plastic_by_particle_count_eriksen_et_al_2014(entity: String!, year: Int!):SurfaceOceanPlasticByParticleCountEriksenEtAl2014Dataset!
  swedish_historical_national_accounts_schon_and_krantz_2007_2012_2015(entity: String!, year: Int!):SwedishHistoricalNationalAccountsSchonAndKrantz200720122015Dataset!
- tax_composition_arroyo_abad_and_p(entity: String!, year: Int!):TaxCompositionArroyoAbadAndPDataset!
+ tax_composition_arroyo_abad_and_p_lindert_2016(entity: String!, year: Int!):TaxCompositionArroyoAbadAndPLindert2016Dataset!
  tax_composition_todaro_and_smith_2014(entity: String!, year: Int!):TaxCompositionTodaroAndSmith2014Dataset!
  tax_revenue_piketty_2014(entity: String!, year: Int!):TaxRevenuePiketty2014Dataset!
  taxes_ictd_grd_2021(entity: String!, year: Int!):TaxesIctdGrd2021Dataset!
- teacher_absenteeism_bold_et_al(entity: String!, year: Int!):TeacherAbsenteeismBoldEtAlDataset!
+ teacher_absenteeism_bold_et_al_2017(entity: String!, year: Int!):TeacherAbsenteeismBoldEtAl2017Dataset!
  teaching_time_lost_world_development_report_2018(entity: String!, year: Int!):TeachingTimeLostWorldDevelopmentReport2018Dataset!
  technology_adoption_isard_1942_and_others(entity: String!, year: Int!):TechnologyAdoptionIsard1942AndOthersDataset!
  technology_diffusion_comin_and_hobijn_2004_and_others(entity: String!, year: Int!):TechnologyDiffusionCominAndHobijn2004AndOthersDataset!
@@ -13446,14 +13465,14 @@ type Query {
  trade_share_by_type_of_trade_owid_calculations_based_on_nber_united_nations_trade_data_1962_2000(entity: String!, year: Int!):TradeShareByTypeOfTradeOwidCalculationsBasedOnNberUnitedNationsTradeData19622000Dataset!
  trade_share_with_capital_and_labor_intensive_countries_owid_calculations_based_on_fouquin_and_hugo(entity: String!, year: Int!):TradeShareWithCapitalAndLaborIntensiveCountriesOwidCalculationsBasedOnFouquinAndHugoDataset!
  transistors_per_microprocessor_rupp_and_horowitz(entity: String!, year: Int!):TransistorsPerMicroprocessorRuppAndHorowitzDataset!
- tree_density_crowther_et_al(entity: String!, year: Int!):TreeDensityCrowtherEtAlDataset!
- tropical_deforestation_by_country_or_region_pendrill_et_al(entity: String!, year: Int!):TropicalDeforestationByCountryOrRegionPendrillEtAlDataset!
+ tree_density_crowther_et_al_2015(entity: String!, year: Int!):TreeDensityCrowtherEtAl2015Dataset!
+ tropical_deforestation_by_country_or_region_pendrill_et_al_2019(entity: String!, year: Int!):TropicalDeforestationByCountryOrRegionPendrillEtAl2019Dataset!
  trust_eurostat(entity: String!, year: Int!):TrustEurostatDataset!
  trust_world_value_survey(entity: String!, year: Int!):TrustWorldValueSurveyDataset!
- ucdpprio_armed_conflict_dataset_version_17(entity: String!, year: Int!):UcdpprioArmedConflictDatasetVersion17Dataset!
+ ucdpprio_armed_conflict_dataset_version_172_direct_form_ucdp(entity: String!, year: Int!):UcdpprioArmedConflictDatasetVersion172DirectFormUcdpDataset!
  uk_butterfly_populations_uk_ons(entity: String!, year: Int!):UkButterflyPopulationsUkOnsDataset!
  uk_cholera_death_over_the_long_term_ons(entity: String!, year: Int!):UkCholeraDeathOverTheLongTermOnsDataset!
- uk_defence_spending_ukpublicspending(entity: String!, year: Int!):UkDefenceSpendingUkpublicspendingDataset!
+ uk_defence_spending_ukpublicspendingcom(entity: String!, year: Int!):UkDefenceSpendingUkpublicspendingcomDataset!
  uk_nominal_wage_data_price_data_and_real_wage_bank_of_england_three_centuries_of_macroeconomic(entity: String!, year: Int!):UkNominalWageDataPriceDataAndRealWageBankOfEnglandThreeCenturiesOfMacroeconomicDataset!
  ukraine_russia_contribution_to_global_food(entity: String!, year: Int!):UkraineRussiaContributionToGlobalFoodDataset!
  ukraine_russia_global_food_based_on_un_fao(entity: String!, year: Int!):UkraineRussiaGlobalFoodBasedOnUnFaoDataset!
@@ -13461,7 +13480,7 @@ type Query {
  un_population_division_median_age_2015(entity: String!, year: Int!):UnPopulationDivisionMedianAge2015Dataset!
  un_population_division_median_age_2017(entity: String!, year: Int!):UnPopulationDivisionMedianAge2017Dataset!
  unadjusted_female_male_hourly_wage_ratios_by_percentile_blau_kahn_2017(entity: String!, year: Int!):UnadjustedFemaleMaleHourlyWageRatiosByPercentileBlauKahn2017Dataset!
- under_5_mortality_rate(entity: String!, year: Int!):Under5MortalityRateDataset!
+ under_5_mortality_rate_our_world_in_data(entity: String!, year: Int!):Under5MortalityRateOurWorldInDataDataset!
  under_five_mortality_rate_un_world_population_prospects_2015(entity: String!, year: Int!):UnderFiveMortalityRateUnWorldPopulationProspects2015Dataset!
  unemployment_rate_ages_25_54_by_education_ilostat_2017(entity: String!, year: Int!):UnemploymentRateAges2554ByEducationIlostat2017Dataset!
  unesco_metadata_on_literacy_uis_2017(entity: String!, year: Int!):UnescoMetadataOnLiteracyUis2017Dataset!
@@ -13492,7 +13511,7 @@ type Query {
  violent_discipline_unicef_2017(entity: String!, year: Int!):ViolentDisciplineUnicef2017Dataset!
  violent_victimization_us_bureau_of_justice_statistics_2017(entity: String!, year: Int!):ViolentVictimizationUsBureauOfJusticeStatistics2017Dataset!
  volcanic_eruption_deaths_ngdcnoaa(entity: String!, year: Int!):VolcanicEruptionDeathsNgdcnoaaDataset!
- wages_in_the_manufacturing_sector_vs(entity: String!, year: Int!):WagesInTheManufacturingSectorVsDataset!
+ wages_in_the_manufacturing_sector_vs_several_food_prices_in_the_us_us_bureau_of_labor_statistic(entity: String!, year: Int!):WagesInTheManufacturingSectorVsSeveralFoodPricesInTheUsUsBureauOfLaborStatisticDataset!
  water_and_sanitation_who_wash_2021(entity: String!, year: Int!):WaterAndSanitationWhoWash2021Dataset!
  water_resources_by_continent_fao_aquastat(entity: String!, year: Int!):WaterResourcesByContinentFaoAquastatDataset!
  water_withdrawals_and_consumption_aquastat(entity: String!, year: Int!):WaterWithdrawalsAndConsumptionAquastatDataset!
@@ -13504,10 +13523,10 @@ type Query {
  weather_fatality_rates_in_the_us_owid_based_on_noaa_and_lopez_holle_and_population_data(entity: String!, year: Int!):WeatherFatalityRatesInTheUsOwidBasedOnNoaaAndLopezHolleAndPopulationDataDataset!
  weekly_home_production_hours_in_the_usa_ramey_2009_and_ramey_francis_2009(entity: String!, year: Int!):WeeklyHomeProductionHoursInTheUsaRamey2009AndRameyFrancis2009Dataset!
  wellcome_global_monitor_trust(entity: String!, year: Int!):WellcomeGlobalMonitorTrustDataset!
- whale_catch_by_decade_rocha_et_al(entity: String!, year: Int!):WhaleCatchByDecadeRochaEtAlDataset!
- whale_catch_rocha_et_al(entity: String!, year: Int!):WhaleCatchRochaEtAlDataset!
- whale_populations_pershing_et_al(entity: String!, year: Int!):WhalePopulationsPershingEtAlDataset!
- wheat_prices_long_run_in_england_makridakis_et_al(entity: String!, year: Int!):WheatPricesLongRunInEnglandMakridakisEtAlDataset!
+ whale_catch_by_decade_rocha_et_al_and_iwc(entity: String!, year: Int!):WhaleCatchByDecadeRochaEtAlAndIwcDataset!
+ whale_catch_rocha_et_al_iwc(entity: String!, year: Int!):WhaleCatchRochaEtAlIwcDataset!
+ whale_populations_pershing_et_al_2010(entity: String!, year: Int!):WhalePopulationsPershingEtAl2010Dataset!
+ wheat_prices_long_run_in_england_makridakis_et_al_1997(entity: String!, year: Int!):WheatPricesLongRunInEnglandMakridakisEtAl1997Dataset!
  who_americans_spend_time_with_american_time_use_survey_2009_2019(entity: String!, year: Int!):WhoAmericansSpendTimeWithAmericanTimeUseSurvey20092019Dataset!
  wildfire_data_in_the_us_nifc(entity: String!, year: Int!):WildfireDataInTheUsNifcDataset!
  womens_economic_opportunity_2012_economist_intelligence_unit_2012(entity: String!, year: Int!):WomensEconomicOpportunity2012EconomistIntelligenceUnit2012Dataset!

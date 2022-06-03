@@ -19,14 +19,16 @@ func NormalizeName(value string) string {
 	return normalizer.Normalize()
 }
 
+// Normalize TODO: implement a more generic normalizer to be able to cover ALL cases.
+// TODO: implement shorter naming for long variable names.
 func (normalizer *NameNormalizer) Normalize() string {
 	return normalizer.toLowercase().
 		cleanAccents().
-		extractUntilStop(".").
-		extractUntilStop("[").
 		replace("=", "").
 		replace("(", "").
 		replace(")", "").
+		replace("[", "").
+		replace("]", "").
 		replace("\"", "").
 		replace("$", "money").
 		replace(" - ", "_").

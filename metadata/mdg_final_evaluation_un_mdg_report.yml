@@ -27,21 +27,21 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: mdg1
+  - name: mdg1a_share_in_extreme_poverty_money125_per_day
     type: Float
-  - name: mdg1
+  - name: mdg1b_share_in_productive_employment
     type: Float
-  - name: mdg1
+  - name: mdg1c_share_undernourished
     type: Float
-  - name: mdg2
+  - name: mdg2a_universal_primary_education
     type: Float
-  - name: mdg3
+  - name: mdg3a_gender_parity_index
     type: Float
-  - name: mdg4
+  - name: mdg4a_child_mortality_rate
     type: Float
-  - name: mdg5
+  - name: mdg5a_maternal_mortality_rate
     type: Float
-  - name: mdg5
+  - name: mdg5b_share_of_pregnant_women_receiving_antenatal_care
     type: Float
-  - name: mdg5
+  - name: mdg5b_share_of_married_women_using_contraceptives
     type: Float

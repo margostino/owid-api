@@ -40,9 +40,9 @@ variables:
     type: Float
   - name: groupers_threatened_endemic
     type: Float
-  - name: herrings_anchovies_etc
+  - name: herrings_anchovies_etc_total_endemic
     type: Float
-  - name: herrings_anchovies_etc
+  - name: herrings_anchovies_etc_threatened_endemic
     type: Float
   - name: seahorses_and_pipefishes_total_endemic
     type: Float
