@@ -23,9 +23,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: historical_urban_fraction_estimate_per_region
+  - name: historical_urban_fraction_estimate_per_region_hyde_3
     type: Float
-  - name: total_urban_area_per_world_region
+  - name: total_urban_area_per_world_region_hyde_3
     type: Float
-  - name: historical_rural_fraction_estimate_per_region
+  - name: historical_rural_fraction_estimate_per_region_hyde_3
     type: Float

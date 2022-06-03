@@ -12,9 +12,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: healthy_life_expectancy
+  - name: healthy_life_expectancy_ihme
     type: Float
-  - name: life_expectancy
+  - name: life_expectancy_ihme
     type: Float
-  - name: years_lived_with_disability
+  - name: years_lived_with_disability_ihme
     type: Float

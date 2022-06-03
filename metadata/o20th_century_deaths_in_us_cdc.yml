@@ -12,9 +12,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: accidents
+  - name: accidents_excl
     type: Float
-  - name: accidents
+  - name: accidents_total_deaths
     type: Float
   - name: arteriosclerosis_deaths
     type: Float
@@ -62,13 +62,13 @@ variables:
     type: Float
   - name: tuberculosis_deaths
     type: Float
-  - name: non_communicable_diseases
+  - name: non_communicable_diseases_ncds_deaths
     type: Float
   - name: communicable_infectious_neonatal_and_other_deaths_deaths
     type: Float
-  - name: accidents
+  - name: accidents_excl
     type: Float
-  - name: accidents
+  - name: accidents_total_death_rates
     type: Float
   - name: arteriosclerosis_death_rates
     type: Float
@@ -116,13 +116,13 @@ variables:
     type: Float
   - name: tuberculosis_death_rates
     type: Float
-  - name: non_communicable_diseases
+  - name: non_communicable_diseases_ncds_death_rates
     type: Float
   - name: communicable_infectious_neonatal_and_other_deaths_death_rates
     type: Float
-  - name: accidents
+  - name: accidents_excl
     type: Float
-  - name: accidents
+  - name: accidents_total_perc_of_deaths
     type: Float
   - name: arteriosclerosis_perc_of_deaths
     type: Float
@@ -172,7 +172,7 @@ variables:
     type: Float
   - name: tuberculosis_perc_of_deaths
     type: Float
-  - name: non_communicable_diseases
+  - name: non_communicable_diseases_ncds_perc_of_deaths
     type: Float
   - name: communicable_infectious_neonatal_and_other_deaths_perc_of_deaths
     type: Float

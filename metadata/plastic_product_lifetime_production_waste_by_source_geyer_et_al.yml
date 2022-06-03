@@ -15,9 +15,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: mean_product_lifetime
+  - name: mean_product_lifetime_years
     type: Float
-  - name: primary_plastic_production
+  - name: primary_plastic_production_million_tonnes
     type: Float
-  - name: primary_plastic_waste_generation
+  - name: primary_plastic_waste_generation_million_tonnes
     type: Float

@@ -22,9 +22,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: feed_conversion_ratio
+  - name: feed_conversion_ratio_alexander_et_al
     type: Float
-  - name: protein_feed_conversion_efficiency
+  - name: protein_feed_conversion_efficiency_alexander_et_al
     type: Float
-  - name: energy_conversion_efficiency
+  - name: energy_conversion_efficiency_alexander_et_al
     type: Float

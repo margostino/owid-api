@@ -15,13 +15,13 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: total_sex_ratio_at_birth
+  - name: total_sex_ratio_at_birth_srb_jiang_et_al
     type: Float
-  - name: first_child_srb
+  - name: first_child_srb_jiang_et_al
     type: Float
-  - name: second_child_srb
+  - name: second_child_srb_jiang_et_al
     type: Float
-  - name: third_child_srb
+  - name: third_child_srb_jiang_et_al
     type: Float
-  - name: fourth_child_and_higher_srb
+  - name: fourth_child_and_higher_srb_jiang_et_al
     type: Float

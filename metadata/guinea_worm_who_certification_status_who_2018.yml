@@ -9,5 +9,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: guinea_worm_certification_status
+  - name: guinea_worm_certification_status_who_2018
     type: Float

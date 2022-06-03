@@ -9,5 +9,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: annual_population_growth_rate
+  - name: annual_population_growth_rate_owid
     type: Float

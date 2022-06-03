@@ -17,13 +17,13 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: small_microplastic_mass
+  - name: small_microplastic_mass_0
     type: Float
-  - name: large_microplastic_mass
+  - name: large_microplastic_mass_1
     type: Float
-  - name: mesoplastic_mass
+  - name: mesoplastic_mass_4
     type: Float
-  - name: macroplastic_mass
+  - name: macroplastic_mass_greater200mm
     type: Float
-  - name: all_sizes
+  - name: all_sizes_total_mass
     type: Float

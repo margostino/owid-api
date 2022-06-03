@@ -17,9 +17,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: excess_skin_cancer_cases_per_million
+  - name: excess_skin_cancer_cases_per_million_no_restrictions
     type: Float
-  - name: excess_skin_cancer_cases_per_million
+  - name: excess_skin_cancer_cases_per_million_montreal_protocol
     type: Float
-  - name: excess_skin_cancer_cases_per_million
+  - name: excess_skin_cancer_cases_per_million_copenhagen_amendments
     type: Float

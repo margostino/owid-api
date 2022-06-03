@@ -13,5 +13,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: plastic_waste_generation
+  - name: plastic_waste_generation_tonnes_total
     type: Float

@@ -11,5 +11,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: defence_spending_as_a_percent_of_gdp
+  - name: defence_spending_as_a_percent_of_gdp_ukpublicspending
     type: Float

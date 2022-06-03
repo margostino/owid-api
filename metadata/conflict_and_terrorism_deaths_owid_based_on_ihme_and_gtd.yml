@@ -20,11 +20,11 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: terrorism
+  - name: terrorism_deaths
     type: Float
-  - name: conflict
+  - name: conflict_deaths
     type: Float
-  - name: terrorism
+  - name: terrorism_percent
     type: Float
-  - name: conflict
+  - name: conflict_percent
     type: Float

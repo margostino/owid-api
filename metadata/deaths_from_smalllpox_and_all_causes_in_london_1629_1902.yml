@@ -14,9 +14,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: deaths_from_smallpox_in_london_1629_1902
+  - name: deaths_from_smallpox_in_london_1629_1902_owid_2017
     type: Float
-  - name: deaths_from_all_causes_in_london_1629_1902
+  - name: deaths_from_all_causes_in_london_1629_1902_owid_2017
     type: Float
-  - name: smallpox_death_rate_in_london_1629_1902
+  - name: smallpox_death_rate_in_london_1629_1902_owid_2017
     type: Float

@@ -14,27 +14,27 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: nickel_production
+  - name: nickel_production_clio_infra_and_usgs
     type: Float
-  - name: tungsten_production
+  - name: tungsten_production_clio_infra_and_usgs
     type: Float
-  - name: zinc_production
+  - name: zinc_production_clio_infra_and_usgs
     type: Float
-  - name: silver_production
+  - name: silver_production_clio_infra_and_usgs
     type: Float
-  - name: bauxite_production
+  - name: bauxite_production_clio_infra_and_usgs
     type: Float
-  - name: iron_ore_production
+  - name: iron_ore_production_clio_infra_and_usgs
     type: Float
-  - name: gold_production
+  - name: gold_production_clio_infra_and_usgs
     type: Float
-  - name: tin_production
+  - name: tin_production_clio_infra_and_usgs
     type: Float
-  - name: lead_production
+  - name: lead_production_clio_infra_and_usgs
     type: Float
-  - name: copper_production
+  - name: copper_production_clio_infra_and_usgs
     type: Float
-  - name: aluminium_production
+  - name: aluminium_production_clio_infra_and_usgs
     type: Float
-  - name: manganese_production
+  - name: manganese_production_clio_infra_and_usgs
     type: Float

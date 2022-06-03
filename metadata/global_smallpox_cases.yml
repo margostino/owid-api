@@ -10,7 +10,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: global_smallpox_cases
+  - name: global_smallpox_cases_who_2011
     type: Float
-  - name: reported_smallpox_cases
+  - name: reported_smallpox_cases_who_2011
     type: Float

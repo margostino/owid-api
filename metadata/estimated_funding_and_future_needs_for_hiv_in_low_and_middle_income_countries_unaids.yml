@@ -13,7 +13,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: estimated_hiv_resource_availability_for_low_and_middle_income_countries
+  - name: estimated_hiv_resource_availability_for_low_and_middle_income_countries_million_usmoney
     type: Float
-  - name: estimated_resource_needs_for_fast_track_targets
+  - name: estimated_resource_needs_for_fast_track_targets_million_usmoney
     type: Float

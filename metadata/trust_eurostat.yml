@@ -9,7 +9,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: trust_in_others
+  - name: trust_in_others_eurostat_2015
     type: Float
-  - name: trust_in_police
+  - name: trust_in_police_eurostat_2015
     type: Float

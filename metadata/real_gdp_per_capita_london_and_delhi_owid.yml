@@ -15,5 +15,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: real_gdp_per_capita
+  - name: real_gdp_per_capita_owid
     type: Float

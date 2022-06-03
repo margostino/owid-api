@@ -23,7 +23,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: absolute_difference_in_population
+  - name: absolute_difference_in_population_owid_based_on_un_vs_us_census_bureau
     type: Float
-  - name: relative_difference_in_population
+  - name: relative_difference_in_population_owid_based_on_un_vs_us_census_bureau
     type: Float

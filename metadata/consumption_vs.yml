@@ -43,11 +43,11 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: share_of_global_population
+  - name: share_of_global_population_perc
     type: Float
-  - name: consumption_based_co2_emissions
+  - name: consumption_based_co2_emissions_perc_of_global_total
     type: Float
-  - name: production_based_co2_emissions
+  - name: production_based_co2_emissions_perc_of_global_total
     type: Float
   - name: consumption_based_co2_per_capita
     type: Float

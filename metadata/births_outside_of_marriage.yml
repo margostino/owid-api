@@ -20,5 +20,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: births_outside_of_marriage
+  - name: births_outside_of_marriage_perc_of_all_births
     type: Float

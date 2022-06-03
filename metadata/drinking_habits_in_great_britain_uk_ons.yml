@@ -17,5 +17,5 @@ variables:
     type: Float
   - name: dont_drink
     type: Float
-  - name: share_of_drinkers_who_"binged"_on_heaviest_day_of_drinking_in_last_week
+  - name: share_of_drinkers_who_binged_on_heaviest_day_of_drinking_in_last_week
     type: Float

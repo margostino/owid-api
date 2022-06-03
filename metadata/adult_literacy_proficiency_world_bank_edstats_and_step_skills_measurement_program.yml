@@ -28,5 +28,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: mean_adult_literacy_proficiency
+  - name: mean_adult_literacy_proficiency_world_bank_edstats_and_step_skills_measurement_program
     type: Float

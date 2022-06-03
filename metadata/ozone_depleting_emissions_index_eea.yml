@@ -11,5 +11,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: ozone_depleting_emissions
+  - name: ozone_depleting_emissions_index_1986_100
     type: Float

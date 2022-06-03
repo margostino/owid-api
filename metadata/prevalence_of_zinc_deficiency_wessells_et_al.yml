@@ -12,5 +12,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: prevalence_of_zinc_deficiency
+  - name: prevalence_of_zinc_deficiency_wessells_et_al
     type: Float

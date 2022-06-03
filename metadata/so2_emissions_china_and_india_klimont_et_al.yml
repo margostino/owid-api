@@ -18,5 +18,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: so2_emissions_in_china_and_india
+  - name: so2_emissions_in_china_and_india_klimont_et_al
     type: Float

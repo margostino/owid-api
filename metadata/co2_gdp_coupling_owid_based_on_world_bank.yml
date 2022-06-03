@@ -9,25 +9,25 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: gdp_per_capita
+  - name: gdp_per_capita_owid_based_on_world_bank
     type: Float
-  - name: gdp
+  - name: gdp_owid_based_on_world_bank
     type: Float
-  - name: population
+  - name: population_owid_based_on_world_bank
     type: Float
-  - name: co2_emissions
+  - name: co2_emissions_owid_based_on_world_bank
     type: Float
-  - name: co2_emissions_per_capita
+  - name: co2_emissions_per_capita_owid_based_on_world_bank
     type: Float
-  - name: methane_emissions
+  - name: methane_emissions_owid_based_on_world_bank
     type: Float
-  - name: methane_emissions_per_capita
+  - name: methane_emissions_per_capita_owid_based_on_world_bank
     type: Float
-  - name: nitrous_oxide_emissions
+  - name: nitrous_oxide_emissions_owid_based_on_world_bank
     type: Float
-  - name: nitrous_oxide_per_capita
+  - name: nitrous_oxide_per_capita_owid_based_on_world_bank
     type: Float
-  - name: energy_use_per_capita
+  - name: energy_use_per_capita_owid_based_on_world_bank
     type: Float
-  - name: energy_use
+  - name: energy_use_owid_based_on_world_bank
     type: Float

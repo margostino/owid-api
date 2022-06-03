@@ -9,11 +9,11 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: income_and_wealth
+  - name: income_and_wealth_arroyo_abad_and_lindert_2016
     type: Float
-  - name: consumption
+  - name: consumption_arroyo_abad_and_lindert_2016
     type: Float
-  - name: trade
+  - name: trade_arroyo_abad_and_lindert_2016
     type: Float
-  - name: resources
+  - name: resources_arroyo_abad_and_lindert_2016
     type: Float

@@ -9,5 +9,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: so2_emissions_per_capita
+  - name: so2_emissions_per_capita_clio_infra
     type: Float

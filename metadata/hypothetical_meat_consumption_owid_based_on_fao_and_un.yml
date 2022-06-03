@@ -18,5 +18,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: hypothetical_global_meat_consumption
+  - name: hypothetical_global_meat_consumption_owid_based_on_fao_and_un
     type: Float

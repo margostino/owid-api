@@ -16,5 +16,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: earnings_of_tertiary_educated_workers_relative_to_the_earnings_of_workers_with_upper_secondary_education
+  - name: earnings_of_tertiary_educated_workers_relative_to_the_earnings_of_workers_with_upper_secondary_education_oecd_2017
     type: Float

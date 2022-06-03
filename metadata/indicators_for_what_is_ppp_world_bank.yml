@@ -38,9 +38,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: price_level_ratio_of_ppp_conversion_factor
+  - name: price_level_ratio_of_ppp_conversion_factor_gdp_to_market_exchange_rate_world_bank
     type: Float
-  - name: gdp_per_capita_ppp_int_$_adjusted
+  - name: gdp_per_capita_ppp_int_money_adjusted_world_bank
     type: Float
-  - name: gdp_per_capita_us_$_market_exchange
+  - name: gdp_per_capita_us_money_market_exchange_world_bank
     type: Float

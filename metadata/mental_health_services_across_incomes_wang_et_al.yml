@@ -35,17 +35,17 @@ variables:
     type: Float
   - name: share_receiving_any_treatment_for_mental_health
     type: Float
-  - name: mental_health_specialty
+  - name: mental_health_specialty_perc
     type: Float
-  - name: general_medical
+  - name: general_medical_perc
     type: Float
-  - name: human_services
+  - name: human_services_perc
     type: Float
-  - name: complementary_and_alternative_medicine
+  - name: complementary_and_alternative_medicine_perc
     type: Float
-  - name: severe_mental_health_who_received_treatment_in_last_year
+  - name: severe_mental_health_who_received_treatment_in_last_year_perc
     type: Float
-  - name: moderate_mental_health_who_received_treatment_in_last_year
+  - name: moderate_mental_health_who_received_treatment_in_last_year_perc
     type: Float
-  - name: mild_mental_health_who_received_treatment_in_last_year
+  - name: mild_mental_health_who_received_treatment_in_last_year_perc
     type: Float

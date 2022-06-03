@@ -12,7 +12,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: plastic_exports_to_china
+  - name: plastic_exports_to_china_tonnes
     type: Float
-  - name: share_of_chinese_plastic_imports
+  - name: share_of_chinese_plastic_imports_perc
     type: Float

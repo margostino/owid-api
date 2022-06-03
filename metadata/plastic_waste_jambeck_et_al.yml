@@ -39,5 +39,5 @@ variables:
     type: Float
   - name: total_mismanaged_plastic_waste_in_2025
     type: Float
-  - name: per_capita_plastic_waste
+  - name: per_capita_plastic_waste_kgpersonday
     type: Float

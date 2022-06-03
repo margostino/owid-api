@@ -9,9 +9,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: countries_with_vat
+  - name: countries_with_vat_oecd_2016
     type: Float
-  - name: value_added_taxes
+  - name: value_added_taxes_oecd_2016
     type: Float
-  - name: taxes_on_specific_goods_and_services
+  - name: taxes_on_specific_goods_and_services_oecd_2016
     type: Float

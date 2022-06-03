@@ -25,5 +25,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: e10
+  - name: e10_united_nations_population_division_and_human_mortality_database_2015
     type: Float

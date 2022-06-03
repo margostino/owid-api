@@ -20,7 +20,7 @@ arguments:
 variables:
   - name: cartagena_protocol_on_biosafety
     type: Float
-  - name: convention_on_biological_diversity
+  - name: convention_on_biological_diversity_cbd
     type: Float
   - name: cites_convention_on_international_trade_in_endangered_species_of_wild_fauna_nad_flora
     type: Float
@@ -30,7 +30,7 @@ variables:
     type: Float
   - name: kyoto_protocol
     type: Float
-  - name: vienna_convention
+  - name: vienna_convention_ozone
     type: Float
   - name: ramsar_convention
     type: Float
@@ -38,11 +38,11 @@ variables:
     type: Float
   - name: stockholm_convention_on_persistent_organic_pollutants
     type: Float
-  - name: un_convention_to_combat_desertification
+  - name: un_convention_to_combat_desertification_unccd
     type: Float
-  - name: un_convention_on_the_law_of_the_sea
+  - name: un_convention_on_the_law_of_the_sea_unclos
     type: Float
-  - name: un_framework_convention_on_climate_change
+  - name: un_framework_convention_on_climate_change_unfccc
     type: Float
   - name: cites_convention_on_international_trade_in_endangered_species_of_wild_fauna_and_flora
     type: Float

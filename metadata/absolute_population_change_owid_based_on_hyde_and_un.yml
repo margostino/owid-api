@@ -22,7 +22,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: absolute_increase_in_population
+  - name: absolute_increase_in_population_owid_based_on_hyde_and_un
     type: Float
-  - name: projected_absolute_population_increase
+  - name: projected_absolute_population_increase_owid_based_on_hyde_and_un
     type: Float

@@ -19,39 +19,39 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: time_spent_on_personal_care
+  - name: time_spent_on_personal_care_eurostat
     type: Float
-  - name: time_spent_in_employment
+  - name: time_spent_in_employment_eurostat
     type: Float
-  - name: time_spent_in_study
+  - name: time_spent_in_study_eurostat
     type: Float
-  - name: time_spent_on_household_and_family_care
+  - name: time_spent_on_household_and_family_care_eurostat
     type: Float
-  - name: time_spent_on_leisure_social_and_associative_life
+  - name: time_spent_on_leisure_social_and_associative_life_eurostat
     type: Float
-  - name: time_spent_on_travel
+  - name: time_spent_on_travel_eurostat
     type: Float
-  - name: participation_time_in_personal_care
+  - name: participation_time_in_personal_care_eurostat
     type: Float
-  - name: participation_time_in_employment
+  - name: participation_time_in_employment_eurostat
     type: Float
-  - name: participation_time_in_study
+  - name: participation_time_in_study_eurostat
     type: Float
-  - name: participation_time_in_household_and_family_care
+  - name: participation_time_in_household_and_family_care_eurostat
     type: Float
-  - name: participation_time_in_leisure_social_and_associative_life
+  - name: participation_time_in_leisure_social_and_associative_life_eurostat
     type: Float
-  - name: participation_time_in_travel
+  - name: participation_time_in_travel_eurostat
     type: Float
-  - name: participation_rate_in_personal_care
+  - name: participation_rate_in_personal_care_eurostat
     type: Float
-  - name: participation_rate_in_employment
+  - name: participation_rate_in_employment_eurostat
     type: Float
-  - name: participation_rate_in_study
+  - name: participation_rate_in_study_eurostat
     type: Float
-  - name: participation_rate_in_household_and_family_care
+  - name: participation_rate_in_household_and_family_care_eurostat
     type: Float
-  - name: participation_rate_in_leisure_social_and_associative_life_activities
+  - name: participation_rate_in_leisure_social_and_associative_life_activities_eurostat
     type: Float
-  - name: participation_rate_in_travel
+  - name: participation_rate_in_travel_eurostat
     type: Float

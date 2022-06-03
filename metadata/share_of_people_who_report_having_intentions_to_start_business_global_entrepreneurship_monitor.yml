@@ -11,5 +11,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: share_of_people_who_report_having_intentions_to_start_business
+  - name: share_of_people_who_report_having_intentions_to_start_business_global_entrepreneurship_monitor
     type: Float

@@ -19,9 +19,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: cost_per_mb_dna_sequence
+  - name: cost_per_mb_dna_sequence_gsp
     type: Float
-  - name: cost_per_genome
+  - name: cost_per_genome_gsp
     type: Float
-  - name: number_of_base_pairs_sequenced_per_us$
+  - name: number_of_base_pairs_sequenced_per_usmoney_gsp
     type: Float

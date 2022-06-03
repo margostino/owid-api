@@ -15,5 +15,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: percentage_of_persons_without_health_insurance
+  - name: percentage_of_persons_without_health_insurance_perc
     type: Float

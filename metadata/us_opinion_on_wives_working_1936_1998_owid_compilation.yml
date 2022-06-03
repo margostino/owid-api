@@ -12,5 +12,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: perc_approve_of_wife_working_if_husband_can_support
+  - name: perc_approve_of_wife_working_if_husband_can_support_owid_2017
     type: Float

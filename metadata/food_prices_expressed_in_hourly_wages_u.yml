@@ -10,5 +10,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: food_prices_expressed_in_hourly_wages
+  - name: food_prices_expressed_in_hourly_wages_u
     type: Float

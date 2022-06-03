@@ -9,5 +9,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: human_development_index
+  - name: human_development_index_undp
     type: Float

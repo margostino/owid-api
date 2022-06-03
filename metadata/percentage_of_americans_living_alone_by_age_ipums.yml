@@ -18,15 +18,15 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: percentage_of_americans_living_alone_by_year_total
+  - name: percentage_of_americans_living_alone_by_year_total_ipums
     type: Float
-  - name: percentage_of_americans_living_alone_by_year_male
+  - name: percentage_of_americans_living_alone_by_year_male_ipums
     type: Float
-  - name: percentage_of_americans_living_alone_by_year_female
+  - name: percentage_of_americans_living_alone_by_year_female_ipums
     type: Float
-  - name: percentage_of_americans_living_alone_by_age_total
+  - name: percentage_of_americans_living_alone_by_age_total_ipums
     type: Float
-  - name: percentage_of_americans_living_alone_by_age_male
+  - name: percentage_of_americans_living_alone_by_age_male_ipums
     type: Float
-  - name: percentage_of_americans_living_alone_by_age_female
+  - name: percentage_of_americans_living_alone_by_age_female_ipums
     type: Float

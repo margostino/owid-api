@@ -18,7 +18,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: arable_land_and_permanent_crops
+  - name: arable_land_and_permanent_crops_ausbuel_et_al
     type: Float
   - name: ausubel_et_al
     type: Float

@@ -14,5 +14,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: hidden_hunger_index_in_pre_school_children
+  - name: hidden_hunger_index_in_pre_school_children_muthayya_et_al
     type: Float

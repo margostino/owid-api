@@ -23,5 +23,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: share_of_population_with_an_episode_of_homelessness
+  - name: share_of_population_with_an_episode_of_homelessness_toro_et_al
     type: Float

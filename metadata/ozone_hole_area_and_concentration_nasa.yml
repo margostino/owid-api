@@ -12,11 +12,11 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: maximum_ozone_hole_area
+  - name: maximum_ozone_hole_area_nasa
     type: Float
   - name: mean_ozone_hole_area
     type: Float
-  - name: minimum_daily_concentration
+  - name: minimum_daily_concentration_nasa
     type: Float
-  - name: mean_daily_concentration
+  - name: mean_daily_concentration_nasa
     type: Float

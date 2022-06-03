@@ -14,13 +14,13 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: number_of_peacekeeping_missions
+  - name: number_of_peacekeeping_missions_united_nations_peacekeeping
     type: Float
-  - name: size_of_total_peacekeeping_force
+  - name: size_of_total_peacekeeping_force_united_nations_peacekeeping
     type: Float
-  - name: civilian_police
+  - name: civilian_police_peacekeepers_united_nations_peacekeeping
     type: Float
-  - name: military_observers
+  - name: military_observers_peacekeepers_united_nations_peacekeeping
     type: Float
-  - name: troops
+  - name: troops_peacekeepers_united_nations_peacekeeping
     type: Float

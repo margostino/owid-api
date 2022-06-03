@@ -42,7 +42,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: reported_smallpox_cases
+  - name: reported_smallpox_cases_who
     type: Float
-  - name: world_region
+  - name: world_region_world_bank_2017
     type: Float

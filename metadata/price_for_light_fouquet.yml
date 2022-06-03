@@ -9,5 +9,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: price_for_light_fouquet_and_pearson
+  - name: price_for_light_fouquet_and_pearson_2012
     type: Float

@@ -11,5 +11,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: world_trade
+  - name: world_trade_perc_of_gdp_pwt_9
     type: Float

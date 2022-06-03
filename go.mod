@@ -7,6 +7,7 @@ require (
 	github.com/google/go-github/v45 v45.0.1-0.20220525150416-4ca1d673b251
 	github.com/vektah/gqlparser/v2 v2.4.4
 	golang.org/x/oauth2 v0.0.0-20220524215830-622c5d57e401
+	golang.org/x/text v0.3.7
 	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
 )
 

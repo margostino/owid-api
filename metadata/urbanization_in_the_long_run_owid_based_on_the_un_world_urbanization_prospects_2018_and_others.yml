@@ -26,19 +26,19 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: urban_population
+  - name: urban_population_perc_long_run_with_2050_projections_owid
     type: Float
-  - name: rural_population
+  - name: rural_population_perc_long_run_with_2050_projections_owid
     type: Float
-  - name: urban_population_long_run_with_2050_projections
+  - name: urban_population_long_run_with_2050_projections_owid
     type: Float
-  - name: rural_population_long_run_with_2050_projections
+  - name: rural_population_long_run_with_2050_projections_owid
     type: Float
-  - name: urban_population
+  - name: urban_population_perc_long_run_to_2016_owid
     type: Float
-  - name: rural_population
+  - name: rural_population_perc_long_run_to_2016_owid
     type: Float
-  - name: urban_population_long_run_to_2016
+  - name: urban_population_long_run_to_2016_owid
     type: Float
-  - name: rural_population_long_run_to_2016
+  - name: rural_population_long_run_to_2016_owid
     type: Float

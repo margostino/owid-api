@@ -14,7 +14,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: age_standardized_cancer_death_rate_attributed_to_tobacco
+  - name: age_standardized_cancer_death_rate_attributed_to_tobacco_per_100_000
     type: Float
   - name: age_standardized_share_of_cancer_deaths_attributed_to_tobacco
     type: Float

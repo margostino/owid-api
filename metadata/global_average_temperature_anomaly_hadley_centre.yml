@@ -13,5 +13,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: global_average_temperature_anomaly
+  - name: global_average_temperature_anomaly_hadley_centre
     type: Float

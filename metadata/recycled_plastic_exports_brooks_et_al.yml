@@ -11,9 +11,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: cumulative_recycled_plastic_trade_value
+  - name: cumulative_recycled_plastic_trade_value_billion_usd
     type: Float
-  - name: cumulative_net_exported_plastic
+  - name: cumulative_net_exported_plastic_million_tonnes
     type: Float
-  - name: share_of_global_exports
+  - name: share_of_global_exports_perc
     type: Float

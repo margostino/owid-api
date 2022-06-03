@@ -16,13 +16,13 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: muscle
+  - name: muscle_gales_et_al
     type: Float
-  - name: firewood
+  - name: firewood_gales_et_al
     type: Float
-  - name: wind_water
+  - name: wind_water_gales_et_al
     type: Float
-  - name: fossil_fuels
+  - name: fossil_fuels_gales_et_al
     type: Float
-  - name: primary_electricity
+  - name: primary_electricity_gales_et_al
     type: Float

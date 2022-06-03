@@ -9,5 +9,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: year_of_maternal_neonatal_tetanus
+  - name: year_of_maternal_neonatal_tetanus_mnt_elimination
     type: Float

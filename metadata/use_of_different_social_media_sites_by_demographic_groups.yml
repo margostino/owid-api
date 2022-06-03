@@ -9,7 +9,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: social_media_use_among_men_in_the_us
+  - name: social_media_use_among_men_in_the_us_perc
     type: Float
-  - name: social_media_use_among_women_in_the_us
+  - name: social_media_use_among_women_in_the_us_perc
     type: Float

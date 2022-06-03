@@ -16,5 +16,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: historical_index_of_human_development
+  - name: historical_index_of_human_development_prados_de_la_escosura
     type: Float

@@ -20,13 +20,13 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: share_of_violent_deaths
+  - name: share_of_violent_deaths_prehistoric_archeological_sites
     type: Float
-  - name: share_of_violent_deaths
+  - name: share_of_violent_deaths_non_state_societies
     type: Float
-  - name: share_of_violent_deaths
+  - name: share_of_violent_deaths_state_societies
     type: Float
-  - name: rate_of_violent_deaths
+  - name: rate_of_violent_deaths_state_societies
     type: Float
-  - name: rate_of_violent_deaths
+  - name: rate_of_violent_deaths_non_state_societies
     type: Float

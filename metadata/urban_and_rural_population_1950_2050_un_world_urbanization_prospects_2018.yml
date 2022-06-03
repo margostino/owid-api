@@ -10,7 +10,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: urban_population_1950_2050
+  - name: urban_population_1950_2050_un_world_urbanization_prospects_2018
     type: Float
-  - name: rural_population_1950_2050
+  - name: rural_population_1950_2050_un_world_urbanization_prospects_2018
     type: Float

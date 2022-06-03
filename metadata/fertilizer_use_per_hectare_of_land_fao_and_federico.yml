@@ -21,5 +21,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: fertilizer_consumption
+  - name: fertilizer_consumption_fao_2017_and_federico_2008
     type: Float

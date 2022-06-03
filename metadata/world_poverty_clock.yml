@@ -9,9 +9,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: share_of_population_in_extreme_poverty
+  - name: share_of_population_in_extreme_poverty_world_data_lab_2018
     type: Float
-  - name: number_of_people_in_extreme_poverty
+  - name: number_of_people_in_extreme_poverty_world_data_lab_2018
     type: Float
-  - name: population
+  - name: population_world_data_lab_2018
     type: Float

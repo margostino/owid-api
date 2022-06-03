@@ -16,7 +16,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: actual_production
+  - name: actual_production_cavallo_and_eia
     type: Float
-  - name: hubberts_curve
+  - name: hubberts_curve_cavallo_and_eia
     type: Float

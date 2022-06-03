@@ -12,27 +12,27 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: all_levels_of_education
+  - name: all_levels_of_education_active
     type: Float
-  - name: all_levels_of_education
+  - name: all_levels_of_education_employed
     type: Float
-  - name: all_levels_of_education
+  - name: all_levels_of_education_total
     type: Float
-  - name: below_upper_secondary_education
+  - name: below_upper_secondary_education_active
     type: Float
-  - name: below_upper_secondary_education
+  - name: below_upper_secondary_education_employed
     type: Float
-  - name: below_upper_secondary_education
+  - name: below_upper_secondary_education_total
     type: Float
-  - name: tertiary_education
+  - name: tertiary_education_active
     type: Float
-  - name: tertiary_education
+  - name: tertiary_education_employed
     type: Float
-  - name: tertiary_education
+  - name: tertiary_education_total
     type: Float
-  - name: upper_secondary_and_post_secondary_non_tertiary_education
+  - name: upper_secondary_and_post_secondary_non_tertiary_education_active
     type: Float
-  - name: upper_secondary_and_post_secondary_non_tertiary_education
+  - name: upper_secondary_and_post_secondary_non_tertiary_education_employed
     type: Float
-  - name: upper_secondary_and_post_secondary_non_tertiary_education
+  - name: upper_secondary_and_post_secondary_non_tertiary_education_total
     type: Float

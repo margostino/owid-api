@@ -12,31 +12,31 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: stomach
+  - name: stomach_male
     type: Float
-  - name: colon_and_rectum
+  - name: colon_and_rectum_male
     type: Float
-  - name: liver
+  - name: liver_male
     type: Float
-  - name: pancreas
+  - name: pancreas_male
     type: Float
-  - name: lung_and_bronchus
+  - name: lung_and_bronchus_male
     type: Float
-  - name: prostate
+  - name: prostate_male
     type: Float
-  - name: leukemia
+  - name: leukemia_male
     type: Float
-  - name: stomach
+  - name: stomach_female
     type: Float
-  - name: colon_and_rectum
+  - name: colon_and_rectum_female
     type: Float
-  - name: pancreas
+  - name: pancreas_female
     type: Float
-  - name: lung_and_bronchus
+  - name: lung_and_bronchus_female
     type: Float
-  - name: breast
+  - name: breast_female
     type: Float
-  - name: uterus
+  - name: uterus_female
     type: Float
-  - name: liver
+  - name: liver_female
     type: Float

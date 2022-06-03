@@ -39,5 +39,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: literacy_rates
+  - name: literacy_rates_world_bank_cia_world_factbook_and_other_sources
     type: Float

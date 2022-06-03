@@ -12,5 +12,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: oil_production
+  - name: oil_production_etemad_and_luciana
     type: Float

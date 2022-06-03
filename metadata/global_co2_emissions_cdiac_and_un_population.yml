@@ -33,7 +33,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: co2_emissions
+  - name: co2_emissions_cdiac_and_un_population
     type: Float
-  - name: per_capita_co2_emissions
+  - name: per_capita_co2_emissions_cdiac_and_un_population
     type: Float

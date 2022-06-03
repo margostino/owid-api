@@ -11,7 +11,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: share_of_children_who_passed_the_minimum_pasec_proficiency_level_poor
+  - name: share_of_children_who_passed_the_minimum_pasec_proficiency_level_poor_unesco
     type: Float
-  - name: share_of_children_who_passed_the_minimum_pasec_proficiency_level_rich
+  - name: share_of_children_who_passed_the_minimum_pasec_proficiency_level_rich_unesco
     type: Float

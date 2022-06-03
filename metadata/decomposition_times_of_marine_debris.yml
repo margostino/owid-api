@@ -9,5 +9,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: decomposition_rates_of_marine_debris
+  - name: decomposition_rates_of_marine_debris_years
     type: Float

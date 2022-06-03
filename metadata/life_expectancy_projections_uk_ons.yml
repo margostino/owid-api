@@ -13,11 +13,11 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: male_life_expectancy
+  - name: male_life_expectancy_2016_projections
     type: Float
-  - name: female_life_expectancy
+  - name: female_life_expectancy_2016_projections
     type: Float
-  - name: male_life_expectancy
+  - name: male_life_expectancy_2014_projections
     type: Float
-  - name: female_life_expectancy
+  - name: female_life_expectancy_2014_projections
     type: Float

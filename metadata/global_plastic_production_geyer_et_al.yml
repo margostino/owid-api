@@ -10,7 +10,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: global_plastics_production
+  - name: global_plastics_production_million_tonnes
     type: Float
-  - name: cumulative_global_plastics_production
+  - name: cumulative_global_plastics_production_million_tonnes
     type: Float

@@ -20,9 +20,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: time_allocation_all
+  - name: time_allocation_all_statistics_finland
     type: Float
-  - name: time_allocation_men
+  - name: time_allocation_men_statistics_finland
     type: Float
-  - name: time_allocation_women
+  - name: time_allocation_women_statistics_finland
     type: Float

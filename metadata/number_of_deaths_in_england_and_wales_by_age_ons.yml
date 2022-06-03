@@ -10,9 +10,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: male
+  - name: male_number_of_deaths
     type: Float
-  - name: female
+  - name: female_number_of_deaths
     type: Float
-  - name: both_sexes
+  - name: both_sexes_number_of_deaths
     type: Float

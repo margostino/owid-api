@@ -39,21 +39,21 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: ssp1
+  - name: ssp1_number_of_people_in_extreme_poverty
     type: Float
-  - name: ssp2
+  - name: ssp2_number_of_people_in_extreme_poverty
     type: Float
-  - name: ssp3
+  - name: ssp3_number_of_people_in_extreme_poverty
     type: Float
-  - name: ssp4
+  - name: ssp4_number_of_people_in_extreme_poverty
     type: Float
-  - name: ssp5
+  - name: ssp5_number_of_people_in_extreme_poverty
     type: Float
-  - name: ssp1
+  - name: ssp1_difference_in_number_in_extreme_poverty_to_baseline
     type: Float
-  - name: ssp3
+  - name: ssp3_difference_in_number_in_extreme_poverty_to_baseline
     type: Float
-  - name: ssp4
+  - name: ssp4_difference_in_number_in_extreme_poverty_to_baseline
     type: Float
-  - name: ssp5
+  - name: ssp5_difference_in_number_in_extreme_poverty_to_baseline
     type: Float

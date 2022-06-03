@@ -11,5 +11,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: total_population
+  - name: total_population_gapminder_un_population_division
     type: Float

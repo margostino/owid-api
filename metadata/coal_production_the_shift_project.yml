@@ -12,5 +12,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: coal_production
+  - name: coal_production_the_shift_project
     type: Float

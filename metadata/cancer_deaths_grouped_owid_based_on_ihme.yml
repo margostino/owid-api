@@ -16,43 +16,43 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: lip_and_oral_cavity_cancer
+  - name: lip_and_oral_cavity_cancer_deaths
     type: Float
-  - name: other_pharynx_cancer
+  - name: other_pharynx_cancer_deaths
     type: Float
-  - name: esophageal_cancer
+  - name: esophageal_cancer_deaths
     type: Float
-  - name: stomach_cancer
+  - name: stomach_cancer_deaths
     type: Float
-  - name: colon_and_rectum_cancer
+  - name: colon_and_rectum_cancer_deaths
     type: Float
-  - name: liver_cancer
+  - name: liver_cancer_deaths
     type: Float
-  - name: gallbladder_cancer
+  - name: gallbladder_cancer_deaths
     type: Float
-  - name: pancreatic_cancer
+  - name: pancreatic_cancer_deaths
     type: Float
-  - name: larynx_cancer
+  - name: larynx_cancer_deaths
     type: Float
-  - name: tracheal_bronchus_and_lung_cancer
+  - name: tracheal_bronchus_and_lung_cancer_deaths
     type: Float
-  - name: breast_cancer
+  - name: breast_cancer_deaths
     type: Float
-  - name: cervical_cancer
+  - name: cervical_cancer_deaths
     type: Float
-  - name: ovarian_cancer
+  - name: ovarian_cancer_deaths
     type: Float
-  - name: prostate_cancer
+  - name: prostate_cancer_deaths
     type: Float
-  - name: kidney_cancer
+  - name: kidney_cancer_deaths
     type: Float
-  - name: bladder_cancer
+  - name: bladder_cancer_deaths
     type: Float
-  - name: brain_and_nervous_system_cancer
+  - name: brain_and_nervous_system_cancer_deaths
     type: Float
-  - name: non_hodgkin_lymphoma
+  - name: non_hodgkin_lymphoma_deaths
     type: Float
-  - name: leukemia
+  - name: leukemia_deaths
     type: Float
-  - name: other_cancers
+  - name: other_cancers_deaths
     type: Float

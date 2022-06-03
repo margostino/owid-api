@@ -28,7 +28,7 @@ variables:
     type: Float
   - name: deaths
     type: Float
-  - name: deaths
+  - name: deaths_per_million_vehicles
     type: Float
   - name: injuries
     type: Float

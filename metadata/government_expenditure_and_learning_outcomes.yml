@@ -20,7 +20,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: government_expenditure_per_primary_student
+  - name: government_expenditure_per_primary_student_pppmoney_2006_2014
     type: Float
-  - name: share_of_students_reaching_no_or_minimum_achievement_only
+  - name: share_of_students_reaching_no_or_minimum_achievement_only_2005_2015
     type: Float

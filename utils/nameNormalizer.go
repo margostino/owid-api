@@ -2,8 +2,12 @@ package utils
 
 import (
 	"fmt"
+	"golang.org/x/text/runes"
+	"golang.org/x/text/transform"
+	"golang.org/x/text/unicode/norm"
 	"strconv"
 	"strings"
+	"unicode"
 )
 
 type NameNormalizer struct {
@@ -17,13 +21,21 @@ func NormalizeName(value string) string {
 
 func (normalizer *NameNormalizer) Normalize() string {
 	return normalizer.toLowercase().
+		cleanAccents().
 		extractUntilStop(".").
-		extractUntilStop("(").
 		extractUntilStop("[").
+		replace("=", "").
+		replace("(", "").
+		replace(")", "").
+		replace("\"", "").
+		replace("$", "money").
 		replace(" - ", "_").
 		replace(" -", "_").
 		replace("- ", "_").
 		replace("-", "_").
+		replace(`-`, "_").
+		replace(`—`, "_").
+		replace(`–`, "_").
 		replace(",", "_").
 		replace("&", "and").
 		replace("%", "perc").
@@ -42,12 +54,19 @@ func (normalizer *NameNormalizer) Normalize() string {
 		replace("[", "_").
 		replace("]", "_").
 		replace(" ", "_").
+		replace("  ", "_").
+		replace("    ", "_").
+		replace("     ", "_").
 		replace("__", "_").
 		replace("___", "_").
 		replace("_–_", "_").
 		replace("_—_", "_").
+		replace("__", "_").
+		replace("___", "_").
 		replace("<", "less").
 		replace(">", "greater").
+		replace("≥", "greater_or_equal").
+		replace("≥", "greater_or_equal").
 		replace("₀", "0").
 		replace("₁", "1").
 		replace("₂", "2").
@@ -61,9 +80,20 @@ func (normalizer *NameNormalizer) Normalize() string {
 		replace("ö", "o").
 		replace("ü", "u").
 		replace("è̀", "e").
+		replace("̀\t̀", "").
 		sanitizeHead().
 		sanitizeTail().
 		Value
+}
+
+func (normalizer *NameNormalizer) cleanAccents() *NameNormalizer {
+	t := transform.Chain(norm.NFD, runes.Remove(runes.In(unicode.Mn)), norm.NFC)
+	output, _, e := transform.String(t, normalizer.Value)
+	if e != nil {
+		panic(e)
+	}
+	normalizer.Value = output
+	return normalizer
 }
 
 func (normalizer *NameNormalizer) extractUntilStop(stopFlag string) *NameNormalizer {
@@ -96,6 +126,6 @@ func (normalizer *NameNormalizer) sanitizeTail() *NameNormalizer {
 }
 
 func (normalizer *NameNormalizer) replace(old string, character string) *NameNormalizer {
-	normalizer.Value = strings.Replace(normalizer.Value, old, character, -1)
+	normalizer.Value = strings.ReplaceAll(normalizer.Value, old, character)
 	return normalizer
 }

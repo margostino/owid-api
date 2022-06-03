@@ -12,7 +12,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: oecd_subnational_gini_coefficients
+  - name: oecd_subnational_gini_coefficients_oecd_based_on_royuela_et_al
     type: Float
-  - name: average_annual_growth_rate_of_gdp_per_capita
+  - name: average_annual_growth_rate_of_gdp_per_capita_oecd_based_on_royuela_et_al
     type: Float

@@ -30,5 +30,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: number_of_executions
+  - name: number_of_executions_amnesty_international
     type: Float

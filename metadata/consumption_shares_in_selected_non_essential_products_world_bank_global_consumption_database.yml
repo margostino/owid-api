@@ -56,11 +56,11 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: share_of_alcohol_in_total_household_consumption
+  - name: share_of_alcohol_in_total_household_consumption_world_bank_global_consumption_database
     type: Float
-  - name: share_of_games_of_chance_in_total_household_consumption
+  - name: share_of_games_of_chance_in_total_household_consumption_world_bank_global_consumption_database
     type: Float
-  - name: share_of_tobacco_in_total_household_consumption
+  - name: share_of_tobacco_in_total_household_consumption_world_bank_global_consumption_database
     type: Float
-  - name: share_of_non_essential_products_in_total_household
+  - name: share_of_non_essential_products_in_total_household_world_bank_global_consumption_database
     type: Float

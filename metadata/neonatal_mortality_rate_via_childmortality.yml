@@ -10,5 +10,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: neonatal_mortality_rate
+  - name: neonatal_mortality_rate_via_childmortality
     type: Float

@@ -14,11 +14,11 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: beer
+  - name: beer_niaaa
     type: Float
-  - name: wine
+  - name: wine_niaaa
     type: Float
-  - name: spirits
+  - name: spirits_niaaa
     type: Float
-  - name: all_beverages
+  - name: all_beverages_niaaa
     type: Float

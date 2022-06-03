@@ -12,7 +12,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: vienna_convention_and_montreal_protocol
+  - name: vienna_convention_and_montreal_protocol_parties_subscribing_each_year
     type: Float
-  - name: vienna_convention_and_montreal_protocol
+  - name: vienna_convention_and_montreal_protocol_cumulative_parties
     type: Float

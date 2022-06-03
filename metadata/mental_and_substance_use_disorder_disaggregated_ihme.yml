@@ -9,39 +9,39 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: prevalence_mental_health_disorders_both
+  - name: prevalence_mental_health_disorders_both_age_standardized_percent
     type: Float
-  - name: prevalence_mental_health_disorders_male
+  - name: prevalence_mental_health_disorders_male_age_standardized_percent
     type: Float
-  - name: prevalence_mental_health_disorders_female
+  - name: prevalence_mental_health_disorders_female_age_standardized_percent
     type: Float
-  - name: prevalence_mental_health_disorders_both
+  - name: prevalence_mental_health_disorders_both_number
     type: Float
-  - name: prevalence_mental_health_disorders_male
+  - name: prevalence_mental_health_disorders_male_number
     type: Float
-  - name: prevalence_mental_health_disorders_female
+  - name: prevalence_mental_health_disorders_female_number
     type: Float
-  - name: prevalence_alcohol_and_substance_use_disorders_both
+  - name: prevalence_alcohol_and_substance_use_disorders_both_age_standardized_percent
     type: Float
-  - name: prevalence_alcohol_and_substance_use_disorders_male
+  - name: prevalence_alcohol_and_substance_use_disorders_male_age_standardized_percent
     type: Float
-  - name: prevalence_alcohol_and_substance_use_disorders_female
+  - name: prevalence_alcohol_and_substance_use_disorders_female_age_standardized_percent
     type: Float
-  - name: prevalence_alcohol_and_substance_use_disorders_both
+  - name: prevalence_alcohol_and_substance_use_disorders_both_number
     type: Float
-  - name: prevalence_alcohol_and_substance_use_disorders_male
+  - name: prevalence_alcohol_and_substance_use_disorders_male_number
     type: Float
-  - name: prevalence_alcohol_and_substance_use_disorders_female
-    type: Float
-  - name: deaths_alcohol_and_substance_use_disorders
+  - name: prevalence_alcohol_and_substance_use_disorders_female_number
     type: Float
   - name: deaths_alcohol_and_substance_use_disorders
     type: Float
-  - name: dalys
+  - name: deaths_alcohol_and_substance_use_disorders_age_standardized_rate
     type: Float
-  - name: dalys
+  - name: dalys_disability_adjusted_life_years_alcohol_and_substance_use_disorders_age_standardized_percent
     type: Float
-  - name: dalys
+  - name: dalys_disability_adjusted_life_years_mental_health_disorders_age_standardized_percent
     type: Float
-  - name: dalys
+  - name: dalys_disability_adjusted_life_years_alcohol_and_substance_use_disorders_age_standardized_rate
+    type: Float
+  - name: dalys_disability_adjusted_life_years_mental_health_disorders_age_standardized_rate
     type: Float

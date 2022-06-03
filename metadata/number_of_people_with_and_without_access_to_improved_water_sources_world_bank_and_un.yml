@@ -23,7 +23,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: number_of_people_with_improved_water_sources
+  - name: number_of_people_with_improved_water_sources_world_bank_and_un
     type: Float
-  - name: number_of_people_without_improved_water_sources
+  - name: number_of_people_without_improved_water_sources_world_bank_and_un
     type: Float

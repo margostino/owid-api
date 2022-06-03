@@ -28,15 +28,15 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: patent_application_rates
+  - name: patent_application_rates_owid_based_on_world_bank_and_un
     type: Float
-  - name: patent_application_rates_nonresidents
+  - name: patent_application_rates_nonresidents_owid_based_on_world_bank_and_un
     type: Float
-  - name: scientific_and_technical_journal_publication_rates
+  - name: scientific_and_technical_journal_publication_rates_owid_based_on_world_bank_and_un
     type: Float
-  - name: patent_application_rates_aged_15
+  - name: patent_application_rates_aged_15_owid_based_on_world_bank_and_un
     type: Float
-  - name: patent_application_rates_aged_15_nonresidents
+  - name: patent_application_rates_aged_15_nonresidents_owid_based_on_world_bank_and_un
     type: Float
-  - name: scientific_and_technical_journal_publication_rates_aged_15
+  - name: scientific_and_technical_journal_publication_rates_aged_15_owid_based_on_world_bank_and_un
     type: Float

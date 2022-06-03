@@ -17,13 +17,13 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: small_microplastic_count
+  - name: small_microplastic_count_0
     type: Float
-  - name: large_microplastic_count
+  - name: large_microplastic_count_1
     type: Float
-  - name: mesoplastic_count
+  - name: mesoplastic_count_4
     type: Float
-  - name: macroplastic_count
+  - name: macroplastic_count_greater200mm
     type: Float
-  - name: all_sizes
+  - name: all_sizes_total_count
     type: Float

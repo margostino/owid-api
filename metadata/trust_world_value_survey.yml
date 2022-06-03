@@ -9,5 +9,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: trust_in_others
+  - name: trust_in_others_world_values_survey_2014
     type: Float

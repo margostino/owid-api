@@ -14,5 +14,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: government_expenditure
+  - name: government_expenditure_imf_based_on_mauro_et_al
     type: Float

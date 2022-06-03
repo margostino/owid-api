@@ -60,19 +60,23 @@ func GenerateMetadata() {
 				}
 				if fieldName == "entity" || fieldName == "year" {
 					metadata.Arguments = append(metadata.Arguments, &variable)
-				} else {
+				} else if len(fieldName) > 0 && fieldName != "\r" {
 					metadata.Variables = append(metadata.Variables, &variable)
 				}
 				fmt.Printf("FieldName: %s  -  FieldType: %s\n", fieldName, fieldType)
 			}
 		}
 
-		yamlData, err := yaml.Marshal(&metadata)
-		common.Check(err)
 		fileName := fmt.Sprintf("%s/%s.yml", config.MetadataPath, metadata.Name)
-		err = ioutil.WriteFile(fileName, yamlData, 0644)
-		common.Check(err)
-		fmt.Printf("\nNew file: %s\n", fileName)
+		if len(metadata.Variables) > 0 {
+			yamlData, err := yaml.Marshal(&metadata)
+			common.Check(err)
+			err = ioutil.WriteFile(fileName, yamlData, 0644)
+			common.Check(err)
+			fmt.Printf("\nNew file: %s\n", fileName)
+		} else {
+			fmt.Printf("\nNo variables for %s\n", fileName)
+		}
 	}
 
 	// TODO: add and report sanity checks at the end

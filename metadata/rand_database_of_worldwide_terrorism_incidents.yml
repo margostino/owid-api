@@ -22,9 +22,9 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: count_of_terrorist_incidents
+  - name: count_of_terrorist_incidents_rand
     type: Float
-  - name: injuries_due_to_terrorism
+  - name: injuries_due_to_terrorism_rand
     type: Float
-  - name: fatalities_due_to_terrorism
+  - name: fatalities_due_to_terrorism_rand
     type: Float

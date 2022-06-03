@@ -18,5 +18,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: renewable_investment
+  - name: renewable_investment_perc_of_gdp_bnep_and_world_bank
     type: Float

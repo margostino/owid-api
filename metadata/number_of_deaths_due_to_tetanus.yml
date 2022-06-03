@@ -9,5 +9,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: number_of_deaths_from_tetanus
+  - name: number_of_deaths_from_tetanus_gbd_2016
     type: Float

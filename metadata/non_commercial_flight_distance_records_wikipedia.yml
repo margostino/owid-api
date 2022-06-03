@@ -15,5 +15,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: non_commercial_flight_distance_record
+  - name: non_commercial_flight_distance_record_km_wikipedia
     type: Float

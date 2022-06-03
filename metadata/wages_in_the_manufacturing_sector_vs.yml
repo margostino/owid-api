@@ -12,5 +12,5 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: wage_and_food_prices
+  - name: wage_and_food_prices_u
     type: Float

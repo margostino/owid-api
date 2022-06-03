@@ -14,17 +14,17 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: domestic_plastic_waste_generated
+  - name: domestic_plastic_waste_generated_tonnes
     type: Float
-  - name: imported_recycled_waste
+  - name: imported_recycled_waste_tonnes
     type: Float
-  - name: total_waste_to_manage
+  - name: total_waste_to_manage_tonnes
     type: Float
-  - name: share_of_plastic_waste_imported
+  - name: share_of_plastic_waste_imported_perc
     type: Float
-  - name: displaced_plastic_waste_100perc_ban
+  - name: displaced_plastic_waste_100perc_ban_tonnes
     type: Float
-  - name: displaced_plastic_waste_75perc_ban
+  - name: displaced_plastic_waste_75perc_ban_tonnes
     type: Float
-  - name: displaced_plastic_waste_50perc_ban
+  - name: displaced_plastic_waste_50perc_ban_tonnes
     type: Float

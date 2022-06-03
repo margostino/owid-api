@@ -9,7 +9,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: number_of_airline_hijackings
+  - name: number_of_airline_hijackings_aviation_safety_network
     type: Float
-  - name: fatalities_due_to_airline_hijacking
+  - name: fatalities_due_to_airline_hijacking_aviation_safety_network
     type: Float

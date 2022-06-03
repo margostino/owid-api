@@ -17,7 +17,7 @@ variables:
     type: Float
   - name: nox
     type: Float
-  - name: non_methane_volatile_organic_compounds
+  - name: non_methane_volatile_organic_compounds_vocs
     type: Float
   - name: pm10
     type: Float
@@ -25,15 +25,15 @@ variables:
     type: Float
   - name: so2
     type: Float
-  - name: carbon_monoxide
+  - name: carbon_monoxide_index
     type: Float
-  - name: nox
+  - name: nox_index
     type: Float
-  - name: non_methane_volatile_organic_compounds
+  - name: non_methane_volatile_organic_compounds_vocs_index
     type: Float
-  - name: pm10
+  - name: pm10_index
     type: Float
   - name: pm2
     type: Float
-  - name: so2
+  - name: so2_index
     type: Float

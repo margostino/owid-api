@@ -15,7 +15,7 @@ arguments:
   - name: year
     type: Int
 variables:
-  - name: oil_consumption
+  - name: oil_consumption_bp_statistics_2016
     type: Float
-  - name: crude_oil_price
+  - name: crude_oil_price_bp_statistics_2016
     type: Float
