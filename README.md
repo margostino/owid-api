@@ -23,9 +23,9 @@ Currently, this is a manual process. There are 2 step to re-generate:
 You can get the current schema executing the following queries:  
 
 1. Get Full Schema. See [here](https://github.com/margostino/owid-api/blob/master/queries/introspection.graphql)
-2. Get All Dataset names. See [here](https://github.com/margostino/owid-api/blob/master/queries/get_datasets.graphql)  
-
-
+2. Get All Dataset names. See [here](https://github.com/margostino/owid-api/blob/master/queries/get_datasets.graphql)
+3. Get the plain text from repo. See [here](https://github.com/margostino/owid-api/blob/master/graph/schema.graphql)
+4. Navigate Schema from Playground **Documentation Explorer**
 
 ### Generate Schema
 

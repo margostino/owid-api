@@ -2831,11 +2831,17 @@ func (r *queryResolver) TimeUseInSwedenStatisticsSweden(ctx context.Context, ent
 }
 
 func (r *queryResolver) Top1percWealthSharesChartbookOfEconomicInequality2017(ctx context.Context, entity string, year int) (*model.Top1percWealthSharesChartbookOfEconomicInequality2017Dataset, error) {
-	panic(fmt.Errorf("not implemented"))
+	results := fetcher.Fetch("Top1percWealthSharesChartbookOfEconomicInequality2017", entity, year)
+	var response = model.Top1percWealthSharesChartbookOfEconomicInequality2017Dataset{
+		ShareOfWealthHeldByTop1percChartbookOfEconomicInequality2017: results["share_of_wealth_held_by_top_1perc_chartbook_of_economic_inequality_2017"],
+	}
+	return &response, nil
 }
 
 func (r *queryResolver) TopIncomeSharesWorldWealthAndIncomeDatabase2018(ctx context.Context, entity string, year int) (*model.TopIncomeSharesWorldWealthAndIncomeDatabase2018Dataset, error) {
-	panic(fmt.Errorf("not implemented"))
+	results := fetcher.Fetch("TopIncomeSharesWorldWealthAndIncomeDatabase2018", entity, year)
+	var response = model.TopIncomeSharesWorldWealthAndIncomeDatabase2018Dataset{results["share_of_top_1perc_in_pre_tax_national_income"]}
+	return &response, nil
 }
 
 func (r *queryResolver) TopMarginalIncomeTaxRateReynolds2008(ctx context.Context, entity string, year int) (*model.TopMarginalIncomeTaxRateReynolds2008Dataset, error) {
