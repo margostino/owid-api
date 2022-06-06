@@ -9,9 +9,7 @@ import (
 
 func UnmarshalYamlBytes(bytes []byte, out interface{}) {
 	err := yaml.Unmarshal(bytes, out)
-	if err != nil {
-		log.Fatalf("Unmarshal: %v", err)
-	}
+	Check(err)
 }
 
 func UnmarshalYaml(file string, out interface{}) {

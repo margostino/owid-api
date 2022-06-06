@@ -24,9 +24,13 @@ var datasetCache = make(map[string]DatasetIndex)
 var indexCache = loadIndex()
 
 func loadIndex() map[string]string {
+	// Load index only in server mode
+	if len(os.Args) > 1 {
+		return nil
+	}
 	var urls = make(map[string]string)
 	metadataUrl := os.Getenv("METADATA_URL")
-	datasetUrls := fmt.Sprintf("%s/dataset.yml", metadataUrl)
+	datasetUrls := fmt.Sprintf("%s/datasets.yml", metadataUrl)
 	resp, err := http.Get(datasetUrls)
 	defer resp.Body.Close()
 	common.Check(err)

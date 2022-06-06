@@ -40,7 +40,7 @@ func GenerateSchema() {
 			description := dataPackage["description"].(string)
 			resourceName := dataPackage["name"].(string)
 			dataUrl := fmt.Sprintf("%s/%s/%s.csv", dataBaseUrl, resourceName, resourceName)
-			dataUrlMapping += fmt.Sprintf("%s: %s\n", datasetName, dataUrl)
+			dataUrlMapping += fmt.Sprintf("%s: \"%s\"\n", datasetName, dataUrl)
 
 			// First append description above Variable definition
 			if description != "" {
