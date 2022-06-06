@@ -24,6 +24,7 @@ func NormalizeName(value string) string {
 func (normalizer *NameNormalizer) Normalize() string {
 	return normalizer.toLowercase().
 		cleanAccents().
+		replace("\t", "").
 		replace("=", "").
 		replace("(", "").
 		replace(")", "").

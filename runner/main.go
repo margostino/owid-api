@@ -20,8 +20,6 @@ func main() {
 		tooling.RunLocalServer()
 	case "schema-gen":
 		tooling.GenerateSchema()
-	case "metadata-gen":
-		tooling.GenerateMetadata()
 	default:
 		log.Printf("command not valid: %s", action)
 	}

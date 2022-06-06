@@ -1,13 +1,12 @@
 package tooling
 
 import (
+	"encoding/json"
 	"fmt"
 	"github.com/margostino/owid-api/common"
 	"github.com/margostino/owid-api/configuration"
-	"github.com/margostino/owid-api/model"
-	"gopkg.in/yaml.v3"
+	"github.com/margostino/owid-api/utils"
 	"io/ioutil"
-	"log"
 	"os"
 	"path/filepath"
 	"strings"
@@ -17,53 +16,65 @@ const COMMENT_BLOCK_BEGIN = "\"\"\""
 const COMMENT_BLOCK_END = "\"\"\""
 
 func GenerateSchema() {
-	a := "6₆"
-	if strings.HasSuffix(a, "₆") || strings.Contains(a, "U+208x") {
-		println("dsmk")
-	}
 	config := configuration.GetConfig()
-	var metadata model.Metadata
 	var schema string
 	var queryVariables = make([]string, 0)
 
 	filepath.Walk(config.MetadataPath, func(path string, info os.FileInfo, err error) error {
-		var argumentsList = make([]string, 0)
-		if err != nil {
-			log.Fatalf(err.Error())
-		}
-		if strings.HasSuffix(info.Name(), ".yml") {
-			var normalizedTypeNameParts = make([]string, 0)
-			fmt.Printf("File Name: %s \n", path)
-			ymlFile, err := ioutil.ReadFile(path)
-			common.Check(err)
-			ymlFile = []byte(os.ExpandEnv(string(ymlFile)))
-			err = yaml.Unmarshal(ymlFile, &metadata)
-			common.Check(err)
-			typeNameParts := strings.Split(metadata.Name, "_")
-			for _, typeNamePart := range typeNameParts {
-				normalizedTypeNameParts = append(normalizedTypeNameParts, strings.Title(strings.ToLower(typeNamePart)))
-			}
-			typeName := strings.Join(normalizedTypeNameParts, "") + "Dataset"
+		common.Check(err)
 
-			description := metadata.Description
-			for _, argument := range metadata.Arguments {
-				argumentsList = append(argumentsList, fmt.Sprintf("%s: %s!", argument.Name, argument.Type))
-			}
-			arguments := strings.Join(argumentsList[:], ", ")
+		if info.Name() == "datapackage.json" {
+			var normalizedTypeNameParts = make([]string, 0)
+			var argumentsList = make([]string, 0)
+			var dataPackage map[string]interface{}
+
+			// Get file content
+			jsonFile, err := ioutil.ReadFile(path)
+			common.Check(err)
+			json.Unmarshal(jsonFile, &dataPackage)
+
+			datasetName := utils.NormalizeName(dataPackage["name"].(string))
+			dataResources := dataPackage["resources"].([]interface{})
+			description := dataPackage["description"].(string)
+
+			// First append description above Variable definition
 			if description != "" {
 				sanitizedDescription := strings.ReplaceAll(description, "\n", "")
 				sanitizedDescription = strings.ReplaceAll(sanitizedDescription, ". ", ".\n")
 				schema += fmt.Sprintf("%s\n%s\n%s\n", COMMENT_BLOCK_BEGIN, sanitizedDescription, COMMENT_BLOCK_END)
 			}
 
+			// Variable Type
+			typeNameParts := strings.Split(datasetName, "_")
+			for _, typeNamePart := range typeNameParts {
+				normalizedTypeNameParts = append(normalizedTypeNameParts, strings.Title(strings.ToLower(typeNamePart)))
+			}
+			typeName := strings.Join(normalizedTypeNameParts, "") + "Dataset"
+			if strings.Contains(typeName, "ArroyoAbadAndPLindert2016Dataset") {
+				println("ds")
+			}
 			schema += fmt.Sprintf("type %s {\n", typeName)
-			for _, variable := range metadata.Variables {
-				schema += fmt.Sprintf(" %s: %s\n", variable.Name, variable.Type)
+
+			// Fields
+			for _, resource := range dataResources {
+				dataSchema := resource.(map[string]interface{})["schema"]
+				fieldsMap := dataSchema.(map[string]interface{})
+				fields := fieldsMap["fields"].([]interface{})
+				for _, fieldMap := range fields {
+					field := fieldMap.(map[string]interface{})
+					fieldName := utils.NormalizeName(field["name"].(string))
+					fieldType := utils.NormalizeType(field["type"].(string))
+					if fieldName == "entity" || fieldName == "year" {
+						argumentsList = append(argumentsList, fmt.Sprintf("%s: %s!", fieldName, fieldType))
+					} else if len(fieldName) > 0 && fieldName != "\r" {
+						schema += fmt.Sprintf(" %s: %s\n", fieldName, fieldType)
+					}
+				}
 			}
 			schema += "}\n\n"
-			queryVariables = append(queryVariables, fmt.Sprintf(" %s(%s):%s!\n", metadata.Name, arguments, typeName))
+			arguments := strings.Join(argumentsList[:], ", ")
+			queryVariables = append(queryVariables, fmt.Sprintf(" %s(%s):%s!\n", datasetName, arguments, typeName))
 		}
-
 		return nil
 	})
 
@@ -71,6 +82,7 @@ func GenerateSchema() {
 	for _, queryVariable := range queryVariables {
 		schema += queryVariable
 	}
+
 	schema += "}\n\n"
 	schema += "schema {\n query: Query\n}"
 	println(schema)

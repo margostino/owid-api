@@ -41,6 +41,10 @@ run:
 v.stop:
 	./bin/vercel-stop
 
+.PHONY: schema.gen
+schema.gen:
+	go run ./runner schema-gen
+
 .PHONY: server.gen
 server.gen:
 	go mod tidy
