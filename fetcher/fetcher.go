@@ -4,7 +4,6 @@ import (
 	"encoding/csv"
 	"fmt"
 	"github.com/margostino/owid-api/common"
-	"github.com/margostino/owid-api/model"
 	"github.com/margostino/owid-api/utils"
 	"io"
 	"log"
@@ -22,15 +21,18 @@ type DatasetIndex struct {
 }
 
 var datasetCache = make(map[string]DatasetIndex)
+var indexCache = loadIndex()
 
-func getMetadata(url string) *model.Metadata {
-	var metadata model.Metadata
-	resp, err := http.Get(url)
+func loadIndex() map[string]string {
+	var urls = make(map[string]string)
+	metadataUrl := os.Getenv("METADATA_URL")
+	datasetUrls := fmt.Sprintf("%s/dataset.yml", metadataUrl)
+	resp, err := http.Get(datasetUrls)
 	defer resp.Body.Close()
 	common.Check(err)
 	bodyBytes, err := io.ReadAll(resp.Body)
-	common.UnmarshalYamlBytes(bodyBytes, &metadata)
-	return &metadata
+	common.UnmarshalYamlBytes(bodyBytes, &urls)
+	return urls
 }
 
 func fetchCSVFromUrl(url string) ([][]string, error) {
@@ -66,10 +68,8 @@ func Fetch(queryResolver string, entity string, year int) map[string]*float64 {
 	}
 
 	var results = make(map[string]*float64)
-	baseUrl := os.Getenv("METADATA_BASE_URL")
-	url := fmt.Sprintf("%s/%s.yml", baseUrl, dataset)
-	metadata := getMetadata(url)
-	data, err := fetchCSVFromUrl(metadata.DataBaseUrl)
+	url := indexCache[dataset]
+	data, err := fetchCSVFromUrl(url)
 	common.Check(err)
 
 	var index = make(map[int]string)

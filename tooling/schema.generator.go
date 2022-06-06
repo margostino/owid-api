@@ -19,6 +19,8 @@ func GenerateSchema() {
 	config := configuration.GetConfig()
 	var schema string
 	var queryVariables = make([]string, 0)
+	var dataBaseUrl = os.Getenv("DATA_BASE_URL")
+	var dataUrlMapping string
 
 	filepath.Walk(config.MetadataPath, func(path string, info os.FileInfo, err error) error {
 		common.Check(err)
@@ -36,6 +38,9 @@ func GenerateSchema() {
 			datasetName := utils.NormalizeName(dataPackage["name"].(string))
 			dataResources := dataPackage["resources"].([]interface{})
 			description := dataPackage["description"].(string)
+			resourceName := dataPackage["name"].(string)
+			dataUrl := fmt.Sprintf("%s/%s/%s.csv", dataBaseUrl, resourceName, resourceName)
+			dataUrlMapping += fmt.Sprintf("%s: %s\n", datasetName, dataUrl)
 
 			// First append description above Variable definition
 			if description != "" {
@@ -50,9 +55,7 @@ func GenerateSchema() {
 				normalizedTypeNameParts = append(normalizedTypeNameParts, strings.Title(strings.ToLower(typeNamePart)))
 			}
 			typeName := strings.Join(normalizedTypeNameParts, "") + "Dataset"
-			if strings.Contains(typeName, "ArroyoAbadAndPLindert2016Dataset") {
-				println("ds")
-			}
+
 			schema += fmt.Sprintf("type %s {\n", typeName)
 
 			// Fields
@@ -87,9 +90,18 @@ func GenerateSchema() {
 	schema += "schema {\n query: Query\n}"
 	println(schema)
 
-	file, err := os.OpenFile(config.SchemaFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
+	// Save Schema
+	save(config.SchemaFile, schema)
+
+	// Save Data URLs mapping
+	save(config.UrlMappingFile, dataUrlMapping)
+
+}
+
+func save(filename string, data string) {
+	file, err := os.OpenFile(filename, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 	common.Check(err)
 	defer file.Close()
-	_, err2 := file.WriteString(schema)
+	_, err2 := file.WriteString(data)
 	common.Check(err2)
 }
