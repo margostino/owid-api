@@ -26,7 +26,7 @@ var indexCache = loadIndex()
 func loadIndex() map[string]string {
 	log.Println("Command-line arguments: " + os.Args[0])
 	// Load index only in server mode
-	if len(os.Args) > 0 {
+	if len(os.Args) > 1 {
 		log.Println("Command-line arguments: " + os.Args[1])
 		return nil
 	}
