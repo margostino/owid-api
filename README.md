@@ -22,8 +22,8 @@ Currently, this is a manual process. There are 2 step to re-generate:
 
 You can get the current schema executing the following queries:  
 
-1. Get Full Schema. See [here]()
-2. Get All Dataset names. See [here]()  
+1. Get Full Schema. See [here](https://github.com/margostino/owid-api/blob/master/queries/introspection.graphql)
+2. Get All Dataset names. See [here](https://github.com/margostino/owid-api/blob/master/queries/get_datasets.graphql)  
 
 
 
@@ -92,4 +92,22 @@ Another decision was the types of each variable. A first data inspection shows t
 
 ### Arguments
 
-This project assumes that every dataset has 2 arguments: `Entity:String` and `Year:Int`. 
+This project assumes that every dataset has 2 arguments: `Entity:String` and `Year:Int`.
+
+## Architecture
+
+...TBD...
+
+## Roadmap
+
+As mentioned at the beginning, this started as a Proof of Concept. So a roadmap definition is just a vague idea on what I would like to learn and build. So I would start naming the following list of features:
+
+- [x] Schema generation
+- [x] Server generation
+- [x] Playground and Rest API
+- [x] Full Schema for real
+- [ ] Data fetcher for ALL datasets
+- [ ] Naming improvements
+- [ ] Datasets updates automation
+- [ ] ...to be continued...
+
