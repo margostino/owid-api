@@ -100,7 +100,9 @@ This project assumes that every dataset has 2 arguments: `Entity:String` and `Ye
 
 ## Roadmap
 
-As mentioned at the beginning, this started as a Proof of Concept. So a roadmap definition is just a vague idea on what I would like to learn and build. So I would start naming the following list of features:
+As mentioned at the beginning, this started as a Proof of Concept. 
+So a roadmap definition is just a vague idea on what I would like to learn and build. 
+So I would start naming the following list of features:
 
 - [x] Schema generation
 - [x] Server generation
