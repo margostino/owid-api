@@ -66,3 +66,12 @@ func TestNameNormalizer(t *testing.T) {
 
 	//TODO
 }
+
+func TestToSnakeCase(t *testing.T) {
+
+	original := "TopIncomeSharesWorldWealthAndIncomeDatabase2018"
+	expected := "top_income_shares_world_wealth_and_income_database_2018"
+	result := ToSnakeCase(original)
+	assert(t, expected, result)
+
+}

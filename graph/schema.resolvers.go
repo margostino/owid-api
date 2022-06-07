@@ -2839,7 +2839,11 @@ func (r *queryResolver) Top1percWealthSharesChartbookOfEconomicInequality2017(ct
 }
 
 func (r *queryResolver) TopIncomeSharesWorldWealthAndIncomeDatabase2018(ctx context.Context, entity string, year int) (*model.TopIncomeSharesWorldWealthAndIncomeDatabase2018Dataset, error) {
-	results := fetcher.Fetch("top_income_shares_world_wealth_and_income_database_2018", entity, year)
+	dataset, err := fetcher.GetDatasetFrom(ctx)
+	if err != nil {
+		return nil, err
+	}
+	results := fetcher.Fetch(dataset, entity, year)
 	var response = model.TopIncomeSharesWorldWealthAndIncomeDatabase2018Dataset{results["share_of_top_1perc_in_pre_tax_national_income"]}
 	return &response, nil
 }

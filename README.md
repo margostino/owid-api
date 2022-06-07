@@ -109,6 +109,7 @@ So I would start naming the following list of features:
 - [x] Playground and Rest API
 - [x] Full Schema for real
 - [ ] Data fetcher for ALL datasets
+- [ ] Data fetcher automation for new datasets
 - [ ] Naming improvements
 - [ ] Datasets updates automation
 - [ ] Local sources (folders, files, url) for testing purposes
