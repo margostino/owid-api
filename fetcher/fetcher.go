@@ -1,6 +1,7 @@
 package fetcher
 
 import (
+	"context"
 	"encoding/csv"
 	"fmt"
 	"github.com/margostino/owid-api/common"
@@ -53,7 +54,12 @@ func fetchCSVFromUrl(url string) ([][]string, error) {
 }
 
 // Fetch TODO: caching or preloading?
-func Fetch(dataset string, entity string, year int) map[string]*float64 {
+func Fetch(ctx context.Context, entity string, year int) (map[string]*float64, error) {
+	dataset, err := GetDatasetFrom(ctx)
+	if err != nil {
+		return nil, err
+	}
+
 	yearAsString := strconv.Itoa(year)
 	dataKey := entity + yearAsString
 
@@ -62,7 +68,7 @@ func Fetch(dataset string, entity string, year int) map[string]*float64 {
 	if value, ok := datasetCache[dataset]; ok {
 		if result, ok := value.Index[dataKey]; ok {
 			log.Println("Results from cache")
-			return result.Row
+			return result.Row, nil
 		}
 	}
 
@@ -96,8 +102,8 @@ func Fetch(dataset string, entity string, year int) map[string]*float64 {
 			}
 			datasetCache[dataset] = datasetIndex
 			log.Printf("New entry in cache for dataset %s and entity %s and year %s\n", dataset, entity, yearAsString)
-			return results
+			return results, nil
 		}
 	}
-	return results
+	return results, nil
 }

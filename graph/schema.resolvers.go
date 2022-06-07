@@ -2808,7 +2808,10 @@ func (r *queryResolver) TimeThatDoctorsSpendWithAPatientDasHammerAndLeonard2008(
 }
 
 func (r *queryResolver) TimeUseInFinlandStatisticsFinland(ctx context.Context, entity string, year int) (*model.TimeUseInFinlandStatisticsFinlandDataset, error) {
-	results := fetcher.Fetch("time_use_in_finland_statistics_finland", entity, year)
+	results, err := fetcher.Fetch(ctx, entity, year)
+	if err != nil {
+		return nil, err
+	}
 	var response = model.TimeUseInFinlandStatisticsFinlandDataset{
 		TimeAllocationAllStatisticsFinland:   results["time_allocation_all_statistics_finland"],
 		TimeAllocationMenStatisticsFinland:   results["time_allocation_men_statistics_finland"],
@@ -2818,7 +2821,10 @@ func (r *queryResolver) TimeUseInFinlandStatisticsFinland(ctx context.Context, e
 }
 
 func (r *queryResolver) TimeUseInSwedenStatisticsSweden(ctx context.Context, entity string, year int) (*model.TimeUseInSwedenStatisticsSwedenDataset, error) {
-	results := fetcher.Fetch("time_use_in_sweden_statistics_sweden", entity, year)
+	results, err := fetcher.Fetch(ctx, entity, year)
+	if err != nil {
+		return nil, err
+	}
 	var response = model.TimeUseInSwedenStatisticsSwedenDataset{
 		TimeAllocationWeekdayWomen:    results["time_allocation_weekday_women"],
 		TimeAllocationWeekendWomen:    results["time_allocation_weekend_women"],
@@ -2831,7 +2837,10 @@ func (r *queryResolver) TimeUseInSwedenStatisticsSweden(ctx context.Context, ent
 }
 
 func (r *queryResolver) Top1percWealthSharesChartbookOfEconomicInequality2017(ctx context.Context, entity string, year int) (*model.Top1percWealthSharesChartbookOfEconomicInequality2017Dataset, error) {
-	results := fetcher.Fetch("top_1perc_wealth_shares_chartbook_of_economic_inequality_2017", entity, year)
+	results, err := fetcher.Fetch(ctx, entity, year)
+	if err != nil {
+		return nil, err
+	}
 	var response = model.Top1percWealthSharesChartbookOfEconomicInequality2017Dataset{
 		ShareOfWealthHeldByTop1percChartbookOfEconomicInequality2017: results["share_of_wealth_held_by_top_1perc_chartbook_of_economic_inequality_2017"],
 	}
@@ -2839,11 +2848,10 @@ func (r *queryResolver) Top1percWealthSharesChartbookOfEconomicInequality2017(ct
 }
 
 func (r *queryResolver) TopIncomeSharesWorldWealthAndIncomeDatabase2018(ctx context.Context, entity string, year int) (*model.TopIncomeSharesWorldWealthAndIncomeDatabase2018Dataset, error) {
-	dataset, err := fetcher.GetDatasetFrom(ctx)
+	results, err := fetcher.Fetch(ctx, entity, year)
 	if err != nil {
 		return nil, err
 	}
-	results := fetcher.Fetch(dataset, entity, year)
 	var response = model.TopIncomeSharesWorldWealthAndIncomeDatabase2018Dataset{results["share_of_top_1perc_in_pre_tax_national_income"]}
 	return &response, nil
 }
