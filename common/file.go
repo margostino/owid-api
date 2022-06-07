@@ -8,6 +8,8 @@ import (
 )
 
 func UnmarshalYamlBytes(bytes []byte, out interface{}) {
+	a := string(bytes)
+	println(a)
 	err := yaml.Unmarshal(bytes, out)
 	Check(err)
 }

@@ -21,6 +21,11 @@ func GenerateSchema() {
 	var queryVariables = make([]string, 0)
 	var dataBaseUrl = os.Getenv("DATA_BASE_URL")
 	var dataUrlMapping string
+	//var accessToken = config.GithubAccessToken
+	//ctx := context.Background()
+	//ts := oauth2.StaticTokenSource(&oauth2.Token{AccessToken: accessToken})
+	//tc := oauth2.NewClient(ctx, ts)
+	//client := github.NewClient(tc)
 
 	filepath.Walk(config.MetadataPath, func(path string, info os.FileInfo, err error) error {
 		common.Check(err)
@@ -35,11 +40,15 @@ func GenerateSchema() {
 			common.Check(err)
 			json.Unmarshal(jsonFile, &dataPackage)
 
-			datasetName := utils.NormalizeName(dataPackage["name"].(string))
+			resourceName := dataPackage["name"].(string)
+			datasetName := utils.NormalizeName(resourceName)
 			dataResources := dataPackage["resources"].([]interface{})
 			description := dataPackage["description"].(string)
-			resourceName := dataPackage["name"].(string)
-			dataUrl := fmt.Sprintf("%s/%s/%s.csv", dataBaseUrl, resourceName, resourceName)
+
+			// Data URL for CVS file
+			pathParts := strings.Split(path, "/")
+			indexForPath := len(pathParts) - 2
+			dataUrl := fmt.Sprintf("%s/%s/%s.csv", dataBaseUrl, pathParts[indexForPath], pathParts[indexForPath])
 			dataUrlMapping += fmt.Sprintf("%s: \"%s\"\n", datasetName, dataUrl)
 
 			// First append description above Variable definition

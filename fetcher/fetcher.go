@@ -24,12 +24,6 @@ var datasetCache = make(map[string]DatasetIndex)
 var indexCache = loadIndex()
 
 func loadIndex() map[string]string {
-	log.Println("Command-line arguments: " + os.Args[0])
-	// Load index only in server mode
-	if len(os.Args) > 1 {
-		log.Println("Command-line arguments: " + os.Args[1])
-		return nil
-	}
 	var urls = make(map[string]string)
 	metadataUrl := os.Getenv("METADATA_URL")
 	datasetUrls := fmt.Sprintf("%s/datasets.yml", metadataUrl)
