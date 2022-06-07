@@ -111,5 +111,6 @@ So I would start naming the following list of features:
 - [ ] Data fetcher for ALL datasets
 - [ ] Naming improvements
 - [ ] Datasets updates automation
+- [ ] Local sources (folders, files, url) for testing purposes
 - [ ] ...to be continued...
 

@@ -53,9 +53,8 @@ func fetchCSVFromUrl(url string) ([][]string, error) {
 }
 
 // Fetch TODO: caching or preloading?
-func Fetch(queryResolver string, entity string, year int) map[string]*float64 {
+func Fetch(dataset string, entity string, year int) map[string]*float64 {
 	yearAsString := strconv.Itoa(year)
-	dataset := utils.ToSnakeCase(queryResolver)
 	dataKey := entity + yearAsString
 
 	log.Printf("Query for dataset %s with entity [%s] and year [%s]\n", dataset, entity, yearAsString)
