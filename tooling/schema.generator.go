@@ -45,47 +45,49 @@ func GenerateSchema() {
 			dataResources := dataPackage["resources"].([]interface{})
 			description := dataPackage["description"].(string)
 
-			// Data URL for CVS file
-			pathParts := strings.Split(path, "/")
-			indexForPath := len(pathParts) - 2
-			dataUrl := fmt.Sprintf("%s/%s/%s.csv", dataBaseUrl, pathParts[indexForPath], pathParts[indexForPath])
-			dataUrlMapping += fmt.Sprintf("%s: \"%s\"\n", datasetName, dataUrl)
+			if shouldGenerateSchema(dataResources) {
+				// Data URL for CVS file
+				pathParts := strings.Split(path, "/")
+				indexForPath := len(pathParts) - 2
+				dataUrl := fmt.Sprintf("%s/%s/%s.csv", dataBaseUrl, pathParts[indexForPath], pathParts[indexForPath])
+				dataUrlMapping += fmt.Sprintf("%s: \"%s\"\n", datasetName, dataUrl)
 
-			// First append description above Variable definition
-			if description != "" {
-				sanitizedDescription := strings.ReplaceAll(description, "\n", "")
-				sanitizedDescription = strings.ReplaceAll(sanitizedDescription, ". ", ".\n")
-				schema += fmt.Sprintf("%s\n%s\n%s\n", COMMENT_BLOCK_BEGIN, sanitizedDescription, COMMENT_BLOCK_END)
-			}
+				// First append description above Variable definition
+				if description != "" {
+					sanitizedDescription := strings.ReplaceAll(description, "\n", "")
+					sanitizedDescription = strings.ReplaceAll(sanitizedDescription, ". ", ".\n")
+					schema += fmt.Sprintf("%s\n%s\n%s\n", COMMENT_BLOCK_BEGIN, sanitizedDescription, COMMENT_BLOCK_END)
+				}
 
-			// Variable Type
-			typeNameParts := strings.Split(datasetName, "_")
-			for _, typeNamePart := range typeNameParts {
-				normalizedTypeNameParts = append(normalizedTypeNameParts, strings.Title(strings.ToLower(typeNamePart)))
-			}
-			typeName := strings.Join(normalizedTypeNameParts, "") + "Dataset"
+				// Variable Type
+				typeNameParts := strings.Split(datasetName, "_")
+				for _, typeNamePart := range typeNameParts {
+					normalizedTypeNameParts = append(normalizedTypeNameParts, strings.Title(strings.ToLower(typeNamePart)))
+				}
+				typeName := strings.Join(normalizedTypeNameParts, "") + "Dataset"
 
-			schema += fmt.Sprintf("type %s {\n", typeName)
+				schema += fmt.Sprintf("type %s {\n", typeName)
 
-			// Fields
-			for _, resource := range dataResources {
-				dataSchema := resource.(map[string]interface{})["schema"]
-				fieldsMap := dataSchema.(map[string]interface{})
-				fields := fieldsMap["fields"].([]interface{})
-				for _, fieldMap := range fields {
-					field := fieldMap.(map[string]interface{})
-					fieldName := utils.NormalizeName(field["name"].(string))
-					fieldType := utils.NormalizeType(field["type"].(string))
-					if fieldName == "entity" || fieldName == "year" {
-						argumentsList = append(argumentsList, fmt.Sprintf("%s: %s!", fieldName, fieldType))
-					} else if len(fieldName) > 0 && fieldName != "\r" {
-						schema += fmt.Sprintf(" %s: %s\n", fieldName, fieldType)
+				// Fields
+				for _, resource := range dataResources {
+					dataSchema := resource.(map[string]interface{})["schema"]
+					fieldsMap := dataSchema.(map[string]interface{})
+					fields := fieldsMap["fields"].([]interface{})
+					for _, fieldMap := range fields {
+						field := fieldMap.(map[string]interface{})
+						fieldName := utils.NormalizeName(field["name"].(string))
+						fieldType := utils.NormalizeType(field["type"].(string))
+						if fieldName == "entity" || fieldName == "year" {
+							argumentsList = append(argumentsList, fmt.Sprintf("%s: %s!", fieldName, fieldType))
+						} else if len(fieldName) > 0 && fieldName != "\r" {
+							schema += fmt.Sprintf(" %s: %s\n", fieldName, fieldType)
+						}
 					}
 				}
+				schema += "}\n\n"
+				arguments := strings.Join(argumentsList[:], ", ")
+				queryVariables = append(queryVariables, fmt.Sprintf(" %s(%s):%s!\n", datasetName, arguments, typeName))
 			}
-			schema += "}\n\n"
-			arguments := strings.Join(argumentsList[:], ", ")
-			queryVariables = append(queryVariables, fmt.Sprintf(" %s(%s):%s!\n", datasetName, arguments, typeName))
 		}
 		return nil
 	})
@@ -113,4 +115,16 @@ func save(filename string, data string) {
 	defer file.Close()
 	_, err2 := file.WriteString(data)
 	common.Check(err2)
+}
+
+func shouldGenerateSchema(dataResources []interface{}) bool {
+	if len(dataResources) > 0 {
+		resource := dataResources[0]
+		dataSchema := resource.(map[string]interface{})["schema"]
+		fieldsMap := dataSchema.(map[string]interface{})
+		fields := fieldsMap["fields"].([]interface{})
+
+		return !(len(fields) == 2 || len(fields) == 0)
+	}
+	return false
 }
