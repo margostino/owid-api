@@ -5,6 +5,9 @@ This project is a Proof of Concept which implements a GraphQL API for exploring 
 [OWID](https://ourworldindata.org/) is a scientific online publication that focuses on large global problems such as poverty, disease, hunger, climate change, war, existential risks, and inequality.
 [The goal of OWID](https://ourworldindata.org/about) is to make the knowledge on the big problems accessible and understandable. As they say on their homepage, Our World in Data’s mission is to publish the “research and data to make progress against the world’s largest problems”.
 
+## Demo
+[![Watch the video](https://img.youtube.com/vi/ppWp-Kc6yfs/default.jpg)](https://www.youtube.com/watch?v=ppWp-Kc6yfs)
+
 ## How does OWID-API work?
 
 The data in [OWID](https://github.com/owid/owid-datasets) is stored as CSV files. 
@@ -138,10 +141,6 @@ This project assumes that every dataset has 2 arguments: `Entity:String` and `Ye
 }
 ```
 
-## Demo
-[![Watch the video](https://img.youtube.com/vi/ppWp-Kc6yfs/default.jpg)](https://www.youtube.com/watch?v=ppWp-Kc6yfs)
-
-
 ## Architecture
 
 ...TBD...
@@ -158,9 +157,10 @@ So I would start naming the following list of features:
 - [x] Full Schema for real
 - [ ] Data fetcher for ALL datasets
 - [ ] Data fetcher automation for new datasets
-- [ ] Naming improvements
+- [ ] Naming improvements (for datasets and variables)
 - [ ] Datasets updates automation
 - [ ] Local sources (folders, files, url) for testing purposes
 - [ ] Split large files (e.g. resolvers)
+- [ ] Authentication?
 - [ ] ...to be continued...
 
