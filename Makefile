@@ -47,7 +47,6 @@ schema.gen:
 
 .PHONY: server.gen
 server.gen:
-	go mod tidy
 	go get github.com/99designs/gqlgen@v0.17.9
 	go run github.com/99designs/gqlgen generate
 
@@ -60,3 +59,6 @@ schema.recovery:
 	git checkout -m graph/generated/generated.go
 	git checkout -m graph/model/models_gen.go
 
+.PHONY: template.copy
+template.copy:
+	sudo cp ./templates/custom_resolver.gotpl /Users/martin.dagostino/go/pkg/mod/github.com/99designs/gqlgen@v0.17.9/plugin/resolvergen/

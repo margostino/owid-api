@@ -90,10 +90,53 @@ This is an initial approach and in next iterations it should be improved in orde
 ### Types
 Another decision was the types of each variable. A first data inspection shows that all variables, except __entity__ are numbers, and since some of them are decimals, the type for all variables is `Float`.
 
+### Resolvers
+Resolvers are generated automatically as part of the _Server Generation_. Since there are lots of datasets, the output file (_schema.resolvers.go_) is huge.
+To implement each dataset resolver is hard to the decision was to use a custom template and common and very simple logic. 
+In order to do it a **custom_resolver.goptl** template is copied where [the plugin](https://github.com/99designs/gqlgen/tree/master/plugin/resolvergen) is located.
+Then the server can be generated. The result of this is [schema.resolvers.go](https://github.com/margostino/owid-api/blob/master/graph/schema.resolvers.go).
+
 ### Arguments
 
 This project assumes that every dataset has 2 arguments: `Entity:String` and `Year:Int`.
 
+### Example:
+#### Query:
+```graphql
+{
+  time_use_in_finland_statistics_finland(entity: "Free time", year: 1987) {
+    time_allocation_all_statistics_finland
+    time_allocation_women_statistics_finland
+  }
+  o20th_century_deaths_in_us_cdc(entity: "United States", year: 1908) {
+    cancers_deaths
+  }
+  adult_obesity_by_region_fao_2017(
+    entity: "Latin America and the Caribbean"
+    year: 1976
+  ) {
+    prevalence_of_obesity_in_adults_18_years_old_fao_2017
+  }
+}
+```
+
+#### Response
+```graphql
+{
+  "data": {
+    "time_use_in_finland_statistics_finland": {
+      "time_allocation_all_statistics_finland": 348.24182,
+      "time_allocation_women_statistics_finland": 334.53537
+    },
+    "o20th_century_deaths_in_us_cdc": {
+      "cancers_deaths": 27617
+    },
+    "adult_obesity_by_region_fao_2017": {
+      "prevalence_of_obesity_in_adults_18_years_old_fao_2017": 7.1
+    }
+  }
+}
+```
 ## Architecture
 
 ...TBD...
@@ -113,5 +156,6 @@ So I would start naming the following list of features:
 - [ ] Naming improvements
 - [ ] Datasets updates automation
 - [ ] Local sources (folders, files, url) for testing purposes
+- [ ] Split large files (e.g. resolvers)
 - [ ] ...to be continued...
 

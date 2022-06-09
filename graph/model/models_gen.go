@@ -617,9 +617,9 @@ type BooksBuringhAndVanZanden2009Dataset struct {
 }
 
 // The share of people of living in poverty and extreme poverty is taken from Bourguignon and Morrison (2002), and ‘the poverty lines were calibrated so that poverty and extreme poverty headcounts in 1992 coincided roughly with estimates from other sources’.
-// And in footnote they say ‘these definitions correspond to poverty lines equal to consumption per capita of  and  a day, expressed in 1985 PPP.’
+// And in footnote they say ‘these definitions correspond to poverty lines equal to consumption per capita of $2 and $1 a day, expressed in 1985 PPP.’
 //
-// To this I added the share of people living living below the international poverty line which, since the revision in 2015, is .90 at 2011 purchasing-power parity (PPP).
+// To this I added the share of people living living below the international poverty line which, since the revision in 2015, is $1.90 at 2011 purchasing-power parity (PPP).
 // The revisions in the definition of the poverty line and the PPP adjustment make the poverty figures in levels not comparable to earlier data – to illustrate this I have plotted both series for the time from 1981 to 1992.
 // The World Bank data was downloaded in October 2015.
 type BourguignonAndMorrison2002AndWorldBankPovcalnet2015Dataset struct {
@@ -1418,14 +1418,14 @@ type ConsumptionVsProductionBasedCo2EmissionsSharesBasedOnGcpAndUnDataset struct
 }
 
 // The data in this chart comes from Figure 2 in the source paper, where there are also estimates of children's self-reports of teacher’s use of physical punishment on other children: https://ourworldindata.org/wp-content/uploads/2017/11/Teacher-violence-UNICEF-2015.png
-type CorporalPunishmentInSchoolsLongitudinalEvidenceFromEthiopiaIndiaPeruAndVietnamUniceDataset struct {
+type CorporalPunishmentInSchoolsLongitudinalEvidenceFromEthiopiaIndiaPeruAndVietnamUnicef2015Dataset struct {
 	ChildrenAge8WhoReportPhysicalPunishmentByTeachers  *float64 `json:"children_age_8_who_report_physical_punishment_by_teachers"`
 	ChildrenAge15WhoReportPhysicalPunishmentByTeachers *float64 `json:"children_age_15_who_report_physical_punishment_by_teachers"`
 }
 
 // The variable 'milex' has been split into two variables as the currency of expenditure changes pre and post-1914.
 // Pre-1914, military expenditure is in thousands of UK pounds and post-1914 it is in thousands of US dollars.
-// Both expenditure figures are measured in current prices.For values in real prices: Deflated the pre-1914 series to give the value in 1900 UK £s and  deflated the post-1914 series to give the value in 2000 US .
+// Both expenditure figures are measured in current prices.For values in real prices: Deflated the pre-1914 series to give the value in 1900 UK £s and  deflated the post-1914 series to give the value in 2000 US $s.
 // Uses Quandl data.
 type CorrelatesOfWarNationalMaterialCapabilitiesV40Dataset struct {
 	IronAndSteelProductionCorrelatesOfWarNationalMaterialCapabilitiesV40                    *float64 `json:"iron_and_steel_production_correlates_of_war_national_material_capabilities_v40"`
@@ -1614,7 +1614,7 @@ type CrossCountryLiteracyRatesWorldBankCiaWorldFactbookAndOtherSourcesDataset st
 }
 
 // *Note: Our World In Data compiled the data from the above sources as follows: for the years 1541-1861: Wrigley and Schofield (1981); for the years 1862-2003: Brian Mitchell (2010); for the years 2004-2015: UK Office for National Statistics (2016).
-type CrudeBirthAndDeathRatesPer1000EnglandAndWales15412015WrigleyAndSchofieldMitcheDataset struct {
+type CrudeBirthAndDeathRatesPer1000EnglandAndWales15412015WrigleyAndSchofieldMitchellUkOnsDataset struct {
 	CrudeBirthRateOwidBasedOnWrigleyAndSchofield1981Mitchell2010AndUkOns2016 *float64 `json:"crude_birth_rate_owid_based_on_wrigley_and_schofield_1981_mitchell_2010_and_uk_ons_2016"`
 	CrudeDeathRateOwidBasedOnWrigleyAndSchofield1981Mitchell2010AndUkOns2016 *float64 `json:"crude_death_rate_owid_based_on_wrigley_and_schofield_1981_mitchell_2010_and_uk_ons_2016"`
 }
@@ -1805,7 +1805,7 @@ type DeathsByWorldRegionWho2016Dataset struct {
 // Fairlie and Sumner (2006).
 // An independent scientific evaluation of health and environmental effects 20 years after the nuclear disaster providing critical analysis of a recent report by the International Atomic Energy Agency (IAEA) and the World Health Organisation (WHO).
 // Available at: http://www.chernobylreport.org/?p=summary
-type DeathsFromChernobylRangeOfLongTermEstimatesWho2005FairlieAndSumner2006CardisEDataset struct {
+type DeathsFromChernobylRangeOfLongTermEstimatesWho2005FairlieAndSumner2006CardisEtAl2006Dataset struct {
 	ChernobylWho2005FairlieAndSumner2006CardisEtAl2006 *float64 `json:"chernobyl_who_2005_fairlie_and_sumner_2006_cardis_et_al_2006"`
 }
 
@@ -1882,7 +1882,7 @@ type DeathsPerTwhEnergyProductionMarkandyaAndWilkinsonSovacoolEtAlDataset struct
 
 // Number of deaths attributed to energy-related accidents of low-carbon energy sources, measured as the number of deaths per terawatt-hour of production.Sovacool et al.
 // (2016) developed a database of energy-related accidents over the period from 1950 to 2014.
-// They define an accident as: "an unintentional incident or event at an energy facility that led to either one death (or more) or at least 0,000 in property damage."This database was developed based on a series of academic databases (including ScienceDirect and EBSCO host) as well as the internet (using Google and Safari).The normalized death rate data is presented by Sovacool et al.
+// They define an accident as: "an unintentional incident or event at an energy facility that led to either one death (or more) or at least $50,000 in property damage."This database was developed based on a series of academic databases (including ScienceDirect and EBSCO host) as well as the internet (using Google and Safari).The normalized death rate data is presented by Sovacool et al.
 // (2016) as the number of deaths per TWh over the period from 1990 to 2013.
 type DeathsPerTwhFromLowCarbonEnergySovacoolEtAl2016Dataset struct {
 	DeathsPerTwhSovacoolEtAl *float64 `json:"deaths_per_twh_sovacool_et_al"`
@@ -2130,7 +2130,7 @@ type DurationOfMarriagesEndingInDivorceOwidBasedOnNationalStatisticsDataset stru
 }
 
 // Estimated number of deaths from earthquake events.
-// This is estimated as the total number from the earthquake event plus secondary impacts (such as a tsunami triggered by an earthquake).A significant earthquake is classified as one that meets at least one of the following criteria: caused deaths, caused moderate damage (approximately  million or more), magnitude 7.5 or greater, Modified Mercalli Intensity (MMI) X or greater, or the earthquake generated a tsunami.Our World in Data have aggregated significant earthquake deaths by country/location per year.
+// This is estimated as the total number from the earthquake event plus secondary impacts (such as a tsunami triggered by an earthquake).A significant earthquake is classified as one that meets at least one of the following criteria: caused deaths, caused moderate damage (approximately $1 million or more), magnitude 7.5 or greater, Modified Mercalli Intensity (MMI) X or greater, or the earthquake generated a tsunami.Our World in Data have aggregated significant earthquake deaths by country/location per year.
 // Due to data availability, reporting and evidence, it's expected that more recent data will be more complete than the long historical record.
 type EarthquakeDeathsNgdcNoaaDataset struct {
 	EarthquakeDeathsNgdcNoaa *float64 `json:"earthquake_deaths_ngdc_noaa"`
@@ -2169,7 +2169,7 @@ type EarthquakeDeathsNgdcNoaaDataset struct {
 // These are different to those published by the Harvard Atlas of Economic Complexity.
 // As far as we are aware, the discrepancies stem from differences in the way each sources clean the underlying cross-country trade data.
 // You can explore differences between these two data sources here: https://ourworldindata.org/grapher/eci-country-rankings-comparison?country=KOR.
-type EciCountryRankingsObservatoryOfEconomicComplexity2016AndTheAtlasOfEconomicComplexityDataset struct {
+type EciCountryRankingsObservatoryOfEconomicComplexity2016AndTheAtlasOfEconomicComplexity2016Dataset struct {
 	EconomicComplexityIndexEciObservatoryOfEconomicComplexity2016    *float64 `json:"economic_complexity_index_eci_observatory_of_economic_complexity_2016"`
 	EciObservatoryOfEconomicComplexity2016                           *float64 `json:"eci_observatory_of_economic_complexity_2016"`
 	EconomicComplexityIndexEciAtlasOfEconomicComplexity2016          *float64 `json:"economic_complexity_index_eci_atlas_of_economic_complexity_2016"`
@@ -2995,7 +2995,7 @@ type ExtremeIncomePovertyInEuropeBradshawAndMayhew2011Dataset struct {
 
 // Data on extreme poverty projections by country and region are sourced from the Nature publication by Crespo-Cuaresma et al.
 // (2018).
-// This data is also presented visually at the World Poverty Clock: http://worldpoverty.io/index.htmlExtreme poverty is defined by the international poverty line, set at a threshold of .90 per person per day, which is adjusted for inflation (by normalising to 2011 dollars), and corrected for cross-country price differences (PPP).The UN's Sustainable Development Goal (SDG) Target 1.1 is to end extreme poverty by 2030.
+// This data is also presented visually at the World Poverty Clock: http://worldpoverty.io/index.htmlExtreme poverty is defined by the international poverty line, set at a threshold of $1.90 per person per day, which is adjusted for inflation (by normalising to 2011 dollars), and corrected for cross-country price differences (PPP).The UN's Sustainable Development Goal (SDG) Target 1.1 is to end extreme poverty by 2030.
 // 'Ending extreme poverty' is assumed when a country reaches an extreme poverty level below 3% of the total population.Scenarios of future extreme poverty rates were assessed and modelled by Crespo-Cuaresma et al.
 // (2018) using a combination of the IMF World Economic Outlook, and multiple Shared Socioeconomic Pathways (SSP).
 // The SSPs are defined broadly as follows:- SSP1: low challenges for both climate change adaptation and mitigation resulting from income growth which does not rely heavily on natural resources and technological change, coupled with low fertility rate and high educational attainment.- SSP2: the benchmark scenario and assumes the continuation of current global socioeconomic trends at the global level.
@@ -3668,7 +3668,7 @@ type GhgEmissionsPerCapitaEdgar2019Dataset struct {
 	GhgEmissionsPerCapitaPerDayKgco2eEdgar2019 *float64 `json:"ghg_emissions_per_capita_per_day_kgco2e_edgar_2019"`
 }
 
-type GiniCoefficientEquivalizedIncomeAfterTaxAndTransfersChartbookOfEconomicInequality201Dataset struct {
+type GiniCoefficientEquivalizedIncomeAfterTaxAndTransfersChartbookOfEconomicInequality2017Dataset struct {
 	GiniCoefficientEquivalizedIncomeAfterTaxAndTransfers *float64 `json:"gini_coefficient_equivalized_income_after_tax_and_transfers"`
 }
 
@@ -4394,7 +4394,7 @@ type GlobalYearOfLastPolioCasePlusCertificationStatusGpei2017Dataset struct {
 	PolioStatusGpei2017 *float64 `json:"polio_status_gpei_2017"`
 }
 
-type GlobalizationOver5CenturiesPwt90KlasingAndMilionis2014AndEstevadeordalFrantzAndDataset struct {
+type GlobalizationOver5CenturiesPwt90KlasingAndMilionis2014AndEstevadeordalFrantzAndTaylor2003Dataset struct {
 	WorldTradePercOfGdpPwt90 *float64 `json:"world_trade_perc_of_gdp_pwt_90"`
 }
 
@@ -4422,7 +4422,7 @@ type GovernmentEducationExpenditure19602010Szirmai2015Dataset struct {
 	GovernmentEducationExpenditure1960_2010Szirmai2015 *float64 `json:"government_education_expenditure_1960_2010_szirmai_2015"`
 }
 
-// This dataset was compiled to compare the government expenditure per primary student () with learning outcomes.
+// This dataset was compiled to compare the government expenditure per primary student ($PPP) with learning outcomes.
 // Because of the patchy nature of the government expenditure data as obtained from the World Bank EdStats Dataset, the most recent available expenditure data were used while 2006 was used as a cut-off point.
 // The measure of learning outcome used is the share of students either achieving or not achieving a minimum proficiency benchmark.
 // Achievement outcomes come from standardized, psychometrically-robust international and regional tests.
@@ -5017,7 +5017,7 @@ type IncidenceOfChildLaborEnglandItalyUsWorldCunninghamAndViazzo1996AndOthersDat
 }
 
 // See the authors' data appendix for more detail on how the data was prepared and analyzed.
-type IncidenceOfManagerialOrProfessionalJobsAndCollectiveBargainingByGenderBlauAndKahn20Dataset struct {
+type IncidenceOfManagerialOrProfessionalJobsAndCollectiveBargainingByGenderBlauAndKahn2017Dataset struct {
 	GapBetweenMenAndWomenInManagerialJobsBlauAndKahn2017               *float64 `json:"gap_between_men_and_women_in_managerial_jobs_blau_and_kahn_2017"`
 	GapBetweenMenAndWomenInProfessionalJobsBlauAndKahn2017             *float64 `json:"gap_between_men_and_women_in_professional_jobs_blau_and_kahn_2017"`
 	GapBetweenMenAndWomenInMaleProfessionalJobsBlauAndKahn2017         *float64 `json:"gap_between_men_and_women_in_male_professional_jobs_blau_and_kahn_2017"`
@@ -5038,7 +5038,7 @@ type IncomeClassificationWorldBank2017Dataset struct {
 // The decile cut-offs  are calculated on the basis of disposable household income.
 // The measure of disposable household income employed in the Luxembourg Income Study is paid employment and self-employment income, capital income, transfer income, which includes social security transfers (work-related insurance transfers, universal benefits, and assistance benefits) and private transfers, minus income taxes and social security contributions.
 // This follows the definitions of the Canberra Group.
-type IncomesAcrossTheDistributionDatabaseAuthoredByNolanThewissenRoserBasedOnLisIndexedDataset struct {
+type IncomesAcrossTheDistributionDatabaseAuthoredByNolanThewissenRoserBasedOnLisIndexedToTheFirstYear2016Dataset struct {
 	O1stIncomesAcrossTheDistributionDatabase2016 *float64 `json:"o1st_incomes_across_the_distribution_database_2016"`
 	O2ndIncomesAcrossTheDistributionDatabase2016 *float64 `json:"o2nd_incomes_across_the_distribution_database_2016"`
 	O3rdIncomesAcrossTheDistributionDatabase2016 *float64 `json:"o3rd_incomes_across_the_distribution_database_2016"`
@@ -5360,7 +5360,7 @@ type JobSearchMethodsUsPewResearchCenter2015Dataset struct {
 
 // Data is based on industry and company reports from lab-scale (not commercial-scale) production of in-vitro beef.Prices have been reported in US$ per pound (lb) of lab-grown beef.
 // We have converted this to US$ per kilogram using a conversion factor of 0.454.
-type LabGrownMeatPricesNextbigfuture2017AndUnitedStatesBureauOfLaborStatisticsBls201Dataset struct {
+type LabGrownMeatPricesNextbigfuture2017AndUnitedStatesBureauOfLaborStatisticsBls2017Dataset struct {
 	LabGrownBeefNextbigfuture2017 *float64 `json:"lab_grown_beef_nextbigfuture_2017"`
 }
 
@@ -5374,7 +5374,7 @@ type LabGrownMeatPricesNextbigfuture2017AndUnitedStatesBureauOfLaborStatisticsBl
 // The Evolution of Retirement: An American Economic History, 1880-1990.
 // Chicago: University of Chicago Press, 1998.– Bureau of Labor Statistics Data for 2000 to 2015 is from the OECD [OECD.stat web browser – Source: http://stats.oecd.org/viewhtml.aspx?datasetcode=LFS_SEXAGE_I_R&lang=en Labor force participation of men 65 and older from the OECD – http://stats.oecd.org/viewhtml.aspx?datasetcode=LFS_SEXAGE_I_R&lang=en]"Data for 2000 is available from both sources and the discrepancy is minor so that we decided to merge the data as presented in the sources.
 // Short reports 17.5% while the OECD reports 17.73% for 2000.
-type LaborForceParticipationRatesOfMenAge65AndOverInTheUsOwidBasedOnShort2002AndOeDataset struct {
+type LaborForceParticipationRatesOfMenAge65AndOverInTheUsOwidBasedOnShort2002AndOecdDataset struct {
 	LaborForceParticipationRateInTheUsOfMen65AndOlder *float64 `json:"labor_force_participation_rate_in_the_us_of_men_65_and_older"`
 }
 
@@ -5573,7 +5573,7 @@ type LifeExpectancy19502015UnPopulationDivision2015Dataset struct {
 // We omitted data from the first period for which data is available for each country, because often this first period was not a full 5 years long.
 // For instance, the life table for Australia begins with the 4-year period 1921-1924, and every subsequent period is a full 5 years long.
 // With data manipulation or extrapolation, this first data point can be included in the future.
-type LifeExpectancyAtAge1017502100UnitedNationsPopulationDivisionAndHumanMortalityDatabaDataset struct {
+type LifeExpectancyAtAge1017502100UnitedNationsPopulationDivisionAndHumanMortalityDatabase2015Dataset struct {
 	E10UnitedNationsPopulationDivisionAndHumanMortalityDatabase2015 *float64 `json:"e10_united_nations_population_division_and_human_mortality_database_2015"`
 }
 
@@ -5602,7 +5602,7 @@ type LifeExpectancyGapminderUnIhmeDataset struct {
 
 // Changes to Riley's data by Max Roser:I have assigned the 'Life expectancy before health transition' from Riley's data to the year 1770 for all world regions.
 // The reason for doing this is that 1770 is the earliest available data from his paper and I chose that as the start year for the chart.Then I took Riley's estimate for 'Period when earliest health transition in region began' and assigned the 'Life expectancy before health transition' to the mid-point of that period.From then on I show Riley's data until 1990 where his dataset ends.For 2000 and later estimates:Africa: WHO for world region 'Africa'Americas: WHO for world region 'Americas'Asia: World Bank population weighted average of all countries in Riley's definition of Asia http://www.lifetable.de/cgi-bin/countryR.plx?c=AsiaFormer Soviet Union countries: World Bank population weighted average of former Soviet countries ( Russian Federation, Ukraine, Republic of Belarus, Republic of Uzbekistan, Republic of Kazakhstan, Georgia, Republic of Azerbaijan, Republic of Lithuania, Republic of Moldova, Republic of Latvia, Kyrgyz Republic, Republic of Tajikistan, Republic of Armenia, Turkmenistan, and Republic of Estonia.)Europe: Riley's definition of Europe is this: http://www.lifetable.de/cgi-bin/countryR.plx?c=Europe The data here is from the World Bank World Bank: Population weighted average of all countries in Riley's definition of Oceania http://www.lifetable.de/RileyBib.htm)
-type LifeExpectancyJamesRileyForData1990AndEarlierWhoAndWorldBankForLaterDataByMaxRDataset struct {
+type LifeExpectancyJamesRileyForData1990AndEarlierWhoAndWorldBankForLaterDataByMaxRoserDataset struct {
 	LifeExpectancyJamesRileyForData1990AndEarlierWhoAndWorldBankForLaterDataByMaxRoser *float64 `json:"life_expectancy_james_riley_for_data_1990_and_earlier_who_and_world_bank_for_later_data_by_max_roser"`
 }
 
@@ -5648,7 +5648,7 @@ type LifeExpectancyRiley2005ClioInfra2015AndUn2019Dataset struct {
 // The Hacker (2010) data is used for the period 1780 to 1890.
 // The year 1790 refers to the period 1790-99; see Table 8: New Life Tables for the White Population of the United States, 1780-1900 for the original data consulted for this period.
 // The US Social Security Administration data is used from 1900 to today.
-type LifeExpectationBySexAtAges015And45OwidBasedOnHacker2010AndTheUsSocialSecuriDataset struct {
+type LifeExpectationBySexAtAges015And45OwidBasedOnHacker2010AndTheUsSocialSecurityAdministration2017Dataset struct {
 	LifeExpectationAge0FemalesOwid          *float64 `json:"life_expectation_age_0_females_owid"`
 	LifeExpectationAge0MalesOwid            *float64 `json:"life_expectation_age_0_males_owid"`
 	LifeExpectationAge15FemalesOwid         *float64 `json:"life_expectation_age_15_females_owid"`
@@ -6367,7 +6367,7 @@ type MaternalMortalityRatioGapminder2010AndWorldBank2015Dataset struct {
 	MaternalMortalityRatioGapminder2010AndWorldBank2015 *float64 `json:"maternal_mortality_ratio_gapminder_2010_and_world_bank_2015"`
 }
 
-// Data is based on the UN's final evaluation of the Millennium Development Goals (MDGs) and sourced from its final report (http://www.un.org/millenniumgoals/2015_MDG_Report/pdf/MDG%202015%20rev%20(July%201).pdf) and Statistical Database (http://mdgs.un.org/unsd/mdg/Resources/Static/Products/Progress2015/StatAnnex.pdf).The specific Targets with data here are:MDG1.A: halve share of people living in extreme poverty (defined as living on less than .25 per day - the historical poverty line).MDG1.B: achieve full and productive employment, as well as decent work for all, including young people and women.MDG1.C: halve the proportion of individuals suffering from hunger.MDG2: ensure that children universally – including both boys and girls – will be able to complete a full course of primary education by 2015.MDG3.A: eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015.MDG4.A: reduce the under-five mortality rate by two-thirds in the period between 1990 and 2015.MDG5.A: reduce the maternal mortality ratio by 75 percent.MDG5.B: achieve universal access to reproductive health.
+// Data is based on the UN's final evaluation of the Millennium Development Goals (MDGs) and sourced from its final report (http://www.un.org/millenniumgoals/2015_MDG_Report/pdf/MDG%202015%20rev%20(July%201).pdf) and Statistical Database (http://mdgs.un.org/unsd/mdg/Resources/Static/Products/Progress2015/StatAnnex.pdf).The specific Targets with data here are:MDG1.A: halve share of people living in extreme poverty (defined as living on less than $1.25 per day - the historical poverty line).MDG1.B: achieve full and productive employment, as well as decent work for all, including young people and women.MDG1.C: halve the proportion of individuals suffering from hunger.MDG2: ensure that children universally – including both boys and girls – will be able to complete a full course of primary education by 2015.MDG3.A: eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015.MDG4.A: reduce the under-five mortality rate by two-thirds in the period between 1990 and 2015.MDG5.A: reduce the maternal mortality ratio by 75 percent.MDG5.B: achieve universal access to reproductive health.
 type MdgFinalEvaluationUnMdgReportDataset struct {
 	Mdg1aShareInExtremePovertyMoney125PerDay        *float64 `json:"mdg1a_share_in_extreme_poverty_money125_per_day"`
 	Mdg1bShareInProductiveEmployment                *float64 `json:"mdg1b_share_in_productive_employment"`
@@ -6411,13 +6411,13 @@ type MeaslesLondonDataset struct {
 // For example, consumption group 1.25 - 1.9 is calculated as follows: 'total population living under the poverty line at 1.9 int-$ per day' minus 'total population living under the poverty line at 1.25 int-$ per day'.Consumption per capita is the preferred welfare indicator for the World Bank’s analysis of global poverty.
 // But not all national statistical agencies report to the World Bank consistent estimates of consumption based on expenditure surveys.
 // For about 25% of the countries, estimates correspond to income, rather than consumption.Warning:'Rich' countries are not included in the PovcalNet tables used for these calculations.
-// Therefore, people belonging to these consumption groups, but living in rich countries (defined by the World Bank) are not represented in these figures.'Non-rich' countries are all countries in the World except: Australia, Austria, Belgium, Canada, Cyprus, Denmark, Finland, France, Germany, Greece, Iceland, Ireland, Israel, Italy, Japan, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom, United States.---World population in absolute poverty:The share of World population living in Absolute poverty corresponds to the poverty headcount at the World Bank poverty line of 1.9$ per day.Data between 1981 and 2013 are from 'World Total' in PovcalNet's "Regional aggregation using 2011 PPP and .9/day poverty line".The 2030 projection of 4.2% is taken from Ferreira at al.
+// Therefore, people belonging to these consumption groups, but living in rich countries (defined by the World Bank) are not represented in these figures.'Non-rich' countries are all countries in the World except: Australia, Austria, Belgium, Canada, Cyprus, Denmark, Finland, France, Germany, Greece, Iceland, Ireland, Israel, Italy, Japan, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom, United States.---World population in absolute poverty:The share of World population living in Absolute poverty corresponds to the poverty headcount at the World Bank poverty line of 1.9$ per day.Data between 1981 and 2013 are from 'World Total' in PovcalNet's "Regional aggregation using 2011 PPP and $1.9/day poverty line".The 2030 projection of 4.2% is taken from Ferreira at al.
 // (World Bank, 2015), p.37.
 // This projection is "based on the country-specific historic average growth rates for the past 10 years".
 // According to the report, an alternative projection based on the last 20 years would give 5.7%.---Share living in extreme poverty by region:The share of population living in extreme poverty by world region is calculated dividing the absolute number of people living in extreme poverty by the population living in the region.To calculate the share of population living in extreme poverty at world level OWID team uses the total world population, not the sum of the 6 regions.
-// In fact, as explained below, the six world regions do not take into account high-income countries.PovcalNet provides regional aggregation using 2011 PPPs and .90/day poverty line for reference years 1987, 1990, 1993, 1996, 1999, 2002, 2005, 2008, 2010, 2011, 2012 and 2013.Unfortunately, for certain regions and years the data survey coverage is too low and the results are suppressed.
+// In fact, as explained below, the six world regions do not take into account high-income countries.PovcalNet provides regional aggregation using 2011 PPPs and $1.90/day poverty line for reference years 1987, 1990, 1993, 1996, 1999, 2002, 2005, 2008, 2010, 2011, 2012 and 2013.Unfortunately, for certain regions and years the data survey coverage is too low and the results are suppressed.
 // Therefore, OWID team calculated the number of the missing variable subtracting the sum of the observed regions from the World Total.
-// For example, dis-aggregated data is not available for Middle East and North Africa (MENA) in 2013:MENA 2013 = World Total - (East Asia and Pacific + Europe and Central Asia + Latin America and the Caribbean + South Asia + Sub-Saharan Africa).Warning:The most recent figures from the MENA reason do not necessarily reflect the geopolitical turmoil in the region.High-income countries are not included in PovcalNet tables used for this calculations.---World poverty in absolute number by region:PovcalNet provides regional aggregation using 2011 PPPs and .90/day poverty line for reference years 1987, 1990, 1993, 1996, 1999, 2002, 2005, 2008, 2010, 2011, 2012 and 2013.Unfortunately, for certain regions and years the data survey coverage is too low and the results are suppressed.
+// For example, dis-aggregated data is not available for Middle East and North Africa (MENA) in 2013:MENA 2013 = World Total - (East Asia and Pacific + Europe and Central Asia + Latin America and the Caribbean + South Asia + Sub-Saharan Africa).Warning:The most recent figures from the MENA reason do not necessarily reflect the geopolitical turmoil in the region.High-income countries are not included in PovcalNet tables used for this calculations.---World poverty in absolute number by region:PovcalNet provides regional aggregation using 2011 PPPs and $1.90/day poverty line for reference years 1987, 1990, 1993, 1996, 1999, 2002, 2005, 2008, 2010, 2011, 2012 and 2013.Unfortunately, for certain regions and years the data survey coverage is too low and the results are suppressed.
 // Therefore, OWID team calculated the number of the missing variable subtracting the sum of the observed regions from the World Total.
 // For example, dis-aggregated data is not available for Middle East and North Africa (MENA) in 2013:MENA 2013 = World Total - (East Asia and Pacific + Europe and Central Asia + Latin America and the Caribbean + South Asia + Sub-Saharan Africa).Warning:The most recent figures from the MENA reason do not necessarily reflect the geopolitical turmoil in the region.High-income countries are not included in PovcalNet tables used for this calculations.
 type MeasuresAndIndicatorsForPovertyPovcalnetWorldBank2017Dataset struct {
@@ -7096,7 +7096,7 @@ type NaturalDisastersFrom1900To2019Emdat2020Dataset struct {
 	TotalEconomicDamageEmdat2019 *float64 `json:"total_economic_damage_emdat_2019"`
 }
 
-type NeglectedTropicalDiseasesLymphaticFilariasisPopulationRequiringPcNotTreatedAndTreatedDataset struct {
+type NeglectedTropicalDiseasesLymphaticFilariasisPopulationRequiringPcNotTreatedAndTreatedEnricJane2016Dataset struct {
 	ReportedNumberOfPeopleTreatedEnricJane2016           *float64 `json:"reported_number_of_people_treated_enric_jane_2016"`
 	PopulationRequiringPcForLfButNotTreatedEnricJane2016 *float64 `json:"population_requiring_pc_for_lf_but_not_treated_enric_jane_2016"`
 }
@@ -7902,7 +7902,7 @@ type PercentageOfIndividualsUsingTheInternetIctItu2015Dataset struct {
 // For 1978-2015, both CEA and NCHS relied on historical data from the National Health Interview Survey (NHIS).
 //  For years prior to 1978 CEA estimated the overall uninsured rate by combining information from the NHIS on trends in private coverage, with administrative data on Medicare and Medicaid enrollment during those years.
 // See the links above for further details.
-type PercentageOfPersonsWithoutHealthInsuranceCouncilOfEconomicAdvisersAndNationalCenterFoDataset struct {
+type PercentageOfPersonsWithoutHealthInsuranceCouncilOfEconomicAdvisersAndNationalCenterForHealthStatisticsDataset struct {
 	PercentageOfPersonsWithoutHealthInsurancePerc *float64 `json:"percentage_of_persons_without_health_insurance_perc"`
 }
 
@@ -8565,7 +8565,7 @@ type PopulationGrowth19922015Listed2017UnPopulationDivision2015Dataset struct {
 	PopulationGrowth1992_2015UnPopulationDivision *float64 `json:"population_growth_1992_2015_un_population_division"`
 }
 
-type PopulationGrowthRateByRegion20202100MediumVariantProjectionUnPopulationDivision2015Dataset struct {
+type PopulationGrowthRateByRegion20202100MediumVariantProjectionUnPopulationDivision2015RevisionDataset struct {
 	ProjectedGrowthRateUnPopulationDivision2015Revision *float64 `json:"projected_growth_rate_un_population_division_2015_revision"`
 }
 
@@ -8606,7 +8606,7 @@ type PovertyHeadcountAtMoney190ADay2011PppHighIncomeWorldBankPovcal2017Dataset s
 	ExtremePovertyHeadcountHighIncomeWorldBankPovcal2017 *float64 `json:"extreme_poverty_headcount_high_income_world_bank_povcal_2017"`
 }
 
-type PovertyRate50percOfMedianLisKeyFigures2018Dataset struct {
+type PovertyRateLess50percOfMedianLisKeyFigures2018Dataset struct {
 	PovertyRateLess50percOfMedianLisKeyFigures2018 *float64 `json:"poverty_rate_less50perc_of_median_lis_key_figures_2018"`
 }
 
@@ -8690,7 +8690,7 @@ type PrevalenceOfUndernourishmentWorldBank2017AndUnSofi2018Dataset struct {
 }
 
 // Data on vitamin-A deficiency is based on the reported prevalence of risk by the World Health Organization, which has collated national and household level survey data on indicators extending the period 1995-2005.
-// Note that data on vitamin-A deficiency is typically not measured on an annual basis, therefore the year of measurement will vary by country, but lie within the period 1995-2005.All countries with a GDP per capita ≥US5,000 were assumed by the WHO to be free from vitamin-A deficiency of a public health significance and were therefore excluded.
+// Note that data on vitamin-A deficiency is typically not measured on an annual basis, therefore the year of measurement will vary by country, but lie within the period 1995-2005.All countries with a GDP per capita ≥US$15,000 were assumed by the WHO to be free from vitamin-A deficiency of a public health significance and were therefore excluded.
 // None of these 37 countries had retinol or night blindness data reported for either preschool-age children or pregnant women.Two sets of indicators of VAD are commonly used for population surveys: clinically assessed eye signs and biochemically determined concentrations of retinol in plasma or serum.
 // The incidence of night blindness in individuals indicates moderate-to-severe systemic VAD.
 // VAD can also be identified when serum retinol concentrations fall below below a cut-off value of 0.70 µmol/l.Vitamin A deficiency (VAD) is a major nutritional concern in poor societies, especially in lower income countries.
@@ -8704,7 +8704,7 @@ type PrevalenceOfVitaminADeficiencyInChildrenWho2017Dataset struct {
 }
 
 // Data on vitamin-A deficiency is based on the reported prevalence of risk by the World Health Organization, which has collated national and household level survey data on indicators extending the period 1995-2005.
-// Note that data on vitamin-A deficiency is typically not measured on an annual basis, therefore the year of measurement will vary by country, but lie within the period 1995-2005.All countries with a GDP per capita ≥US5,000 were assumed by the WHO to be free from vitamin-A deficiency of a public health significance and were therefore excluded..
+// Note that data on vitamin-A deficiency is typically not measured on an annual basis, therefore the year of measurement will vary by country, but lie within the period 1995-2005.All countries with a GDP per capita ≥US$15,000 were assumed by the WHO to be free from vitamin-A deficiency of a public health significance and were therefore excluded..
 // None of these 37 countries had retinol or night blindness data reported for either preschool-age children or pregnant women.Two sets of indicators of VAD are commonly used for population surveys: clinically assessed eye signs and biochemically determined concentrations of retinol in plasma or serum.
 // The incidence of night blindness in individuals indicates moderate-to-severe systemic VAD.
 // VAD can also be identified when serum retinol concentrations fall below below a cut-off value of 0.70 µmol/l.Vitamin A deficiency (VAD) is a major nutritional concern in poor societies, especially in lower income countries.
@@ -8876,7 +8876,7 @@ type PrisonersPer100000FromWorldPrisonBriefDownloadedSeptember2018CountryStandar
 // Population data is based on the Medium UN projection (2017 Edition) from 2015-2100.
 // Our World in Data have derived the change in the projected under-5 population between the year 2015 to 2050 (here, denoted as '2050') and the change between 2050 to 2100 (here, denoted as '2100').
 // This was calculated simply through the subtraction of 2015 under-5 numbers from projected 2050 figures; and 2050 figures subtracted from 2100 projections.
-type ProjectedChangeInUnder5PopulationByCountry201520502100OwidBasedOnUnPopulation20Dataset struct {
+type ProjectedChangeInUnder5PopulationByCountry201520502100OwidBasedOnUnPopulation2017Dataset struct {
 	ChangeInUnder5Population2015To2050_2050To2100 *float64 `json:"change_in_under_5_population_2015_to_2050_2050_to_2100"`
 }
 
@@ -8884,7 +8884,7 @@ type ProjectedChangeInUnder5PopulationByCountry201520502100OwidBasedOnUnPopulati
 // In particular these figures relate to SSP2, the baseline scenario employed by Crespo Cuaresma et al.
 // (2018).
 // Population projections from UN World Population Prospects: The 2017 Revision.The sources of the fragile states lists are as follows:OECD States of Fragility, 2018OECD Resource Flows to Fragile and Conflict-Affected States: Annual Report 2008World Bank 2019 – FY19 List of fragile situationsWorld Bank 2009 – FY09 Fragile States list
-type ProjectedExtremePovertyAmongDifferentGroupingsOfFragileStatesCrespoCuaresmaEtAl2018Dataset struct {
+type ProjectedExtremePovertyAmongDifferentGroupingsOfFragileStatesCrespoCuaresmaEtAl2018OecdWorldBankDataset struct {
 	ProjectedGlobalExtremePovertyRate                      *float64 `json:"projected_global_extreme_poverty_rate"`
 	ProjectedExtremePoorInFragileStates                    *float64 `json:"projected_extreme_poor_in_fragile_states"`
 	ProjectedShareOfGlobalExtremePoorLivingInFragileStates *float64 `json:"projected_share_of_global_extreme_poor_living_in_fragile_states"`
@@ -9056,7 +9056,7 @@ type RecycledPlasticExportsBrooksEtAl2018Dataset struct {
 
 // This dataset provides information on the size of populations living under different political systems.Population data comes from our own calculations based on Gapminder (v6), HYDE (v3.2), and UN (2019).Political regimes are identified using the Regimes of the World classification from Lührmann et al.
 // (2018), data from the Varieties of Democracy Project (v12), and expanding the data and refining the classification ourselves.The classification distinguishes between closed autocracies, electoral autocracies, electoral democracies, and liberal democracies.
-type RegimePopulationsOwidBasedOnLuhrmannEtAl2018VDemV12Owid2021GapminderV6Dataset struct {
+type RegimePopulationsOwidBasedOnLuhrmannEtAl2018VDemV12Owid2021GapminderV6HydeV32AndUn2019Dataset struct {
 	PopulationClosedAut    *float64 `json:"population_closed_aut"`
 	PopulationElectoralAut *float64 `json:"population_electoral_aut"`
 	PopulationElectoralDem *float64 `json:"population_electoral_dem"`
@@ -9066,7 +9066,7 @@ type RegimePopulationsOwidBasedOnLuhrmannEtAl2018VDemV12Owid2021GapminderV6Datas
 
 // The year of reference is 2015 for all countries except: Denmark (2014), Finland (2014), Belgium (2014), Italy (2013), Canada (2014), Netherlands (2014), Japan (2012), Spain (2014), France (2013), Luxembourg (2014), Poland (2014), and Lithuania (2014).
 // Earnings are net of income tax only for: Latvia, Ireland, and Mexico.For further details, see Table A6.1 in the <a href="https://www.oecd-ilibrary.org/docserver/eag-2017-en.pdf?expires=1533729082&id=id&accname=guest&checksum=78D200C9AD96EA2A893AEC34BFB793F8" rel="noopener" target="_blank">Education at a Glance 2017</a> report.
-type RelativeEarningsOfAdultsByEducationalAttainmentEducationAtAGlance2017OecdIndicatorsDataset struct {
+type RelativeEarningsOfAdultsByEducationalAttainmentEducationAtAGlance2017OecdIndicators2017Dataset struct {
 	EarningsOfTertiaryEducatedWorkersRelativeToTheEarningsOfWorkersWithUpperSecondaryEducationOecd2017 *float64 `json:"earnings_of_tertiary_educated_workers_relative_to_the_earnings_of_workers_with_upper_secondary_education_oecd_2017"`
 }
 
@@ -9480,7 +9480,7 @@ type ShareOfMarriagesInEnglandAndWalesThatEndedInDivorceUkOns2020Dataset struct 
 // Total U.S.
 // population figures for the period 2011-2016 are taken from the 'National Population Totals Tables: 2010-2016'.
 // These estimates "are produced using a similar procedure to that used for our current postcensal estimates series, and with no knowledge of the Census count at the end of the decade."
-type ShareOfPeopleExperiencingHomelessnessInTheUsa20072016Per100000Hud2016AndUsCDataset struct {
+type ShareOfPeopleExperiencingHomelessnessInTheUsa20072016Per100000Hud2016AndUsCensusBureau2010Dataset struct {
 	ShelteredHomelessHud2016AndUsCensusBureau2010   *float64 `json:"sheltered_homeless_hud_2016_and_us_census_bureau_2010"`
 	UnshelteredHomelessHud2016AndUsCensusBureau2010 *float64 `json:"unsheltered_homeless_hud_2016_and_us_census_bureau_2010"`
 }
@@ -9567,14 +9567,14 @@ type SharkAttacksAndFatalitiesGlobalSharkAttackFileGsaf2018Dataset struct {
 }
 
 // The Significant Earthquake Database is a global listing of over 5,700 earthquakes from 2150 BC to the present.
-// A significant earthquake is classified as one that meets at least one of the following criteria: caused deaths, caused moderate damage (approximately  million or more), magnitude 7.5 or greater, Modified Mercalli Intensity (MMI) X or greater, or the earthquake generated a tsunami.Our World in Data have aggregated significant earthquake numbers by country/location per year.
+// A significant earthquake is classified as one that meets at least one of the following criteria: caused deaths, caused moderate damage (approximately $1 million or more), magnitude 7.5 or greater, Modified Mercalli Intensity (MMI) X or greater, or the earthquake generated a tsunami.Our World in Data have aggregated significant earthquake numbers by country/location per year.
 // Due to data availability, reporting and evidence, it's expected that more recent data will be more complete than the long historical record.
 type SignificantEarthquakeEventsNgdcNasaDataset struct {
 	SignificantEarthquakeEventsNgdcNasa *float64 `json:"significant_earthquake_events_ngdc_nasa"`
 }
 
 // The Significant Volcanic Eruption Database is a global listing of over 500 significant eruptions which includes information on the latitude, longitude, elevation, type of volcano, and last known eruption.
-// A significant eruption is classified as one that meets at least one of the following criteria: caused fatalities, caused moderate damage (approximately  million or more), with a Volcanic Explosivity Index (VEI) of 6 or larger, caused a tsunami, or was associated with a major earthquake.Note that since this data is very long-term it's expected that most recent data on eruptions will be the most complete than long historic events.
+// A significant eruption is classified as one that meets at least one of the following criteria: caused fatalities, caused moderate damage (approximately $1 million or more), with a Volcanic Explosivity Index (VEI) of 6 or larger, caused a tsunami, or was associated with a major earthquake.Note that since this data is very long-term it's expected that most recent data on eruptions will be the most complete than long historic events.
 type SignificantVolcanicEruptionsNgdcWdsDataset struct {
 	NumberOfSignificantVolcanicEruptionsNgdcWds *float64 `json:"number_of_significant_volcanic_eruptions_ngdc_wds"`
 }
@@ -9787,7 +9787,7 @@ type SolidFuelUseForCookingByRegionBonjourEtAl2013Dataset struct {
 // Continental groupings are defined according to OWID's classification.
 // Europe has been split into Western Europe including: Austria, Belgium, Denmark, Finland, France, Germany, Greece, Hungary, Italy, the Netherlands, Norway, Portugal, Russia, Spain, Sweden, Switzerland, and the United Kingdom.
 // Remaining European countries have been classified as Eastern Europe.
-type SplitOfExportsToDifferentCountryGroupsOwidCalculationsBasedOnFouquinAndHugotCepii2Dataset struct {
+type SplitOfExportsToDifferentCountryGroupsOwidCalculationsBasedOnFouquinAndHugotCepii2016DyadicDataDataset struct {
 	ExportsToAfricaFouquinAndHugotCepii2016Dyadic                    *float64 `json:"exports_to_africa_fouquin_and_hugot_cepii_2016_dyadic"`
 	ExportsToAntarcticaFouquinAndHugotCepii2016Dyadic                *float64 `json:"exports_to_antarctica_fouquin_and_hugot_cepii_2016_dyadic"`
 	ExportsToAsiaFouquinAndHugotCepii2016Dyadic                      *float64 `json:"exports_to_asia_fouquin_and_hugot_cepii_2016_dyadic"`
@@ -10226,7 +10226,7 @@ type TerroristAttacksByWeaponTypeGlobalTerrorismDatabase2018Dataset struct {
 // The neonatal tetanus incidence was zero.
 // Population size does therefore not matter to calculate the rate, as it will be zero regardless of the population size.No population data was available for Swaziland (all years) and (Serbia 1980-1989).
 // They were therefore excluded.
-type TetanusNeonatalRateCalculatedFromWhoIncidence2017AndWdiPopulationDataHannahBehrenDataset struct {
+type TetanusNeonatalRateCalculatedFromWhoIncidence2017AndWdiPopulationDataHannahBehrensDataset struct {
 	NumberOfNeonatalTetanusCasesWho2017Per100_000PeoplePopulationFromWdi *float64 `json:"number_of_neonatal_tetanus_cases_who_2017_per_100_000_people_population_from_wdi"`
 }
 
@@ -10371,7 +10371,7 @@ type TotalEconomyProductivityGrowthOecdDataset struct {
 	AnnualProductivityGrowthRate *float64 `json:"annual_productivity_growth_rate"`
 }
 
-type TotalFertilityByRegion20202100MediumVariantProjectionUnPopulationDivision2015RevisiDataset struct {
+type TotalFertilityByRegion20202100MediumVariantProjectionUnPopulationDivision2015RevisionDataset struct {
 	ProjectedFertilityRateUnPopulationDivision2015Revision *float64 `json:"projected_fertility_rate_un_population_division_2015_revision"`
 }
 
@@ -10403,7 +10403,7 @@ type TotalPopulationGapminderUnPopulationDivisionDataset struct {
 // Fouquin and Hugot (CEPII 2016) data uses the IMF's Direction of Trade Statistics (DOTS) dataset extensively from 1948 until the present day.West Germany estimates have been used between 1950 - 1990, and Germany's trade estimates used before 1950 and after 1990.
 // Estimates for East Germany have been excluded.
 // Please see the original document providing a detailed description of the data set used, including country and territory definitions, available at: http://www.cepii.fr/CEPII/fr/publications/wp/abstract.asp?NoDoc=9134Micronesia, Marshall Islands, Monaco, Montenegro, San Marino, and the Bahamas have also been excluded from the sample due to insufficient data availability.
-type TotalValueOfExportsByCountryToWorldPercgdpOwidCalculationsBasedOnFouquinAndHugotCepDataset struct {
+type TotalValueOfExportsByCountryToWorldPercgdpOwidCalculationsBasedOnFouquinAndHugotCepii2016AndOtherSourcesDataset struct {
 	TotalMerchandiseTradeAsShareOfGdpFouquinAndHugotCepii2016DyadicData *float64 `json:"total_merchandise_trade_as_share_of_gdp_fouquin_and_hugot_cepii_2016_dyadic_data"`
 }
 
@@ -10466,7 +10466,7 @@ type TradeShareByTypeOfTradeOwidCalculationsBasedOnNberUnitedNationsTradeData196
 // Bilateral trade flows are recorded in current British pounds.West Germany estimates have been used between 1950 - 1990, and Germany's trade estimates used before 1950 and after 1990.
 //  Estimates for East Germany have been excluded.
 // Please see the original document providing a detailed description of the data set used, including country and territory definitions, available at: http://www.cepii.fr/CEPII/fr/publications/wp/abstract.asp?NoDoc=9134Micronesia, Marshall Islands, Monaco, Montenegro, San Marino, and the Bahamas have also been excluded from the sample due to insufficient data availability.
-type TradeShareWithCapitalAndLaborIntensiveCountriesOwidCalculationsBasedOnFouquinAndHugoDataset struct {
+type TradeShareWithCapitalAndLaborIntensiveCountriesOwidCalculationsBasedOnFouquinAndHugotCepii2016Dataset struct {
 	ValueOfExportsToLaborIntensiveCountriesPercOfGdpOwidCalculationsBasedOnCepii2016   *float64 `json:"value_of_exports_to_labor_intensive_countries_perc_of_gdp_owid_calculations_based_on_cepii_2016"`
 	ValueOfExportsToCapitalIntensiveCountriesPercOfGdpOwidCalculationsBasedOnCepii2016 *float64 `json:"value_of_exports_to_capital_intensive_countries_perc_of_gdp_owid_calculations_based_on_cepii_2016"`
 	ValueOfImportsToLaborIntensiveCountriesPercOfGdpOwidCalculationsBasedOnCepii2016   *float64 `json:"value_of_imports_to_labor_intensive_countries_perc_of_gdp_owid_calculations_based_on_cepii_2016"`
@@ -10592,7 +10592,7 @@ type UkDefenceSpendingUkpublicspendingcomDataset struct {
 //
 //
 // For all details see the original source.
-type UkNominalWageDataPriceDataAndRealWageBankOfEnglandThreeCenturiesOfMacroeconomicDataset struct {
+type UkNominalWageDataPriceDataAndRealWageBankOfEnglandThreeCenturiesOfMacroeconomicData2017Dataset struct {
 	NominalAverageWeeklyWagesBankOfEngland2017        *float64 `json:"nominal_average_weekly_wages_bank_of_england_2017"`
 	SplicedConsumerPriceIndex2015100BankOfEngland2017 *float64 `json:"spliced_consumer_price_index_2015100_bank_of_england_2017"`
 	RealAverageWeeklyWagesBankOfEngland2017           *float64 `json:"real_average_weekly_wages_bank_of_england_2017"`
@@ -11081,7 +11081,7 @@ type UsaPatentsGrantedUsPatentAndTrademarkOfficeDataset struct {
 // 53 by the US Public Health Service US Population estimates: 1910-1919: US Census Bureau “43rd Statistical Abstract of the United States 1920” https://www.census.gov/library/publications/1921/compendia/statab/43ed.html US Census Bureau “71st Statistical Abstract of the United States 1950” https://www.census.gov/library/publications/1950/compendia/statab/71ed.html The United Nations DESA Population Division latest "World Population Prospects" Report from 2017 (Link above) The number of cases of polio and the deaths due to polio include any type of poliomyelitis, i.e.
 // both the wild and vaccine-derived type as well as both indigenous and imported cases.
 // This explains why, even though the US were declared polio free in 1979, there are still cases reported.
-type UsaPolioCasesAndDeaths19102010OwidBasedOnUsPublicHealthService19101951UsCenterDataset struct {
+type UsaPolioCasesAndDeaths19102010OwidBasedOnUsPublicHealthService19101951UsCenterForDiseaseControl19602010AndWho2011Dataset struct {
 	PolioCasesOwidBasedOnUsPublicHealthService1910_1951AndUsCenterForDiseaseControl1960_2010     *float64 `json:"polio_cases_owid_based_on_us_public_health_service_1910_1951_and_us_center_for_disease_control_1960_2010"`
 	PolioDeathsOwidBasedOnUsPublicHealthService1910_1951AndUsCenterForDiseaseControl1960_2010    *float64 `json:"polio_deaths_owid_based_on_us_public_health_service_1910_1951_and_us_center_for_disease_control_1960_2010"`
 	PolioCaseRateOwidBasedOnUsPublicHealthService1910_1951AndUsCenterForDiseaseControl1960_2010  *float64 `json:"polio_case_rate_owid_based_on_us_public_health_service_1910_1951_and_us_center_for_disease_control_1960_2010"`
@@ -11126,7 +11126,7 @@ type ValueOfGlobalMerchandiseImportsAndExportsFouquinAndHugotCepii2016NationalDa
 // excluding deaths from disease or famine).It is based on the UCDP Georeferenced Event Dataset (GED) Global version 21.1.
 // This presents deaths estimates for individual events.
 // We aggregate deaths across years, broken down by conflict/violence type and by region.
-type ViolentDeathsInConflictsAndOneSidedViolenceSince1989ByRegionAndTypeOfViolenceUcdpDataset struct {
+type ViolentDeathsInConflictsAndOneSidedViolenceSince1989ByRegionAndTypeOfViolenceUcdp2022Dataset struct {
 	DeathsInStateBasedConflict           *float64 `json:"deaths_in_state_based_conflict"`
 	DeathsInNonStateConflict             *float64 `json:"deaths_in_non_state_conflict"`
 	DeathsInOneSidedViolence             *float64 `json:"deaths_in_one_sided_violence"`
@@ -11185,7 +11185,7 @@ type VolcanicEruptionDeathsNgdcnoaaDataset struct {
 
 // Wages in the Manufacturing Sector vs.
 // Several Food Prices USA  – BLS Data
-type WagesInTheManufacturingSectorVsSeveralFoodPricesInTheUsUsBureauOfLaborStatisticDataset struct {
+type WagesInTheManufacturingSectorVsSeveralFoodPricesInTheUsUsBureauOfLaborStatistics2013Dataset struct {
 	WageAndFoodPricesUsBureauOfLaborStatistics2013 *float64 `json:"wage_and_food_prices_us_bureau_of_labor_statistics_2013"`
 }
 

@@ -101,41 +101,65 @@ type AbsoluteDeathsFromAmbientPm25AirPollutionStateOfGlobalAirDataset {
 
 """
 Data is calculated by OurWorldinData as the net change in population from one year to the next e.g.
-figures for 1900 represent the net change in population between 1900 and 1901.These calculations are based on the 'OurWorldinData'-series derived from various sources.
+figures for 1900 represent the net change in population between 1900 and 1901.
+
+These calculations are based on the 'OurWorldinData'-series derived from various sources.
 The data for the period before 1900 are taken from the History Database of the Global Environment (HYDE).
 The History Database of the Global Environment (HYDE) collected the data by earlier publications.
 The data for the World Population between 1900 and 1940 is taken from the UN publication 'The World at Six Billion'.
 The annual data for the World Population between 1950 and 2015 is taken from the United Nations, Department of Economic and Social Affairs, Population Division (2017).
 World Population Prospects: The 2017 Revision, DVD Edition.
-Available at: https://esa.un.org/unpd/wpp/Download/Standard/Population/Data from 2016 onwards is based on the above UN source's 'medium variant' projection to the year 2100.The HYDE Database is available at: 	http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.htmlThe full 'OurWorldinData' series is available to download at: https://ourworldindata.org/wp-content/uploads/2013/05/WorldPopulationAnnual12000years_interpolated_HYDEandUNto2015.csv
+Available at: https://esa.un.org/unpd/wpp/Download/Standard/Population/
+
+Data from 2016 onwards is based on the above UN source's 'medium variant' projection to the year 2100.
+
+The HYDE Database is available at: 	http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+
+The full 'OurWorldinData' series is available to download at: https://ourworldindata.org/wp-content/uploads/2013/05/WorldPopulationAnnual12000years_interpolated_HYDEandUNto2015.csv
 """
 type AbsolutePopulationChangeOwidBasedOnHydeAndUnDataset {
  absolute_increase_in_population_owid_based_on_hyde_and_un: Float
  projected_absolute_population_increase_owid_based_on_hyde_and_un: Float
 }
 
-type AccessToElectricityPercPopulationWorldBankDataset {
-}
-
 """
-This data series extends from 2005-2014, and has been created through the merging of two independent estimates of access to financial services.Data for 2011 and 2014 has been sourced from the World Bank's Global Findex (Global Financial Inclusion) Database [available at: http://databank.worldbank.org/data/reports], which provides several measures of financial access.
+This data series extends from 2005-2014, and has been created through the merging of two independent estimates of access to financial services.
+
+Data for 2011 and 2014 has been sourced from the World Bank's Global Findex (Global Financial Inclusion) Database [available at: http://databank.worldbank.org/data/reports], which provides several measures of financial access.
 The dataset presented here is 'Account at a financial institution (% age 15+)'.
 This dataset is predominantly sourced from household and census survey data.
-The World Bank defines this parameter as:"the percentage of respondents who report having an account (by themselves or together with someone else) at a bank or another type of financial institution; having a debit card in their own name; receiving wages, government transfers, or payments for agricultural products into an account at a financial institution in the past 12 months; paying utility bills or school fees from an account at a financial institution in the past 12 months; or receiving wages or government transfers into a card in the past 12 months (% age 15+).Earlier global estimates of global access to financial services are less certain.
+The World Bank defines this parameter as:
+
+"the percentage of respondents who report having an account (by themselves or together with someone else) at a bank or another type of financial institution; having a debit card in their own name; receiving wages, government transfers, or payments for agricultural products into an account at a financial institution in the past 12 months; paying utility bills or school fees from an account at a financial institution in the past 12 months; or receiving wages or government transfers into a card in the past 12 months (% age 15+).
+
+Earlier global estimates of global access to financial services are less certain.
 To present earlier estimates, we have relied on composite measures of financial access reported in the World Bank's publication 'Finance for All?: Policies and Pitfalls in Expanding Access' (2008).
-The sources from which the World Bank draws upon for this composite indicator are referenced below.The World Bank defines this composite indicator as measuring "the percentage of the adult population with access to an account with a financial intermediary.
+The sources from which the World Bank draws upon for this composite indicator are referenced below.
+
+The World Bank defines this composite indicator as measuring "the percentage of the adult population with access to an account with a financial intermediary.
 The indicator is constructed as follows: for any country with data on access from a household survey, the surveyed percentage is given.
 For other countries, the percentage is constructed as a function of the estimated number and average size of bank accounts as discussed in Honohan (2007).
-These numbers are subject to estimation error."It should also be noted that while the majority of data is reported for the year 2005, some are sourced from earlier (thus the measurement period should be considered to extend from 2000-2005).References:World Bank.
+These numbers are subject to estimation error."
+
+It should also be noted that while the majority of data is reported for the year 2005, some are sourced from earlier (thus the measurement period should be considered to extend from 2000-2005).
+References:
+World Bank.
 2008.
 Finance for All? A World Bank Policy Research Report.
-Available at: http://siteresources.worldbank.org/INTFINFORALL/Resources/4099583-1194373512632/FFA_book.pdf [accessed 25/05/2017]Honohan.
+Available at: http://siteresources.worldbank.org/INTFINFORALL/Resources/4099583-1194373512632/FFA_book.pdf [accessed 25/05/2017]
+
+Honohan.
 2006.
-“Household Financial Assets in the Process of Development.” Policy Research Working Paper 3965, World Bank, Washington DC.Christen, Robert Peck, Veena Jayadeva, and Richard Rosenberg.
+“Household Financial Assets in the Process of Development.” Policy Research Working Paper 3965, World Bank, Washington DC.
+Christen, Robert Peck, Veena Jayadeva, and Richard Rosenberg.
 2004.
-“Financial Institutions with a Double Bottom Line: Implications for the Future of Microfi nance.” CGAP Occasional Paper 8, Consultative Group to Assist the Poorest, Washington DC.Beck, Thorsten, Aslı Demirgüç-Kunt, and Maria Soledad Martinez Peria.
+“Financial Institutions with a Double Bottom Line: Implications for the Future of Microfi nance.” CGAP Occasional Paper 8, Consultative Group to Assist the Poorest, Washington DC.
+
+Beck, Thorsten, Aslı Demirgüç-Kunt, and Maria Soledad Martinez Peria.
 2007.
-“Reaching Out: Access to and Use of Banking Services across Countries.” Journal of Financial Economics 85 (1): 234–66.Peachey, Stephen, and Alan Roe.
+“Reaching Out: Access to and Use of Banking Services across Countries.” Journal of Financial Economics 85 (1): 234–66.
+
+Peachey, Stephen, and Alan Roe.
 2006.
 “Access to Finance: Measuring the Contribution of Savings Banks.” World Savings Banks Institute, Brussels, Belgium.
 """
@@ -239,11 +263,18 @@ This dataset is produced using ‘A3.
 Eng.
 Agriculture 1270-1870’ sheet of the BoE dataset.
 To maintain consistency, all measurements are converted into either hectares or tonnes.
-We use the following sources to convert units:1 Acre = 0.404686 hectareBushels to tonne (for grain): Agriculture statistics, Govt.
+We use the following sources to convert units:
+
+1 Acre = 0.404686 hectare
+Bushels to tonne (for grain): Agriculture statistics, Govt.
 of Canada.
-Available at https://www.gov.mb.ca/agriculture/market-prices-and-statistics/yearbook-and-state-of-agriculture/pubs/crop_conversion_factors.pdfBushels to tonne (for potatoes): Potato weights & volumes, Northern Plains Potato Growers Association, Minnesota, USA.
-Available at http://nppga.org/crop_science/measurements.php1 UK gallon = 0.004546 tonnes.
-Available at http://convert-to.com/conversion/water-weight-volume/convert-metric-tonne-t-water-weight-to-uk-gal-of-water-volume.html1 UK ton = 1.01605 tonne1 Pound = 0.000454 tonne
+Available at https://www.gov.mb.ca/agriculture/market-prices-and-statistics/yearbook-and-state-of-agriculture/pubs/crop_conversion_factors.pdf
+Bushels to tonne (for potatoes): Potato weights & volumes, Northern Plains Potato Growers Association, Minnesota, USA.
+Available at http://nppga.org/crop_science/measurements.php
+1 UK gallon = 0.004546 tonnes.
+Available at http://convert-to.com/conversion/water-weight-volume/convert-metric-tonne-t-water-weight-to-uk-gal-of-water-volume.html
+1 UK ton = 1.01605 tonne
+1 Pound = 0.000454 tonne
 """
 type AgricultureInEngland12701870BankOfEngland2017Dataset {
  total_arable_and_sown_acreage: Float
@@ -298,9 +329,6 @@ Raw data and extension of this set to 2016 was generously supplied through perso
 type AirPollutionByCityFouquetAndDpcc2011Dataset {
  smoke_fouquet_and_dpcc_2011: Float
  suspended_particulate_matter_spm_fouquet_and_dpcc_2011: Float
-}
-
-type AirPollutionDeathRateWorldIhmeDataset {
 }
 
 """
@@ -426,7 +454,15 @@ type AntibioticUseInLivestockEuropeanCommissionAndVanBoeckelEtAlDataset {
 
 """
 Boeker et al.
-(2017) project global antibiotic use under business-as-usual antibiotic concentrations and projected meat consumption.The authors also project a number of potential reduction scenarios:- a global limit of 50 milligrams of antibiotic use per kilogram of meat production.- a limit of 50 milligrams of antibiotic use per kilogram of meat production for OECD countries & China.- global per capita meat consumption of 40 grams per day (the equivalent of an average burger patty)- global per capita meat consumption of 165 grams per day (the projected EU average in 2030)Projected global antibiotic use for livestock are shown for each of these potential reduction scenarios.
+(2017) project global antibiotic use under business-as-usual antibiotic concentrations and projected meat consumption.
+
+The authors also project a number of potential reduction scenarios:
+- a global limit of 50 milligrams of antibiotic use per kilogram of meat production.
+- a limit of 50 milligrams of antibiotic use per kilogram of meat production for OECD countries & China.
+- global per capita meat consumption of 40 grams per day (the equivalent of an average burger patty)
+- global per capita meat consumption of 165 grams per day (the projected EU average in 2030)
+
+Projected global antibiotic use for livestock are shown for each of these potential reduction scenarios.
 """
 type AntibioticUseInLivestock2030BoeckelEtAl2017Dataset {
  global_antibiotic_use: Float
@@ -732,7 +768,9 @@ type BooksBuringhAndVanZanden2009Dataset {
 
 """
 The share of people of living in poverty and extreme poverty is taken from Bourguignon and Morrison (2002), and ‘the poverty lines were calibrated so that poverty and extreme poverty headcounts in 1992 coincided roughly with estimates from other sources’.
-And in footnote they say ‘these definitions correspond to poverty lines equal to consumption per capita of $2 and $1 a day, expressed in 1985 PPP.’To this I added the share of people living living below the international poverty line which, since the revision in 2015, is $1.90 at 2011 purchasing-power parity (PPP).
+And in footnote they say ‘these definitions correspond to poverty lines equal to consumption per capita of $2 and $1 a day, expressed in 1985 PPP.’
+
+To this I added the share of people living living below the international poverty line which, since the revision in 2015, is $1.90 at 2011 purchasing-power parity (PPP).
 The revisions in the definition of the poverty line and the PPP adjustment make the poverty figures in levels not comparable to earlier data – to illustrate this I have plotted both series for the time from 1981 to 1992.
 The World Bank data was downloaded in October 2015.
 """
@@ -778,7 +816,9 @@ type Co2FootprintBreakdownPerCapitaGoodall2011Dataset {
 }
 
 """
-Figures represent the carbon dioxide emission factors as used in offical greenhouse gas reporting methodologies, defined by the Intergovernmental Panel on Climate Change (IPCC).Data has been converted from kilograms per terajoule to kilograms per MWh (kg/MWh) using a conversion factor of 277.778.
+Figures represent the carbon dioxide emission factors as used in offical greenhouse gas reporting methodologies, defined by the Intergovernmental Panel on Climate Change (IPCC).
+
+Data has been converted from kilograms per terajoule to kilograms per MWh (kg/MWh) using a conversion factor of 277.778.
 """
 type Co2EmissionFactorsIpcc2006Dataset {
  co2_emissions_factor_ipcc_2006: Float
@@ -873,17 +913,18 @@ type Co2EmissionsInTradeAsPercProductionGlobalCarbonProject2014Dataset {
  co2_traded_as_percentage_of_domestic_emissions_production_global_carbon_project_2014: Float
 }
 
-type Co2EmissionsPerCapitaCdiacDataset {
-}
-
 """
-CDIAC data originally sourced from:T.A.
+CDIAC data originally sourced from:
+
+T.A.
 Boden, G.
 Marland, and R.J.
 Andres.
 2017.
 Global, Regional, and National Fossil-Fuel CO2 Emissions.
-Available at: doi:10.3334/CDIAC/00001_V2010Data originally reported in units of carbon.
+Available at: doi:10.3334/CDIAC/00001_V2010
+
+Data originally reported in units of carbon.
 This has been converted to units of CO2 using a conversion factor of 3.67.
 """
 type Co2FromCementCdiac2017Dataset {
@@ -891,13 +932,17 @@ type Co2FromCementCdiac2017Dataset {
 }
 
 """
-CDIAC data originally sourced from:T.A.
+CDIAC data originally sourced from:
+
+T.A.
 Boden, G.
 Marland, and R.J.
 Andres.
 2017.
 Global, Regional, and National Fossil-Fuel CO2 Emissions.
-Available at: doi:10.3334/CDIAC/00001_V2010Data originally reported in units of carbon.
+Available at: doi:10.3334/CDIAC/00001_V2010
+
+Data originally reported in units of carbon.
 This has been converted to units of CO2 using a conversion factor of 3.67.
 """
 type Co2FromFlaringCdiac2017Dataset {
@@ -905,13 +950,17 @@ type Co2FromFlaringCdiac2017Dataset {
 }
 
 """
-CDIAC data originally sourced from:T.A.
+CDIAC data originally sourced from:
+
+T.A.
 Boden, G.
 Marland, and R.J.
 Andres.
 2017.
 Global, Regional, and National Fossil-Fuel CO2 Emissions.
-Available at: doi:10.3334/CDIAC/00001_V2010Data originally reported in units of carbon.
+Available at: doi:10.3334/CDIAC/00001_V2010
+
+Data originally reported in units of carbon.
 This has been converted to units of CO2 using a conversion factor of 3.67.
 """
 type Co2FromGasCdiac2017Dataset {
@@ -919,13 +968,17 @@ type Co2FromGasCdiac2017Dataset {
 }
 
 """
-CDIAC data originally sourced from:T.A.
+CDIAC data originally sourced from:
+
+T.A.
 Boden, G.
 Marland, and R.J.
 Andres.
 2017.
 Global, Regional, and National Fossil-Fuel CO2 Emissions.
-Available at: doi:10.3334/CDIAC/00001_V2010Data originally reported in units of carbon.
+Available at: doi:10.3334/CDIAC/00001_V2010
+
+Data originally reported in units of carbon.
 This has been converted to units of CO2 using a conversion factor of 3.67.
 """
 type Co2FromLiquidCdiac2017Dataset {
@@ -933,13 +986,17 @@ type Co2FromLiquidCdiac2017Dataset {
 }
 
 """
-CDIAC data originally sourced from:T.A.
+CDIAC data originally sourced from:
+
+T.A.
 Boden, G.
 Marland, and R.J.
 Andres.
 2017.
 Global, Regional, and National Fossil-Fuel CO2 Emissions.
-Available at: doi:10.3334/CDIAC/00001_V2010Data originally reported in units of carbon.
+Available at: doi:10.3334/CDIAC/00001_V2010
+
+Data originally reported in units of carbon.
 This has been converted to units of CO2 using a conversion factor of 3.67.
 """
 type Co2FromSolidFuelCdiac2017Dataset {
@@ -950,9 +1007,6 @@ type Co2IntensityOfTransportByModeUkBeisDataset {
  ghg_emissions_gco2ekm: Float
  co2_emissions_gco2km: Float
  non_co2_emissions_gco2ekm: Float
-}
-
-type Co2IntensityKgco22011MoneyPppWorldBankDataset {
 }
 
 """
@@ -980,10 +1034,14 @@ type Co2MitigationCurvesFor2cAndrewsAndGcp2019Dataset {
 """
 Emissions data have been converted from units of carbon to carbon dioxide (CO2) using a conversion factor of 3.67.
 Regions denoted "other" are given as regional totals minus emissions from the EU-28, USA, China and India.
-Here, we have rephrased the general term "bunker (fuels)" as "international aviation and maritime transport" for clarity.CDIAC denote a "statistical difference" component which has been included in this data.
+Here, we have rephrased the general term "bunker (fuels)" as "international aviation and maritime transport" for clarity.
+
+CDIAC denote a "statistical difference" component which has been included in this data.
 This statistical difference represents the difference between estimated global CO2 emissions and the sum of national totals.
 Estimates of CO2 emissions show that the global total of emissions is not equal to the sum of emissions from all countries.
-This is introduced in several cases: emissions within international territories, which are included in global totals but not attributed to individual countries; inconsistent national reporting where global import and export data is imbalanced; and differing treatment of non-fuel uses of hydrocarbons.Full methodology on global, regional, national and statistical difference estimations can be found in Le Quere et al.
+This is introduced in several cases: emissions within international territories, which are included in global totals but not attributed to individual countries; inconsistent national reporting where global import and export data is imbalanced; and differing treatment of non-fuel uses of hydrocarbons.
+
+Full methodology on global, regional, national and statistical difference estimations can be found in Le Quere et al.
 (2016): Le Quéré, C., Andrew, R.
 M., Canadell, J.
 G., Sitch, S., Korsbakken, J.
@@ -1189,7 +1247,9 @@ type CancerDeathRatesInTheUsOverTheLongTermAmericanCancerSocietyDataset {
 
 """
 Total annual number of deaths from cancers (termed 'Neoplasms' within the IHME, Global Burden of Disease Study).
-This measures cancer deaths across both sexes and all ages.Smaller categories of cancer types have been grouped by Our World in Data into a collective category 'Other cancers'.
+This measures cancer deaths across both sexes and all ages.
+
+Smaller categories of cancer types have been grouped by Our World in Data into a collective category 'Other cancers'.
 This grouping was set based on cancer types with global annual deaths in 2016 under 100,000.
 This includes testicular, Hodgkin lymphoma, mesothelioma, thyroid, non-melanoma skin cancer, nasopharynx, malignant skin melanoma, uterine cancer, and multiple myeloma.
 """
@@ -1225,8 +1285,12 @@ type CapitalCityPopulationUnUrbanizationProspects2018Dataset {
 
 """
 Carbon intensity was calculated by dividing total national CO2 emissions by gross domestic product (2011 int-$ PPP) for a given year.
-These figures are presented in kgCO2 per international-$ PPP.Annual CO2 emissions data was derived from the Carbon Dioxide Information Analysis Center (CDIAC): http://cdiac.ornl.gov/CO2_Emission/ (accessed on 20th April 2017).
-CDIAC generates estimates of CO2 emissions from fossil-fuel consumption and cement production at global and national levels, dating historically to 1751.GDP figures are presented in 2011 international-$ PPP based on backward extension of World Bank and Maddison datasets.
+These figures are presented in kgCO2 per international-$ PPP.
+
+Annual CO2 emissions data was derived from the Carbon Dioxide Information Analysis Center (CDIAC): http://cdiac.ornl.gov/CO2_Emission/ (accessed on 20th April 2017).
+CDIAC generates estimates of CO2 emissions from fossil-fuel consumption and cement production at global and national levels, dating historically to 1751.
+
+GDP figures are presented in 2011 international-$ PPP based on backward extension of World Bank and Maddison datasets.
 The data presented here from 1990 onwards is from the World Bank.
 It is total global and national GDP in 2011 international-$ as published here: http://data.worldbank.org/indicator/NY.GDP.MKTP.PP.KD (accessed on 20th April 2017).
 Data earlier than 1990 is backwards extended from the World Bank observation for 1990 based on the growth rates implied by Maddison data.
@@ -1237,7 +1301,11 @@ type CarbonIntensityKgco2moneyMadissonWorldBankCdiacDataset {
 }
 
 """
-Estimates refer to both sexes and to the global level.All causes for which IHME published an estimate of 0 were removed from the dataset.Ebola as a cause of death was only included in 2015 by IHME.
+Estimates refer to both sexes and to the global level.
+
+All causes for which IHME published an estimate of 0 were removed from the dataset.
+
+Ebola as a cause of death was only included in 2015 by IHME.
 We have assumed 0 deaths for Ebola in 1990.
 """
 type CausesOfChildMortalityIhmeGlobalBurdenOfDiseaseStudy2017Dataset {
@@ -1318,9 +1386,41 @@ type ChangeInGlobalHungerIndex19922017Listed2017GlobalHungerIndex2017Dataset {
 }
 
 """
-Please note that for some countries the Chartbook includes additional time series for economic inequality.The purpose of the Chartbook is to present consistent time-series for each country over time.
+Please note that for some countries the Chartbook includes additional time series for economic inequality.
+
+The purpose of the Chartbook is to present consistent time-series for each country over time.
 Unfortunately there are important cases in which the comparability between countries is limited.
-The table below lists the definition of the Gini time series for each country and differences in definitions should be taken into account when making cross-country comparisons.The addition of series x behind the definition indicates that there are several Gini time-series available for this country in the Chartbook and they can be found at the country page there. Argentina Gini coefficient, household equivalised incomeAustralia Gini coefficient equivalised disposable household income (*)Brazil Gini coefficient, household equivalised incomeCanada Gini coefficient equivalised disposable household income (*) series 3Finland Gini coefficient, equivalised disposable household income (*), series 1France Gini coefficient, equivalised household disposable income (*)Germany Gini coefficient, equivalised household disposable income, (*)Iceland Gini coefficient, equiv dispos household income (*)India Gini coefficient equivalent disposable income, series 2 (*)Indonesia Gini coefficient, household expenditure dataItaly Gini coefficient, per capita income Japan Gini coefficient,  equiv dispos household income, series 3 (*)Malaysia Gini household income, series 2Mauritius Gini coefficient, disposable household incomeNetherlands Gini coefficient, equivalised disposable household income (*)New Zealand Gini coefficient, equivalised disposable household income (*) series 1Norway Gini coefficient, equivalised disposable household income (*), series 2Portugal Gini coefficient, equivalised disposable household income, series 3 (*)Singapore Gini coefficient among employed households (modified OECD equiv scale), income from work after government benefits and taxes, series 3South Africa Gini coefficient, per capita incomeSpain Gini coefficient, equivalised disposable household income, series 2 (*)Sweden Gini coefficient, equivalised household disposable income (*)Switzerland Gini coefficient, equivalised household disposable income (*), EU-SILC Series 3UK Gini coefficient, equivalised household disposable income (*)US Gini coefficient, equivalised household gross income
+The table below lists the definition of the Gini time series for each country and differences in definitions should be taken into account when making cross-country comparisons.
+
+The addition of series x behind the definition indicates that there are several Gini time-series available for this country in the Chartbook and they can be found at the country page there.
+
+ 
+
+Argentina Gini coefficient, household equivalised income
+Australia Gini coefficient equivalised disposable household income (*)
+Brazil Gini coefficient, household equivalised income
+Canada Gini coefficient equivalised disposable household income (*) series 3
+Finland Gini coefficient, equivalised disposable household income (*), series 1
+France Gini coefficient, equivalised household disposable income (*)
+Germany Gini coefficient, equivalised household disposable income, (*)
+Iceland Gini coefficient, equiv dispos household income (*)
+India Gini coefficient equivalent disposable income, series 2 (*)
+Indonesia Gini coefficient, household expenditure data
+Italy Gini coefficient, per capita income 
+Japan Gini coefficient,  equiv dispos household income, series 3 (*)
+Malaysia Gini household income, series 2
+Mauritius Gini coefficient, disposable household income
+Netherlands Gini coefficient, equivalised disposable household income (*)
+New Zealand Gini coefficient, equivalised disposable household income (*) series 1
+Norway Gini coefficient, equivalised disposable household income (*), series 2
+Portugal Gini coefficient, equivalised disposable household income, series 3 (*)
+Singapore Gini coefficient among employed households (modified OECD equiv scale), income from work after government benefits and taxes, series 3
+South Africa Gini coefficient, per capita income
+Spain Gini coefficient, equivalised disposable household income, series 2 (*)
+Sweden Gini coefficient, equivalised household disposable income (*)
+Switzerland Gini coefficient, equivalised household disposable income (*), EU-SILC Series 3
+UK Gini coefficient, equivalised household disposable income (*)
+US Gini coefficient, equivalised household gross income
 """
 type ChartbookOfEconomicInequalityGini2016Dataset {
  gini_chartbook_of_economic_inequality_2016: Float
@@ -1376,8 +1476,13 @@ type ChildLaborInUsLong1958Dataset {
 }
 
 """
-	– The source notes that in some instances observations differ from the standard definition or refer to only part of a country.
-– The dates associated to each observation correspond to the end of the survey used as underlying source
+	
+– The source notes that in some instances observations differ from the standard definition or refer to only part of a country.
+
+
+– The dates associated to each observation correspond to the end of the survey used as underlying source
+
+
 """
 type ChildMarriageUnicef2017Dataset {
  percentage_of_women_20_24_who_were_first_married_before_18_unicef_global_databases_2016: Float
@@ -1385,7 +1490,8 @@ type ChildMarriageUnicef2017Dataset {
 
 """
 The UN Inter-agency Group for Child Mortality Estimation (IGME).
-The IGME, led by the United Nations Children's Fund (UNICEF) and the World Health Organization (WHO), also includes the World Bank and the United Nations Population Division of the Department of Economic and Social Affairs as full members.
+
+The IGME, led by the United Nations Children's Fund (UNICEF) and the World Health Organization (WHO), also includes the World Bank and the United Nations Population Division of the Department of Economic and Social Affairs as full members.
 """
 type ChildMortalityEstimatesCmeInfo2018Dataset {
  child_mortality_estimates_cme_info_2016: Float
@@ -1435,7 +1541,9 @@ type ChildDeathsByLifeStageOwidBasedOnUnIgmeDataset {
 
 """
 – The original data is presented in 1,000s live births.
-Here it was multiplied by 1,000 for this reason.– Importantly data refer to 5 year intervals around the indicated year.
+Here it was multiplied by 1,000 for this reason.
+
+– Importantly data refer to 5 year intervals around the indicated year.
 E.g.
 1952 refers to 1950-1954 in the original dataset.
 Here the value for the 5 year interval is divided by 5 and attributed to the mid-year of the interval.
@@ -1464,8 +1572,12 @@ type ChildMortalityDataIhme2017Dataset {
 }
 
 """
-This is Version 8 of the data set uploaded by Gapminder on 2015 October 18  The World series for 1800 to 1960 was calculated by Max Roser on the basis of the Gapminder estimates of child mortality and the Gapminder series on population by country.
-For each estimate in that period a population weighted global average was calculated.The recent annual observations of the World series (1960 and later) is taken from the World Bank (http://data.worldbank.org/indicator/SH.DYN.MORT).
+This is Version 8 of the data set uploaded by Gapminder on 2015 October 18
+ 
+ 
+The World series for 1800 to 1960 was calculated by Max Roser on the basis of the Gapminder estimates of child mortality and the Gapminder series on population by country.
+For each estimate in that period a population weighted global average was calculated.
+The recent annual observations of the World series (1960 and later) is taken from the World Bank (http://data.worldbank.org/indicator/SH.DYN.MORT).
 """
 type ChildMortalityEstimatesGapminder2015Dataset {
  child_mortality_estimates_gapminder_2015: Float
@@ -1509,7 +1621,9 @@ type ChildrenThatSurvivedPast5YearsOfAgePerWomanGapminder2017Dataset {
 }
 
 """
-Definitions: Our definition of poverty is defined using World Bank's poverty headcount.
+Definitions: 
+
+Our definition of poverty is defined using World Bank's poverty headcount.
 People are considered poor if they live with less than 1.90$ per day (2011 int $ PPP).
 For more information on how the OurWorldInData team defines poverty following the World Bank's definitions see our entry on "Global Extreme Poverty".
 """
@@ -1790,7 +1904,9 @@ type CrudeBirthAndDeathRatesPer1000EnglandAndWales15412015WrigleyAndSchofieldMit
 
 """
 Oil consumption data is based on reported global consumption measured in barrels daily.
-This includes crude oil, shale oil, oil sands and Natural Gas Liquids (the gas component of which is treated separately and not included).Oil prices are based on average crude oil prices as the Arabian Light series from 1965-1983 and Brent dated series from 1984-2015.
+This includes crude oil, shale oil, oil sands and Natural Gas Liquids (the gas component of which is treated separately and not included).
+
+Oil prices are based on average crude oil prices as the Arabian Light series from 1965-1983 and Brent dated series from 1984-2015.
 This is reported in 2015 US$ per barrel (deflated by BP Energy Review using the Consumer Price Index for the US).
 """
 type CrudeOilConsumptionVsPriceBpStatistics2016Dataset {
@@ -1973,14 +2089,28 @@ type DeathsByWorldRegionWho2016Dataset {
 }
 
 """
-Estimates of the total number of deaths from the Chernobyl nuclear incidents remain contested: we have therefore included a series of published estimates to cover the range of considered values.WHO (2005a) refers to the number of deaths (up to 4000) estimated in the populations with highest exposure to radioactive fallout from the incident.
-WHO (2005b) add this to further estimates by the WHO [not included in its report] on the potential death toll in individuals beyond proximate areas.Fairlie & Sumner (a) and (b) are represent their published lower and upper estimates, respectively.References:IAEA, WHO (2005/06).
+Estimates of the total number of deaths from the Chernobyl nuclear incidents remain contested: we have therefore included a series of published estimates to cover the range of considered values.
+
+WHO (2005a) refers to the number of deaths (up to 4000) estimated in the populations with highest exposure to radioactive fallout from the incident.
+WHO (2005b) add this to further estimates by the WHO [not included in its report] on the potential death toll in individuals beyond proximate areas.
+
+Fairlie & Sumner (a) and (b) are represent their published lower and upper estimates, respectively.
+
+References:
+
+IAEA, WHO (2005/06).
 Chernobyl’s Legacy: Health, Environmental and Socio-Economic Impacts.
-Press release available at: http://www.who.int/mediacentre/news/releases/2005/pr38/en/Special Report: Counting the dead.
-Nature 440, 982-983 (20 April 2006) | doi:10.1038/440982a.Cardis et al.
+Press release available at: http://www.who.int/mediacentre/news/releases/2005/pr38/en/
+
+Special Report: Counting the dead.
+Nature 440, 982-983 (20 April 2006) | doi:10.1038/440982a.
+
+Cardis et al.
 (2006).
 Estimates of the cancer burden in Europe from radioactive fallout from the Chernobyl accident.
-International Journal of Cancer.Fairlie and Sumner (2006).
+International Journal of Cancer.
+
+Fairlie and Sumner (2006).
 An independent scientific evaluation of health and environmental effects 20 years after the nuclear disaster providing critical analysis of a recent report by the International Atomic Energy Agency (IAEA) and the World Health Organisation (WHO).
 Available at: http://www.chernobylreport.org/?p=summary
 """
@@ -2073,9 +2203,6 @@ They define an accident as: "an unintentional incident or event at an energy fac
 """
 type DeathsPerTwhFromLowCarbonEnergySovacoolEtAl2016Dataset {
  deaths_per_twh_sovacool_et_al: Float
-}
-
-type DecompositionOfGenderWageGapBlauKahn2017Dataset {
 }
 
 """
@@ -2262,12 +2389,24 @@ type DifferenceInTheValueOfGoodsExportedToAndImportedByTheUsFor2016Dots2017Datas
 }
 
 """
-This dataset was calculated by OWID based on population estimates from the UN Population Division (2017) and US Census Bureau.Absolute differences measure the absolute difference in regional and global population estimates from the UN Population Division and US Census Bureau.
-Figures were calculated as the annual total population estimate from the UN Population Division (2017) minus population estimates from the US Census Bureau.Relative differences measure this difference in estimates as a percentage of UN figures (i.e.
-(UN population - US Census Bureau population) / UN population).Negative figures therefore represent lower UN estimates vs.
-US Census Bureau estimates, and vice versa (positive values indicate higher UN estimates).References:United Nations, Department of Economic and Social Affairs, Population Division (2017).
+This dataset was calculated by OWID based on population estimates from the UN Population Division (2017) and US Census Bureau.
+
+Absolute differences measure the absolute difference in regional and global population estimates from the UN Population Division and US Census Bureau.
+Figures were calculated as the annual total population estimate from the UN Population Division (2017) minus population estimates from the US Census Bureau.
+
+Relative differences measure this difference in estimates as a percentage of UN figures (i.e.
+(UN population - US Census Bureau population) / UN population).
+
+Negative figures therefore represent lower UN estimates vs.
+US Census Bureau estimates, and vice versa (positive values indicate higher UN estimates).
+
+References:
+
+United Nations, Department of Economic and Social Affairs, Population Division (2017).
 World Population Prospects: The 2017 Revision, DVD Edition.
-Available at: https://esa.un.org/unpd/wpp/Download/Standard/Population/ [accessed 2nd October 2017].United States Census Bureau International Database (IDB).
+Available at: https://esa.un.org/unpd/wpp/Download/Standard/Population/ [accessed 2nd October 2017].
+
+United States Census Bureau International Database (IDB).
 Available at: https://www.census.gov/population/international/data/idb/informationGateway.php [accessed 2nd October 2017].
 """
 type DifferencesInPopulationEstimatesOwidBasedOnUnVsUsCensusBureauDataset {
@@ -2345,18 +2484,36 @@ type DurationOfMarriagesEndingInDivorceOwidBasedOnNationalStatisticsDataset {
 }
 
 """
-The Economic Complexity Index takes data on exports, and reduces a country’s economic system into two dimensions: (i) The number or ‘diversification’ of products in the export basket, and (ii) the quality, or ‘ubiquity’ of products in the export basket.To measure these two dimensions, the ECI uses a cross-country export matrix.
-That is, a table with countries in the rows and product categories in the columns, so that each cell in the table shows the value of country-product exports.From this matrix, ‘diversification’ is obtained from the distribution of country exports across products (i.e.
+The Economic Complexity Index takes data on exports, and reduces a country’s economic system into two dimensions: (i) The number or ‘diversification’ of products in the export basket, and (ii) the quality, or ‘ubiquity’ of products in the export basket.
+
+To measure these two dimensions, the ECI uses a cross-country export matrix.
+That is, a table with countries in the rows and product categories in the columns, so that each cell in the table shows the value of country-product exports.
+
+From this matrix, ‘diversification’ is obtained from the distribution of country exports across products (i.e.
 the sum across columns for each row); while ‘ubiquity’  is given by the share of product exports contributed by each country (i.e.
-the sum across rows for each column).To condense both dimensions into a single metric, the ECI further reduces the information in the matrix, such that countries with similar exports are close together in the ranking.
-Loosely speaking, lower ECI scores correspond to countries that export very few different types of products (i.e.
+the sum across rows for each column).
+
+To condense both dimensions into a single metric, the ECI further reduces the information in the matrix, such that countries with similar exports are close together in the ranking.
+
+
+Loosely speaking, lower ECI scores correspond to countries that export very few different types of products (i.e.
 export baskets that are not diversified) and those products that they do export are produced in many other countries (i.e.
 export baskets that load heavily on just a few ubiquitous products).
-By this logic, Germany has a high ECI score because it exports many different kinds of sophisticated things that are only produced by a handful of other countries with similarly diversified productive capacities.
-The following visualization shows ECI rankings for all countries in the world.
-Link: https://ourworldindata.org/grapher/economic-complexity-rankingsAs we can see, there is a clear pattern – richer countries tend to have similar economic structures, and these structures allow them to produce and export a varied basket of sophisticated products.But what about countries endowed with rare natural resources, like petroleum, which would make a country’s export basket less ubiquitous, and hence misleadingly be assigned a more favourable ECI ranking? If a country exporting petroleum can only produce a few other products, then the low ubiquity for their export basket can be explained by these natural resources, and the ECI ranking is corrected by the country’s inability to produce different types of products.
+
+
+By this logic, Germany has a high ECI score because it exports many different kinds of sophisticated things that are only produced by a handful of other countries with similarly diversified productive capacities.
+
+
+The following visualization shows ECI rankings for all countries in the world.
+Link: https://ourworldindata.org/grapher/economic-complexity-rankings
+
+As we can see, there is a clear pattern – richer countries tend to have similar economic structures, and these structures allow them to produce and export a varied basket of sophisticated products.
+
+But what about countries endowed with rare natural resources, like petroleum, which would make a country’s export basket less ubiquitous, and hence misleadingly be assigned a more favourable ECI ranking? If a country exporting petroleum can only produce a few other products, then the low ubiquity for their export basket can be explained by these natural resources, and the ECI ranking is corrected by the country’s inability to produce different types of products.
 However, if this country can also produce a diverse range of other goods, then low ubiquity correctly indicates greater economic complexity which is reflected in the ranking.
-Hence, information on diversity can correct for the information of ubiquity, and vice versa.The data here comes from the Economic Complexity Index scores published by the MIT Observatory of Economic Complexity.
+Hence, information on diversity can correct for the information of ubiquity, and vice versa.
+
+The data here comes from the Economic Complexity Index scores published by the MIT Observatory of Economic Complexity.
 These are different to those published by the Harvard Atlas of Economic Complexity.
 As far as we are aware, the discrepancies stem from differences in the way each sources clean the underlying cross-country trade data.
 You can explore differences between these two data sources here: https://ourworldindata.org/grapher/eci-country-rankings-comparison?country=KOR.
@@ -2471,9 +2628,13 @@ and Woessmann, L.
 (2012) – Do better school lead to more growth? Cognitive skills, economic outcomes, and causation.
 In Journal of Economic Growth, 17, 267–321.
 The paper is available on Eric Hanushek's website and at the journal's site.
-The authors standardized the scores to the PISA test scale but divided the score then by 100.
+
+
+The authors standardized the scores to the PISA test scale but divided the score then by 100.
 The PISA test scale has a mean of 500 and a standard deviation of 100.
-The test scores are not given for a particular year, but instead are the average of all standardized math and science test scores of the international student achievement tests in which that country participated.
+
+
+The test scores are not given for a particular year, but instead are the average of all standardized math and science test scores of the international student achievement tests in which that country participated.
 The first of which is from 1964 and the last is from 2003 – but in general most results come from the later period.
 """
 type EducationalOutcomesHanushekAndWoessmann2012Dataset {
@@ -2739,7 +2900,9 @@ type EndemicVertebrateSpeciesByCountryIucn2020Dataset {
 }
 
 """
-Prices corrected to 2015 US$ using the Consumer Price Index for the USPrices have been normalised to a commodity-specific index by the author where prices in 2000=100
+Prices corrected to 2015 US$ using the Consumer Price Index for the US
+
+Prices have been normalised to a commodity-specific index by the author where prices in 2000=100
 """
 type EnergyPricesBpStatistics2016Dataset {
  oil_bp_statistics_2016: Float
@@ -3190,15 +3353,38 @@ type ExcessMortalityDataOwid2022Dataset {
 }
 
 """
-	Amnesty Interntional note: "AmnestyInternational reports only on executions, death sentences and other aspects of the use ofthe death penalty, such as commutations and exonerations, where there is reasonableconfirmation.In many countries governments do not publish information on their use of thedeath penalty.
-In Belarus, China and Viet Nam, data on the use of the death penalty isclassified as a state secret.
-During 2016 little or no information was available on somecountries – in particular Laos, North Korea (the Democratic People’s Republic of Korea),Syria and Yemen – due to restrictive state practice and/or armed conflict.Therefore, with only a few exceptions, Amnesty International’s figures on the use of the deathpenalty are minimum figures.The true figures are likely to be higher.
-Where the organizationobtains fuller information on a specific country in a given year this is noted in Amnesty International's report.In 2009 Amnesty International stopped publishing its estimated figures on the use of thedeath penalty in China.
-Amnesty International always made clear that the figures it was ableto publish on China were significantly lower than the reality, because of the restrictions onaccess to information.
-Amnesty International’s decision to stop publishing data reflectedconcerns about how the Chinese authorities misrepresented Amnesty International’snumbers.
-Since 2009 the organization challenged China to publish information on the use ofthe death penalty.
+	Amnesty Interntional note: 
+"Amnesty
+International reports only on executions, death sentences and other aspects of the use of
+the death penalty, such as commutations and exonerations, where there is reasonable
+confirmation.
+In many countries governments do not publish information on their use of the
+death penalty.
+In Belarus, China and Viet Nam, data on the use of the death penalty is
+classified as a state secret.
+During 2016 little or no information was available on some
+countries – in particular Laos, North Korea (the Democratic People’s Republic of Korea),
+Syria and Yemen – due to restrictive state practice and/or armed conflict.
+Therefore, with only a few exceptions, Amnesty International’s figures on the use of the death
+penalty are minimum figures.
+The true figures are likely to be higher.
+Where the organization
+obtains fuller information on a specific country in a given year this is noted in Amnesty International's report.
+In 2009 Amnesty International stopped publishing its estimated figures on the use of the
+death penalty in China.
+Amnesty International always made clear that the figures it was able
+to publish on China were significantly lower than the reality, because of the restrictions on
+access to information.
+Amnesty International’s decision to stop publishing data reflected
+concerns about how the Chinese authorities misrepresented Amnesty International’s
+numbers.
+Since 2009 the organization challenged China to publish information on the use of
+the death penalty.
 China has yet to publish any figures on the death penalty.
-However,available information indicates that thousands of people are executed and sentenced to deathin China each year." 
+However,
+available information indicates that thousands of people are executed and sentenced to death
+in China each year." 
+
 """
 type ExecutionsByCountryAmnestyInternationalDataset {
  number_of_executions_amnesty_international: Float
@@ -3220,7 +3406,9 @@ type ExperienceCurvesLafond2017Dataset {
 The increase in life expectancy in 1955 was calculated as follows: Life expectancy in 1955 minus life expectancy in 1950 provides the total increase in life expectancy across this five year interval (x).
 The increase in life expectancy in hours per day is given by x multiplied by 365 divided by 5x365.
 This total is then multiplied by 24.
-The increase in life expectancy in months per year is given by x divided by 5, multiplied by 12.The increase in life expectancy between 1950-2015 has been calculated as follows: Life expectancy in 2015 minus life expectancy in 1950 provides the total increase in years over the 65 year interval (y).
+The increase in life expectancy in months per year is given by x divided by 5, multiplied by 12.
+
+The increase in life expectancy between 1950-2015 has been calculated as follows: Life expectancy in 2015 minus life expectancy in 1950 provides the total increase in years over the 65 year interval (y).
 The increase in life expectancy in hours per day is given by y multiplied by 365 divided by 65x365.
 This total is then multiplied by 24.
 
@@ -3366,11 +3554,10 @@ type FamilyBenefitsPublicSpendingOecd2016Dataset {
  family_benefits_public_spending_perc_gdp_oecd_2016: Float
 }
 
-type FamilyBenefitsSpendingOecd2016Dataset {
-}
-
 """
-Data on fatal accidents, hijacking incidents and numbers of fatalities are based on airliners of 14+ passengers, and do not include corporate jet and military transport accidents.Air traffic figures are based on the number of airliner flight departures (not the number of passengers) per year.
+Data on fatal accidents, hijacking incidents and numbers of fatalities are based on airliners of 14+ passengers, and do not include corporate jet and military transport accidents.
+
+Air traffic figures are based on the number of airliner flight departures (not the number of passengers) per year.
 """
 type FatalAviationAccidentsAndFataltiesAviationSafetyNetworkAsnDataset {
  fatal_accidents_from_commercial_and_non_commercial_airliners_asn: Float
@@ -3746,8 +3933,14 @@ type ForestryAreaFao2017Dataset {
 }
 
 """
-Per capita trends in fossil fuel consumption were calculated by OWID based on population data from the UN Population Division, and national fossil fuel data - coal, oil, and natural gas - from BP's Statistical Review of Global Energy.Per capita consumption was calculated by dividing total population in any given year by a country or region's coal, oil or gas consumption.Population data was sourced from the UN Population Division (2017 Revision).
-Available at: https://esa.un.org/unpd/wpp/DataQuery/ [accessed 17th October 2017].Fossil fuel consumption data was sourced from the BP's Statistical Review of Global Energy.
+Per capita trends in fossil fuel consumption were calculated by OWID based on population data from the UN Population Division, and national fossil fuel data - coal, oil, and natural gas - from BP's Statistical Review of Global Energy.
+
+Per capita consumption was calculated by dividing total population in any given year by a country or region's coal, oil or gas consumption.
+
+Population data was sourced from the UN Population Division (2017 Revision).
+Available at: https://esa.un.org/unpd/wpp/DataQuery/ [accessed 17th October 2017].
+
+Fossil fuel consumption data was sourced from the BP's Statistical Review of Global Energy.
 Available at: https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html [accessed 17th October 2017].
 """
 type FossilFuelConsumptionPerCapitaBpAndUn2017RevisionDataset {
@@ -4027,7 +4220,9 @@ type GiniCoefficientsOecd2016Dataset {
 }
 
 """
-Sent in by Sam Peltzman, who uses this data in his paper “Mortality Inequality”, Journal of Economic Perspectives 23(4), Fall 2009: 175-190.Life tables defined by Peltzman (2009) "lists the number of survivors at each age from a hypothetical birth (age=0) cohort of 100,000." The life table data is compiled from two online databases: www.mortality.org developed by researchers at the University of California Berkeley and the Data Laboratory of the Max Planck Institute for Demographic Research in Rostock, Germany.
+Sent in by Sam Peltzman, who uses this data in his paper “Mortality Inequality”, Journal of Economic Perspectives 23(4), Fall 2009: 175-190.
+
+Life tables defined by Peltzman (2009) "lists the number of survivors at each age from a hypothetical birth (age=0) cohort of 100,000." The life table data is compiled from two online databases: www.mortality.org developed by researchers at the University of California Berkeley and the Data Laboratory of the Max Planck Institute for Demographic Research in Rostock, Germany.
 The http://www.lifetable.de/ data was put together by researchers from these two institutions and the researchers from the Institut national d'etudes demographiques in Paris, France.
 """
 type GiniCoefficientsForLifetimeInequalityPeltzman2009Dataset {
@@ -4057,15 +4252,23 @@ type GlobalBmiInMalesNcdRisc2017Dataset {
 }
 
 """
-Per capita CO2 emissions have been calculated based on the combination of global emissions data from CDIAC (described below), and UN Population Prospects data.Population data was derived from: The History Database of the Global Environment (HYDE) collected the data by earlier publications.
+Per capita CO2 emissions have been calculated based on the combination of global emissions data from CDIAC (described below), and UN Population Prospects data.
+
+Population data was derived from: The History Database of the Global Environment (HYDE) collected the data by earlier publications.
 For the 'OurWorldInData'-series we used various sources: The data for the period before 1900 are taken from the History Database of the Global Environment (HYDE).
 The data for the World Population between 1900 and 1940 is taken from the UN puplication 'The World at Six Billion'.
 The annual data for the World Population between 1950 and 2015 is taken from the UN's World Population Prospects: The 2015 Revision.
-It is the series 'Total Population - Both Sexes' online available at: https://esa.un.org/unpd/wpp/.Emissions data have been sourced from the Carbon Dioxide Information Analysis Centre (CDIAC) database.
-Emissions data have been converted from units of carbon to carbon dioxide (CO2) using a conversion factor of 3.67.CDIAC denote a "statistical difference" component which has been included in this data.
+It is the series 'Total Population - Both Sexes' online available at: https://esa.un.org/unpd/wpp/.
+
+Emissions data have been sourced from the Carbon Dioxide Information Analysis Centre (CDIAC) database.
+Emissions data have been converted from units of carbon to carbon dioxide (CO2) using a conversion factor of 3.67.
+
+CDIAC denote a "statistical difference" component which has been included in this data.
 This statistical difference represents the difference between estimated global CO2 emissions and the sum of national totals.
 Estimates of CO2 emissions show that the global total of emissions is not equal to the sum of emissions from all countries.
-This is introduced in several cases: emissions within international territories, which are included in global totals but not attributed to individual countries; inconsistent national reporting where global import and export data is imbalanced; and differing treatment of non-fuel uses of hydrocarbons.Full methodology on global, regional, national and statistical difference estimations can be found in Le Quere et al.
+This is introduced in several cases: emissions within international territories, which are included in global totals but not attributed to individual countries; inconsistent national reporting where global import and export data is imbalanced; and differing treatment of non-fuel uses of hydrocarbons.
+
+Full methodology on global, regional, national and statistical difference estimations can be found in Le Quere et al.
 (2016): Le Quéré, C., Andrew, R.
 M., Canadell, J.
 G., Sitch, S., Korsbakken, J.
@@ -4120,8 +4323,14 @@ type GlobalCarbonBudgetGcp2021Dataset {
 }
 
 """
-The carbon budget refers to the maximum quantity of carbon which can be released to maintain a 50 percent probability of global average temperature rise remaining below two-degrees celcius (the target set within the UN Paris climate agreement).This has been measured relative to the quantity of carbon which would be released if all fossil fuel reserves were burned without the use of carbon capture and storage (CCS) technology.
-The difference between the two is defined as 'unburnable carbon'.References:Intergovernmental Panel on Climate Change Climate Change 2013: The Physical Science Basis, Summary for Policy Makers, WG1 Contribution to IPCC AR5.
+The carbon budget refers to the maximum quantity of carbon which can be released to maintain a 50 percent probability of global average temperature rise remaining below two-degrees celcius (the target set within the UN Paris climate agreement).
+
+This has been measured relative to the quantity of carbon which would be released if all fossil fuel reserves were burned without the use of carbon capture and storage (CCS) technology.
+The difference between the two is defined as 'unburnable carbon'.
+
+References:
+
+Intergovernmental Panel on Climate Change Climate Change 2013: The Physical Science Basis, Summary for Policy Makers, WG1 Contribution to IPCC AR5.
 Available at: http://www.ipcc.ch/pdf/assessment-report/ar5/wg1/WG1AR5_SPM_FINAL.pdf
 """
 type GlobalCarbonBudgetFor2cIpcc2013Dataset {
@@ -4163,9 +4372,6 @@ type GlobalHungerIndexIn1992Listed2017GlobalHungerIndex2017Dataset {
 
 type GlobalHungerIndexIn2017Listed2017GlobalHungerIndex2017Dataset {
  global_hunger_index_in_2017_global_hunger_index_2017: Float
-}
-
-type GlobalHungerIndexScoreIn1992Dataset {
 }
 
 """
@@ -4508,7 +4714,9 @@ type GlobalAirlineTrafficAndCapacityIcao2020Dataset {
 
 """
 The temperature anomaly is measured relative to the 1961-1990 global average temperature.
-Temperatures at this baseline represent an increase of 0.3-0.4 degrees celcius since pre-Industrial (1850) global average temperatures.The data presented here is a combined land-surface air temperature and sea-surface temperature series.
+Temperatures at this baseline represent an increase of 0.3-0.4 degrees celcius since pre-Industrial (1850) global average temperatures.
+
+The data presented here is a combined land-surface air temperature and sea-surface temperature series.
 Upper and lower bounds represent the 95% confidence intervals.
 """
 type GlobalAverageTemperatureAnomalyHadleyCentreDataset {
@@ -4533,14 +4741,26 @@ type GlobalDeathRatesFromDisastersEmdatUnAndHydeDataset {
 }
 
 """
-The Global Burden of Disease (GBD) database reports the absolute number of deaths across mortality cause and risk factors for any given year.It is important to understand the distinction between risk factors and causes of deaths.
-Causes of deaths are defined by the OECD as: "the underlying cause of death refers to the disease or injury that initiated the train of morbid events leading directly to death or the circumstances of the accident or violence that produced the injury." Causes of deaths therefore include particular events such as road accidents, natural disasters, drowning, HIV/AIDS, and non-communicable diseases such as diabetes, and various cancers.Risk factors are particular behaviors or lifestyle factors which affect the probability of incidence of particular diseases and causes of death.
+The Global Burden of Disease (GBD) database reports the absolute number of deaths across mortality cause and risk factors for any given year.
+It is important to understand the distinction between risk factors and causes of deaths.
+Causes of deaths are defined by the OECD as: "the underlying cause of death refers to the disease or injury that initiated the train of morbid events leading directly to death or the circumstances of the accident or violence that produced the injury." Causes of deaths therefore include particular events such as road accidents, natural disasters, drowning, HIV/AIDS, and non-communicable diseases such as diabetes, and various cancers.
+Risk factors are particular behaviors or lifestyle factors which affect the probability of incidence of particular diseases and causes of death.
 For example, tobacco smoking is a risk factor which increases the probability of lung cancer.
-In this case, it is not tobacco smoking in itself which is the cause of death, but the increased incidence of lung cancer.In order to identify and highlight the specific behaviours, lifestyle factors - and thereby the potential intervention points for prevention of mortality - this data presents a mix of causes of death and risk factors.
+In this case, it is not tobacco smoking in itself which is the cause of death, but the increased incidence of lung cancer.
+In order to identify and highlight the specific behaviours, lifestyle factors - and thereby the potential intervention points for prevention of mortality - this data presents a mix of causes of death and risk factors.
 Many of the variables are straightforward causes of death - such as road accidents, drowning, fire, malaria, terrorism fatalities.
 However, for non-communicable diseases such as stroke, cancer, diabetes, which can form a complex combination of preceding behaviour and lifestyle factors we have instead presented the IHME's attributed figures by risk factors, including high blood pressure, obesity, high blood sugar & tobacco smoking.
-Identification of these factors is more conducive to highlighting the specific behaviours or preventative factors which can be addressed in order to improve health outcomes and reduce mortality rates.Causes and risk factors are further clarified as follows:'Outdoor air pollution' refers to outdoor/ambient exposure to particulate matter (PM) and ozone.'Drug use' refers to the use of cannabis, opioids, or amphetamines, or use of injecting drugs [does not include tobacco or alcohol].
-This is distinguished from 'drug disorders' which refers to direct death as a result of drug dependence and drug abuse.'Alcohol disorders' refers to death as a result of alcohol dependence and alcohol abuse; this is distinguishable from 'alcohol use', which is premature death as a result of general alcohol consumption which is linked to increased risk of certain diseases.'Road accidents' includes deaths from all road vehicles, including drivers, passengers, pedestrians and cyclists.'Nutritional deficiencies' are defined as protein-energy malnutrition, iodine, vitamin-A, and iron deficiency.
+Identification of these factors is more conducive to highlighting the specific behaviours or preventative factors which can be addressed in order to improve health outcomes and reduce mortality rates.
+Causes and risk factors are further clarified as follows:
+'Outdoor air pollution' refers to outdoor/ambient exposure to particulate matter (PM) and ozone.
+'Drug use' refers to the use of cannabis, opioids, or amphetamines, or use of injecting drugs [does not include tobacco or alcohol].
+This is distinguished from 'drug disorders' which refers to direct death as a result of drug dependence and drug abuse.
+'Alcohol disorders' refers to death as a result of alcohol dependence and alcohol abuse; this is distinguishable from 'alcohol use', which is premature death as a result of general alcohol consumption which is linked to increased risk of certain diseases.
+'Road accidents' includes deaths from all road vehicles, including drivers, passengers, pedestrians and cyclists.
+
+'Nutritional deficiencies' are defined as protein-energy malnutrition, iodine, vitamin-A, and iron deficiency.
+
+
 """
 type GlobalDeathsByCauseAndRiskGlobalBurdenOfDisease2017Dataset {
  alcohol_use: Float
@@ -4690,7 +4910,9 @@ type GlobalPlasticProductionGeyerEtAl2017Dataset {
 }
 
 """
-Population data is reported annually based on review of census data, surveys, vital registration and administrative records from a variety of sources.Population is recorded as 'de facto' meaning it includes all persons who are physically present in the country at the reference date, whether or not they are usual and/or legal residents.
+Population data is reported annually based on review of census data, surveys, vital registration and administrative records from a variety of sources.
+
+Population is recorded as 'de facto' meaning it includes all persons who are physically present in the country at the reference date, whether or not they are usual and/or legal residents.
 """
 type GlobalPopulationTrendsUsCensusBureau2017Dataset {
  population_us_census_bureau_2017: Float
@@ -4955,9 +5177,6 @@ type HealthExpenditureUk19502012OfficeOfHealthEconomics2012Dataset {
  nhs_expenditure_per_capita_office_of_health_economics_2012: Float
 }
 
-type HealthExpenditureUs19292013UsCensusAndWdiDataset {
-}
-
 type HealthExpenditureUs19292013PrivateUsCensusAndWdi2013Dataset {
  us_health_expenditure_private_us_census_and_wdi_2013: Float
 }
@@ -4967,7 +5186,9 @@ type HealthExpenditureUs19292013PublicUsCensusAndWdi2013Dataset {
 }
 
 """
-Per capita health expenditure here is measured in 2010 international dollars.The definition of health spending given by the OECD is the following: "Health spending measures the final consumption of health care goods and services (i.e.
+Per capita health expenditure here is measured in 2010 international dollars.
+
+The definition of health spending given by the OECD is the following: "Health spending measures the final consumption of health care goods and services (i.e.
 current health expenditure) including personal health care (curative care, rehabilitative care, long-term care, ancillary services and medical goods) and collective services (prevention and public health services as well as health administration), but excluding spending on investments.
 Health care is financed through a mix of financing arrangements including government spending and compulsory health insurance (“public”) as well as voluntary health insurance and private funds such as households’ out-of-pocket payments, NGOs and private corporations (“private”).
 This indicator is presented as a total and by type of financing (“public”, “private”, “out-of-pocket”) and is measured as a share of GDP, as a share of total health spending and in USD per capita (using economy-wide PPPs)."
@@ -4978,9 +5199,14 @@ type HealthExpenditureAndFinancingOecdstat2017Dataset {
 
 """
 Health Insurance plans are not mutually exclusive – individuals may be simultaneously covered by private and government programs.
-Measurement methodology of insurance coverage changed in 1999.
-For more details see the report Income, Poverty, and Health Insurance Coverage in the United States: 2008, available online at  https://www.census.gov/prod/2009pubs/p60-236.pdf Data for the period 1987-2008 was taken from the report Income, Poverty, and Health Insurance Coverage in the United States: 2008.
-Data thereafter taken from  the  Current Population Survey's Annual Social and Economic Supplement available at https://www.census.gov/hhes/www/hlthins/data/historical/HIB_tables.html 
+
+
+Measurement methodology of insurance coverage changed in 1999.
+For more details see the report Income, Poverty, and Health Insurance Coverage in the United States: 2008, available online at  https://www.census.gov/prod/2009pubs/p60-236.pdf 
+
+Data for the period 1987-2008 was taken from the report Income, Poverty, and Health Insurance Coverage in the United States: 2008.
+Data thereafter taken from  the  Current Population Survey's Annual Social and Economic Supplement available at https://www.census.gov/hhes/www/hlthins/data/historical/HIB_tables.html 
+
 """
 type HealthInsuranceCoverageUsUsCurrentPopulationSurvey2014Dataset {
  health_insurance_coverage_us_any_plan_us_current_population_survey_2014: Float
@@ -5002,7 +5228,8 @@ type HealthProviderAbsenceRatesChaudhuryHammerKremerMuralidharanAndRogers2006Dat
 
 """
 Global Burden of Disease Study 2015 (GBD 2015) Healthcare Access and Quality Index Based on Amenable Mortality 1990–2015 Global Burden of Disease Study 2015 (GBD 2015) estimates were used in an analysis of national levels of personal healthcare access and quality based on 32 causes considered amenable to healthcare over time.
-This dataset includes the the Healthcare Quality and Access (HAQ) Index for global, regional, and national or territory-level estimates for 1990-2015.
+
+This dataset includes the the Healthcare Quality and Access (HAQ) Index for global, regional, and national or territory-level estimates for 1990-2015.
 """
 type HealthcareAccessAndQualityIndexIhme2017Dataset {
  haq_index_ihme_2017: Float
@@ -5055,22 +5282,40 @@ type HistoricalIndexOfHumanDevelopmentPradosDeLaEscosuraDataset {
 }
 
 """
-Global population projections are based on historical World Population Prospects Editions published by the United Nations (UN) across a number of periodic publications.The following UN Population Prospects have been included:United Nations (1973).
+Global population projections are based on historical World Population Prospects Editions published by the United Nations (UN) across a number of periodic publications.
+
+The following UN Population Prospects have been included:
+
+United Nations (1973).
 World Population Prospects as Assessed in 1968.
-United Nations, New York.United Nations.
+United Nations, New York.
+
+United Nations.
 World Population Prospects as Assessed in 1973.
-United Nations, New York.United Nations.
+United Nations, New York.
+
+United Nations.
 World Population Prospects as Assessed in 1980.
-United Nations, New York.United Nations (1985).
+United Nations, New York.
+
+United Nations (1985).
 World Population Prospects: estimates and projections as assessed in 1982.
-United Nations, New York.United Nations (1986).
+United Nations, New York.
+
+United Nations (1986).
 World Population Prospects: estimates and projections as assessed in 1984.
-United Nations, New York.United Nations (1991).
+United Nations, New York.
+
+United Nations (1991).
 World Population Prospects 1990.
-United Nations, New York.United Nations (1998).
+United Nations, New York.
+
+United Nations (1998).
 World Population Prospects: the 1998 Revision.
 Volume I: Comprehensive Tables.
-United Nations, New York.United Nations, Department of Economic and Social Affairs, Population Division (2017).
+United Nations, New York.
+
+United Nations, Department of Economic and Social Affairs, Population Division (2017).
 World Population Prospects: The 2017 Revision.
 """
 type HistoricalUnPopulationProjectionsDataset {
@@ -5156,11 +5401,26 @@ type HistoricalUrbanFractionEstimatesAndTotalComputedUrbanAreasHyde312010Dataset
 }
 
 """
-Among others these are the original source:McEvedy, Colin and Richard Jones, 1978, “Atlas of World Population History,” Facts on File, New York, pp.
-342-351.Biraben, Jean-Noel, 1980, An Essay Concerning Mankind’s Evolution, Population, Selected Papers, December, table 2.Durand, John D., 1974, “Historical Estimates of World Population: An Evaluation,” University of Pennsylvania, Population Center, Analytical and Technical Reports, Number 10, table 2.Haub, Carl, 1995, “How Many People Have Ever Lived on Earth?” Population Today, February, p.
-5.Thomlinson, Ralph, 1975, “Demographic Problems, Controversy Over Population Control,” Second Edition, Table 1.United Nations, 1999, The World at Six Billion, Table 1, “World Population From” Year 0 to Stabilization, p.
-5,U.S.
-Census Bureau (USCB), 2012, Total Midyear Population for the World: 1950-2050.Michael Kremer (1993) “Population Growth and Technological Change: One Million B.C.
+Among others these are the original source:
+
+McEvedy, Colin and Richard Jones, 1978, “Atlas of World Population History,” Facts on File, New York, pp.
+342-351.
+
+Biraben, Jean-Noel, 1980, An Essay Concerning Mankind’s Evolution, Population, Selected Papers, December, table 2.
+
+Durand, John D., 1974, “Historical Estimates of World Population: An Evaluation,” University of Pennsylvania, Population Center, Analytical and Technical Reports, Number 10, table 2.
+
+Haub, Carl, 1995, “How Many People Have Ever Lived on Earth?” Population Today, February, p.
+5.
+
+Thomlinson, Ralph, 1975, “Demographic Problems, Controversy Over Population Control,” Second Edition, Table 1.
+
+United Nations, 1999, The World at Six Billion, Table 1, “World Population From” Year 0 to Stabilization, p.
+5,
+U.S.
+Census Bureau (USCB), 2012, Total Midyear Population for the World: 1950-2050.
+
+Michael Kremer (1993) “Population Growth and Technological Change: One Million B.C.
 to 1990”, Quarterly Journal of Economics., August 1993, pp.681-716.
 """
 type HistoricalWorldPopulationComparisonOfDifferentSourcesDataset {
@@ -5179,8 +5439,16 @@ type HomelessnessAndPrecariousHousingOecd2016Dataset {
 """
 Interviews took place at different points in time within and across countries.
 All interviews took place in the period 1999-2003.
-The source provides the following information regarding the data-collecting process:"Random samples of 250–435 adults were interviewed by telephone in five different nations (N = 1,546): Belgium, Germany, Italy, the UK, and the United States.
-The interview included questions on respondent attitudes, knowledge, and opinions regarding homelessness; respondents’ own personal experiences with homelessness and homeless people; and demographic characteristics of the respondents.Respondents’ personal experiences with homelessness were assessed by querying whether they had ever considered themselves homeless or in another precarious housing situation, following up with items directed at ascertaining the age at which they experienced homelessness, the duration of the episode of homelessness, and whether they were literally homeless (slept in a shelter, in a park) or 'precariously housed' (slept at a friend’s house because they had no other place to go)."We report estimates only for literal homelessness.
+
+
+The source provides the following information regarding the data-collecting process:
+
+"Random samples of 250–435 adults were interviewed by telephone in five different nations (N = 1,546): Belgium, Germany, Italy, the UK, and the United States.
+The interview included questions on respondent attitudes, knowledge, and opinions regarding homelessness; respondents’ own personal experiences with homelessness and homeless people; and demographic characteristics of the respondents.
+
+Respondents’ personal experiences with homelessness were assessed by querying whether they had ever considered themselves homeless or in another precarious housing situation, following up with items directed at ascertaining the age at which they experienced homelessness, the duration of the episode of homelessness, and whether they were literally homeless (slept in a shelter, in a park) or 'precariously housed' (slept at a friend’s house because they had no other place to go)."
+
+We report estimates only for literal homelessness.
 """
 type HomelessnessPrevalenceToroEtAl2007Dataset {
  share_of_population_with_an_episode_of_homelessness_toro_et_al_2007: Float
@@ -5281,7 +5549,9 @@ type HowEuropeansSpendTheirTimeEuropeanCommission2004Dataset {
 """
 Data on actual US oil production is based on reported historical figures from the US Energy Information Administration (EIA).
 This has been plotted based on its dataset on annual 'US Field Production of Crude Oil'.
-Available online at: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=pet&s=mcrfpus1&f=a [accessed 30th July 2017].Data on Hubbert's hypothesised peak oil production in the US is based on distribution analysis discussed and reported in: Cavallo, A.
+Available online at: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=pet&s=mcrfpus1&f=a [accessed 30th July 2017].
+
+Data on Hubbert's hypothesised peak oil production in the US is based on distribution analysis discussed and reported in: Cavallo, A.
 J.
 (2004).
 Hubbert’s petroleum production model: an evaluation and implications for world oil production forecasts.
@@ -5408,8 +5678,16 @@ type HurricaneLandfallsContinentalUsHurdatNoaaDataset {
 }
 
 """
-Data is based on the hypothetical scenario where the total global population had the same carbon dioxide production footprint as the average citizen of a given country.Figures were derived by multiplying the average per capita CO2 footprint (sourced from CDIAC, referenced below) in 2014, by the UN estimated global population in 2014 of 7,265,786,000.References:Carbon Dioxide Information Analysis Center (CDIAC).
-Available at: http://cdiac.ornl.gov/CO2_Emission/ (accessed 2017-05-06)World Population Prospects, the 2015 Revision.
+Data is based on the hypothetical scenario where the total global population had the same carbon dioxide production footprint as the average citizen of a given country.
+
+Figures were derived by multiplying the average per capita CO2 footprint (sourced from CDIAC, referenced below) in 2014, by the UN estimated global population in 2014 of 7,265,786,000.
+
+References:
+
+Carbon Dioxide Information Analysis Center (CDIAC).
+Available at: http://cdiac.ornl.gov/CO2_Emission/ (accessed 2017-05-06)
+
+World Population Prospects, the 2015 Revision.
 United Nations Population Division.
 Available at: https://esa.un.org/unpd/wpp/ (accessed 2017-05-06)
 """
@@ -5638,22 +5916,38 @@ type IncomesAcrossTheDistributionDatabaseGini2016Dataset {
 }
 
 """
-The following definitions are taken from World Bank's World Development Index description in 'Details'.Price level ratio of PPP conversion factor (GDP) to market exchange rate:"Purchasing power parity conversion factor is the number of units of a country's currency required to buy the same amount of goods and services in the domestic market as a U.S.
+The following definitions are taken from World Bank's World Development Index description in 'Details'.
+
+Price level ratio of PPP conversion factor (GDP) to market exchange rate:
+
+"Purchasing power parity conversion factor is the number of units of a country's currency required to buy the same amount of goods and services in the domestic market as a U.S.
 dollar would buy in the United States.
 The ratio of PPP conversion factor to market exchange rate is the result obtained by dividing the PPP conversion factor by the market exchange rate.
 The ratio, also referred to as the national price level, makes it possible to compare the cost of the bundle of goods that make up gross domestic product (GDP) across countries.
 It tells how many dollars are needed to buy a dollar's worth of goods in the country as compared to the United States.
-PPP conversion factors are based on the 2011 ICP round.SourceWorld Bank, International Comparison Program database."GDP per-capita - PPP int-$ adjusted (2015 current prices): "GDP per capita based on purchasing power parity (PPP).
+PPP conversion factors are based on the 2011 ICP round.
+
+SourceWorld Bank, International Comparison Program database."
+
+GDP per-capita - PPP int-$ adjusted (2015 current prices): "GDP per capita based on purchasing power parity (PPP).
 PPP GDP is gross domestic product converted to international dollars using purchasing power parity rates.
 An international dollar has the same purchasing power over GDP as the U.S.
 dollar has in the United States.
 GDP at purchaser's prices is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products.
 It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources.
-Data are in current international dollars based on the 2011 ICP round.SourceWorld Bank, International Comparison Program database."GDP per-capita - US $ market exchange (2015 current prices): "GDP per capita is gross domestic product divided by midyear population.
+Data are in current international dollars based on the 2011 ICP round.
+
+SourceWorld Bank, International Comparison Program database."
+
+GDP per-capita - US $ market exchange (2015 current prices): "GDP per capita is gross domestic product divided by midyear population.
 GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products.
 It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources.
 Data are in current U.S.
-dollars.SourceWorld Bank national accounts data, and OECD National Accounts data files."Country names were modified according to OWID standardized country names.
+dollars.
+
+SourceWorld Bank national accounts data, and OECD National Accounts data files."
+
+Country names were modified according to OWID standardized country names.
 """
 type IndicatorsForWhatIsPppWorldBankDataset {
  price_level_ratio_of_ppp_conversion_factor_gdp_to_market_exchange_rate_world_bank: Float
@@ -5742,7 +6036,8 @@ type InternationalHistoricalStatisticsBirthsPer1000BrianMitchell2013Dataset {
 Edited by Palgrave Macmillan Ltd .
 (April 2013).
 International Historical Statistics .
-[Online] Available at: http://www.palgrave.com/us/book/9780230005150These statistics – orignally published under the editorial leadership of Brian Mitchell (since 1983) – are a collection of data sets taken from many primary sources, including both official national and international abstracts dating back to 1750.
+[Online] Available at: http://www.palgrave.com/us/book/9780230005150
+These statistics – orignally published under the editorial leadership of Brian Mitchell (since 1983) – are a collection of data sets taken from many primary sources, including both official national and international abstracts dating back to 1750.
 The books are published in three volumes covering more than 5000 pages.
 """
 type InternationalHistoricalStatisticsDeathsPer1000BrianMitchell2013Dataset {
@@ -5774,7 +6069,9 @@ type InvestmentInRenewablesByRegionIrena2016Dataset {
 
 """
 Renewable investment figures are measured in billion USD per year.
-Investment adjusts for re-invested equity, and includes estimates for undisclosed deals.Figures excludes investments in large hydropower schemes.
+Investment adjusts for re-invested equity, and includes estimates for undisclosed deals.
+
+Figures excludes investments in large hydropower schemes.
 """
 type InvestmentInRenewablesByTechnologyIrena2017Dataset {
  solar_energy: Float
@@ -5853,9 +6150,13 @@ type LaborForceParticipationRatesOfMenAge65AndOverInTheUsOwidBasedOnShort2002And
 
 """
 The easiest way to illustrate the improvements in labor productivity in cotton spinning over time is to reproduce data on labor productivity from Catling’s study of The Spinning Mule, from which the measure of OHP (operative hours to process 100 lbs of cotton) is applied to other technologies, as shown.
-[Please see table 2 on page 20 for the original data.]Catling’s study of The Spinning Mule provides a historical introduction of the invention of the spinning mule in the 18th century.
+[Please see table 2 on page 20 for the original data.]
+
+Catling’s study of The Spinning Mule provides a historical introduction of the invention of the spinning mule in the 18th century.
 The spinning mule was worked by hand with the spinner manually controlled all its operations.
-It was around 1825 that Richard Roberts invented the ‘quadrant winding motion’ that enabled the machine to operate automatically.Full reference: Chapman, S.D., 1987.
+It was around 1825 that Richard Roberts invented the ‘quadrant winding motion’ that enabled the machine to operate automatically.
+
+Full reference: Chapman, S.D., 1987.
 The cotton industry in the industrial revolution.
 In The Industrial Revolution A Compendium (pp.
 1-64).
@@ -6017,7 +6318,9 @@ type LifeExpectancy19502015UnPopulationDivision2015Dataset {
 }
 
 """
-Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.The source notes that male and female life expectancy at birth is from sources such as: (1) United Nations Population Division.
+Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.
+
+The source notes that male and female life expectancy at birth is from sources such as: (1) United Nations Population Division.
 World Population Prospects, (2) United Nations Statistical Division.
 Population and Vital Statistics Report (various years), (3) Census reports and other statistical publications from national statistical offices, (4) Eurostat: Demographic Statistics, (5) Secretariat of the Pacific Community: Statistics and Demography Programme, and (6) U.S.
 Census Bureau: International Database.
@@ -6080,10 +6383,14 @@ type LifeExpectancyRiley2005ClioInfra2015AndUn2019Dataset {
 """
 The data file used is called “Life Expectancy at exact age x (ex) - Both Sexes” on the website given under “Mortality indicators”.
 This original data file has life expectancy at multiple ages for every country and different regions.
-We use only the countries and “World” data for age 10.Each country has a life table from which we extracted the life expectancy at age 10 (column ex, row where Age is 10 for each country.)We combined the information from the UN Population Division (UNPD) and the Human Mortality Database (HMD) using an R script.
+We use only the countries and “World” data for age 10.
+Each country has a life table from which we extracted the life expectancy at age 10 (column ex, row where Age is 10 for each country.)
+We combined the information from the UN Population Division (UNPD) and the Human Mortality Database (HMD) using an R script.
 In the final data set, UNPD values are used for 1950-2100, and HMD values are used pre-1950, where available.
 The data set uses the first year of the period to graph the data, i.e.
-the e10 value for 1950-1954 is graphed at 1950.We omitted data from the first period for which data is available for each country, because often this first period was not a full 5 years long.
+the e10 value for 1950-1954 is graphed at 1950.
+
+We omitted data from the first period for which data is available for each country, because often this first period was not a full 5 years long.
 For instance, the life table for Australia begins with the 4-year period 1921-1924, and every subsequent period is a full 5 years long.
 With data manipulation or extrapolation, this first data point can be included in the future.
 """
@@ -6329,7 +6636,9 @@ type LongRunSeriesOfHealthExpenditureWorldBankWdi2017Dataset {
 }
 
 """
-The authors note: “Muscle energy corresponds to the input of food by men and working animals; ﬁrewood to the actual consumption; wind and water have been estimated from the power of water and wind engines – sailing ships included – and the time, per year, these engines were in use.”Full citation: Ben Gales, Astrid Kander, Paolo Malanima and Mar Rubio (2007) – North versus South: Energy transition and energy intensity in Europe over 200 years.
+The authors note: “Muscle energy corresponds to the input of food by men and working animals; ﬁrewood to the actual consumption; wind and water have been estimated from the power of water and wind engines – sailing ships included – and the time, per year, these engines were in use.”
+
+Full citation: Ben Gales, Astrid Kander, Paolo Malanima and Mar Rubio (2007) – North versus South: Energy transition and energy intensity in Europe over 200 years.
 European Review of Economic History Vol.
 11, No.
 2 (August 2007), pp.
@@ -6345,15 +6654,43 @@ type LongTermEnergyTransitionInEuropeGalesEtAl2007Dataset {
 }
 
 """
-Data published by the Joint Center for History and Economics has been sourced from a range of authors and publications, referenced below.The authors note:1.
+Data published by the Joint Center for History and Economics has been sourced from a range of authors and publications, referenced below.
+
+The authors note:
+
+1.
 Firewood consumption has been calculated in a variety of ways by the various authors.
 Sometimes totals are not included for the later part of the series, even if IEA or other organizations report it.
-The same applies to other forms of energy such as incinerated waste products;2.
+The same applies to other forms of energy such as incinerated waste products;
+
+2.
 this work considers as primary electricity the following sources: geothermal (only for electricity); hydropower, nuclear power, wind, photo­voltaics, tidals, wave and solar thermal (only for electricity).
-Generally electricity that has been derived from firewood, wastes, or other biomass is not included in ‘primary electricity’ as this entails thermal losses;3.
-non-energy uses of oil and natural gas are excluded from the totals.Original references:Italy: Malanima, Paolo, Energy consumption in Italy, 1861-2000, CNR (2006) in Kander et al, Power to the People (Princeton, 2013).Portugal: Henriques, S, Energy Transitions, Economic Growth and Structural Change: Portugal in a Long-run Comparative Perspective, Lund Studies in Economic History (2011).Spain: Elaborated by Mar Rubio for Kander, Astrid; Gales, Ben; Rubio, Mar; Paolo Malanima, "North versus South: Energy transition and energy intensity in Europe over 200 years", European Review of Economic History 11/2, (2007).France:Elaborated by Ben Gales, Paolo Malanima and Paul Warde for Kander et al, Power to the People (Princeton, 2013).Germany: Elaborated by Ben Gales and Paul Warde for Kander et al, Power to the People (Princeton, 2013).Sweden: Kander, Astrid, Economic growth, energy consumption and CO2 emissions in Sweden, Lund Studies in Economic History, 2002, with further elaborations until 2008 from Swedish National Statistics.England and Wales:Updated from Warde, Paul, Energy Consumption in England & Wales, 1560-2004 (Naples: CNR, 2007).Canada: Richard W.
+Generally electricity that has been derived from firewood, wastes, or other biomass is not included in ‘primary electricity’ as this entails thermal losses;
+
+3.
+non-energy uses of oil and natural gas are excluded from the totals.
+
+Original references:
+
+Italy: Malanima, Paolo, Energy consumption in Italy, 1861-2000, CNR (2006) in Kander et al, Power to the People (Princeton, 2013).
+
+Portugal: Henriques, S, Energy Transitions, Economic Growth and Structural Change: Portugal in a Long-run Comparative Perspective, Lund Studies in Economic History (2011).
+
+Spain: Elaborated by Mar Rubio for Kander, Astrid; Gales, Ben; Rubio, Mar; Paolo Malanima, "North versus South: Energy transition and energy intensity in Europe over 200 years", European Review of Economic History 11/2, (2007).
+
+France:Elaborated by Ben Gales, Paolo Malanima and Paul Warde for Kander et al, Power to the People (Princeton, 2013).
+
+Germany: Elaborated by Ben Gales and Paul Warde for Kander et al, Power to the People (Princeton, 2013).
+
+Sweden: Kander, Astrid, Economic growth, energy consumption and CO2 emissions in Sweden, Lund Studies in Economic History, 2002, with further elaborations until 2008 from Swedish National Statistics.
+
+England and Wales:Updated from Warde, Paul, Energy Consumption in England & Wales, 1560-2004 (Naples: CNR, 2007).
+
+Canada: Richard W.
 Unger, John Thistle, Energy Consumption in Canada in the 19th and 20th Centuries.
-A Statistical Outline, (Naples: CNR, 2013)Uruguay: Adapted from: Bertoni, Reto (2011).
+A Statistical Outline, (Naples: CNR, 2013)
+
+Uruguay: Adapted from: Bertoni, Reto (2011).
 Energía y desarrollo: la restricción energética en Uruguay como problema, 1882-2000.
 Montevideo: Universidad de la República.
 """
@@ -6369,10 +6706,24 @@ type LongTermEnergyTransitionsEnergyHistoryHarvard2016Dataset {
 }
 
 """
-Average per capita fossil fuel production - for coal, oil and gas - was calculated by OWID based on published population and national fossil fuel production data.Per capita fossil fuel production was calculated by dividing national production of coal, oil or gas by the total population in any given year.Population data was sourced from a combination of Gapminder sources (for data pre-1950), and from 1950 onwards was sourced from the UN Population Division's 2017 Revision.Fossil fuel production data was sourced from a combination of sources.Global data from 1800-1965 was sourced from Vaclav Smil's Updated and Revised Edition of his book, 'Energy Transitions: Global and National Perspectives' (2017).
-This book can be found on Smil's website at: http://vaclavsmil.com/2016/12/14/energy-transitions-global-and-national-perspectives-second-expanded-and-updated-edition/.Global data from 1965 onwards was sourced from BP Statistical Review of Global Energy.
-Available at: http://www.bp.com/statisticalreview [accessed 18th October 2017].Data at the national and regional level is sourced from The SHIFT Project Data Portal, who draws upon Etemad & Luciana and US IEA Historical Statistics.
-Available at: http://www.tsp-data-portal.org/ [accessed 18th October 2017].Long-run data on UK coal output was sourced from the UK's Department for Energy and Climate Change (DECC).
+Average per capita fossil fuel production - for coal, oil and gas - was calculated by OWID based on published population and national fossil fuel production data.
+
+Per capita fossil fuel production was calculated by dividing national production of coal, oil or gas by the total population in any given year.
+
+Population data was sourced from a combination of Gapminder sources (for data pre-1950), and from 1950 onwards was sourced from the UN Population Division's 2017 Revision.
+
+Fossil fuel production data was sourced from a combination of sources.
+
+Global data from 1800-1965 was sourced from Vaclav Smil's Updated and Revised Edition of his book, 'Energy Transitions: Global and National Perspectives' (2017).
+This book can be found on Smil's website at: http://vaclavsmil.com/2016/12/14/energy-transitions-global-and-national-perspectives-second-expanded-and-updated-edition/.
+
+Global data from 1965 onwards was sourced from BP Statistical Review of Global Energy.
+Available at: http://www.bp.com/statisticalreview [accessed 18th October 2017].
+
+Data at the national and regional level is sourced from The SHIFT Project Data Portal, who draws upon Etemad & Luciana and US IEA Historical Statistics.
+Available at: http://www.tsp-data-portal.org/ [accessed 18th October 2017].
+
+Long-run data on UK coal output was sourced from the UK's Department for Energy and Climate Change (DECC).
 Historical coal data: coal production, availability and consumption 1853 to 2016.
 Available at: https://www.gov.uk/government/statistical-data-sets/historical-coal-data-coal-production-availability-and-consumption-1853-to-2011 [accessed 18th October 2017].
 """
@@ -6457,9 +6808,16 @@ type MdgFinalEvaluationUnMdgReportDataset {
 }
 
 """
-Full citation: Maddison Project Database, version 2018.
-Bolt, Jutta, Robert Inklaar, Herman de Jong and Jan Luiten van Zanden (2018), “Rebasing ‘Maddison’: new income comparisons and the shape of long-run economic development”, Maddison Project Working paper 10The original Maddison Project dataset expresses the population "in thousands".
-In our dataset we have multiplied it by 1000 to avoid expressing it "in thousands".The Maddison region definitions were adapted from the source from Maddison (2010)'s homepage at: http://www.ggdc.net/maddison/oriindex.htm under the heading "Historical Statistics" and the file titled: Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD (Horizontal file, copyright Angus Maddison, University of Groningen) To calculate average real GDP per capita across regions, we have calculated a population weight for each country per year by dividing country population in year x by the total regional population.
+Full citation: 
+Maddison Project Database, version 2018.
+Bolt, Jutta, Robert Inklaar, Herman de Jong and Jan Luiten van Zanden (2018), “Rebasing ‘Maddison’: new income comparisons and the shape of long-run economic development”, Maddison Project Working paper 10
+
+The original Maddison Project dataset expresses the population "in thousands".
+In our dataset we have multiplied it by 1000 to avoid expressing it "in thousands".
+
+The Maddison region definitions were adapted from the source from Maddison (2010)'s homepage at: http://www.ggdc.net/maddison/oriindex.htm under the heading "Historical Statistics" and the file titled: Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD (Horizontal file, copyright Angus Maddison, University of Groningen) 
+
+To calculate average real GDP per capita across regions, we have calculated a population weight for each country per year by dividing country population in year x by the total regional population.
 This weight has been used to multiply real GDP per capita (in 2011US$, with multiple benchmarks) to give real regional GDP per capita weighted by population.
 """
 type MaddisonProjectDatabase2018BoltEtAl2018Dataset {
@@ -6777,7 +7135,8 @@ type MaleToFemaleRatioHighSchoolCoursesInUsaGoldinEtAlDataset {
 
 """
 Marine energy includes energy generation from both wave and tidal sources.
-
+
+
 """
 type MarineEnergyIrenaDataset {
  installed_capacity: Float
@@ -6827,10 +7186,15 @@ type MarketShareOfIodizedSaltInEuropeanCountriesEuropeanCommission2006Dataset {
 
 """
 Claudia Hanson has reconstructed the historical estimates for Gapminder in 2010.
-The work is documented here: https://www.gapminder.org/documentation/documentation/gapdoc010.pdf and can be accessed here: https://docs.google.com/spreadsheets/d/14ZtQy9kd0pMRKWg_zKsTg3qKHoGtflj-Ekal9gIPZ4A/pub#Gapminder has reconstructed the historical data for the following 13 countries: Australia, Belgium, Denmark, Finland, Germany, Ireland, Japan, Malaysia, Netherlands, Sri Lanka, Sweden, the United Kingdom, and the United States.
-The original source of the World Bank data is: WHO, UNICEF, UNFPA, World Bank Group, and the United Nations Population Division.
+The work is documented here: https://www.gapminder.org/documentation/documentation/gapdoc010.pdf and can be accessed here: https://docs.google.com/spreadsheets/d/14ZtQy9kd0pMRKWg_zKsTg3qKHoGtflj-Ekal9gIPZ4A/pub#
+Gapminder has reconstructed the historical data for the following 13 countries: Australia, Belgium, Denmark, Finland, Germany, Ireland, Japan, Malaysia, Netherlands, Sri Lanka, Sweden, the United Kingdom, and the United States.
+
+
+The original source of the World Bank data is: WHO, UNICEF, UNFPA, World Bank Group, and the United Nations Population Division.
 Trends in Maternal Mortality: 1990 to 2015.
-Geneva, World Health Organization, 2015 The two datasets were combined without any adjustments.
+Geneva, World Health Organization, 2015 
+
+The two datasets were combined without any adjustments.
 """
 type MaternalMortalityRatioGapminder2010AndWorldBank2015Dataset {
  maternal_mortality_ratio_gapminder_2010_and_world_bank_2015: Float
@@ -7031,8 +7395,15 @@ type MentalHealthServicesAcrossIncomesWangEtAl2007Dataset {
 }
 
 """
-Data on metal production is based on the combination of two sources.Historical data from 1850-2011 is sourced from the ClioInfra database, available at: https://www.clio-infra.eu/ [accessed 9th September 2017].This has been combined with recent data from the USGS Mineral Statistics from 2012 onwards.
-Available at: https://minerals.usgs.gov/minerals/pubs/commodity/aluminum/ [accessed 9th September 2017].Both sources report primary production in thousand metric tonnes.Note: Gold production is measured in metric tons.
+Data on metal production is based on the combination of two sources.
+
+Historical data from 1850-2011 is sourced from the ClioInfra database, available at: https://www.clio-infra.eu/ [accessed 9th September 2017].
+
+This has been combined with recent data from the USGS Mineral Statistics from 2012 onwards.
+Available at: https://minerals.usgs.gov/minerals/pubs/commodity/aluminum/ [accessed 9th September 2017].
+
+Both sources report primary production in thousand metric tonnes.
+Note: Gold production is measured in metric tons.
 
 """
 type MetalProductionClioInfraAndUsgsDataset {
@@ -7740,7 +8111,11 @@ type NitrousOxideEmissionsBySectorCait2021Dataset {
 
 """
 This data has been sourced from the compilation of flight distance records Wiki available at: https://en.wikipedia.org/wiki/Flight_distance_record [accessed 2017-07-11].
-References to the individual sources for each record can be found at this link.Only non-commercial powered aircraft are included in this dataset, which contains only those flights taken without mid-flight refueling.Where more than one record was set in any given year, only the highest of the given year has been included here.
+References to the individual sources for each record can be found at this link.
+
+Only non-commercial powered aircraft are included in this dataset, which contains only those flights taken without mid-flight refueling.
+
+Where more than one record was set in any given year, only the highest of the given year has been included here.
 """
 type NonCommercialFlightDistanceRecordsWikipediaDataset {
  non_commercial_flight_distance_record_km_wikipedia: Float
@@ -7886,7 +8261,9 @@ type NumberOfNeonatalDeathsIhme2017Dataset {
 
 """
 This is the number of available surveys with data on poverty measures in Povcal by decade.
-2014 refers to the available surveys in the period 2005-2014; 2004 refers to 1995-2004; 1994 refers to 1985-1994.The idea for this measure is inspired by Serajuddin, Uematsu, Wieser, Yoshida, and Dabalen (2015) – ‘Data deprivation: another deprivation to end’, World Bank Policy Research Working Paper no.
+2014 refers to the available surveys in the period 2005-2014; 2004 refers to 1995-2004; 1994 refers to 1985-1994.
+
+The idea for this measure is inspired by Serajuddin, Uematsu, Wieser, Yoshida, and Dabalen (2015) – ‘Data deprivation: another deprivation to end’, World Bank Policy Research Working Paper no.
 WPS 7252
 """
 type NumberOfObservationsInPovcalPerDecadeOwid2017Dataset {
@@ -7953,8 +8330,16 @@ type NumberOfPeopleWithAndWithoutAccessToImprovedWaterOwidBasedOnWdiDataset {
 }
 
 """
-Dataset derived through the combination of percentage electricity access statistics and UN population figures.The absolute number of people with and without access to improved water sources was derived by multiplying the percentage of the global population with access to improved water sources (from World Bank, World Development Indicators) by United Nations figures on global population in any given year.As defined by the World Bank: "improved drinking water source includes piped water on premises (piped household water connection located inside the user’s dwelling, plot or yard), and other improved drinking water sources (public taps or standpipes, tube wells or boreholes, protected dug wells, protected springs, and rainwater collection)."Access to improved water sources (%) data was derived from World Bank World Development Indicators (WDI).
-Available at: http://data.worldbank.org/ [accessed 2017-06-12].Global population figures were sourced from the United Nations Population Prospects Division.
+Dataset derived through the combination of percentage electricity access statistics and UN population figures.
+
+The absolute number of people with and without access to improved water sources was derived by multiplying the percentage of the global population with access to improved water sources (from World Bank, World Development Indicators) by United Nations figures on global population in any given year.
+
+As defined by the World Bank: "improved drinking water source includes piped water on premises (piped household water connection located inside the user’s dwelling, plot or yard), and other improved drinking water sources (public taps or standpipes, tube wells or boreholes, protected dug wells, protected springs, and rainwater collection)."
+
+Access to improved water sources (%) data was derived from World Bank World Development Indicators (WDI).
+Available at: http://data.worldbank.org/ [accessed 2017-06-12].
+
+Global population figures were sourced from the United Nations Population Prospects Division.
 Available at: https://esa.un.org/unpd/wpp/Download/Standard/Population/ [accessed 2017-06-12]
 """
 type NumberOfPeopleWithAndWithoutAccessToImprovedWaterSourcesWorldBankAndUnDataset {
@@ -8114,13 +8499,23 @@ type OecdEducationStatistics2017Dataset {
 }
 
 """
-DefinitionsPeople are considered 'multidimensional poor' if they are deprived in at least one third of the weighted indicators.The ten indicators relate to: Years of Schooling, Child School Attendance, Child Mortality, Nutrition, Electricity, Sanitation, Drinking Water, Floor, Cooking Fuel, Asset Ownership.
+Definitions
+
+People are considered 'multidimensional poor' if they are deprived in at least one third of the weighted indicators.
+
+The ten indicators relate to: Years of Schooling, Child School Attendance, Child Mortality, Nutrition, Electricity, Sanitation, Drinking Water, Floor, Cooking Fuel, Asset Ownership.
 The first four of these indicators carry a weight of one sixth each (i.e.
 0.166).
 The other six have a weight of one eighteenth each (i.e.
-0.055)Survey dataYears correspond to the year reported for the underlying survey used as source in each country.
+0.055)
+
+Survey data
+
+Years correspond to the year reported for the underlying survey used as source in each country.
 Whenever surveys correspond to year intervals (e.g.
-2011-2012), we display the end year for that interval.The source notes that "The global MPI was first released in 2010, for 104 developing countries, and has been updated yearly with the latest data available.
+2011-2012), we display the end year for that interval.
+
+The source notes that "The global MPI was first released in 2010, for 104 developing countries, and has been updated yearly with the latest data available.
 Starting from winter 2014/2015, updates are now made twice a year, in summer and winter.
 In June 2015, the Global MPI was updated for 32 countries and 6 new countries have been added to the list of those last reported in 2014.
 In total it now covers 101 developing countries, using data ranging from 2005 to 2014."
@@ -8357,9 +8752,19 @@ type PartiesToMontrealProtocolUnepDataset {
 }
 
 """
-Rates of patent application and scientific/technical publication were calculated by OurWorldinData based on a combination of World Bank, World Development Indicators (WDI) and United Nations Population Prospects estimates.Rates were calculated per million people by dividing the absolute number of patent applications and scientific & technical journal articles (as published by the World Bank) by UN population estimates for any given year.The World Bank indicators were based on "patent applications, residents" which measures the number of patent applications from residents of a given country; "patent applications, nonresidents" which measures the number of patent applications for any given country from individuals outside of that country.
+Rates of patent application and scientific/technical publication were calculated by OurWorldinData based on a combination of World Bank, World Development Indicators (WDI) and United Nations Population Prospects estimates.
+
+Rates were calculated per million people by dividing the absolute number of patent applications and scientific & technical journal articles (as published by the World Bank) by UN population estimates for any given year.
+
+The World Bank indicators were based on "patent applications, residents" which measures the number of patent applications from residents of a given country; "patent applications, nonresidents" which measures the number of patent applications for any given country from individuals outside of that country.
 Patent applications are worldwide patent applications filed through the Patent Cooperation Treaty procedure or with a national patent office for exclusive rights for an invention--a product or process that provides a new way of doing something or offers a new technical solution to a problem.
-A patent provides protection for the invention to the owner of the patent for a limited period, generally 20 years."Scientific and technical journal articles" which measures the number of scientific and engineering articles published in the following fields: physics, biology, chemistry, mathematics, clinical medicine, biomedical research, engineering and technology, and earth and space sciences.World Bank, World Development Indicators available at: https://data.worldbank.org/data-catalog/world-development-indicatorsUN World Population Prospects data available at: http://www.un.org/en/development/desa/population/theme/trends/index.shtml
+A patent provides protection for the invention to the owner of the patent for a limited period, generally 20 years.
+
+"Scientific and technical journal articles" which measures the number of scientific and engineering articles published in the following fields: physics, biology, chemistry, mathematics, clinical medicine, biomedical research, engineering and technology, and earth and space sciences.
+
+World Bank, World Development Indicators available at: https://data.worldbank.org/data-catalog/world-development-indicators
+
+UN World Population Prospects data available at: http://www.un.org/en/development/desa/population/theme/trends/index.shtml
 """
 type PatentAndPublicationRatesOwidBasedOnWorldBankAndUnDataset {
  patent_application_rates_owid_based_on_world_bank_and_un: Float
@@ -8398,8 +8803,12 @@ type PeakFarmlandProjectionAusbuelEtAl2013Dataset {
 }
 
 """
-HUD's description of the report:"This report outlines the key findings of the 2016 Point-In-Time (PIT) count and Housing Inventory Count (HIC) conducted in January 2016.
-Specifically, this report provides 2016 national, state, and CoC-level PIT and HIC estimates of homelessness, as well as estimates of chronically homeless persons, homeless veterans, and homeless children and youth".All HUD reports are available at https://www.hudexchange.info/programs/hdx/guides/ahar/#reports
+HUD's description of the report:
+
+"This report outlines the key findings of the 2016 Point-In-Time (PIT) count and Housing Inventory Count (HIC) conducted in January 2016.
+Specifically, this report provides 2016 national, state, and CoC-level PIT and HIC estimates of homelessness, as well as estimates of chronically homeless persons, homeless veterans, and homeless children and youth".
+
+All HUD reports are available at https://www.hudexchange.info/programs/hdx/guides/ahar/#reports
 """
 type PeopleExperiencingHomelessnessInTheUsaPitByShelteringStatusHud2016Dataset {
  sheltered_homeless_hud_2016: Float
@@ -8466,7 +8875,9 @@ type PercentageOfPersonsWithoutHealthInsuranceCouncilOfEconomicAdvisersAndNation
 
 """
 Ipsos MORI conducted 27,250 interviews across 50 countries between September-November 2016 via the Ipsos MORI Online Panel system.
-In the Czech Republic, Montenegro, Netherlands, Norway and Serbia, interviews were carried out through a combination of the online system and face-to-face methodologies.Data are weighted to match the profile of the population.
+In the Czech Republic, Montenegro, Netherlands, Norway and Serbia, interviews were carried out through a combination of the online system and face-to-face methodologies.
+
+Data are weighted to match the profile of the population.
 """
 type PerceptionsOfSpendingOnHealthExpenditureIpsos2016Dataset {
  how_much_we_think_we_spend_on_health_expenditure_ipsos_2016: Float
@@ -9139,24 +9550,31 @@ type PopulationDensityWorldBankGapminderHydeAndUnDataset {
 }
 
 """
-	Additional information: Estimates of population sustained with and without the production of Haber-Bosch nitrogen are derived based on Figure 1 in Erisman et al.
-(2008) and its sources.World population figures were sourced from Gapminder for the years 1900-1949, and from the UN Population Division from 1950 onwards.The share of the world's population reliant on Haber-Bosch fertilizer production for food production was estimated based on Figure 1 in Erisman et al.
+
+	Additional information: 
+Estimates of population sustained with and without the production of Haber-Bosch nitrogen are derived based on Figure 1 in Erisman et al.
+(2008) and its sources.
+World population figures were sourced from Gapminder for the years 1900-1949, and from the UN Population Division from 1950 onwards.
+The share of the world's population reliant on Haber-Bosch fertilizer production for food production was estimated based on Figure 1 in Erisman et al.
 (2008).
 These figures are based on approximation, although coincide with several published projections of these estimates.
 Erisman et al.
 estimate that by 2000, 44% of the global population were sustained by Haber-Bosch nitrogen, rising to 48% by 2008.
 This approximately coincides with Smil (2002) estimates of 40% by 2000.
-OWID have extrapolated these estimates to 2015, assuming that approximately 50% (±2%) rely on Haber-Bosch nitrogen.Erisman, J.
+OWID have extrapolated these estimates to 2015, assuming that approximately 50% (±2%) rely on Haber-Bosch nitrogen.
+Erisman, J.
 W., Sutton, M.
 A., Galloway, J., Klimont, Z., & Winiwarter, W.
 (2008).
 How a century of ammonia synthesis changed the world.
 Nature Geoscience, 1(10), 636-639.
-Available at: https://www.nature.com/articles/ngeo325 [accessed 14th October 2017].Smil, V.
+Available at: https://www.nature.com/articles/ngeo325 [accessed 14th October 2017].
+Smil, V.
 (2002).
 Nitrogen and food production: proteins for human diets.
 AMBIO: A Journal of the Human Environment, 31(2), 126-131.
-Available at: http://www.bioone.org/doi/abs/10.1579/0044-7447-31.2.126 [accessed 24th October 2017].Stewart, W.
+Available at: http://www.bioone.org/doi/abs/10.1579/0044-7447-31.2.126 [accessed 24th October 2017].
+Stewart, W.
 M., Dibb, D.
 W., Johnston, A.
 E., & Smyth, T.
@@ -9164,7 +9582,8 @@ J.
 (2005).
 The contribution of commercial fertilizer nutrients to food production.
 Agronomy Journal, 97(1), 1-6.
-Available at: https://dl.sciencesocieties.org/publications/aj/abstracts/97/1/0001 [accessed 24th October 2017].
+Available at: https://dl.sciencesocieties.org/publications/aj/abstracts/97/1/0001 [accessed 24th October 2017].
+
 """
 type PopulationFedByHaberBoschFertilizersFao2017Dataset {
  world_population: Float
@@ -9210,7 +9629,9 @@ type PotashFertilizersFao2017Dataset {
 }
 
 """
-According to the World Bank's definition: "PovcalNet is an interactive computational tool that allows you to replicate the calculations made by the World Bank's researchers in estimating the extent of absolute poverty in the world".Data are based on primary household survey data obtained from government statistical agencies and World Bank country departments.
+According to the World Bank's definition: "PovcalNet is an interactive computational tool that allows you to replicate the calculations made by the World Bank's researchers in estimating the extent of absolute poverty in the world".
+
+Data are based on primary household survey data obtained from government statistical agencies and World Bank country departments.
 Data for high-income economies are from the Luxembourg Income Study database.
 For more information and methodology, please see PovcalNet.
 (http://iresearch.worldbank.org/PovcalNet/methodology.aspx).
@@ -9400,25 +9821,58 @@ There are three main types of nails: hand forged, machine cut, and wire.
 Blacksmiths produced hand forged nails until about 1820.
 Cut nails have been produced using a machine which cuts nails from sheets of iron or steel - technology patents for this machinery emerging in the late 18th century.
 Wire nails became more widely produced in the late 19th century with individual nails cut from a coil of drawn wire, one end sharpened at the tip, and the head of the nail added to the other (Sichel (2017)).
-Real prices are calculated using Sichel’s (2017) consumer price index (CPI) dating back to 1695 constructed from the UK retail price index (RPI) from 1695-1784, and US CPI from 1784-2011.
+
+
+Real prices are calculated using Sichel’s (2017) consumer price index (CPI) dating back to 1695 constructed from the UK retail price index (RPI) from 1695-1784, and US CPI from 1784-2011.
 2010 is used as the base year, so all prices adjusted for inflation are in terms of 2010 dollars.
-To calculate real price of nails in cents/lb, we use the following procedure:Real price of nails (cents/lb) = Nominal price of nails (cents/lb) divided by (CPI /100) However, the real price of nails measured in units of cents per pound can obscure quality differences.
+To calculate real price of nails in cents/lb, we use the following procedure:
+
+Real price of nails (cents/lb) = Nominal price of nails (cents/lb) divided by (CPI /100) 
+
+However, the real price of nails measured in units of cents per pound can obscure quality differences.
 To adjust for differences in quality, Sichel (2017) standardizes nail sizes, converting all nails to be as close as possible to a 2”, size 6d nail, to construct real prices in cents per nail.
-The counts of nails per pound used for each year can be found in Table 3 of Sichel’s (2017) working paper.In calculating the real price of nails (cents/nail), we first convert units from cents per pound to cents per nail, and then convert from nominal to real prices.
-Nominal price of nails (cents/nail) = Nominal price of nail (cents/lb) x 1/[count of nails per pound]Real price of nails (cents/nail) = Nominal price of nails (cents/nail) divided by (CPI/100)The nominal price series for nails, from which the real series have been constructed, are comprised of multiple data sources.
-From 1695 to 1792, prices are from Beveridge (1939) in the United Kingdom.
+The counts of nails per pound used for each year can be found in Table 3 of Sichel’s (2017) working paper.
+
+In calculating the real price of nails (cents/nail), we first convert units from cents per pound to cents per nail, and then convert from nominal to real prices.
+
+
+Nominal price of nails (cents/nail) = Nominal price of nail (cents/lb) x 1/[count of nails per pound]
+
+Real price of nails (cents/nail) = Nominal price of nails (cents/nail) divided by (CPI/100)
+
+The nominal price series for nails, from which the real series have been constructed, are comprised of multiple data sources.
+
+
+From 1695 to 1792, prices are from Beveridge (1939) in the United Kingdom.
 Where data is not reported for selected years, the values for these years are interpolated.
 Prices have been converted from shillings to cents.
-For the period 1784 to 1813 prices are sourced from Cole (1938) although the type of nails have not been specified and are thus assumed to be mixed (forged and cut) nails.
-From 1814 to 1890 data covers machine-cut nail prices.
+
+
+For the period 1784 to 1813 prices are sourced from Cole (1938) although the type of nails have not been specified and are thus assumed to be mixed (forged and cut) nails.
+
+
+From 1814 to 1890 data covers machine-cut nail prices.
 Between 1814 and 1828, prices are taken from Cole (1938).
 Quotes for later years are from various sources with the data reproduced in ‘Historical Statistics of the United States’.
-The period covering 1890 up until 2011 refers to wire nails.
+
+
+The period covering 1890 up until 2011 refers to wire nails.
 This section of the data series includes data from the Bureau of Labor Statistics.
-For greater detail in the construction of this dataset, please see Sichel’s (2017)* working paper referenced below.
-References: Beveridge, William (1939), Prices and Wages in England from the Twelfth to the Nineteenth Century, Vol.
-I, Price Tables: Mercantile Era, Longmans, Green, and Co., London.Cole, Arthur Harrison (1938), Wholesale Commodity Prices in the United States 1700-1861, Harvard University Press, Cambridge, MA.*Sichel, Daniel E.
-(2017), The Price of Nails since 1695: Even Simple Products Experienced Large Price Declines Over the Centuries.United States Bureau of the Census (1975), Historical Statistics of the United States: Colonial Times to the Present, Washington, D.C.
+
+For greater detail in the construction of this dataset, please see Sichel’s (2017)* working paper referenced below.
+
+
+References: 
+
+Beveridge, William (1939), Prices and Wages in England from the Twelfth to the Nineteenth Century, Vol.
+I, Price Tables: Mercantile Era, Longmans, Green, and Co., London.
+
+Cole, Arthur Harrison (1938), Wholesale Commodity Prices in the United States 1700-1861, Harvard University Press, Cambridge, MA.
+
+*Sichel, Daniel E.
+(2017), The Price of Nails since 1695: Even Simple Products Experienced Large Price Declines Over the Centuries.
+
+United States Bureau of the Census (1975), Historical Statistics of the United States: Colonial Times to the Present, Washington, D.C.
 """
 type PriceOfNailsSince1695DanielSichels2017Dataset {
  uk_forged_centslb_daniel_sichel_2017: Float
@@ -9542,7 +9996,11 @@ type PublicExpenditureOnEducationOecdTanziAndSchuknecht2000Dataset {
 
 """
 The Ipsos MORI survey was conducted in 24 countries.
-An international sample of 18,787 adults aged 18-64 in the US and Canada, and age 16-64 in all other countries, were interviewed between May 6 and May 21, 2011 via the Ipsos Online Panel system.Results presented here are in response to the question: "Please indicate whether you strongly support, somewhat support, somewhat oppose, or strongly oppose each way of producing electricity" [results for nuclear electricity production].Four responses were accepted for this question: "strongly support"; "somewhat support"; "somewhat oppose"; and "strongly oppose".
+An international sample of 18,787 adults aged 18-64 in the US and Canada, and age 16-64 in all other countries, were interviewed between May 6 and May 21, 2011 via the Ipsos Online Panel system.
+
+Results presented here are in response to the question: "Please indicate whether you strongly support, somewhat support, somewhat oppose, or strongly oppose each way of producing electricity" [results for nuclear electricity production].
+
+Four responses were accepted for this question: "strongly support"; "somewhat support"; "somewhat oppose"; and "strongly oppose".
 We have simplified these results to "support" and "oppose" by summing the former and latter two responses, respectively.
 """
 type PublicSupportAndOppositionToNuclearEnergyIpsosMori2011Dataset {
@@ -9571,8 +10029,12 @@ type RaisedBloodPressurePrevalenceNcdRisc2017Dataset {
 
 """
 The Rate of Natural Population Increase is the crude birth rate minus the crude death rate.
-Represents the portion of population growth (or decline) determined exclusively by births and deaths. The data refers to the 5 year interval preceding the shown year (e.g.
-1955 is '1950 to 1955')In the original dataset it is expressed per 1,000 population annually.
+Represents the portion of population growth (or decline) determined exclusively by births and deaths.
+
+ The data refers to the 5 year interval preceding the shown year (e.g.
+1955 is '1950 to 1955')
+
+In the original dataset it is expressed per 1,000 population annually.
 Here it is expressed in percentage terms (original value divided by 10).
 """
 type RateOfNaturalPopulationIncreaseUnPopulationDivision2015Dataset {
@@ -9662,13 +10124,14 @@ type RealCommodityPriceIndexSince1850Jacks2016Dataset {
  wool: Float
 }
 
-type RealGdpAtChainedPppsIn2011UsmoneyPennWorldTable902016Dataset {
-}
-
 """
 The data presented here from 1990 onwards is from the World Bank.
-It is GDP per capita in 2011 international-$ as published here: http://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD (accessed on April 16, 2017).Data earlier than 1990 is backwards extended from the World Bank observation for 1990 based on the growth rates implied by Maddison data.
-The Maddison data is published here: http://www.ggdc.net/maddison/maddison-project/data.htmHere we have assumed GDP per capita for the UK and India is a proxy for London and Delhi, respectively.
+It is GDP per capita in 2011 international-$ as published here: http://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD (accessed on April 16, 2017).
+
+Data earlier than 1990 is backwards extended from the World Bank observation for 1990 based on the growth rates implied by Maddison data.
+The Maddison data is published here: http://www.ggdc.net/maddison/maddison-project/data.htm
+
+Here we have assumed GDP per capita for the UK and India is a proxy for London and Delhi, respectively.
 """
 type RealGdpPerCapitaLondonAndDelhiOwidDataset {
  real_gdp_per_capita_owid: Float
@@ -9783,9 +10246,13 @@ type RenewableEnergyCostsIrena2020Dataset {
 }
 
 """
-Data reports the annual number of new patents filed under the category of each renewable technology.Annual number of patents by technology for the years 2014-2016 was calculated by OWID based on IRENA's cumulative number of patents for each technology in these years (i.e.
-annual number in 2014 = cumulative total in 2015 minus cumulative total in 2014).Note that figures for 2014-16 may be subject to a time lag; processing times of patent applications vary and some patents submitted over this period may not yet be recorded in statistics.
-These figures will be updated with time if additional patent applications are recorded.
+Data reports the annual number of new patents filed under the category of each renewable technology.
+Annual number of patents by technology for the years 2014-2016 was calculated by OWID based on IRENA's cumulative number of patents for each technology in these years (i.e.
+annual number in 2014 = cumulative total in 2015 minus cumulative total in 2014).
+
+Note that figures for 2014-16 may be subject to a time lag; processing times of patent applications vary and some patents submitted over this period may not yet be recorded in statistics.
+These figures will be updated with time if additional patent applications are recorded.
+
 """
 type RenewablesPatentsIrena2016Dataset {
  wind: Float
@@ -9812,9 +10279,14 @@ type ReportedGuineaWormCasesWho2021Dataset {
 }
 
 """
-For the estimated number of polio cases using Tebbens et al.’s 2010 model:The WHO’s dataset of reported polio cases from 1980 onwards (the first link above) is used to produce an estimate of the actual number of polio cases.
+For the estimated number of polio cases using Tebbens et al.’s 2010 model:
+The WHO’s dataset of reported polio cases from 1980 onwards (the first link above) is used to produce an estimate of the actual number of polio cases.
 An explanation of the correction factor algorithm can be found here: https://ourworldindata.org/tebbens-et-al-2011-estimation-of-the-number-of-paralytic-polio-cases/ Part of the model input consists of the WHO’s surveillance system that can be found under the second link cited above.
-For the estimated number of polio cases that disregard any reported cases after a country was certified polio-free and use Tebbens et al.’s (2010) model: The WHO’s dataset from 1980 onwards (the first link above) was modified by deleting all documented polio cases after the year in which polio ceased to be endemic in each country (see map and data here: https://ourworldindata.org/grapher/the-decade-of-the-last-recorded-case-of-paralytic-polio-by-country).
+
+
+
+For the estimated number of polio cases that disregard any reported cases after a country was certified polio-free and use Tebbens et al.’s (2010) model: 
+The WHO’s dataset from 1980 onwards (the first link above) was modified by deleting all documented polio cases after the year in which polio ceased to be endemic in each country (see map and data here: https://ourworldindata.org/grapher/the-decade-of-the-last-recorded-case-of-paralytic-polio-by-country).
 Then, Tebbens et al.’s  (2010) model is applied in the same way as for the “Estimated number of polio cases”, for which we provide an explanation here: https://ourworldindata.org/tebbens-et-al-2011-estimation-of-the-number-of-paralytic-polio-cases/.
 """
 type ReportedNumberAndDifferentEstimationsOfPolioCasesWho2018Dataset {
@@ -9989,10 +10461,16 @@ type So2EmissionsByRegionOecd2014AndKlimontEtAl2013Dataset {
 """
 Metrics of emissions are based on methodology developed in Smith et al.
 (2011).
-This methodology estimates emissions based on energy and industrial production and mass-balance statistics.References:Klimont, Z; S J Smith and J Cofala (2013) – The last decade of global anthropogenic sulfur dioxide: 2000–2011 emissions.
+This methodology estimates emissions based on energy and industrial production and mass-balance statistics.
+
+References:
+
+Klimont, Z; S J Smith and J Cofala (2013) – The last decade of global anthropogenic sulfur dioxide: 2000–2011 emissions.
 Environmental Research Letters, Volume 8, Number 1.
 Published 9 January 2013.
-Online at: http://iopscience.iop.org/article/10.1088/1748-9326/8/1/014003S.
+Online at: http://iopscience.iop.org/article/10.1088/1748-9326/8/1/014003
+
+S.
 J.
 Smith, J.
 van Aardenne, Z.
@@ -10207,13 +10685,29 @@ type ShareOfMarriagesInEnglandAndWalesThatEndedInDivorceUkOns2020Dataset {
 }
 
 """
-Additional info on Homelessness data:HUD's description of the report:"The Annual Homeless Assessment Report (AHAR) is a HUD report to the U.S.
+Additional info on Homelessness data:
+
+HUD's description of the report:
+
+"The Annual Homeless Assessment Report (AHAR) is a HUD report to the U.S.
 Congress that provides nationwide estimates of homelessness, including information about the demographic characteristics of homeless persons, service use patterns, and the capacity to house homeless persons.
-The report is based primarily on Homeless Management Information Systems (HMIS) data about persons who experience homelessness during a 12-month period".All HUD reports are available at https://www.hudexchange.info/programs/hdx/guides/ahar/#reports. Additional info on Population data:As explained by their Guidance for Data: "the Census Bureau’s Population Estimates Program (PEP) releases several different data series over the course of each decade".
-Total U.S.
+The report is based primarily on Homeless Management Information Systems (HMIS) data about persons who experience homelessness during a 12-month period".
+
+All HUD reports are available at https://www.hudexchange.info/programs/hdx/guides/ahar/#reports.
+
+ 
+
+Additional info on Population data:
+
+As explained by their Guidance for Data: "the Census Bureau’s Population Estimates Program (PEP) releases several different data series over the course of each decade".
+
+
+Total U.S.
 population figures for the period 2007-2010 are taken from the 'Intercensal Estimates 2000-2010'.
 Each decade, PEP releases these 'Intercensal Estimates' which constitutes the preferred data series for the decade.
- Total U.S.
+ 
+
+Total U.S.
 population figures for the period 2011-2016 are taken from the 'National Population Totals Tables: 2010-2016'.
 These estimates "are produced using a similar procedure to that used for our current postcensal estimates series, and with no knowledge of the Census count at the end of the decade."
 """
@@ -10406,9 +10900,13 @@ type SmokingCigaretteSalesInternationalSmokingStatistics2017Dataset {
 
 """
 Consumption per smoker per day refers to all ages and both sexes.
-The unit of measurement is in cigarettes.Daily smoking prevalence for male, female, and both (male and female) also refers to all ages of each particular category.
+The unit of measurement is in cigarettes.
+
+Daily smoking prevalence for male, female, and both (male and female) also refers to all ages of each particular category.
 Daily male smoking prevalence is interpreted as the percentage of men, across all ages, who smoke daily.
-The number of daily male smokers refers to the number of men, by country, who smoke cigarettes at least daily.
+
+
+The number of daily male smokers refers to the number of men, by country, who smoke cigarettes at least daily.
 
 """
 type SmokingPrevalenceAndCigaretteConsumptionIhmeGhdx2012Dataset {
@@ -10467,7 +10965,11 @@ type SolarPvModuleCostsAndCapacityLafondEtAl2017AndIrenaDataset {
 }
 
 """
-Data is based on median residential solar photovolatic (PV) prices in the United States only.Installed non-module prices include hardware costs, such as inverters and racking equipment; and the wide assortment of soft costs, including such things as marketing and customer acquisition, system design, installation labor, permitting and inspection costs, and installer margins.Non-module costs have been assumed to be the total solar PV system price minus the solar module price.
+Data is based on median residential solar photovolatic (PV) prices in the United States only.
+
+Installed non-module prices include hardware costs, such as inverters and racking equipment; and the wide assortment of soft costs, including such things as marketing and customer acquisition, system design, installation labor, permitting and inspection costs, and installer margins.
+
+Non-module costs have been assumed to be the total solar PV system price minus the solar module price.
 """
 type SolarPvSystemsCostsBarboseAndDarghouth2016Dataset {
  total_installed_price_barbose_and_darghouth_2016: Float
@@ -10725,9 +11227,15 @@ type TeacherAbsenteeismBoldEtAl2017Dataset {
 }
 
 """
-The years for each observation correspond to the year of publication of the underlying source.The full list of underlying sources is as follows: Abadzi (2009): Brazil (Pernambuco state), Ghana, Morocco, and Tunisia; Benveniste, Marshall, and Araujo (2008): Cambodia; Benveniste, Marshall, and Santibañez (2007): Lao People’s Democratic Republic; Millot and Lane (2002): Arab Republic of Egypt, Lebanon, and Republic of Yemen; World Bank (2016a): Madagascar; World Bank (2016b): Zambia; World Bank’s Service Delivery Indicators, 2012–13 (http://www.worldbank .org/sdi): Kenya, Mozambique, Nigeria, Senegal, Tanzania, Togo, and Uganda.
-For Brazil, Cambodia, Ghana, Lao PDR, Senegal, Tanzania, and Tunisia, data include public schools.
-For all other countries, data include both public and private schools.Also, for Brazil, the data corresponds only to Pernambuco state.
+The years for each observation correspond to the year of publication of the underlying source.
+
+The full list of underlying sources is as follows: Abadzi (2009): Brazil (Pernambuco state), Ghana, Morocco, and Tunisia; Benveniste, Marshall, and Araujo (2008): Cambodia; Benveniste, Marshall, and Santibañez (2007): Lao People’s Democratic Republic; Millot and Lane (2002): Arab Republic of Egypt, Lebanon, and Republic of Yemen; World Bank (2016a): Madagascar; World Bank (2016b): Zambia; World Bank’s Service Delivery Indicators, 2012–13 (http://www.worldbank .org/sdi): Kenya, Mozambique, Nigeria, Senegal, Tanzania, Togo, and Uganda.
+
+
+For Brazil, Cambodia, Ghana, Lao PDR, Senegal, Tanzania, and Tunisia, data include public schools.
+For all other countries, data include both public and private schools.
+
+Also, for Brazil, the data corresponds only to Pernambuco state.
 
 """
 type TeachingTimeLostWorldDevelopmentReport2018Dataset {
@@ -11188,20 +11696,35 @@ type TourismDataByWorldRegionUnwto2019Dataset {
 
 """
 The total value of exports calculated for the NBER-United Nations Datasets includes only trade in goods, classified according to the 4 digit Standard International Trade Classification, Revision 2.
-Authors give primacy to importers' reports whenever they are available, assumed to be more accurate.OWID calculations have excluded all observations for the 'World' with the focus on bilateral country trade flows.
+Authors give primacy to importers' reports whenever they are available, assumed to be more accurate.
+
+OWID calculations have excluded all observations for the 'World' with the focus on bilateral country trade flows.
 Countries Comoros, Saint Kitts and Nevis, and the Netherlands Antilles have also been excluded from the sample as, in the case of the former two, multiple countries are included in these labels in the NBER-UN data, and hence would be inaccurate to calculate the trade share by national GDP.
 For the Netherlands Antilles there is insufficient alternative trade data by the World Bank and other sources to check whether the figures are correctly estimated.
-The United Kingdom consists of: the UK, British Antarctic Territories, the Falkland Islands, and Saint Helena.
-Germany consists of: East Germany, West Germany, and Germany.
-Russia: the former USSR and Russia.
-France: French Guinea, Guadeloupe, Saint Pierre and Miquelon, and France.
-Yemen: the Yemen Arab Republic, the Yemen People's Republic, and Yemen.
-All countries defined to be resource rich have been excluded from the sample.
+
+
+The United Kingdom consists of: the UK, British Antarctic Territories, the Falkland Islands, and Saint Helena.
+
+Germany consists of: East Germany, West Germany, and Germany.
+
+Russia: the former USSR and Russia.
+
+France: French Guinea, Guadeloupe, Saint Pierre and Miquelon, and France.
+
+Yemen: the Yemen Arab Republic, the Yemen People's Republic, and Yemen.
+
+
+All countries defined to be resource rich have been excluded from the sample.
 The list of these countries include: the Democratic Republic of Congo, Liberia, Niger, Guinea, Mali, Chad, Mauritania, Laos, Zambia, Vietnam, Yemen, Nigeria, Cameroon, Papua New Guinea, Sudan, Uzbekistan, Cote d'Ivoire, Bolivia, Mongolia, Congo, Iraq, Indonesia, Timor, Syria, Guyana, Turkmenistan, Angola, Gabon, Equatorial Guinea.
 The list is taken from the IMF resource: https://www.imf.org/external/np/pp/eng/2012/082412.pdf on page 48, Appendix 1, Table 1.
-Capital vs labor intensive countries have been categorised using the World Bank's 2016 income classification.
+
+
+Capital vs labor intensive countries have been categorised using the World Bank's 2016 income classification.
 Low and lower-middle income countries have been classified as labor intensive while upper-middle and high-income countries as capital intensive.
-The 2016 classification has been applied to all previous years for which there is data.To calculate export trade share to labor-intensive countries, using the UK as an example, figures have been calculated as follows:UK-exports-to-labor-intensive-countries-as-share-of-GDP = [exports-to-A + exports-to-B + exports-to-C] / GDP-of-UK (this calculation would assume there are a total of three developing countries in the entire sample).
+The 2016 classification has been applied to all previous years for which there is data.
+
+To calculate export trade share to labor-intensive countries, using the UK as an example, figures have been calculated as follows:
+UK-exports-to-labor-intensive-countries-as-share-of-GDP = [exports-to-A + exports-to-B + exports-to-C] / GDP-of-UK (this calculation would assume there are a total of three developing countries in the entire sample).
 """
 type TradeShareByTypeOfTradeOwidCalculationsBasedOnNberUnitedNationsTradeData19622000Dataset {
  import_trade_share_from_labor_intensive_countries_owid_calculations_based_on_nber_united_nations_trade_data_1962_2000: Float
@@ -11309,19 +11832,31 @@ type UkButterflyPopulationsUkOnsDataset {
 }
 
 """
-Data has been compiled by Our World in Data across various historical sources.Data on 19th century outbreaks of cholera were sourced from Thomas, A.
+Data has been compiled by Our World in Data across various historical sources.
+
+Data on 19th century outbreaks of cholera were sourced from Thomas, A.
 J.
 (2015) and Pearson Schools and Colleges, Poverty, public health and the state in Britain, c1780–1939.
 Note that this data represents total death toll for major pandemic years (and is given as the total death toll for the outbreak period e.g.
 in data for 1832 represents the total deaths across the 1831-32 outbreak).
 The death toll from cholera between these outbreaks was much lower than such peaks, although exact figures are not known.
-These are given as the total death toll in Great Britain (representing England, Wales and Scotland).Data from 1910 onward is for England and Wales only.
+These are given as the total death toll in Great Britain (representing England, Wales and Scotland).
+
+
+Data from 1910 onward is for England and Wales only.
 This data is derived from the Office of National Statistics (ONS).
-'The 20th century mortality files' available at: http://webarchive.nationalarchives.gov.uk/20160108034247tf_/http://www.ons.gov.uk/ons/rel/subnational-health1/the-20th-century-mortality-files/20th-century-deaths/index.html'The 21st century mortality files' available at: https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/the21stcenturymortalityfilesdeathsdatasetReferences:Thomas, A.
+
+'The 20th century mortality files' available at: http://webarchive.nationalarchives.gov.uk/20160108034247tf_/http://www.ons.gov.uk/ons/rel/subnational-health1/the-20th-century-mortality-files/20th-century-deaths/index.html
+'The 21st century mortality files' available at: https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/the21stcenturymortalityfilesdeathsdataset
+
+References:
+Thomas, A.
 J.
 (2015).
 Cholera: The Victorian Plague.
-Pen and Sword.Pearson Schools and Colleges, 'Poverty, public health and the state in Britain, c1780–1939'.
+Pen and Sword.
+
+Pearson Schools and Colleges, 'Poverty, public health and the state in Britain, c1780–1939'.
 Available at: https://www.pearsonschoolsandfecolleges.co.uk/AssetsLibrary/SECTORS/Secondary/SUBJECT/HistoryandSocialScience/PDFs/A%20Level%202015/Paper-3-Sample-Chapters/GCE%20A%20Level%20History_Poverty%20watermarked%20pdf%2021-07-2016_Ch1.pdf
 """
 type UkCholeraDeathOverTheLongTermOnsDataset {
@@ -11337,15 +11872,26 @@ type UkDefenceSpendingUkpublicspendingcomDataset {
 }
 
 """
-Data on nominal weekly wages was spliced by the Bank of England and is based on the following sources:N.
+Data on nominal weekly wages was spliced by the Bank of England and is based on the following sources:
+N.
 Crafts and T.
-Mills Trends in Real Wages in Britain, 1750-1913, Explorations in Economic History (1994)Feinstein (1998)C.
+Mills Trends in Real Wages in Britain, 1750-1913, Explorations in Economic History (1994)
+Feinstein (1998)
+C.
 H.
-Feinstein New Estimates of Average Earnings in the United Kingdom, Economic History Review (1990)C.H.
-Feinstein, National Income Expenditure and Output of the United Kingdom 1855-1965ONS: Series code LNMQONS: Series code KAB9The cost of living index is referred to by the Bank of England as "Headline Consumer Price Index (CPI) - original method in version 1.0" and is indexed to 2015.
+Feinstein New Estimates of Average Earnings in the United Kingdom, Economic History Review (1990)
+C.H.
+Feinstein, National Income Expenditure and Output of the United Kingdom 1855-1965
+ONS: Series code LNMQ
+ONS: Series code KAB9
+
+The cost of living index is referred to by the Bank of England as "Headline Consumer Price Index (CPI) - original method in version 1.0" and is indexed to 2015.
 It is spliced by the BoE based on the following sources: Feinstein (1998), Allen (2007), Feinstein (1991), Capie and Collins (1983), Ministry of Labour, ONS retail prices 1919-1990, O'Donoghue et al (2004), and the ONS website.
-The real weekly wage was calculated based on these two series.
-For all details see the original source.
+
+The real weekly wage was calculated based on these two series.
+
+
+For all details see the original source.
 """
 type UkNominalWageDataPriceDataAndRealWageBankOfEnglandThreeCenturiesOfMacroeconomicData2017Dataset {
  nominal_average_weekly_wages_bank_of_england_2017: Float
@@ -11376,9 +11922,15 @@ type UnPopulationDivisionMedianAge2017Dataset {
 """
 The UNESCO Institute for Statistics (UIS) collects cross-national education statistics.
 Data on literacy rates come from a variety of sources (such as national censuses and surveys) and reporting modes (self-reporting vs household declarations).
-Data instruments used to estimate literacy are grouped under three main types: i) a census; ii) a survey; or iii) indirect estimates.
-Indirect estimates are extrapolated - based on educational attainment, or estimated based on the country's census.Methodologies used for measuring literacy have been grouped into four categories: household declarations, self declarations, literacy tests, and national estimates.
-Both household and self-declared literacy are self-reports; in the former, it is the head of the household responding to the survey, and in the latter it is directly reported by the individuals themselves.UNESCO categorised Chile's (2009) and the Philippines' (2003) mode of literacy reporting as 'Household/Self declaration'.
+
+
+Data instruments used to estimate literacy are grouped under three main types: i) a census; ii) a survey; or iii) indirect estimates.
+Indirect estimates are extrapolated - based on educational attainment, or estimated based on the country's census.
+
+Methodologies used for measuring literacy have been grouped into four categories: household declarations, self declarations, literacy tests, and national estimates.
+Both household and self-declared literacy are self-reports; in the former, it is the head of the household responding to the survey, and in the latter it is directly reported by the individuals themselves.
+
+UNESCO categorised Chile's (2009) and the Philippines' (2003) mode of literacy reporting as 'Household/Self declaration'.
 We have categorised the two countries under the household declaration category.
 """
 type UnescoMetadataOnLiteracyUis2017Dataset {
@@ -11505,7 +12057,9 @@ type UsRevenuePublicSchoolsUsBureauOfTheCensusAndNces2017Dataset {
 }
 
 """
-The Bureau of Labor Statistics report on the monthly Consumer Price Index (CPI) of individual goods and services for urban consumers at a national, city and state level.Data used in this sequence are based on the USA national average of urban consumers, relative to December 1997 (which has been given the value of zero).
+The Bureau of Labor Statistics report on the monthly Consumer Price Index (CPI) of individual goods and services for urban consumers at a national, city and state level.
+
+Data used in this sequence are based on the USA national average of urban consumers, relative to December 1997 (which has been given the value of zero).
 CPI is presented on an annual basis, which we have derived as the average of the monthly CPIs in a given year.
 """
 type UsaConsumerPriceIndexGoodsAndServices19972017UsBureauOfLaborStatistics2017Dataset {
@@ -11746,13 +12300,19 @@ type UnadjustedFemaleMaleHourlyWageRatiosByPercentileBlauKahn2017Dataset {
 }
 
 """
-We have combined two sources: The UN Child Mortality Estimates (CME) data and the Human Mortality Database (HMD).All data points from the CME used.
+We have combined two sources: The UN Child Mortality Estimates (CME) data and the Human Mortality Database (HMD).
+
+All data points from the CME used.
 HMD has been used as a supplement when CME data is not available for a given year.
 HMD values are multiplied by factor of 1.1 for Belarus, Hungary and Lithuania (to match CME data as described in Hill et al.
 2012).
 HMD values are multiplied by a factor of 1.2 for Bulgaria, Czech Republic, Latvia, Russia, Slovakia, Spain and Estonia (before 1992) (to match CME as described in Hill et al.
-2012).Hill et al.
-2012 adjust the CME data by these same factors because of concerns about the low levels of early neonatal death recorded in the civil registration systems of these countries compared to western European countries as a result of differences in the definition of live births.More information can be found in their paper: Hill K, You D, Inoue M, Oestergaard MZ, Technical Advisory Group of the United Nations Inter-agency Group for Child Mortality Estimation (2012) Child Mortality Estimation: Accelerated Progress in Reducing Global Child Mortality, 1990-2010.
+2012).
+
+Hill et al.
+2012 adjust the CME data by these same factors because of concerns about the low levels of early neonatal death recorded in the civil registration systems of these countries compared to western European countries as a result of differences in the definition of live births.
+
+More information can be found in their paper: Hill K, You D, Inoue M, Oestergaard MZ, Technical Advisory Group of the United Nations Inter-agency Group for Child Mortality Estimation (2012) Child Mortality Estimation: Accelerated Progress in Reducing Global Child Mortality, 1990-2010.
 PLoS Med 9(8): e1001303.
 doi:10.1371/journal.pmed.1001303
 """
@@ -11946,12 +12506,20 @@ type ViolentDisciplineInTheUsUsGeneralSocialSurvey2017Dataset {
 
 """
 – The source notes that in some instances observations differ from the standard definition or refer to only part of a country.
-– The dates associated to each observation correspond to the end of the survey used as underlying source – Most estimates come from the Multiple Indicator Cluster Surveys (MICS).
+
+
+– The dates associated to each observation correspond to the end of the survey used as underlying source 
+
+– Most estimates come from the Multiple Indicator Cluster Surveys (MICS).
 The MICS include a standard set of questions covering different disciplinary methods.
-It does allow survey respondents to report both violent and nonviolent forms of discipline.–The source notes that estimates reported in UNICEF publications and in MICS country reports prior to 2010 were calculated using household weights that did not take into account the last-stage selection of children for the administration of the child discipline module in MICS surveys.
+It does allow survey respondents to report both violent and nonviolent forms of discipline.
+
+–The source notes that estimates reported in UNICEF publications and in MICS country reports prior to 2010 were calculated using household weights that did not take into account the last-stage selection of children for the administration of the child discipline module in MICS surveys.
 (A random selection of one child aged 2–14 is undertaken for the administration of the child discipline module.) In January 2010, it was decided that more accurate estimates are produced by using a household weight that takes the last-stage selection into account.
 MICS3 data were recalculated using this approach.
-All estimates produced after 2010 use the revised estimates.– When it was first implemented in MICS3, the child discipline module was administered only to mothers/primary caregivers, who were asked whether any of the disciplinary methods covered in the module had been used by any member of the household during the month preceding the interview.
+All estimates produced after 2010 use the revised estimates.
+
+– When it was first implemented in MICS3, the child discipline module was administered only to mothers/primary caregivers, who were asked whether any of the disciplinary methods covered in the module had been used by any member of the household during the month preceding the interview.
 Beginning with MICS4, the methodology was changed: Any adult household member, not just the mother or primary caregiver, can now respond to the questions on child discipline.
 """
 type ViolentDisciplineUnicef2017Dataset {
@@ -12631,8 +13199,12 @@ type YearOfLastRecordedWildPoliomyelitisVirusWhoGpei2017Dataset {
 """
 The only data not taken from the maps but from the text are the data for Canada, USA, Australia and New Zealand: For Canada the authors reported that “endemic smallpox was eliminated by 1944”, for the USA only that it was eliminated “the latter half of the 1940s” (I chose 1948 for the visualization).
 Dates for the last outbreaks of smallpox in Australia (1917) and New Zealand (1914) are reported in the text – in both countries smallpox has always been rare.
-The dates for Madagascar and Namibia are not exactly known – the authors only report that smallpox was eradicated in Madagascar before 1918 and for Namibia before 1955 (so I chose these years for eradication).
-Countries are shown in their current borders – successor countries of Yugoslavia, the USSR and the Sudan are assigned the eradication date of these states: 1925 for Yugoslavia, 1936 for the USSR, and 1972 for the Sudan.
+
+
+The dates for Madagascar and Namibia are not exactly known – the authors only report that smallpox was eradicated in Madagascar before 1918 and for Namibia before 1955 (so I chose these years for eradication).
+
+
+Countries are shown in their current borders – successor countries of Yugoslavia, the USSR and the Sudan are assigned the eradication date of these states: 1925 for Yugoslavia, 1936 for the USSR, and 1972 for the Sudan.
 """
 type YearOfSmallpoxEradicationByCountryWho1988Dataset {
  year_of_smallpox_eradication_who_1988: Float
@@ -12779,7 +13351,6 @@ type Query {
  a_century_of_work_and_leisure_ramey_and_francis_2009(entity: String!, year: Int!):ACenturyOfWorkAndLeisureRameyAndFrancis2009Dataset!
  absolute_deaths_from_ambient_pm25_air_pollution_state_of_global_air(entity: String!, year: Int!):AbsoluteDeathsFromAmbientPm25AirPollutionStateOfGlobalAirDataset!
  absolute_population_change_owid_based_on_hyde_and_un(entity: String!, year: Int!):AbsolutePopulationChangeOwidBasedOnHydeAndUnDataset!
- access_to_electricity_perc_population_world_bank(entity: String!, year: Int!):AccessToElectricityPercPopulationWorldBankDataset!
  access_to_financial_account_or_services_perc_world_bank_2014(entity: String!, year: Int!):AccessToFinancialAccountOrServicesPercWorldBank2014Dataset!
  adjusted_net_savings_per_capita_world_bank_wdi_2017(entity: String!, year: Int!):AdjustedNetSavingsPerCapitaWorldBankWdi2017Dataset!
  adult_literacy_proficiency_world_bank_edstats_and_step_skills_measurement_program(entity: String!, year: Int!):AdultLiteracyProficiencyWorldBankEdstatsAndStepSkillsMeasurementProgramDataset!
@@ -12790,7 +13361,6 @@ type Query {
  agriculture_in_england_1270_1870_bank_of_england_2017(entity: String!, year: Int!):AgricultureInEngland12701870BankOfEngland2017Dataset!
  air_pollutant_emissions_oecd(entity: String!, year: Int!):AirPollutantEmissionsOecdDataset!
  air_pollution_by_city_fouquet_and_dpcc_2011(entity: String!, year: Int!):AirPollutionByCityFouquetAndDpcc2011Dataset!
- air_pollution_death_rate_world_ihme(entity: String!, year: Int!):AirPollutionDeathRateWorldIhmeDataset!
  air_pollution_sources_in_the_uk_defra(entity: String!, year: Int!):AirPollutionSourcesInTheUkDefraDataset!
  air_travel_trips_per_capita_airbus_2019(entity: String!, year: Int!):AirTravelTripsPerCapitaAirbus2019Dataset!
  airline_hijacking_aviation_safety_network(entity: String!, year: Int!):AirlineHijackingAviationSafetyNetworkDataset!
@@ -12826,14 +13396,12 @@ type Query {
  co2_emissions_by_sector_cait_2021(entity: String!, year: Int!):Co2EmissionsBySectorCait2021Dataset!
  co2_emissions_by_source_cdiac_2016(entity: String!, year: Int!):Co2EmissionsBySourceCdiac2016Dataset!
  co2_emissions_in_trade_as_perc_production_global_carbon_project_2014(entity: String!, year: Int!):Co2EmissionsInTradeAsPercProductionGlobalCarbonProject2014Dataset!
- co2_emissions_per_capita_cdiac(entity: String!, year: Int!):Co2EmissionsPerCapitaCdiacDataset!
  co2_from_cement_cdiac_2017(entity: String!, year: Int!):Co2FromCementCdiac2017Dataset!
  co2_from_flaring_cdiac_2017(entity: String!, year: Int!):Co2FromFlaringCdiac2017Dataset!
  co2_from_gas_cdiac_2017(entity: String!, year: Int!):Co2FromGasCdiac2017Dataset!
  co2_from_liquid_cdiac_2017(entity: String!, year: Int!):Co2FromLiquidCdiac2017Dataset!
  co2_from_solid_fuel_cdiac_2017(entity: String!, year: Int!):Co2FromSolidFuelCdiac2017Dataset!
  co2_intensity_of_transport_by_mode_uk_beis(entity: String!, year: Int!):Co2IntensityOfTransportByModeUkBeisDataset!
- co2_intensity_kgco22011_money_ppp_world_bank(entity: String!, year: Int!):Co2IntensityKgco22011MoneyPppWorldBankDataset!
  co2_mitigation_curves_for_15c_andrews_and_gcp_2019(entity: String!, year: Int!):Co2MitigationCurvesFor15cAndrewsAndGcp2019Dataset!
  co2_mitigation_curves_for_2c_andrews_and_gcp_2019(entity: String!, year: Int!):Co2MitigationCurvesFor2cAndrewsAndGcp2019Dataset!
  co2_per_year_by_region_cdiac_2017(entity: String!, year: Int!):Co2PerYearByRegionCdiac2017Dataset!
@@ -12914,7 +13482,6 @@ type Query {
  deaths_from_smallpox_per_million_population_edwardes_1902(entity: String!, year: Int!):DeathsFromSmallpoxPerMillionPopulationEdwardes1902Dataset!
  deaths_per_twh_energy_production_markandya_and_wilkinson_sovacool_et_al(entity: String!, year: Int!):DeathsPerTwhEnergyProductionMarkandyaAndWilkinsonSovacoolEtAlDataset!
  deaths_per_twh_from_low_carbon_energy_sovacool_et_al_2016(entity: String!, year: Int!):DeathsPerTwhFromLowCarbonEnergySovacoolEtAl2016Dataset!
- decomposition_of_gender_wage_gap_blau_kahn_2017(entity: String!, year: Int!):DecompositionOfGenderWageGapBlauKahn2017Dataset!
  decomposition_of_gender_wage_gap_1980_blau_and_kahn_2017(entity: String!, year: Int!):DecompositionOfGenderWageGap1980BlauAndKahn2017Dataset!
  decomposition_of_gender_wage_gap_2010_blau_and_kahn_2017(entity: String!, year: Int!):DecompositionOfGenderWageGap2010BlauAndKahn2017Dataset!
  decomposition_times_of_marine_debris(entity: String!, year: Int!):DecompositionTimesOfMarineDebrisDataset!
@@ -12982,7 +13549,6 @@ type Query {
  fao_2030_50_projections_of_arable_land_fao_2017(entity: String!, year: Int!):Fao203050ProjectionsOfArableLandFao2017Dataset!
  fao_undernourishment_comparison_2010_vs_2012(entity: String!, year: Int!):FaoUndernourishmentComparison2010Vs2012Dataset!
  family_benefits_public_spending_oecd_2016(entity: String!, year: Int!):FamilyBenefitsPublicSpendingOecd2016Dataset!
- family_benefits_spending_oecd_2016(entity: String!, year: Int!):FamilyBenefitsSpendingOecd2016Dataset!
  fatal_aviation_accidents_and_fatalties_aviation_safety_network_asn(entity: String!, year: Int!):FatalAviationAccidentsAndFataltiesAviationSafetyNetworkAsnDataset!
  female_and_male_life_expectancy_at_birth_owid_based_on_un_population_division_2017(entity: String!, year: Int!):FemaleAndMaleLifeExpectancyAtBirthOwidBasedOnUnPopulationDivision2017Dataset!
  female_labor_force_participation_rate_owid_2017(entity: String!, year: Int!):FemaleLaborForceParticipationRateOwid2017Dataset!
@@ -13038,7 +13604,6 @@ type Query {
  global_hunger_index_2021(entity: String!, year: Int!):GlobalHungerIndex2021Dataset!
  global_hunger_index_in_1992_listed_2017_global_hunger_index_2017(entity: String!, year: Int!):GlobalHungerIndexIn1992Listed2017GlobalHungerIndex2017Dataset!
  global_hunger_index_in_2017_listed_2017_global_hunger_index_2017(entity: String!, year: Int!):GlobalHungerIndexIn2017Listed2017GlobalHungerIndex2017Dataset!
- global_hunger_index_score_in_1992(entity: String!, year: Int!):GlobalHungerIndexScoreIn1992Dataset!
  global_hunger_index_ifpri_2018(entity: String!, year: Int!):GlobalHungerIndexIfpri2018Dataset!
  global_population_by_region_with_projections_hyde_2016_and_un_2017(entity: String!, year: Int!):GlobalPopulationByRegionWithProjectionsHyde2016AndUn2017Dataset!
  global_primary_energy_consumption_vaclav_smil_2017_and_bp_statistics_2020(entity: String!, year: Int!):GlobalPrimaryEnergyConsumptionVaclavSmil2017AndBpStatistics2020Dataset!
@@ -13083,7 +13648,6 @@ type Query {
  happiness_predictors_world_happiness_report_2017(entity: String!, year: Int!):HappinessPredictorsWorldHappinessReport2017Dataset!
  health_coverage_ilo_2014(entity: String!, year: Int!):HealthCoverageIlo2014Dataset!
  health_expenditure_uk_1950_2012_office_of_health_economics_2012(entity: String!, year: Int!):HealthExpenditureUk19502012OfficeOfHealthEconomics2012Dataset!
- health_expenditure_us_1929_2013_us_census_and_wdi(entity: String!, year: Int!):HealthExpenditureUs19292013UsCensusAndWdiDataset!
  health_expenditure_us_1929_2013_private_us_census_and_wdi_2013(entity: String!, year: Int!):HealthExpenditureUs19292013PrivateUsCensusAndWdi2013Dataset!
  health_expenditure_us_1929_2013_public_us_census_and_wdi_2013(entity: String!, year: Int!):HealthExpenditureUs19292013PublicUsCensusAndWdi2013Dataset!
  health_expenditure_and_financing_oecdstat_2017(entity: String!, year: Int!):HealthExpenditureAndFinancingOecdstat2017Dataset!
@@ -13389,7 +13953,6 @@ type Query {
  rate_of_internationally_observed_elections_hyde_and_marinov_2012(entity: String!, year: Int!):RateOfInternationallyObservedElectionsHydeAndMarinov2012Dataset!
  rate_of_internationally_observed_elections_susan_hyde_2011(entity: String!, year: Int!):RateOfInternationallyObservedElectionsSusanHyde2011Dataset!
  real_commodity_price_index_since_1850_jacks_2016(entity: String!, year: Int!):RealCommodityPriceIndexSince1850Jacks2016Dataset!
- real_gdp_at_chained_ppps_in_2011_usmoney_penn_world_table_90_2016(entity: String!, year: Int!):RealGdpAtChainedPppsIn2011UsmoneyPennWorldTable902016Dataset!
  real_gdp_per_capita_london_and_delhi_owid(entity: String!, year: Int!):RealGdpPerCapitaLondonAndDelhiOwidDataset!
  recycled_plastic_exports_brooks_et_al_2018(entity: String!, year: Int!):RecycledPlasticExportsBrooksEtAl2018Dataset!
  regime_populations_owid_based_on_luhrmann_et_al_2018_v_dem_v12_owid_2021_gapminder_v6_hyde_v32_and_un_2019(entity: String!, year: Int!):RegimePopulationsOwidBasedOnLuhrmannEtAl2018VDemV12Owid2021GapminderV6HydeV32AndUn2019Dataset!
