@@ -139,7 +139,7 @@ This project assumes that every dataset has 2 arguments: `Entity:String` and `Ye
 ```
 
 ## Demo
-![](./owid-api-demo.mov)
+[![Demo Playground](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/Isos2ey4U-M)
 
 ## Architecture
 
