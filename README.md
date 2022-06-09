@@ -139,7 +139,8 @@ This project assumes that every dataset has 2 arguments: `Entity:String` and `Ye
 ```
 
 ## Demo
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Isos2ey4U-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Watch the video](https://img.youtube.com/vi/Isos2ey4U-M/default.jpg)](https://www.youtube.com/embed/Isos2ey4U-M)
+
 
 ## Architecture
 
