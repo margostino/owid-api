@@ -139,7 +139,7 @@ This project assumes that every dataset has 2 arguments: `Entity:String` and `Ye
 ```
 
 ## Demo
-[![Watch the video](https://img.youtube.com/vi/Isos2ey4U-M/default.jpg)](https://www.youtube.com/embed/Isos2ey4U-M)
+[![Watch the video](https://img.youtube.com/vi/ppWp-Kc6yfs/default.jpg)](https://www.youtube.com/watch?v=ppWp-Kc6yfs)
 
 
 ## Architecture
