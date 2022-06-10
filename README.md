@@ -162,5 +162,7 @@ So I would start naming the following list of features:
 - [ ] Local sources (folders, files, url) for testing purposes
 - [ ] Split large files (e.g. resolvers)
 - [ ] Authentication?
+- [ ] More and better logging
+- [ ] Testing, testing, testing
 - [ ] ...to be continued...
 
