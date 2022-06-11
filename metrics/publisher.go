@@ -23,9 +23,7 @@ func send(payload *bytes.Buffer) {
 	request.Header.Add("Content-Type", "application/json")
 	response, err := client.Do(request)
 	common.Check(err)
-	if response.StatusCode >= 200 && response.StatusCode <= 299 {
-		log.Println("Events published to GA")
-	} else {
+	if response.StatusCode > 299 {
 		log.Printf("Error publishing events to GA: %d\n", response.StatusCode)
 	}
 }
