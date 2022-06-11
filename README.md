@@ -35,7 +35,7 @@ You can get the current schema executing the following queries:
 There is one Go function to generate the schema. This process read all files `datapackage.json` from [this repo](https://github.com/owid/owid-datasets/tree/master/datasets) and create a new file `schema.graphql`. 
 
 ```bash
-> make schema.gen 
+> make schema
 ```
 
 ### Generate Server
@@ -43,7 +43,7 @@ There is one Go function to generate the schema. This process read all files `da
 Finally the following command will generate the server using [gqlgen](https://github.com/99designs/gqlgen).
 
 ```bash
-> make server.gen
+> make server
 ```
 
 ## Usage
