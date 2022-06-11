@@ -2,62 +2,18 @@ package fetcher
 
 import (
 	"context"
-	"encoding/csv"
 	"encoding/json"
 	"fmt"
 	"github.com/margostino/owid-api/common"
+	"github.com/margostino/owid-api/metrics"
 	"github.com/margostino/owid-api/utils"
-	"io"
 	"log"
-	"net/http"
-	"os"
 	"strconv"
 )
 
-type Dataset struct {
-	Row map[string]*float64
-}
-
-type DatasetIndex struct {
-	Index map[string]Dataset
-}
-
-var datasetCache = make(map[string]DatasetIndex)
-var indexCache = loadIndex()
-
-func loadIndex() map[string]string {
-	var urls = make(map[string]string)
-	metadataUrl := os.Getenv("METADATA_URL")
-	datasetUrls := fmt.Sprintf("%s/datasets.yml", metadataUrl)
-	resp, err := http.Get(datasetUrls)
-	defer resp.Body.Close()
-	common.Check(err)
-	bodyBytes, err := io.ReadAll(resp.Body)
-	common.UnmarshalYamlBytes(bodyBytes, &urls)
-	return urls
-}
-
-func fetchCSVFromUrl(url string) ([][]string, error) {
-	resp, err := http.Get(url)
-	if err != nil {
-		return nil, err
-	}
-
-	defer resp.Body.Close()
-	reader := csv.NewReader(resp.Body)
-	reader.Comma = ','
-	data, err := reader.ReadAll()
-	if err != nil {
-		return nil, err
-	}
-
-	return data, nil
-}
-
-// Fetch TODO: caching or preloading?
 func Fetch(ctx context.Context, entity string, year int, response any) (map[string]*float64, error) {
 	var results = make(map[string]*float64)
-	dataset, err := GetDatasetFrom(ctx)
+	dataset, err := getDatasetFrom(ctx)
 	if err != nil {
 		return nil, err
 	}
@@ -66,6 +22,7 @@ func Fetch(ctx context.Context, entity string, year int, response any) (map[stri
 	dataKey := entity + yearAsString
 
 	log.Printf("Query for dataset %s with entity [%s] and year [%s]\n", dataset, entity, yearAsString)
+	go metrics.PublishQuery(ctx)
 
 	if value, ok := datasetCache[dataset]; ok {
 		if result, ok := value.Index[dataKey]; ok {

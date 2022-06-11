@@ -21,6 +21,6 @@ func main() {
 	case "schema-gen":
 		tooling.GenerateSchema()
 	default:
-		log.Printf("command not valid: %s", action)
+		log.Printf("command not valid: %s\n", action)
 	}
 }

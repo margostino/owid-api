@@ -6,7 +6,7 @@ import (
 	"github.com/99designs/gqlgen/graphql"
 )
 
-func GetDatasetFrom(ctx context.Context) (string, error) {
+func getDatasetFrom(ctx context.Context) (string, error) {
 	fieldContext := graphql.GetFieldContext(ctx)
 	if fieldContext != nil && len(fieldContext.Path()) > 0 {
 		dataset := fieldContext.Path().String()
