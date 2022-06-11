@@ -5,12 +5,14 @@ import (
 	"github.com/margostino/owid-api/fetcher"
 	"github.com/margostino/owid-api/graph"
 	"github.com/margostino/owid-api/graph/generated"
+	"log"
 	"net/http"
 )
 
 var server = newServer()
 
 func Query(w http.ResponseWriter, r *http.Request) {
+	log.Println("New Query request")
 	server.ServeHTTP(w, r)
 	//http.Handle("/", playground.Handler("GraphQL playground", "/query"))
 	//http.Handle("/query", server)

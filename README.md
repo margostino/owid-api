@@ -164,5 +164,6 @@ So I would start naming the following list of features:
 - [ ] Authentication?
 - [ ] More and better logging
 - [ ] Testing, testing, testing
+- [ ] Metrics
 - [ ] ...to be continued...
 
