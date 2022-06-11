@@ -19,6 +19,8 @@ func send(payload *bytes.Buffer) {
 	q := request.URL.Query()
 	q.Add("api_secret", os.Getenv("GA_MP_API_SECRET"))
 	q.Add("measurement_id", os.Getenv("GA_MP_MEASUREMENT_ID"))
+	request.URL.RawQuery = q.Encode()
+	request.Header.Add("Content-Type", "application/json")
 	response, err := client.Do(request)
 	common.Check(err)
 	if response.StatusCode >= 200 && response.StatusCode <= 299 {
