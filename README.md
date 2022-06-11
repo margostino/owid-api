@@ -164,6 +164,7 @@ So I would start naming the following list of features:
 - [ ] Authentication?
 - [ ] More and better logging
 - [ ] Testing, testing, testing
+- [ ] Improve client ID in metrics (user agent + ip?)
 - [ ] Metrics
 - [ ] ...to be continued...
 

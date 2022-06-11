@@ -8,21 +8,25 @@ import (
 	"net/http"
 )
 
+func sanitizeParam(value string) string {
+	if value == "" {
+		value = "empty"
+	}
+	return value
+}
+
 func requestToMeasure(request *http.Request) *Measure {
-	ip := request.Header.Get("X-Real-Ip")
-	country := request.Header.Get("X-Vercel-Ip-Country")
-	path := request.RequestURI
-	if ip == "" {
-		ip = "empty"
-	}
-	if country == "" {
-		country = "empty"
-	}
+	ip := sanitizeParam(request.Header.Get("X-Real-Ip"))
+	city := sanitizeParam(request.Header.Get("X-Vercel-Ip-City"))
+	country := sanitizeParam(request.Header.Get("X-Vercel-Ip-Country"))
+	path := sanitizeParam(request.URL.EscapedPath())
+
 	event := Event{
 		Name:   "request",
 		Params: make(map[string]interface{}),
 	}
 	event.Params["country"] = country
+	event.Params["city"] = city
 	event.Params["path"] = path
 
 	events := make([]Event, 0)
