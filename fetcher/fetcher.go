@@ -9,6 +9,7 @@ import (
 	"github.com/margostino/owid-api/utils"
 	"log"
 	"strconv"
+	"strings"
 )
 
 func Fetch(ctx context.Context, entity string, year int, response any) (map[string]*float64, error) {
@@ -18,8 +19,9 @@ func Fetch(ctx context.Context, entity string, year int, response any) (map[stri
 		return nil, err
 	}
 
+	entity = strings.ToLower(entity)
 	yearAsString := strconv.Itoa(year)
-	dataKey := entity + yearAsString
+	dataKey := strings.ToLower(entity + yearAsString)
 
 	log.Printf("Query for dataset %s with entity [%s] and year [%s]\n", dataset, entity, yearAsString)
 	go metrics.PublishQuery(ctx)
@@ -36,9 +38,10 @@ func Fetch(ctx context.Context, entity string, year int, response any) (map[stri
 
 		var index = make(map[int]string)
 		for idx, row := range data {
+			row[0] = strings.ToLower(row[0])
 			if idx == 0 {
 				for dataIndex, column := range row[2:] {
-					index[dataIndex] = utils.NormalizeName(column)
+					index[dataIndex] = utils.NormalizeName(strings.ToLower(column))
 				}
 				continue
 			}
